@@ -12,6 +12,12 @@
     "workspaces": [
         "packages/*"
     ],
+    "scripts": {
+        "init": "doom init",
+        "i18n": "doom i18n",
+        "launch": "doom launch",
+        "update": "ncu -u --deep"
+    },
     "keywords": [],
     "author": "Milhous",
     "license": "ISC",
@@ -21,6 +27,7 @@
         "cross-env": "^7.0.3",
         "cross-var": "^1.1.0",
         "eslint": "^8.31.0",
+        "eslint-config-next": "^13.1.1",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-prettier": "^4.2.1",
         "eslint-plugin-react": "7.31.11",

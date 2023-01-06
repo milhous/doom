@@ -1,0 +1,25 @@
+{
+    "name": "@packages/referral",
+    "version": "1.0.0",
+    "description": "邀请",
+    "type": "module",
+    "main": "dist/static/js/main.js",
+    "private": true,
+    "scripts": {
+        "start": "mage start",
+        "build": "mage build"
+    },
+    "dependencies": {
+        "i18next": "^22.4.8",
+        "next": "^13.1.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-i18next": "^12.1.1",
+        "react-router-dom": "^6.6.1",
+        "regenerator-runtime": "^0.13.11"
+    },
+    "devDependencies": {
+        "@types/react": "^18",
+        "@types/react-dom": "^18.0.10"
+    }
+}
