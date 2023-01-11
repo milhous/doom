@@ -1,0 +1,118 @@
+body {
+    background-color: #0f151f;
+    font-family: Arial, sans-serif;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+ol,
+ul,
+li,
+p,
+dl,
+dt,
+dd,
+button,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+svg,
+button,
+li,
+summary {
+    outline: none;
+    user-select: none;
+}
+
+svg,
+img {
+    display: block;
+}
+
+label,
+button,
+summary {
+    cursor: pointer;
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    position: relative;
+}
+
+fieldset {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    &:disabled input {
+        cursor: not-allowed;
+    }
+}
+
+input[type='number'] {
+    appearance: textfield;
+    -webkit-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+.grecaptcha-badge {
+    display: none;
+    opacity: 0;
+}
+
+ :root {
+    --pc-radius: 6px;
+    --pc-box-radius: 10px;
+    --pc-input-radius: 4px;
+    --pc-btn-radius: 4px;
+    --h5-radius: 8px;
+    --h5-box-radius: 15px;
+    --h5-input-radius: 6px;
+    --h5-btn-radius: 6px;
+    --animation-duration: 0.3s;
+    --ui-btn-default: #0f151f;
+    --ui-btn-default-hover: #344258;
+    --ui-btn-primary: linear-gradient(180deg, #05c9a3, #02996a);
+    --ui-btn-primary-hover: linear-gradient(#ffcd69, #ffab00);
+}

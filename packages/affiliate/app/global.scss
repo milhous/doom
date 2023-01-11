@@ -1,4 +1,15 @@
+@use "libs/styles/library" as *;
 @import "normalize.css";
+@import "libs/styles/reset";
 .test {
-    font-size: 16px;
+    color: #fff;
+    @include smallScreen {
+        font-size: 32px;
+    }
+    @include mediumScreen {
+        font-size: 20px;
+    }
+    @include largeScreen {
+        font-size: 16px;
+    }
 }
