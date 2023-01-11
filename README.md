@@ -10,7 +10,7 @@ Module Federation in Next.js
 yarn add -D sass
 ```
 
-#### 如何支持 rem
+#### 支持 rem
 
 1. 安装依赖
 
@@ -80,5 +80,3 @@ export default function Head() {
   );
 }
 ```
-
-#### 如何支持 rem
