@@ -55,7 +55,7 @@ module.exports = {
 };
 ```
 
-2. app/head 加入计算根元素 html 的 font-size 值逻辑
+3. app/head 加入计算根元素 html 的 font-size 值逻辑
 
 ```js
 import Script from "next/script";
