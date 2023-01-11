@@ -6,19 +6,23 @@
     "main": "dist/static/js/main.js",
     "private": true,
     "scripts": {
-        "start": "mage start",
-        "build": "mage build"
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
     },
     "dependencies": {
-        "i18next": "^22.4.8",
+        "i18next": "^22.4.9",
         "next": "^13.1.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "react-i18next": "^12.1.1",
-        "react-router-dom": "^6.6.1"
+        "react-i18next": "^12.1.4"
     },
     "devDependencies": {
+        "@types/node": "18.11.18",
         "@types/react": "^18",
-        "@types/react-dom": "^18.0.10"
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21",
+        "postcss-pxtorem": "^6.0.0",
+        "sass": "^1.57.1"
     }
 }
