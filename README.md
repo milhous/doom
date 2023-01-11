@@ -80,3 +80,15 @@ export default function Head() {
   );
 }
 ```
+
+#### 支持 Normalize CSS
+
+全局样式引入 normalize.css
+
+```scss
+@import "normalize.css";
+
+.test {
+  font-size: 16px;
+}
+```
