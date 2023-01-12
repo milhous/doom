@@ -203,9 +203,10 @@ svg 体积过大时, 建议使用 url , 避免使用 inline, 导致 js 体积大
 
 ```
 # svg 体积较大时，比如 banner
+import Image from 'next/image';
 import svg from './assets/file.svg?url'
 
-<img src={svg} width="200" height="200" />
+<Image src={svg.src} width={200} height={200} priority />
 
 # svg 体积较小时，比如 icon
 import Svg from './assets/file.svg'
