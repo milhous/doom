@@ -333,6 +333,70 @@ input::-webkit-inner-spin-button {
   --ui-btn-primary-hover: linear-gradient(#ffcd69, #ffab00);
 }
 
+.skinBlack,
+.affiliate {
+  --border-color: #1A2536;
+  --background-color: #0F151F;
+  --font-color: #7286A6;
+  --font-title-color: #fff;
+  --font-subtitle-color: #fff;
+  --font-desc-color: #8DA3C8;
+  --font-highlight-color: #F7B500;
+  --font-content-color: #fff;
+  --font-btn-color: #fff;
+  --section-background: #121C2C;
+  --box-background: #18273F;
+  --corner-background: #222F43;
+  --table-header-background: #263956;
+  --table-body-background: #101F38;
+  --scrollbar-thumb-background: #1F2C3F;
+  --gradient-background: to right, #0F151F, #141C29 50%, #0F151F;
+  --gradient-halo: circle closest-side, #35445E, rgba(3, 18, 35, 0);
+  --gradient-share: farthest-corner at 0 0, #2B64B8 0%, #144389 100%;
+  --gradient-btn-apply: to bottom, #05C9A3, #02996A;
+  --gradient-btn-background: gradient-blue;
+  --background-btn-default: #0091FF;
+  --commission-box-dark: #0F151F;
+  --commission-box-light: #18273F;
+  --commission-circle-dark: #080D17;
+  --commission-circle-light: #121F34;
+  --how-background: #131A26;
+  --faq-background: #131A26;
+  --faq-border: #45556D;
+  --faq-symbol: #02996A;
+}
+
+.skinWhite {
+  --border-color: #1A2536;
+  --background-color: #0F151F;
+  --font-color: #7286A6;
+  --font-title-color: #fff;
+  --font-subtitle-color: #fff;
+  --font-desc-color: #8DA3C8;
+  --font-highlight-color: #F7B500;
+  --font-content-color: #fff;
+  --font-btn-color: #fff;
+  --section-background: #121C2C;
+  --box-background: #18273F;
+  --corner-background: #222F43;
+  --table-header-background: #263956;
+  --table-body-background: #101F38;
+  --scrollbar-thumb-background: #1F2C3F;
+  --gradient-background: to right, #0F151F, #141C29 50%, #0F151F;
+  --gradient-halo: circle closest-side, #2B4A7D, rgba(18, 28, 44, 0);
+  --gradient-btn-apply: to bottom, #05C9A3, #02996A;
+  --gradient-btn-background: to bottom, #00C4FF, #0091FF;
+  --background-btn-default: #0091FF;
+  --commission-box-dark: #0F151F;
+  --commission-box-light: #18273F;
+  --commission-circle-dark: #080D17;
+  --commission-circle-light: #121F34;
+  --how-background: #131A26;
+  --faq-background: #131A26;
+  --faq-border: #45556D;
+  --faq-symbol: #02996A;
+}
+
 .test {
   color: #fff;
 }

@@ -1,3 +1,11 @@
+import path from 'path';
+import fs from 'fs-extra';
+
+// 当前应用路径
+export const appDir = fs.realpathSync(process.cwd());
+// 路径或路径片段的序列解析为应用绝对路径
+export const resolveAppPath = (appPath) => path.resolve(appDir, appPath);
+
 const nextConfig = {
   experimental: {
     appDir: true,
@@ -67,6 +75,9 @@ const webpack = (config) => {
       },
     }],
   });
+
+  // 别名配置
+  config.resolve.alias['@app'] = resolveAppPath('./app');
 
   return config;
 };

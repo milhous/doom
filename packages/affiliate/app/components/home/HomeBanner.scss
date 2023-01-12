@@ -1,35 +1,35 @@
-@use "../../libs/styles/library" as *;
+@use "@app/libs/styles/library" as *;
 .affiliate .affiliate-banner {
     @include setFlex(center, center, column);
     box-sizing: border-box;
     width: 100%;
     height: 600px;
     padding: 0 20px;
-    background: url('../../assets/home/banner-bg.jpg') no-repeat center bottom;
+    background: url('~@app/assets/home/banner-bg.jpg') no-repeat center bottom;
     background-size: cover;
     @include mediumScreen {
         height: 725px;
     }
     @include smallScreen {
         height: 950px;
-        background-image: url('../../assets/home/banner-bg_h5.jpg');
+        background-image: url('~@app/assets/home/banner-bg_h5.jpg');
         background-size: 100% 950px;
     }
     dt {
         @include setImg(982px,
         156px,
-        '~../../assets/home/banner-pic.svg');
+        '~@app/assets/home/banner-pic.svg');
         margin: 0 auto;
         text-indent: -9999px;
         @include mediumScreen {
             @include setImg(484px,
             348px,
-            '~../../assets/home/banner-pic_h5.svg');
+            '~@app/assets/home/banner-pic_h5.svg');
         }
         @include smallScreen {
             @include setImg(484px,
             348px,
-            '~../../assets/home/banner-pic_h5.svg');
+            '~@app/assets/home/banner-pic_h5.svg');
         }
     }
     dd {

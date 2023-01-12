@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Assets from './assets';
 
-import HomeBanner from './components/home/HomeBanner';
+import HomeBanner from '@app/components/home/HomeBanner';
 
 export default function Page() {
   return (

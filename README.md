@@ -213,3 +213,35 @@ import Svg from './assets/file.svg'
 
 <Svg width="200" height="200" />
 ```
+
+## Alias 配置
+
+1. tsconfig.json 配置，用于 ts & tsx 的 import 引用。
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["app/*"]
+    }
+  }
+}
+```
+
+2. next.config.js 配置，用于 scss 的 @use、@import 和 url 引用。
+
+```js
+const nextConfig = {
+  ...
+}
+
+const webpack = (config) => {
+  ...
+
+  config.resolve.alias['@app'] = resolveAppPath('./app');
+
+  return config;
+}
+```

@@ -1,6 +1,7 @@
-@use "libs/styles/library" as *;
+@use "@app/libs/styles/library" as *;
 @import "normalize.css";
-@import "libs/styles/reset";
+@import "@app/libs/styles/reset";
+@import '@app/theme.scss';
 .test {
     color: #fff;
     @include smallScreen {
