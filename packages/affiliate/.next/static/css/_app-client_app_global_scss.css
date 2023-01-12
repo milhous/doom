@@ -356,3 +356,30 @@ input::-webkit-inner-spin-button {
   width: 0.98rem;
   height: 0.96rem;
 }
+
+.fontGradient {
+  position: relative;
+  text-align: center;
+  font-size: 0.28rem;
+  line-height: 0.38rem;
+}
+.fontGradient span {
+  display: block;
+  color: transparent;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.fontGradient span:first-child {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.fontGradient span:last-child {
+  position: relative;
+  z-index: 5;
+  background: linear-gradient(0deg, #fdf8c9, #c19431);
+  background-origin: content-box;
+  -webkit-background-clip: text;
+          background-clip: text;
+}

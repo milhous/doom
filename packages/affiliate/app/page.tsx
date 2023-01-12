@@ -8,6 +8,10 @@ console.log('Assets', Assets.homeCommissionIcon1.src);
 export default function Page() {
   return <>
     <h1 className="test">Hello, Next.js!!</h1>
+    <h3 className="fontGradient">
+        <span>Hello world!</span>
+        <span>Hello world!</span>
+    </h3>
     <Assets.HomeHowIcon1 className="how-icon1" />
     <Image
       className="home-icon1"

@@ -18,3 +18,9 @@
     width: 98px;
     height: 96px;
 }
+
+.fontGradient {
+    @include setFontGradient('0deg', '#fdf8c9', '#c19431');
+    font-size: .28rem;
+    line-height: .38rem;
+}

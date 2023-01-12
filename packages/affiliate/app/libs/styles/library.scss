@@ -16,3 +16,107 @@
         @content;
     }
 }
+
+// 文字渐变
+@mixin setFontGradient($args...) {
+    position: relative;
+    text-align: center;
+    span {
+        display: block;
+        color: transparent;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    span:first-child {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+    span:last-child {
+        position: relative;
+        z-index: 5;
+        background: linear-gradient(#{$args});
+        background-origin: content-box;
+        background-clip: text;
+    }
+}
+
+// 设置字体
+@mixin setFont($fontSize, $lineHeight, $fontColor, $fontWeight: 400) {
+    color: $fontColor;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+
+// 设置flex
+@mixin setFlex($justifyContent: center, $alignItems: center, $flexDirection: row) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+// 设置图片
+@mixin setImg($width, $height, $src) {
+    display: block;
+    width: $width;
+    min-width: $width;
+    height: $height;
+    min-height: $height;
+    background: url('#{$src}') no-repeat center center;
+    background-size: 100% 100%;
+}
+
+// 设置伪元素
+@mixin setPseudo() {
+    content: '.';
+    display: block;
+    position: absolute;
+    text-indent: -9999px;
+}
+
+// 设置按钮
+@mixin setBtn($width,
+$height,
+$fontSize,
+$fontColor,
+$background,
+$borderRadius) {
+    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: $width;
+    height: $height;
+    padding: 0 calc($borderRadius * 2);
+    border-radius: $borderRadius;
+    background: linear-gradient($background);
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: $fontColor;
+    font-size: $fontSize;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+    white-space: nowrap;
+    outline: none;
+}
+
+// 设置省略
+@mixin setEllipsis() {
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// 设置垂直居中
+@mixin setVerticalCenter() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
