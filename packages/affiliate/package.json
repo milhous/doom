@@ -18,13 +18,15 @@
         "react-i18next": "^12.1.4"
     },
     "devDependencies": {
+        "@svgr/webpack": "^6.5.1",
         "@types/node": "18.11.18",
         "@types/react": "^18",
-        "browserslist": "^4.21.4",
         "autoprefixer": "^10.4.13",
+        "browserslist": "^4.21.4",
         "postcss": "^8.4.21",
-        "postcss-pxtorem": "^6.0.0",
         "postcss-normalize": "^10.0.1",
-        "sass": "^1.57.1"
+        "postcss-pxtorem": "^6.0.0",
+        "sass": "^1.57.1",
+        "svgo-loader": "^3.0.3"
     }
 }

@@ -55,28 +55,44 @@ module.exports = {
 };
 ```
 
-3. app/head 加入计算根元素 html 的 font-size 值逻辑
+3. app/layout 加入计算根元素 html 的 font-size 值逻辑。
+
+> 注: 当 Script 在 layout body 中时，strategy 才能设置为 beforeInteractive，插入到 head 中。
 
 ```js
 import Script from "next/script";
 
-export default function Head() {
+export default function RootLayout({
+  // Layouts must accept a children prop.
+  // This will be populated with nested layouts or pages
+  children,
+}: {
+  children: React.ReactNode,
+}) {
   return (
-    <>
-      ...
-      <Script>
-        {`
-          var setFontSize = function() {
-            var width = document.documentElement.clientWidth;
-            width = width > 768 ? 768 : width;
-            var fontSize = (width / 768) * 100;
-            document.getElementsByTagName('html')[0].style.fontSize = fontSize + 'px';
-          };
-          setFontSize();
-          window.addEventListener('resize', setFontSize);
-        `}
-      </Script>
-    </>
+    <html lang="en">
+      <body>
+        {children}
+        <Script id="flexible" strategy="beforeInteractive">
+          {`
+            var setFontSize = function() {
+              var width = document.documentElement.clientWidth;
+              width = width > 768 ? 768 : width;
+              var fontSize = (width / 768) * 100;
+              var html = document.querySelector('html');
+
+              if (!!html) {
+                html.style.fontSize = fontSize + 'px';
+              }
+            };
+
+            setFontSize();
+
+            window.addEventListener('resize', setFontSize);
+          `}
+        </Script>
+      </body>
+    </html>
   );
 }
 ```
@@ -91,4 +107,108 @@ export default function Head() {
 .test {
   font-size: 16px;
 }
+```
+
+## SVG 配置
+
+在 next.config.js 中自定义 webpack 配置，支持 url 和 inline 方式加载。
+
+> 注: loader 不支持 swc-loader，rule 不支持 generator dataUrl
+
+```js
+const nextConfig = {
+  ...
+}
+
+const webpack = (config) => {
+  let svgLoaderOptions = {};
+
+  for (const rule of config.module.rules) {
+    if (rule.test && rule.options && ("" + rule.test).includes("svg")) {
+      svgLoaderOptions = rule.options;
+
+      break;
+    }
+  }
+
+  // 通过url方式加载
+  config.module.rules.push({
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    resourceQuery: /url/,
+    use: [
+      {
+        loader: "next-image-loader",
+        options: svgLoaderOptions,
+      },
+      {
+        loader: "svgo-loader",
+        options: {
+          plugins: [
+            {
+              name: "preset-default",
+              params: {
+                overrides: {
+                  removeViewBox: false,
+                  cleanupIDs: false,
+                },
+              },
+            },
+          ],
+        },
+      },
+    ],
+  });
+
+  // 通过inline方式加载
+  config.module.rules.push({
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    resourceQuery: { not: [/url/] },
+    use: [
+      {
+        loader: "@svgr/webpack",
+        options: {
+          svgo: true,
+          svgoConfig: {
+            plugins: [
+              {
+                name: "preset-default",
+                params: {
+                  overrides: {
+                    removeViewBox: false,
+                    cleanupIDs: false,
+                  },
+                },
+              },
+            ],
+          },
+        },
+      },
+    ],
+  });
+
+  return config;
+};
+
+export default {
+  ...nextConfig,
+  webpack,
+};
+```
+
+svg 体积过大时, 建议使用 url , 避免使用 inline, 导致 js 体积大, 页面需要较长时间加载才能显示。
+
+> 为了区分导入类型, url 导入时, 导入名首字母小写. inline 导入时, 导入名首字母大写.
+
+```
+# svg 体积较大时，比如 banner
+import svg from './assets/file.svg?url'
+
+<img src={svg} width="200" height="200" />
+
+# svg 体积较小时，比如 icon
+import Svg from './assets/file.svg'
+
+<Svg width="200" height="200" />
 ```
