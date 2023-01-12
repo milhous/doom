@@ -1,0 +1,121 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[12].use[2]!../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[12].use[3]!../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[3].oneOf[12].use[4]!../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[3].oneOf[12].use[5]!./app/components/home/HomeBanner.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.affiliate .affiliate-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 6rem;
+  padding: 0 0.2rem;
+  background: url(/_next/static/media/banner-bg.b2d8dff7.jpg) no-repeat center bottom;
+  background-size: cover;
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .affiliate .affiliate-banner {
+    height: 7.25rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .affiliate .affiliate-banner {
+    height: 9.5rem;
+    background-image: url(/_next/static/media/banner-bg_h5.6389d565.jpg);
+    background-size: 100% 9.5rem;
+  }
+}
+.affiliate .affiliate-banner dt {
+  display: block;
+  width: 9.82rem;
+  min-width: 9.82rem;
+  height: 1.56rem;
+  min-height: 1.56rem;
+  background: url(/_next/static/media/banner-pic.70944cc8.svg) no-repeat center center;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  text-indent: -99.99rem;
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .affiliate .affiliate-banner dt {
+    display: block;
+    width: 4.84rem;
+    min-width: 4.84rem;
+    height: 3.48rem;
+    min-height: 3.48rem;
+    background: url(/_next/static/media/banner-pic_h5.35805dab.svg) no-repeat center center;
+    background-size: 100% 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .affiliate .affiliate-banner dt {
+    display: block;
+    width: 4.84rem;
+    min-width: 4.84rem;
+    height: 3.48rem;
+    min-height: 3.48rem;
+    background: url(/_next/static/media/banner-pic_h5.35805dab.svg) no-repeat center center;
+    background-size: 100% 100%;
+  }
+}
+.affiliate .affiliate-banner dd {
+  color: var(--font-subtitle-color);
+  font-weight: 400;
+  font-size: 0.22rem;
+  line-height: 0.26rem;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .affiliate .affiliate-banner dd {
+    margin-top: 0.2rem;
+    font-size: 0.26rem;
+    line-height: 0.4rem;
+  }
+}
+.affiliate .affiliate-banner .btn-apply {
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2rem;
+  height: 0.46rem;
+  padding: 0 calc(var(--pc-btn-radius) * 2);
+  border-radius: var(--pc-btn-radius);
+  background: linear-gradient(var(--gradient-btn-apply));
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: var(--font-btn-color);
+  font-size: 0.16rem;
+  text-decoration: none;
+  text-shadow: 0 0.02rem 0.04rem rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  outline: none;
+  margin-top: 0.76rem;
+}
+@media only screen and (max-width: 768px) {
+  .affiliate .affiliate-banner .btn-apply {
+    cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 1.8rem;
+    height: 0.6rem;
+    padding: 0 calc(var(--h5-btn-radius) * 2);
+    border-radius: var(--h5-btn-radius);
+    background: linear-gradient(var(--gradient-btn-apply));
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: var(--font-btn-color);
+    font-size: 0.22rem;
+    text-decoration: none;
+    text-shadow: 0 0.02rem 0.04rem rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    outline: none;
+    margin-top: 0.9rem;
+  }
+}

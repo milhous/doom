@@ -216,6 +216,9 @@
   "__entry_css_files__": {
     "/Users/milhous/Documents/work/GitHub/doom/packages/affiliate/app/layout": [
       "static/css/_app-client_app_global_scss.css"
+    ],
+    "/Users/milhous/Documents/work/GitHub/doom/packages/affiliate/app/page": [
+      "static/css/_app-client_app_components_home_HomeBanner_scss.css"
     ]
   },
   "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js": {
@@ -588,6 +591,15 @@
       "name": "default",
       "chunks": [
         "static/css/_app-client_app_global_scss.css"
+      ]
+    }
+  },
+  "/Users/milhous/Documents/work/GitHub/doom/packages/affiliate/app/components/home/HomeBanner.scss": {
+    "default": {
+      "id": "null",
+      "name": "default",
+      "chunks": [
+        "static/css/_app-client_app_components_home_HomeBanner_scss.css"
       ]
     }
   }
