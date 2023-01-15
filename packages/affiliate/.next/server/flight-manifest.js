@@ -1,8 +1,8 @@
 self.__RSC_MANIFEST={
   "__ssr_module_mapping__": {
-    "../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js": {
+    "../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
         "name": "",
         "chunks": [
           "webpack:webpack",
@@ -11,7 +11,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
         "name": "*",
         "chunks": [
           "webpack:webpack",
@@ -20,7 +20,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
         "name": "default",
         "chunks": [
           "webpack:webpack",
@@ -29,9 +29,9 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js": {
+    "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
         "name": "",
         "chunks": [
           "app/page:app/page"
@@ -39,7 +39,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
         "name": "*",
         "chunks": [
           "app/page:app/page"
@@ -47,7 +47,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
         "name": "default",
         "chunks": [
           "app/page:app/page"
@@ -55,9 +55,9 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js": {
+    "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
         "name": "",
         "chunks": [
           "app/page:app/page"
@@ -65,7 +65,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
         "name": "*",
         "chunks": [
           "app/page:app/page"
@@ -73,7 +73,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
         "name": "default",
         "chunks": [
           "app/page:app/page"
@@ -81,9 +81,9 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js": {
+    "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
         "name": "",
         "chunks": [
           "app/layout:app/layout"
@@ -91,7 +91,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
         "name": "*",
         "chunks": [
           "app/layout:app/layout"
@@ -99,7 +99,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
         "name": "default",
         "chunks": [
           "app/layout:app/layout"
@@ -107,9 +107,9 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js": {
+    "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
         "name": "",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -117,7 +117,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
         "name": "*",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -125,7 +125,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
         "name": "default",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -133,9 +133,9 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js": {
+    "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
         "name": "",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -143,7 +143,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
         "name": "*",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -151,7 +151,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
         "name": "default",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -159,9 +159,9 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js": {
+    "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
         "name": "",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -169,7 +169,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
         "name": "*",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -177,7 +177,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
         "name": "default",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -185,9 +185,9 @@ self.__RSC_MANIFEST={
         "async": false
       }
     },
-    "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js": {
+    "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js": {
       "": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
         "name": "",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -195,7 +195,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "*": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
         "name": "*",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -203,7 +203,7 @@ self.__RSC_MANIFEST={
         "async": false
       },
       "default": {
-        "id": "(sc_client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+        "id": "(sc_client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
         "name": "default",
         "chunks": [
           "app-client-internals:app-client-internals"
@@ -221,9 +221,9 @@ self.__RSC_MANIFEST={
       "static/css/_app-client_app_components_home_HomeBanner_scss.css"
     ]
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
       "name": "",
       "chunks": [
         "app/layout:app/layout"
@@ -231,7 +231,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
       "name": "*",
       "chunks": [
         "app/layout:app/layout"
@@ -239,7 +239,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
       "name": "default",
       "chunks": [
         "app/layout:app/layout"
@@ -247,9 +247,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/esm/client/script.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/esm/client/script.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
       "name": "",
       "chunks": [
         "app/layout:app/layout"
@@ -257,7 +257,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
       "name": "*",
       "chunks": [
         "app/layout:app/layout"
@@ -265,7 +265,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/script.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/script.js",
       "name": "default",
       "chunks": [
         "app/layout:app/layout"
@@ -273,9 +273,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
       "name": "",
       "chunks": [
         "app/page:app/page"
@@ -283,7 +283,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
       "name": "*",
       "chunks": [
         "app/page:app/page"
@@ -291,7 +291,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
       "name": "default",
       "chunks": [
         "app/page:app/page"
@@ -299,9 +299,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/esm/client/image.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/esm/client/image.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
       "name": "",
       "chunks": [
         "app/page:app/page"
@@ -309,7 +309,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
       "name": "*",
       "chunks": [
         "app/page:app/page"
@@ -317,7 +317,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/image.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/image.js",
       "name": "default",
       "chunks": [
         "app/page:app/page"
@@ -325,9 +325,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
       "name": "",
       "chunks": [
         "app/page:app/page"
@@ -335,7 +335,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
         "app/page:app/page"
@@ -343,7 +343,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
       "name": "default",
       "chunks": [
         "app/page:app/page"
@@ -351,9 +351,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/esm/client/link.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/esm/client/link.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
       "name": "",
       "chunks": [
         "app/page:app/page"
@@ -361,7 +361,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
         "app/page:app/page"
@@ -369,7 +369,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/link.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/link.js",
       "name": "default",
       "chunks": [
         "app/page:app/page"
@@ -377,9 +377,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -387,7 +387,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -395,7 +395,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -403,9 +403,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/esm/client/components/app-router.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/esm/client/components/app-router.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -413,7 +413,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -421,7 +421,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/app-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/app-router.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -429,9 +429,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -439,7 +439,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -447,7 +447,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -455,9 +455,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/esm/client/components/error-boundary.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/esm/client/components/error-boundary.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -465,7 +465,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -473,7 +473,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/error-boundary.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/error-boundary.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -481,9 +481,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -491,7 +491,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -499,7 +499,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -507,9 +507,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/esm/client/components/layout-router.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/esm/client/components/layout-router.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -517,7 +517,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -525,7 +525,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/layout-router.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/layout-router.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -533,9 +533,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -543,7 +543,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -551,7 +551,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -559,9 +559,9 @@ self.__RSC_MANIFEST={
       "async": false
     }
   },
-  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/esm/client/components/render-from-template-context.js": {
+  "/Users/milhous/Documents/work/GitHub/doom/node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/esm/client/components/render-from-template-context.js": {
     "": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -569,7 +569,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "*": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "*",
       "chunks": [
         "app-client-internals:app-client-internals"
@@ -577,7 +577,7 @@ self.__RSC_MANIFEST={
       "async": false
     },
     "default": {
-      "id": "(app-client)/../../node_modules/.store/next-virtual-c30510a5c3/node_modules/next/dist/client/components/render-from-template-context.js",
+      "id": "(app-client)/../../node_modules/.store/next-virtual-47cf6502b0/node_modules/next/dist/client/components/render-from-template-context.js",
       "name": "default",
       "chunks": [
         "app-client-internals:app-client-internals"

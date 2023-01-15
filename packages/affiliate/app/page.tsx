@@ -6,8 +6,10 @@ import Assets from './assets';
 import HomeBanner from '@app/components/home/HomeBanner';
 
 export default function Page() {
+
   return (
     <main className="affiliate affiliate-home">
+      {/* @ts-expect-error Server Component */}
       <HomeBanner />
       <h1 className="test">Hello, Next.js!!</h1>
       <h3 className="fontGradient">

@@ -1,6 +1,7 @@
 import './global.scss';
 
 import Script from 'next/script';
+import { cookies } from 'next/headers';
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -9,9 +10,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
   }) {
+    const nextCookies = cookies();
+    const i18nextLng = nextCookies.get('i18nextLng')?.value;
   
   return (
-    <html lang="en">
+    <html lang={i18nextLng}>
       <body>
         {children}
         <Script id="flexible" strategy="beforeInteractive">

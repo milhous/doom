@@ -2,16 +2,17 @@ import path from 'path';
 import fs from 'fs-extra';
 
 // 当前应用路径
-export const appDir = fs.realpathSync(process.cwd());
+const appDir = fs.realpathSync(process.cwd());
 // 路径或路径片段的序列解析为应用绝对路径
-export const resolveAppPath = (appPath) => path.resolve(appDir, appPath);
+const resolveAppPath = (appPath) => path.resolve(appDir, appPath);
 
+// nextJs配置
 const nextConfig = {
   experimental: {
     appDir: true,
   },
   reactStrictMode: true
-}
+};
 
 const webpack = (config) => {
   let svgLoaderOptions = {};
