@@ -1,0 +1,92 @@
+@use "@app/libs/styles/library" as *;
+.affiliate .affiliate-support {
+    @include setFlex(space-between, center);
+    box-sizing: border-box;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    @include mediumScreen {
+        @include setFlex(flex-start, center, column);
+    }
+    @include smallScreen {
+        @include setFlex(flex-start, center, column);
+        padding: 80px 35px;
+    }
+    article {
+        @include setFlex(flex-start, flex-start, column);
+        max-width: 400px;
+        @include mediumScreen {
+            width: 100%;
+            max-width: none;
+        }
+        @include smallScreen {
+            width: 100%;
+            max-width: none;
+        }
+        h3 {
+            @include setFont(30px, 42px, var(--font-title-color), 700);
+            @include smallScreen {
+                font-size: 48px;
+                line-height: 68px;
+            }
+        }
+        ul {
+            margin-top: 20px;
+            @include smallScreen {
+                margin-top: 32px;
+            }
+            ;
+        }
+        li {
+            @include setFont(15px, 26px, var(--font-desc-color));
+            position: relative;
+            padding-left: 10px;
+            @include smallScreen {
+                font-size: 24px;
+                line-height: 42px;
+            }
+            ;
+            &::before {
+                @include setPseudo();
+                position: absolute;
+                left: 3px;
+                top: 12px;
+                width: 2px;
+                height: 2px;
+                border-radius: 50%;
+                background-color: currentColor;
+                @include smallScreen {
+                    top: 18px;
+                    width: 4px;
+                    height: 4px;
+                }
+            }
+        }
+        span {
+            color: var(--font-highlight-color);
+        }
+        .btn-background {
+            @include setBtn(100px, 36px, 16px, var(--font-btn-color), var(--gradient-btn-background), var(--pc-btn-radius));
+            margin-top: 40px;
+            @include mediumScreen {
+                margin: 40px auto 0;
+            }
+            @include smallScreen {
+                @include setBtn(180px, 60px, 22px, var(--font-btn-color), var(--gradient-btn-background), var(--h5-btn-radius));
+                margin: 40px auto 0;
+            }
+        }
+    }
+    aside {
+        @include mediumScreen {
+            margin-top: 40px;
+        }
+        @include smallScreen {
+            margin-top: 40px;
+            img {
+                width: 706px;
+                height: 452px;
+            }
+        }
+    }
+}
