@@ -10,6 +10,7 @@ import HomeSupport from '@app/components/home/HomeSupport';
 import HomeRights from '@app/components/home/HomeRights';
 import HomeAdvantage from '@app/components/home/HomeAdvantage';
 import HomeHow from '@app/components/home/HomeHow';
+import HomeFaq from '@app/components/home/HomeFaq';
 
 export default function Page() {
 
@@ -29,6 +30,8 @@ export default function Page() {
       <HomeAdvantage />
       {/* @ts-expect-error Server Component */}
       <HomeHow />
+      {/* @ts-expect-error Server Component */}
+      <HomeFaq />
     </main>
   );
 }

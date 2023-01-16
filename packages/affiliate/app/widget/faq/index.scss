@@ -1,0 +1,119 @@
+@use "@app/libs/styles/library" as *;
+.widget-faq {
+    --widget-faq-background: #131A26;
+    --widget-faq-title: #fff;
+    --widget-faq-desc: #7286A6;
+    --widget-faq-border: #45556D;
+    --widget-faq-symbol: #02996A;
+    box-sizing: border-box;
+    margin: 2px auto 0;
+    padding: 50px 0 45px;
+    background-color: var(--widget-faq-background);
+    @include smallScreen {
+        padding: 70px 40px;
+    }
+    h3 {
+        @include setFont(30px, 40px, var(--widget-faq-title), 700);
+        text-align: center;
+        @include smallScreen {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+    ul {
+        @include setFlex(center, flex-start);
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        max-width: 1450px;
+        margin: 30px auto 0;
+        padding: 0 30px;
+        @include smallScreen {
+            @include setFlex(center, flex-start, column);
+        }
+        li {
+            box-sizing: border-box;
+            width: 50%;
+            margin-bottom: 20px;
+            padding: 0 10px;
+            @include smallScreen {
+                width: 100%;
+                margin-bottom: 30px;
+                padding: 0;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    details {
+        padding: 12px 20px;
+        border: 1px solid var(--widget-faq-border);
+        border-radius: var(--pc-radius);
+        @include smallScreen {
+            padding: 15px 20px;
+            border-radius: 10px;
+        }
+    }
+    summary {
+        @include setFont(15px, 21px, var(--widget-faq-title), 700);
+        position: relative;
+        padding-left: 20px;
+        @include smallScreen {
+            padding-left: 55px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        i {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 21px;
+            @include smallScreen {
+                width: 24px;
+                height: 40px;
+            }
+            &::before,
+            &::after {
+                @include setPseudo();
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: var(--widget-faq-symbol);
+            }
+            &::before {
+                width: 12px;
+                height: 2px;
+                @include smallScreen {
+                    width: 24px;
+                    height: 4px;
+                }
+            }
+            &::after {
+                display: block;
+                width: 2px;
+                height: 12px;
+                transition: height .2s;
+                @include smallScreen {
+                    width: 4px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    [open] summary {
+        i::after {
+            height: 0;
+        }
+    }
+    p {
+        @include setFont(15px, 21px, var(--widget-faq-desc));
+        margin-top: 10px;
+        @include smallScreen {
+            margin-top: 6px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+}
