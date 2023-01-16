@@ -6,7 +6,7 @@ import { cookies, headers } from 'next/headers';
 import { createInstance, i18n } from 'i18next';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
-import { defaultNS, defaultLng, supportedLngs, cookieLngName, getLng } from './settings';
+import { defaultNS, supportedLngs, cookieLngName, getLng } from './settings';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.parse(__filename).dir;

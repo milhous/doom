@@ -1,7 +1,6 @@
-import './global.scss';
-
 import Script from 'next/script';
-import { cookies } from 'next/headers';
+
+import './global.scss';
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -10,31 +9,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
   }) {
-    const nextCookies = cookies();
-    const i18nextLng = nextCookies.get('i18nextLng')?.value;
-  
   return (
-    <html lang={i18nextLng}>
+    <html>
+      <head>
+        <script src="flexible.js" />
+      </head>
       <body>
         {children}
-        <Script id="flexible" strategy="beforeInteractive">
-          {`
-            var setFontSize = function() {
-              var width = document.documentElement.clientWidth;
-              width = width > 768 ? 768 : width;
-              var fontSize = (width / 768) * 100;
-              var html = document.querySelector('html');
-
-              if (!!html) {
-                html.style.fontSize = fontSize + 'px';
-              }
-            };
-
-            setFontSize();
-
-            window.addEventListener('resize', setFontSize);
-          `}
-        </Script>
       </body>
     </html>
   );
