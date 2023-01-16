@@ -72,7 +72,7 @@ export const getLng = (cookieLng: string | undefined, acceptLng: string) => {
 
     if (!!cookieLng && supportedLngs.includes(cookieLng)) {
         lng = cookieLng;
-    } else {
+    } else if (!!acceptLng) {
         const localeLngs: ILocaleLng[] = getLocaleLngs(acceptLng);
 
         for (const {type} of localeLngs) {
