@@ -55,9 +55,9 @@ module.exports = {
 };
 ```
 
-3. app/layout 加入计算根元素 html 的 font-size 值逻辑。
+3. app/layout header 中引入计算根元素 html 的 font-size 值逻辑的 js。
 
-> 注: 当 Script 在 layout body 中时，strategy 才能设置为 beforeInteractive，插入到 head 中。
+> 注: js 放入项目根路径 public 中。
 
 ```js
 import Script from "next/script";
@@ -70,28 +70,11 @@ export default function RootLayout({
   children: React.ReactNode,
 }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-        <Script id="flexible" strategy="beforeInteractive">
-          {`
-            var setFontSize = function() {
-              var width = document.documentElement.clientWidth;
-              width = width > 768 ? 768 : width;
-              var fontSize = (width / 768) * 100;
-              var html = document.querySelector('html');
-
-              if (!!html) {
-                html.style.fontSize = fontSize + 'px';
-              }
-            };
-
-            setFontSize();
-
-            window.addEventListener('resize', setFontSize);
-          `}
-        </Script>
-      </body>
+    <html>
+      <head>
+        <script src="flexible.js" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
