@@ -37,11 +37,9 @@ const getNSResources = async (lng: string): Promise<any> => {
   return res;
 }
 
-let i18nextInstance: i18n;
-
 const initI18next = async (lng: string) => {
   // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel
-    const i18nInstance = createInstance();
+  const i18nInstance = createInstance();
   const bundledResources = await getResources();
   const ns = Object.keys(bundledResources[lng]);
 
@@ -71,9 +69,7 @@ export async function useTranslation(ns: string | string[]) {
   const acceptLng = nextHeaders.get('Accept-Language');
   const lng = getLng(cookieLng, acceptLng);
 
-  if (!i18nextInstance) {
-    i18nextInstance = await initI18next(lng);
-  }
+  const i18nextInstance = await initI18next(lng);
 
   return {
     // TODO: solve TKPrefix problem here...
