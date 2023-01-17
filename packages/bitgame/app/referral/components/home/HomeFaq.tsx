@@ -9,7 +9,7 @@ import './HomeFaq.scss';
 async function getData() {
   const headersList = headers();
   const host = headersList.get('host');
-  const url = `http://${host}/api/graphql`;
+  const url = `http://localhost:3000/api/graphql`;
   const query =
     '{ invitationInfo {firstBet, lutPrize, betDivisor, rebateAmount, singleLimit, rebateLimit, flowRate, inviteLimt, inviteCode } }';
 
@@ -41,6 +41,7 @@ const HomeFaq = async (): Promise<JSX.Element> => {
   const {t} = await useTranslation(['referral']);
 
   // const {data} = await getData();
+
   const {
     firstBet = 0,
     lutPrize = 0,
@@ -50,6 +51,7 @@ const HomeFaq = async (): Promise<JSX.Element> => {
     rebateLimit = 0,
     flowRate = 0,
   } = {};
+  // data.invitationInfo;
 
   const list: {question: string; answer: string}[] = [];
 

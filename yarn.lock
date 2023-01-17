@@ -1857,9 +1857,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@packages/affiliate@workspace:packages/web":
+"@packages/bitgame@workspace:packages/bitgame":
   version: 0.0.0-use.local
-  resolution: "@packages/affiliate@workspace:packages/web"
+  resolution: "@packages/bitgame@workspace:packages/bitgame"
   dependencies:
     "@svgr/webpack": ^6.5.1
     "@types/fs-extra": ^11
