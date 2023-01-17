@@ -1,0 +1,65 @@
+@use "@libs/styles/library" as *;
+.affiliate .affiliate-banner {
+    @include setFlex(center, center, column);
+    box-sizing: border-box;
+    width: 100%;
+    height: 600px;
+    padding: 0 20px;
+    background: url('~@affiliate/assets/home/banner-bg.jpg') no-repeat center bottom;
+    background-size: cover;
+    @include mediumScreen {
+        height: 725px;
+    }
+    @include smallScreen {
+        height: 950px;
+        background-image: url('~@affiliate/assets/home/banner-bg_h5.jpg');
+        background-size: 100% 950px;
+    }
+    dt {
+        @include setImg(982px,
+        156px,
+        '~@affiliate/assets/home/banner-pic.svg');
+        margin: 0 auto;
+        text-indent: -9999px;
+        @include mediumScreen {
+            @include setImg(484px,
+            348px,
+            '~@affiliate/assets/home/banner-pic_h5.svg');
+        }
+        @include smallScreen {
+            @include setImg(484px,
+            348px,
+            '~@affiliate/assets/home/banner-pic_h5.svg');
+        }
+    }
+    dd {
+        @include setFont(22px,
+        26px,
+        var(--font-subtitle-color));
+        margin-top: 30px;
+        text-align: center;
+        @include smallScreen {
+            margin-top: 20px;
+            font-size: 26px;
+            line-height: 40px;
+        }
+    }
+    .btn-apply {
+        @include setBtn(200px,
+        46px,
+        16px,
+        var(--font-btn-color),
+        var(--gradient-btn-apply),
+        var(--pc-btn-radius));
+        margin-top: 76px;
+        @include smallScreen {
+            @include setBtn(180px,
+            60px,
+            22px,
+            var(--font-btn-color),
+            var(--gradient-btn-apply),
+            var(--h5-btn-radius));
+            margin-top: 90px;
+        }
+    }
+}
