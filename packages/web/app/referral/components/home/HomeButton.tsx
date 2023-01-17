@@ -5,24 +5,24 @@ import {useRouter} from 'next/navigation';
 
 import {cookieLngName} from '@app/libs/i18n/settings';
 
-import useSWR from 'swr';
+// import useSWR from 'swr';
 
-const fetcher = (query: string) =>
-  fetch('/api/graphql', {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify({query}),
-  })
-    .then(res => res.json())
-    .then(json => json.data);
+// const fetcher = (query: string) =>
+//   fetch('/api/graphql', {
+//     method: 'POST',
+//     headers: {
+//       'Content-type': 'application/json',
+//     },
+//     body: JSON.stringify({query}),
+//   })
+//     .then(res => res.json())
+//     .then(json => json.data);
 
-type Data = {
-  users: {
-    name: string;
-  }[];
-};
+// type Data = {
+//   users: {
+//     name: string;
+//   }[];
+// };
 
 const HomeButton = (): JSX.Element => {
   const router = useRouter();
@@ -33,7 +33,7 @@ const HomeButton = (): JSX.Element => {
     router.refresh();
   };
 
-  useSWR<Data>('{ users { name } }', fetcher);
+  // useSWR<Data>('{ users { name } }', fetcher);
 
   return (
     <>

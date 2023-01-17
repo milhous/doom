@@ -1,4 +1,5 @@
 import {headers} from 'next/headers';
+import {NextRequest} from 'next/server';
 
 import {useTranslation} from '@libs/i18n/server';
 import WidgetFaq from '@widget/faq';
@@ -8,9 +9,7 @@ import './HomeFaq.scss';
 async function getData() {
   const headersList = headers();
   const host = headersList.get('host');
-  const referer = headersList.get('referer');
-  const protocol = referer.split(host)[0];
-  const url = `${protocol}${host}/api/graphql`;
+  const url = `http://${host}/api/graphql`;
   const query =
     '{ invitationInfo {firstBet, lutPrize, betDivisor, rebateAmount, singleLimit, rebateLimit, flowRate, inviteLimt, inviteCode } }';
 
@@ -41,7 +40,7 @@ async function getData() {
 const HomeFaq = async (): Promise<JSX.Element> => {
   const {t} = await useTranslation(['referral']);
 
-  const {data} = await getData();
+  // const {data} = await getData();
   const {
     firstBet = 0,
     lutPrize = 0,
@@ -50,7 +49,7 @@ const HomeFaq = async (): Promise<JSX.Element> => {
     singleLimit = 0,
     rebateLimit = 0,
     flowRate = 0,
-  } = data.invitationInfo;
+  } = {};
 
   const list: {question: string; answer: string}[] = [];
 
