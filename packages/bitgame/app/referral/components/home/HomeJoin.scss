@@ -1,0 +1,85 @@
+@use "@libs/styles/library" as *;
+.referral .referral-join {
+    @include setFlex(center, center);
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+    padding: 55px 0 58px;
+    background: linear-gradient(var(--gradient-background));
+    @include smallScreen {
+        margin-top: 70px;
+        padding: 75px 0;
+    }
+    &::before {
+        @include setPseudo();
+        @include setImg(438px, 166px, '~@referral/assets/home/join-bg.png');
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        @include smallScreen {
+            width: 656px;
+            height: 250px;
+        }
+    }
+    &::after {
+        @include setPseudo();
+        $width: 610px;
+        left: 50%;
+        bottom: 54px;
+        transform: translateX(-50%);
+        width: $width;
+        height: $width;
+        border-radius: 50%;
+        background: radial-gradient(var(--gradient-halo));
+        opacity: 0.8;
+        @include smallScreen {
+            $width: 916px;
+            bottom: 80px;
+            width: $width;
+            height: $width;
+        }
+    }
+    div {
+        @include setFlex(center, center, column);
+        position: relative;
+        z-index: 10;
+    }
+    dl {
+        text-align: center;
+        dt {
+            @include setFont(22px, 36px, var(--font-title-color), 700);
+            @include smallScreen {
+                font-size: 34px;
+                line-height: 60px;
+            }
+        }
+        dd {
+            @include setFont(26px, 36px, var(--font-highlight-color), 700);
+            @include smallScreen {
+                font-size: 40px;
+                line-height: 60px;
+            }
+        }
+    }
+    p {
+        @include setFont(15px, 26px, var(--font-content-color));
+        margin-top: 10px;
+        text-align: center;
+        @include smallScreen {
+            margin-top: 26px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+        a {
+            color: var(--font-content-color);
+        }
+    }
+    .btn-apply {
+        @include setBtn(140px, 36px, 16px, var(--font-btn-color), var(--gradient-btn-apply), var(--pc-btn-radius));
+        margin-top: 25px;
+        @include smallScreen {
+            @include setBtn(210px, 60px, 24px, var(--font-btn-color), var(--gradient-btn-apply), var(--h5-btn-radius));
+            margin-top: 36px;
+        }
+    }
+}

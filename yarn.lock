@@ -1871,7 +1871,7 @@ __metadata:
     fs-extra: ^11.1.0
     graphql: ^16.6.0
     graphql-tag: ^2.12.6
-    graphql-yoga: ^3.2.1
+    graphql-yoga: ^3.3.0
     i18next: ^22.4.9
     i18next-browser-languagedetector: ^7.0.1
     i18next-chained-backend: ^4.2.0
@@ -5467,7 +5467,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-yoga@npm:^3.2.1":
+"graphql-yoga@npm:^3.3.0":
   version: 3.3.0
   resolution: "graphql-yoga@npm:3.3.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fgraphql-yoga%2F-%2Fgraphql-yoga-3.3.0.tgz"
   dependencies:

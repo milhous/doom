@@ -84,6 +84,7 @@ const webpack = (config, options) => {
 
   // 别名配置
   const alias = {
+    '@api': resolveAppPath('./pages/api'),
     '@app': resolveAppPath('./app'),
     '@libs': resolveAppPath('./app/libs'),
     '@widget': resolveAppPath('./app/widget'),

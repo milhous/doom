@@ -33,10 +33,10 @@ $gradient-green: to bottom,
     --gradient-background: to right, #0F151F, #141C29 50%, #0F151F;
     --gradient-halo: circle closest-side, #35445E, rgba(3, 18, 35, 0);
     --gradient-share: farthest-corner at 0 0, #2B64B8 0%, #144389 100%;
-    --gradient-btn-copy: @gradient-green;
-    --gradient-btn-create: @gradient-green;
-    --gradient-btn-apply: @gradient-blue;
-    --gradient-btn-invite: @gradient-green;
+    --gradient-btn-copy: #{$gradient-green};
+    --gradient-btn-create: #{$gradient-green};
+    --gradient-btn-apply: #{$gradient-blue};
+    --gradient-btn-invite: #{$gradient-green};
     --background-btn-default: #0091FF;
 }
 
@@ -68,9 +68,9 @@ $gradient-green: to bottom,
     --gradient-background: to right, #0F151F, #141C29 50%, #0F151F;
     --gradient-halo: circle closest-side, #35445E, rgba(3, 18, 35, 0);
     --gradient-share: farthest-corner at 0 0, #2B64B8 0%, #144389 100%;
-    --gradient-btn-copy: @gradient-green;
-    --gradient-btn-create: @gradient-green;
-    --gradient-btn-apply: @gradient-blue;
-    --gradient-btn-invite: @gradient-green;
+    --gradient-btn-copy: #{$gradient-green};
+    --gradient-btn-create: #{$gradient-green};
+    --gradient-btn-apply: #{$gradient-blue};
+    --gradient-btn-invite: #{$gradient-green};
     --background-btn-default: #0091FF;
 }

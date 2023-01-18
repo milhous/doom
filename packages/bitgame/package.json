@@ -13,7 +13,7 @@
     "dependencies": {
         "graphql": "^16.6.0",
         "graphql-tag": "^2.12.6",
-        "graphql-yoga": "^3.2.1",
+        "graphql-yoga": "^3.3.0",
         "i18next": "^22.4.9",
         "i18next-browser-languagedetector": "^7.0.1",
         "i18next-chained-backend": "^4.2.0",

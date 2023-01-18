@@ -12,6 +12,7 @@ const fetcher = (query: string) =>
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
+      Authorization: 'Milhous',
     },
     body: JSON.stringify({query}),
   })

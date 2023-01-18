@@ -1,0 +1,139 @@
+@use "@libs/styles/library" as *;
+.referral .referral-how {
+    box-sizing: border-box;
+    max-width: 1450px;
+    margin: 50px auto 0;
+    padding: 0 40px;
+    @include smallScreen {
+        margin-top: 70px;
+    }
+    h3 {
+        @include setFont(30px, 40px, var(--font-title-color), 700);
+        margin-bottom: 10px;
+        @include smallScreen {
+            margin-bottom: 20px;
+            font-size: 40px;
+            line-height: 56px;
+        }
+    }
+    p {
+        @include setFont(15px, 25px, var(--font-desc-color));
+        @include smallScreen {
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+    .how-list {
+        max-width: 1180px;
+        margin: 0 auto;
+    }
+    ul {
+        @include setFlex(center, flex-start);
+        flex-wrap: wrap;
+        transform: translateX(-25px);
+        width: calc(100% + 50px);
+        padding-top: 10px;
+        @include smallScreen {
+            @include setFlex(center, center, column);
+            padding-top: 0;
+        }
+    }
+    li {
+        width: 340px;
+        margin: 25px 25px 0;
+        @include smallScreen {
+            width: 560px;
+            margin-top: 40px;
+        }
+    }
+    li div {
+        @include setImg(100%, 160px, '~@referral/assets/home/how-bg.jpg');
+        @include setFlex();
+        overflow: hidden;
+        position: relative;
+        border-radius: var(--pc-box-radius);
+        @include smallScreen {
+            height: 264px;
+            border-radius: var(--h5-box-radius);
+        }
+        ;
+        &:before {
+            @include setPseudo();
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-right: 100px solid transparent;
+            border-top: 90px solid var(--corner-background);
+            @include smallScreen {
+                border-right-width: 165px;
+                border-top-width: 148px;
+            }
+            ;
+        }
+        .icon-sn {
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 38px;
+            height: 36px;
+            color: var(--font-desc-color);
+            @include smallScreen {
+                left: 16px;
+                top: 18px;
+                width: 5px;
+                height: 5px;
+            }
+        }
+        .icon-link {
+            width: 75px;
+            height: 75px;
+            @include smallScreen {
+                width: 126px;
+                height: 126px;
+            }
+        }
+        .icon-people {
+            width: 78px;
+            height: 62px;
+            @include smallScreen {
+                width: 128px;
+                height: 104px;
+            }
+        }
+        .icon-usdt {
+            width: 75px;
+            height: 75px;
+            @include smallScreen {
+                width: 126px;
+                height: 126px;
+            }
+        }
+    }
+    dl {
+        margin-top: 20px;
+        @include smallScreen {
+            margin-top: 36px;
+        }
+    }
+    dt {
+        @include setFont(20px, 30px, var(--font-title-color), 700);
+        @include smallScreen {
+            font-size: 30px;
+            line-height: 42px;
+        }
+    }
+    dd {
+        @include setFont(15px, 25px, var(--font-desc-color));
+        margin-top: 5px;
+        @include smallScreen {
+            margin-top: 1px;
+            font-size: 24px;
+            line-height: 42px;
+        }
+        strong {
+            color: var(--font-highlight-color);
+            font-weight: 400;
+        }
+    }
+}

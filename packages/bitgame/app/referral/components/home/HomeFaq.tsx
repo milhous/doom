@@ -1,46 +1,21 @@
-import {headers} from 'next/headers';
-import {NextRequest} from 'next/server';
-
 import {useTranslation} from '@libs/i18n/server';
 import WidgetFaq from '@widget/faq';
+
+import {getInvitationInfo} from '@referral/api';
 
 import './HomeFaq.scss';
 
 async function getData() {
-  const headersList = headers();
-  const host = headersList.get('host');
-  const url = `http://localhost:3000/api/graphql`;
-  const query =
-    '{ invitationInfo {firstBet, lutPrize, betDivisor, rebateAmount, singleLimit, rebateLimit, flowRate, inviteLimt, inviteCode } }';
+  const res = await getInvitationInfo();
 
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify({query}),
-  });
-
-  return res.json();
-
-  //const res = await fetch(`${protocol}${host}/api/user`);
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
-
-  // Recommendation: handle errors
-  // if (!res.ok) {
-  //   // This will activate the closest `error.js` Error Boundary
-  //   throw new Error('Failed to fetch data');
-  // }
-
-  // return res.json();
+  return res;
 }
 
 // 常见问题
 const HomeFaq = async (): Promise<JSX.Element> => {
   const {t} = await useTranslation(['referral']);
 
-  // const {data} = await getData();
+  const data = await getData();
 
   const {
     firstBet = 0,
@@ -50,8 +25,7 @@ const HomeFaq = async (): Promise<JSX.Element> => {
     singleLimit = 0,
     rebateLimit = 0,
     flowRate = 0,
-  } = {};
-  // data.invitationInfo;
+  } = data;
 
   const list: {question: string; answer: string}[] = [];
 
