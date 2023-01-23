@@ -1636,109 +1636,109 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/env@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fenv%2F-%2Fenv-13.1.2.tgz"
-  checksum: 0b25af4a1c31b4d798fea57df05ba45c5e35b13d87a7c612532e5f25e4b800d1d61854b7f95b8064587ee5a5b43f3d33da5d914ec70c132b6ee82925d44cf18c
+"@next/env@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/env@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fenv%2F-%2Fenv-13.1.4.tgz"
+  checksum: 68e222462d35959f183aa17829e3b9045830d0a1030a64bc40fe556bde70584cab7f4bde3bf53abbdbf110fefb2c00a0c573180a50536676919016cded945e09
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/eslint-plugin-next@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Feslint-plugin-next%2F-%2Feslint-plugin-next-13.1.2.tgz"
+"@next/eslint-plugin-next@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/eslint-plugin-next@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Feslint-plugin-next%2F-%2Feslint-plugin-next-13.1.4.tgz"
   dependencies:
     glob: 7.1.7
-  checksum: 6095e224feaaaf4e8d272ce38f86eabd3a3e885ad9a6b06d57566790166ff899bb0378140f129d20ded04ab0ab629fa5f53a7d2754c38176004f92ab53d7c9e6
+  checksum: ac7b0cf88f68ed1993fd3cc36350b4e404578e4e37c968197959adf9b8136ebda4ee9abac8652a085e60757e7ed98fede7ee6bd973ba33639a3bc6f8528a078f
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-android-arm-eabi@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm-eabi%2F-%2Fswc-android-arm-eabi-13.1.2.tgz"
+"@next/swc-android-arm-eabi@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-android-arm-eabi@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm-eabi%2F-%2Fswc-android-arm-eabi-13.1.4.tgz"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-android-arm64@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm64%2F-%2Fswc-android-arm64-13.1.2.tgz"
+"@next/swc-android-arm64@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-android-arm64@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm64%2F-%2Fswc-android-arm64-13.1.4.tgz"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-darwin-arm64@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-arm64%2F-%2Fswc-darwin-arm64-13.1.2.tgz"
+"@next/swc-darwin-arm64@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-darwin-arm64@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-arm64%2F-%2Fswc-darwin-arm64-13.1.4.tgz"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-darwin-x64@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-x64%2F-%2Fswc-darwin-x64-13.1.2.tgz"
+"@next/swc-darwin-x64@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-darwin-x64@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-x64%2F-%2Fswc-darwin-x64-13.1.4.tgz"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-freebsd-x64@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-freebsd-x64@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-freebsd-x64%2F-%2Fswc-freebsd-x64-13.1.2.tgz"
+"@next/swc-freebsd-x64@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-freebsd-x64@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-freebsd-x64%2F-%2Fswc-freebsd-x64-13.1.4.tgz"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm-gnueabihf%2F-%2Fswc-linux-arm-gnueabihf-13.1.2.tgz"
+"@next/swc-linux-arm-gnueabihf@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm-gnueabihf%2F-%2Fswc-linux-arm-gnueabihf-13.1.4.tgz"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-gnu%2F-%2Fswc-linux-arm64-gnu-13.1.2.tgz"
+"@next/swc-linux-arm64-gnu@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-gnu%2F-%2Fswc-linux-arm64-gnu-13.1.4.tgz"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-linux-arm64-musl@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-musl%2F-%2Fswc-linux-arm64-musl-13.1.2.tgz"
+"@next/swc-linux-arm64-musl@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-linux-arm64-musl@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-musl%2F-%2Fswc-linux-arm64-musl-13.1.4.tgz"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-linux-x64-gnu@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-gnu%2F-%2Fswc-linux-x64-gnu-13.1.2.tgz"
+"@next/swc-linux-x64-gnu@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-linux-x64-gnu@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-gnu%2F-%2Fswc-linux-x64-gnu-13.1.4.tgz"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-linux-x64-musl@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-musl%2F-%2Fswc-linux-x64-musl-13.1.2.tgz"
+"@next/swc-linux-x64-musl@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-linux-x64-musl@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-musl%2F-%2Fswc-linux-x64-musl-13.1.4.tgz"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-arm64-msvc%2F-%2Fswc-win32-arm64-msvc-13.1.2.tgz"
+"@next/swc-win32-arm64-msvc@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-arm64-msvc%2F-%2Fswc-win32-arm64-msvc-13.1.4.tgz"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-ia32-msvc%2F-%2Fswc-win32-ia32-msvc-13.1.2.tgz"
+"@next/swc-win32-ia32-msvc@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-ia32-msvc%2F-%2Fswc-win32-ia32-msvc-13.1.4.tgz"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.1.2":
-  version: 13.1.2
-  resolution: "@next/swc-win32-x64-msvc@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-x64-msvc%2F-%2Fswc-win32-x64-msvc-13.1.2.tgz"
+"@next/swc-win32-x64-msvc@npm:13.1.4":
+  version: 13.1.4
+  resolution: "@next/swc-win32-x64-msvc@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-x64-msvc%2F-%2Fswc-win32-x64-msvc-13.1.4.tgz"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1866,8 +1866,10 @@ __metadata:
     "@types/js-cookie": ^3
     "@types/node": 18.11.18
     "@types/react": ^18
+    "@types/react-dom": ^18.0.10
     autoprefixer: ^10.4.13
     browserslist: ^4.21.4
+    copy-webpack-plugin: ^11.0.0
     fs-extra: ^11.1.0
     graphql: ^16.6.0
     graphql-tag: ^2.12.6
@@ -1879,17 +1881,18 @@ __metadata:
     i18next-http-backend: ^2.1.1
     i18next-resources-to-backend: ^1.1.1
     js-cookie: ^3.0.1
-    next: ^13.1.2
+    next: ^13.1.4
     postcss: ^8.4.21
     postcss-normalize: ^10.0.1
     postcss-pxtorem: ^6.0.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-i18next: ^12.1.4
+    react-toastify: ^9.1.1
     sass: ^1.57.1
     server-only: ^0.0.1
-    svgo-loader: ^3.0.3
-    swr: ^2.0.0
+    svgo-loader: ^4.0.0
+    swr: ^2.0.1
   languageName: unknown
   linkType: soft
 
@@ -2236,7 +2239,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^18":
+"@types/react-dom@npm:^18.0.10":
+  version: 18.0.10
+  resolution: "@types/react-dom@npm:18.0.10::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Freact-dom%2F-%2Freact-dom-18.0.10.tgz"
+  dependencies:
+    "@types/react": "*"
+  checksum: ff8282d5005a0b1cd95fb65bf79d3d8485e4cfe2aaf052129033a178684b940014a3f4536bc20d573f8a01cf4c6f4770c74988cef7c2b5cac3041d9f172647e3
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*, @types/react@npm:^18":
   version: 18.0.26
   resolution: "@types/react@npm:18.0.26::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Freact%2F-%2Freact-18.0.26.tgz"
   dependencies:
@@ -2543,6 +2555,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ajv-formats@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "ajv-formats@npm:2.1.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fajv-formats%2F-%2Fajv-formats-2.1.1.tgz"
+  dependencies:
+    ajv: ^8.0.0
+  peerDependencies:
+    ajv: ^8.0.0
+  peerDependenciesMeta:
+    ajv:
+      optional: true
+  checksum: 4a287d937f1ebaad4683249a4c40c0fa3beed30d9ddc0adba04859026a622da0d317851316ea64b3680dc60f5c3c708105ddd5d5db8fe595d9d0207fd19f90b7
+  languageName: node
+  linkType: hard
+
+"ajv-keywords@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "ajv-keywords@npm:5.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fajv-keywords%2F-%2Fajv-keywords-5.1.0.tgz"
+  dependencies:
+    fast-deep-equal: ^3.1.3
+  peerDependencies:
+    ajv: ^8.8.2
+  checksum: c35193940b853119242c6757787f09ecf89a2c19bcd36d03ed1a615e710d19d450cb448bfda407b939aba54b002368c8bff30529cc50a0536a8e10bcce300421
+  languageName: node
+  linkType: hard
+
 "ajv@npm:^6.10.0, ajv@npm:^6.12.4":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fajv%2F-%2Fajv-6.12.6.tgz"
@@ -2552,6 +2589,18 @@ __metadata:
     json-schema-traverse: ^0.4.1
     uri-js: ^4.2.2
   checksum: 874972efe5c4202ab0a68379481fbd3d1b5d0a7bd6d3cc21d40d3536ebff3352a2a1fabb632d4fd2cc7fe4cbdcd5ed6782084c9bbf7f32a1536d18f9da5007d4
+  languageName: node
+  linkType: hard
+
+"ajv@npm:^8.0.0, ajv@npm:^8.8.0":
+  version: 8.12.0
+  resolution: "ajv@npm:8.12.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fajv%2F-%2Fajv-8.12.0.tgz"
+  dependencies:
+    fast-deep-equal: ^3.1.1
+    json-schema-traverse: ^1.0.0
+    require-from-string: ^2.0.2
+    uri-js: ^4.2.2
+  checksum: 4dc13714e316e67537c8b31bc063f99a1d9d9a497eb4bbd55191ac0dcd5e4985bbb71570352ad6f1e76684fb6d790928f96ba3b2d4fd6e10024be9612fe3f001
   languageName: node
   linkType: hard
 
@@ -3651,13 +3700,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"big.js@npm:^5.2.2":
-  version: 5.2.2
-  resolution: "big.js@npm:5.2.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fbig.js%2F-%2Fbig.js-5.2.2.tgz"
-  checksum: b89b6e8419b097a8fb4ed2399a1931a68c612bce3cfd5ca8c214b2d017531191070f990598de2fc6f3f993d91c0f08aa82697717f6b3b8732c9731866d233c9e
-  languageName: node
-  linkType: hard
-
 "binary-extensions@npm:^2.0.0":
   version: 2.2.0
   resolution: "binary-extensions@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fbinary-extensions%2F-%2Fbinary-extensions-2.2.0.tgz"
@@ -3966,6 +4008,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:^1.1.1":
+  version: 1.2.1
+  resolution: "clsx@npm:1.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fclsx%2F-%2Fclsx-1.2.1.tgz"
+  checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
+  languageName: node
+  linkType: hard
+
 "color-convert@npm:^1.9.0":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcolor-convert%2F-%2Fcolor-convert-1.9.3.tgz"
@@ -4069,6 +4118,22 @@ __metadata:
   version: 1.9.0
   resolution: "convert-source-map@npm:1.9.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fconvert-source-map%2F-%2Fconvert-source-map-1.9.0.tgz"
   checksum: dc55a1f28ddd0e9485ef13565f8f756b342f9a46c4ae18b843fe3c30c675d058d6a4823eff86d472f187b176f0adf51ea7b69ea38be34be4a63cbbf91b0593c8
+  languageName: node
+  linkType: hard
+
+"copy-webpack-plugin@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "copy-webpack-plugin@npm:11.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcopy-webpack-plugin%2F-%2Fcopy-webpack-plugin-11.0.0.tgz"
+  dependencies:
+    fast-glob: ^3.2.11
+    glob-parent: ^6.0.1
+    globby: ^13.1.1
+    normalize-path: ^3.0.0
+    schema-utils: ^4.0.0
+    serialize-javascript: ^6.0.0
+  peerDependencies:
+    webpack: ^5.1.0
+  checksum: df4f8743f003a29ee7dd3d9b1789998a3a99051c92afb2ba2203d3dacfa696f4e757b275560fafb8f206e520a0aa78af34b990324a0e36c2326cefdeef3ca82e
   languageName: node
   linkType: hard
 
@@ -4188,6 +4253,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-select@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "css-select@npm:5.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcss-select%2F-%2Fcss-select-5.1.0.tgz"
+  dependencies:
+    boolbase: ^1.0.0
+    css-what: ^6.1.0
+    domhandler: ^5.0.2
+    domutils: ^3.0.1
+    nth-check: ^2.0.1
+  checksum: 2772c049b188d3b8a8159907192e926e11824aea525b8282981f72ba3f349cf9ecd523fdf7734875ee2cb772246c22117fc062da105b6d59afe8dcd5c99c9bda
+  languageName: node
+  linkType: hard
+
 "css-tree@npm:^1.1.2, css-tree@npm:^1.1.3":
   version: 1.1.3
   resolution: "css-tree@npm:1.1.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcss-tree%2F-%2Fcss-tree-1.1.3.tgz"
@@ -4198,7 +4276,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-what@npm:^6.0.1":
+"css-tree@npm:^2.2.1":
+  version: 2.3.1
+  resolution: "css-tree@npm:2.3.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcss-tree%2F-%2Fcss-tree-2.3.1.tgz"
+  dependencies:
+    mdn-data: 2.0.30
+    source-map-js: ^1.0.1
+  checksum: 493cc24b5c22b05ee5314b8a0d72d8a5869491c1458017ae5ed75aeb6c3596637dbe1b11dac2548974624adec9f7a1f3a6cf40593dc1f9185eb0e8279543fbc0
+  languageName: node
+  linkType: hard
+
+"css-tree@npm:~2.2.0":
+  version: 2.2.1
+  resolution: "css-tree@npm:2.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcss-tree%2F-%2Fcss-tree-2.2.1.tgz"
+  dependencies:
+    mdn-data: 2.0.28
+    source-map-js: ^1.0.1
+  checksum: b94aa8cc2f09e6f66c91548411fcf74badcbad3e150345074715012d16333ce573596ff5dfca03c2a87edf1924716db765120f94247e919d72753628ba3aba27
+  languageName: node
+  linkType: hard
+
+"css-what@npm:^6.0.1, css-what@npm:^6.1.0":
   version: 6.1.0
   resolution: "css-what@npm:6.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcss-what%2F-%2Fcss-what-6.1.0.tgz"
   checksum: b975e547e1e90b79625918f84e67db5d33d896e6de846c9b584094e529f0c63e2ab85ee33b9daffd05bff3a146a1916bec664e18bb76dd5f66cbff9fc13b2bbe
@@ -4211,6 +4309,15 @@ __metadata:
   dependencies:
     css-tree: ^1.1.2
   checksum: 380ba9663da3bcea58dee358a0d8c4468bb6539be3c439dc266ac41c047217f52fd698fb7e4b6b6ccdfb8cf53ef4ceed8cc8ceccb8dfca2aa628319826b5b998
+  languageName: node
+  linkType: hard
+
+"csso@npm:^5.0.5":
+  version: 5.0.5
+  resolution: "csso@npm:5.0.5::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcsso%2F-%2Fcsso-5.0.5.tgz"
+  dependencies:
+    css-tree: ~2.2.0
+  checksum: 0ad858d36bf5012ed243e9ec69962a867509061986d2ee07cc040a4b26e4d062c00d4c07e5ba8d430706ceb02dd87edd30a52b5937fd45b1b6f2119c4993d59a
   languageName: node
   linkType: hard
 
@@ -4373,7 +4480,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"domelementtype@npm:^2.0.1, domelementtype@npm:^2.2.0":
+"dom-serializer@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "dom-serializer@npm:2.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fdom-serializer%2F-%2Fdom-serializer-2.0.0.tgz"
+  dependencies:
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.2
+    entities: ^4.2.0
+  checksum: cd1810544fd8cdfbd51fa2c0c1128ec3a13ba92f14e61b7650b5de421b88205fd2e3f0cc6ace82f13334114addb90ed1c2f23074a51770a8e9c1273acbc7f3e6
+  languageName: node
+  linkType: hard
+
+"domelementtype@npm:^2.0.1, domelementtype@npm:^2.2.0, domelementtype@npm:^2.3.0":
   version: 2.3.0
   resolution: "domelementtype@npm:2.3.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fdomelementtype%2F-%2Fdomelementtype-2.3.0.tgz"
   checksum: ee837a318ff702622f383409d1f5b25dd1024b692ef64d3096ff702e26339f8e345820f29a68bcdcea8cfee3531776b3382651232fbeae95612d6f0a75efb4f6
@@ -4389,6 +4507,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"domhandler@npm:^5.0.1, domhandler@npm:^5.0.2":
+  version: 5.0.3
+  resolution: "domhandler@npm:5.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fdomhandler%2F-%2Fdomhandler-5.0.3.tgz"
+  dependencies:
+    domelementtype: ^2.3.0
+  checksum: 0f58f4a6af63e6f3a4320aa446d28b5790a009018707bce2859dcb1d21144c7876482b5188395a188dfa974238c019e0a1e610d2fc269a12b2c192ea2b0b131c
+  languageName: node
+  linkType: hard
+
 "domutils@npm:^2.8.0":
   version: 2.8.0
   resolution: "domutils@npm:2.8.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fdomutils%2F-%2Fdomutils-2.8.0.tgz"
@@ -4397,6 +4524,17 @@ __metadata:
     domelementtype: ^2.2.0
     domhandler: ^4.2.0
   checksum: abf7434315283e9aadc2a24bac0e00eab07ae4313b40cc239f89d84d7315ebdfd2fb1b5bf750a96bc1b4403d7237c7b2ebf60459be394d625ead4ca89b934391
+  languageName: node
+  linkType: hard
+
+"domutils@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "domutils@npm:3.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fdomutils%2F-%2Fdomutils-3.0.1.tgz"
+  dependencies:
+    dom-serializer: ^2.0.0
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.1
+  checksum: 23aa7a840572d395220e173cb6263b0d028596e3950100520870a125af33ff819e6f609e1606d6f7d73bd9e7feb03bb404286e57a39063b5384c62b724d987b3
   languageName: node
   linkType: hard
 
@@ -4409,7 +4547,7 @@ __metadata:
     cross-env: ^7.0.3
     cross-var: ^1.1.0
     eslint: ^8.32.0
-    eslint-config-next: ^13.1.2
+    eslint-config-next: ^13.1.4
     eslint-config-prettier: ^8.6.0
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: 7.32.1
@@ -4464,13 +4602,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emojis-list@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "emojis-list@npm:3.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Femojis-list%2F-%2Femojis-list-3.0.0.tgz"
-  checksum: ddaaa02542e1e9436c03970eeed445f4ed29a5337dfba0fe0c38dfdd2af5da2429c2a0821304e8a8d1cadf27fdd5b22ff793571fa803ae16852a6975c65e8e70
-  languageName: node
-  linkType: hard
-
 "encoding@npm:^0.1.13":
   version: 0.1.13
   resolution: "encoding@npm:0.1.13::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fencoding%2F-%2Fencoding-0.1.13.tgz"
@@ -4497,7 +4628,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^4.4.0":
+"entities@npm:^4.2.0, entities@npm:^4.4.0":
   version: 4.4.0
   resolution: "entities@npm:4.4.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fentities%2F-%2Fentities-4.4.0.tgz"
   checksum: 84d250329f4b56b40fa93ed067b194db21e8815e4eb9b59f43a086f0ecd342814f6bc483de8a77da5d64e0f626033192b1b4f1792232a7ea6b970ebe0f3187c2
@@ -4626,11 +4757,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:^13.1.2":
-  version: 13.1.2
-  resolution: "eslint-config-next@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-config-next%2F-%2Feslint-config-next-13.1.2.tgz"
+"eslint-config-next@npm:^13.1.4":
+  version: 13.1.4
+  resolution: "eslint-config-next@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-config-next%2F-%2Feslint-config-next-13.1.4.tgz"
   dependencies:
-    "@next/eslint-plugin-next": 13.1.2
+    "@next/eslint-plugin-next": 13.1.4
     "@rushstack/eslint-patch": ^1.1.3
     "@typescript-eslint/parser": ^5.42.0
     eslint-import-resolver-node: ^0.3.6
@@ -4645,7 +4776,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 332ab947d1c4ffb4a18108991c80e161ce37d38df706e3e5c621d12c115f078654d335c0fcd5606ec4c3d07bec143c8fbcdd1f593601458ecbe3b97194a009bf
+  checksum: 6bbace5b4626121791d95e4a9c5df9fbf7206d253f7ab85853454850117694dd80de92e8f2c2e62309b1541c61c79e8a4c5a2022a369a767abc9aea172289720
   languageName: node
   linkType: hard
 
@@ -5282,7 +5413,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob-parent@npm:^6.0.2":
+"glob-parent@npm:^6.0.1, glob-parent@npm:^6.0.2":
   version: 6.0.2
   resolution: "glob-parent@npm:6.0.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fglob-parent%2F-%2Fglob-parent-6.0.2.tgz"
   dependencies:
@@ -5394,7 +5525,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^13.1.2":
+"globby@npm:^13.1.1, globby@npm:^13.1.2":
   version: 13.1.3
   resolution: "globby@npm:13.1.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fglobby%2F-%2Fglobby-13.1.3.tgz"
   dependencies:
@@ -6232,6 +6363,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-schema-traverse@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "json-schema-traverse@npm:1.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fjson-schema-traverse%2F-%2Fjson-schema-traverse-1.0.0.tgz"
+  checksum: 02f2f466cdb0362558b2f1fd5e15cce82ef55d60cd7f8fa828cf35ba74330f8d767fcae5c5c2adb7851fa811766c694b9405810879bc4e1ddd78a7c0e03658ad
+  languageName: node
+  linkType: hard
+
 "json-stable-stringify-without-jsonify@npm:^1.0.1":
   version: 1.0.1
   resolution: "json-stable-stringify-without-jsonify@npm:1.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fjson-stable-stringify-without-jsonify%2F-%2Fjson-stable-stringify-without-jsonify-1.0.1.tgz"
@@ -6259,7 +6397,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.2, json5@npm:^2.2.2":
+"json5@npm:^2.2.2":
   version: 2.2.3
   resolution: "json5@npm:2.2.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fjson5%2F-%2Fjson5-2.2.3.tgz"
   bin:
@@ -6360,17 +6498,6 @@ __metadata:
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Flines-and-columns%2F-%2Flines-and-columns-1.2.4.tgz"
   checksum: 0c37f9f7fa212b38912b7145e1cd16a5f3cd34d782441c3e6ca653485d326f58b3caccda66efce1c5812bde4961bbde3374fae4b0d11bf1226152337f3894aa5
-  languageName: node
-  linkType: hard
-
-"loader-utils@npm:^2.0.3":
-  version: 2.0.4
-  resolution: "loader-utils@npm:2.0.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Floader-utils%2F-%2Floader-utils-2.0.4.tgz"
-  dependencies:
-    big.js: ^5.2.2
-    emojis-list: ^3.0.0
-    json5: ^2.1.2
-  checksum: a5281f5fff1eaa310ad5e1164095689443630f3411e927f95031ab4fb83b4a98f388185bb1fe949e8ab8d4247004336a625e9255c22122b815bb9a4c5d8fc3b7
   languageName: node
   linkType: hard
 
@@ -6509,6 +6636,20 @@ __metadata:
   version: 2.0.14
   resolution: "mdn-data@npm:2.0.14::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fmdn-data%2F-%2Fmdn-data-2.0.14.tgz"
   checksum: 9d0128ed425a89f4cba8f787dca27ad9408b5cb1b220af2d938e2a0629d17d879a34d2cb19318bdb26c3f14c77dd5dfbae67211f5caaf07b61b1f2c5c8c7dc16
+  languageName: node
+  linkType: hard
+
+"mdn-data@npm:2.0.28":
+  version: 2.0.28
+  resolution: "mdn-data@npm:2.0.28::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fmdn-data%2F-%2Fmdn-data-2.0.28.tgz"
+  checksum: f51d587a6ebe8e426c3376c74ea6df3e19ec8241ed8e2466c9c8a3904d5d04397199ea4f15b8d34d14524b5de926d8724ae85207984be47e165817c26e49e0aa
+  languageName: node
+  linkType: hard
+
+"mdn-data@npm:2.0.30":
+  version: 2.0.30
+  resolution: "mdn-data@npm:2.0.30::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fmdn-data%2F-%2Fmdn-data-2.0.30.tgz"
+  checksum: d6ac5ac7439a1607df44b22738ecf83f48e66a0874e4482d6424a61c52da5cde5750f1d1229b6f5fa1b80a492be89465390da685b11f97d62b8adcc6e88189aa
   languageName: node
   linkType: hard
 
@@ -6743,24 +6884,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^13.1.2":
-  version: 13.1.2
-  resolution: "next@npm:13.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fnext%2F-%2Fnext-13.1.2.tgz"
+"next@npm:^13.1.4":
+  version: 13.1.4
+  resolution: "next@npm:13.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fnext%2F-%2Fnext-13.1.4.tgz"
   dependencies:
-    "@next/env": 13.1.2
-    "@next/swc-android-arm-eabi": 13.1.2
-    "@next/swc-android-arm64": 13.1.2
-    "@next/swc-darwin-arm64": 13.1.2
-    "@next/swc-darwin-x64": 13.1.2
-    "@next/swc-freebsd-x64": 13.1.2
-    "@next/swc-linux-arm-gnueabihf": 13.1.2
-    "@next/swc-linux-arm64-gnu": 13.1.2
-    "@next/swc-linux-arm64-musl": 13.1.2
-    "@next/swc-linux-x64-gnu": 13.1.2
-    "@next/swc-linux-x64-musl": 13.1.2
-    "@next/swc-win32-arm64-msvc": 13.1.2
-    "@next/swc-win32-ia32-msvc": 13.1.2
-    "@next/swc-win32-x64-msvc": 13.1.2
+    "@next/env": 13.1.4
+    "@next/swc-android-arm-eabi": 13.1.4
+    "@next/swc-android-arm64": 13.1.4
+    "@next/swc-darwin-arm64": 13.1.4
+    "@next/swc-darwin-x64": 13.1.4
+    "@next/swc-freebsd-x64": 13.1.4
+    "@next/swc-linux-arm-gnueabihf": 13.1.4
+    "@next/swc-linux-arm64-gnu": 13.1.4
+    "@next/swc-linux-arm64-musl": 13.1.4
+    "@next/swc-linux-x64-gnu": 13.1.4
+    "@next/swc-linux-x64-musl": 13.1.4
+    "@next/swc-win32-arm64-msvc": 13.1.4
+    "@next/swc-win32-ia32-msvc": 13.1.4
+    "@next/swc-win32-x64-msvc": 13.1.4
     "@swc/helpers": 0.4.14
     caniuse-lite: ^1.0.30001406
     postcss: 8.4.14
@@ -6807,7 +6948,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: bc9aedfc70b979bb33a2190adca3719f8b0012d345a1bc44a6efac320ff599de1e39ade7ba7bae8e5f0d57ebcffb8c4ecc8b7da55565be6a59574896568f0685
+  checksum: cc399e2245c5bf27ac2101672e8ce591d8258bce777de788b812f3e5d346f99349c74be8567b7340270c314bd1522e90de9a36187f9b74dc759aa114a3fb5036
   languageName: node
   linkType: hard
 
@@ -7533,6 +7674,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"randombytes@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "randombytes@npm:2.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Frandombytes%2F-%2Frandombytes-2.1.0.tgz"
+  dependencies:
+    safe-buffer: ^5.1.0
+  checksum: d779499376bd4cbb435ef3ab9a957006c8682f343f14089ed5f27764e4645114196e75b7f6abf1cbd84fd247c0cb0651698444df8c9bf30e62120fbbc52269d6
+  languageName: node
+  linkType: hard
+
 "rc-config-loader@npm:^4.1.1":
   version: 4.1.2
   resolution: "rc-config-loader@npm:4.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Frc-config-loader%2F-%2Frc-config-loader-4.1.2.tgz"
@@ -7593,6 +7743,18 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Freact-is%2F-%2Freact-is-16.13.1.tgz"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-toastify@npm:^9.1.1":
+  version: 9.1.1
+  resolution: "react-toastify@npm:9.1.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Freact-toastify%2F-%2Freact-toastify-9.1.1.tgz"
+  dependencies:
+    clsx: ^1.1.1
+  peerDependencies:
+    react: ">=16"
+    react-dom: ">=16"
+  checksum: 2039255539961a9b4d77b2656f120b20abe46cb0c699a7f3c0af23b4ef669d9c4d24dae6b8f4954b5efd83edf6d6e23614a29e94e9ee0d2647741fba9ba2db85
   languageName: node
   linkType: hard
 
@@ -7926,7 +8088,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-buffer@npm:~5.2.0":
+"safe-buffer@npm:^5.1.0, safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsafe-buffer%2F-%2Fsafe-buffer-5.2.1.tgz"
   checksum: b99c4b41fdd67a6aaf280fcd05e9ffb0813654894223afb78a31f14a19ad220bba8aba1cb14eddce1fcfb037155fe6de4e861784eb434f7d11ed58d1e70dd491
@@ -7980,6 +8142,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"schema-utils@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "schema-utils@npm:4.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fschema-utils%2F-%2Fschema-utils-4.0.0.tgz"
+  dependencies:
+    "@types/json-schema": ^7.0.9
+    ajv: ^8.8.0
+    ajv-formats: ^2.1.1
+    ajv-keywords: ^5.0.0
+  checksum: c843e92fdd1a5c145dbb6ffdae33e501867f9703afac67bdf35a685e49f85b1dcc10ea250033175a64bd9d31f0555bc6785b8359da0c90bcea30cf6dfbb55a8f
+  languageName: node
+  linkType: hard
+
 "semver-diff@npm:^4.0.0":
   version: 4.0.0
   resolution: "semver-diff@npm:4.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsemver-diff%2F-%2Fsemver-diff-4.0.0.tgz"
@@ -8013,6 +8187,15 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: ba9c7cbbf2b7884696523450a61fee1a09930d888b7a8d7579025ad93d459b2d1949ee5bbfeb188b2be5f4ac163544c5e98491ad6152df34154feebc2cc337c1
+  languageName: node
+  linkType: hard
+
+"serialize-javascript@npm:^6.0.0":
+  version: 6.0.1
+  resolution: "serialize-javascript@npm:6.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fserialize-javascript%2F-%2Fserialize-javascript-6.0.1.tgz"
+  dependencies:
+    randombytes: ^2.1.0
+  checksum: 3c4f4cb61d0893b988415bdb67243637333f3f574e9e9cc9a006a2ced0b390b0b3b44aef8d51c951272a9002ec50885eefdc0298891bc27eb2fe7510ea87dc4f
   languageName: node
   linkType: hard
 
@@ -8136,7 +8319,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.2":
+"source-map-js@npm:>=0.6.2 <2.0.0, source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsource-map-js%2F-%2Fsource-map-js-1.0.2.tgz"
   checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
@@ -8423,13 +8606,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo-loader@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "svgo-loader@npm:3.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsvgo-loader%2F-%2Fsvgo-loader-3.0.3.tgz"
+"svgo-loader@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "svgo-loader@npm:4.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsvgo-loader%2F-%2Fsvgo-loader-4.0.0.tgz"
   dependencies:
-    loader-utils: ^2.0.3
-    svgo: ^2.8.0
-  checksum: 50f0241dec806da548e7034b19499488e47da40cf278135e18e9650ce159d2c8b38bc753fba87f6af297a002f2d2a0a6f202544be1e4217e92d90819834e7186
+    svgo: ^3.0.0
+  checksum: c5c86d7b8d302cbdce16a534576aee8c630c4a12323f46597a29b3e83befde30faadb63740273d873d32a805b0b1b0458c3ec5c3500344541e3677f7c51065c6
   languageName: node
   linkType: hard
 
@@ -8450,14 +8632,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swr@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "swr@npm:2.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fswr%2F-%2Fswr-2.0.0.tgz"
+"svgo@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "svgo@npm:3.0.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsvgo%2F-%2Fsvgo-3.0.2.tgz"
+  dependencies:
+    "@trysound/sax": 0.2.0
+    commander: ^7.2.0
+    css-select: ^5.1.0
+    css-tree: ^2.2.1
+    csso: ^5.0.5
+    picocolors: ^1.0.0
+  bin:
+    svgo: bin/svgo
+  checksum: 381ba14aa782e71ab7033227634a3041c11fa3e2769aeaf0df43a08a615de61925108e34f55af6e7c5146f4a3109e78deabb4fa9d687e36d45d1f848b4e23d17
+  languageName: node
+  linkType: hard
+
+"swr@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "swr@npm:2.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fswr%2F-%2Fswr-2.0.1.tgz"
   dependencies:
     use-sync-external-store: ^1.2.0
   peerDependencies:
     react: ^16.11.0 || ^17.0.0 || ^18.0.0
-  checksum: 4852d8318ed022a681b40a384e675f65e211104d62075c1250b02f47cc8b739cb9138a954e2191c700e2de22b010b9bd05a113c71b193abe0c351d3c4f4646d8
+  checksum: 5466e46a80bccf722c212ea3f14668b4e7f047d958f3da7252fba3529e6b1773a1762aa4bbf43aec104cc50625dbd55380539eeef59fd5ad9ebca6ad0552f45d
   languageName: node
   linkType: hard
 

@@ -1,4 +1,4 @@
-import {useTranslation} from '@libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 import WidgetFaq from '@widget/faq';
 
 import {getInvitationInfo} from '@referral/api';
@@ -13,7 +13,7 @@ async function getData() {
 
 // 常见问题
 const HomeFaq = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslation(['referral']);
+  const {t} = await useTranslate(['referral']);
 
   const data = await getData();
 

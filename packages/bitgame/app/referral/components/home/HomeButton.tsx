@@ -4,8 +4,10 @@ import Cookies from 'js-cookie';
 import {useRouter} from 'next/navigation';
 
 import {cookieLngName} from '@app/libs/i18n/settings';
+import {changeLang} from '@app/libs/i18n/client';
 
 import useSWR from 'swr';
+import ReactDOM from 'react-dom';
 
 const fetcher = (query: string) =>
   fetch('/api/graphql', {
@@ -29,8 +31,9 @@ const HomeButton = (): JSX.Element => {
   const router = useRouter();
 
   const hanldeChange = (lng: string) => {
-    Cookies.set(cookieLngName, lng);
+    changeLang(lng);
 
+    Cookies.set(cookieLngName, lng);
     router.refresh();
   };
 

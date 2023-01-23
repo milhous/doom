@@ -33,7 +33,7 @@ const users = [
 const resolvers = {
   Query: {
     users(_, _args, context) {
-      console.log('context', context.request.headers.get('Authorization'));
+      // console.log('context', context.request.headers.get('Authorization'));
 
       return users;
     },

@@ -1,5 +1,5 @@
 @use "@libs/styles/library" as *;
-.affiliate .affiliate-support {
+#affiliate .affiliate-support {
     @include setFlex(space-between, center);
     box-sizing: border-box;
     max-width: 1120px;

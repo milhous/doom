@@ -1,0 +1,130 @@
+@use "@libs/styles/library" as *;
+$toastColor: #0ec68d;
+$errorColor: #ff3c3c;
+.Toastify {
+    .Toastify__toast-container--top-right {
+        top: 15px;
+        right: 10px;
+    }
+    .Toastify__toast-container--top-center {
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .Toastify__toast-container {
+        width: auto;
+        padding-top: constant(safe-area-inset-top);
+        padding-top: env(safe-area-inset-top);
+    }
+    .widget-toastify {
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 320px;
+        min-height: 60px;
+        margin: 0 0 10px 0;
+        padding: 10px 20px;
+        border-left: 6px solid #{$toastColor};
+        border-right: 6px solid transparent;
+        border-radius: 6px;
+        background-color: #29394f;
+        color: #fff;
+        font-size: 14px;
+        line-height: 20px;
+        @include smallScreen {
+            width: 480px;
+            min-height: 90px;
+            margin-bottom: 15px;
+            padding: 10px 40px;
+            border-left-width: 9px;
+            border-right-width: 9px;
+            border-radius: 9px;
+            font-size: 24px;
+            line-height: 46px;
+        }
+        &.widget-toastify_error {
+            border-left-color: #{$errorColor}!important;
+            .widget-toastify_content {
+                svg {
+                    fill: #{$errorColor}!important;
+                }
+            }
+        }
+        .Toastify__toast-body {
+            padding: 0;
+        }
+        .widget-toastify_content {
+            display: flex;
+            svg {
+                $width: 18px;
+                width: $width;
+                min-width: $width;
+                height: $width;
+                margin-right: 10px;
+                fill: #{$toastColor};
+                @include smallScreen {
+                    $width: 28px;
+                    width: $width;
+                    min-width: $width;
+                    height: $width;
+                    margin-top: 8px;
+                }
+            }
+            p {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        .Toastify__close-button {
+            position: absolute;
+            right: 0;
+            top: 6px;
+            color: #fff;
+            opacity: 1;
+            svg {
+                width: 14px;
+                height: 16px;
+            }
+            @include smallScreen {
+                top: 9px;
+                svg {
+                    width: 28px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
+
+.widget-toastify_content_share {
+    .title {
+        text-align: center;
+        font-size: 18px;
+        padding: 15px 0;
+        @include smallScreen {
+            font-size: 30px;
+        }
+    }
+    .matchReward,
+    .lutReward {
+        @include setFlex(center, center);
+        padding: 0 10px 5px;
+        font-size: 15px;
+        white-space: normal;
+        @include smallScreen {
+            font-size: 24px;
+        }
+        span {
+            margin-left: 10px;
+            color: #f7b500;
+            font-weight: 700;
+            white-space: nowrap;
+            @include smallScreen {
+                font-size: 24px;
+            }
+        }
+    }
+}

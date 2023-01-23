@@ -6,6 +6,7 @@ import {cookies, headers} from 'next/headers';
 import {createInstance} from 'i18next';
 import {initReactI18next} from 'react-i18next/initReactI18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
+
 import {defaultNS, supportedLngs, cookieLngName, getLng} from './settings';
 
 const __filename = url.fileURLToPath(import.meta.url);
@@ -91,7 +92,7 @@ const initI18next = async (lng: string) => {
   return i18nInstance;
 };
 
-export async function useTranslation(ns: string | string[]) {
+export async function useTranslate(ns: string | string[]) {
   const nextCookies = cookies();
   const cookieLng = nextCookies.get(cookieLngName)?.value;
   const nextHeaders = headers();

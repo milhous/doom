@@ -19,7 +19,7 @@ export interface IGetInvitationInfoData {
   singleLimit: number;
   rebateLimit: number;
   flowRate: number;
-  inviteLimt: number;
+  inviteLimit: number;
   inviteCode: string;
 }
 
@@ -32,7 +32,7 @@ const invitationInfo: IGetInvitationInfoData = {
   singleLimit: 5,
   rebateLimit: 6,
   flowRate: 7,
-  inviteLimt: 8,
+  inviteLimit: 8,
   inviteCode: 'DGGIzkd4',
 };
 

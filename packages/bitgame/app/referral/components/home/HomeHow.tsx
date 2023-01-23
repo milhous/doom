@@ -1,6 +1,6 @@
 import {Trans} from 'react-i18next/TransWithoutContext';
 
-import {useTranslation} from '@libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 
 import Assets from '@referral/assets';
 import {getInvitationInfo} from '@referral/api';
@@ -14,7 +14,7 @@ async function getData() {
 }
 
 const HomeHow = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslation(['referral']);
+  const {t} = await useTranslate(['referral']);
 
   const data = await getData();
   const {betDivisor, lutPrize, rebateAmount, rebateLimit} = data;

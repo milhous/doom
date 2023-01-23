@@ -1,6 +1,6 @@
 import {Trans} from 'react-i18next/TransWithoutContext';
 
-import {useTranslation} from '@app/libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 
 import Assets from '@app/affiliate/assets';
 
@@ -8,7 +8,7 @@ import './HomePlan.scss';
 
 // 联盟计划
 const HomePlan = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslation(['affiliate']);
+  const {t} = await useTranslate(['affiliate']);
 
   return (
     <section className="affiliate-plan">

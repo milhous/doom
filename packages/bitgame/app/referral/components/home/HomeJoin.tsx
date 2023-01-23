@@ -1,11 +1,11 @@
-import {useTranslation} from '@libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 
 import WidgetAnalytics from '@widget/analytics';
 
 import './HomeJoin.scss';
 
 const ReferralJoin = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslation(['referral']);
+  const {t} = await useTranslate(['referral']);
 
   return (
     <section className="referral-join">

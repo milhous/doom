@@ -1,5 +1,5 @@
 @use "@libs/styles/library" as *;
-.affiliate .affiliate-banner {
+#affiliate .affiliate-banner {
     @include setFlex(center, center, column);
     box-sizing: border-box;
     width: 100%;

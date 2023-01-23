@@ -1,5 +1,5 @@
 @use "@libs/styles/library" as *;
-.affiliate .affiliate-rights {
+#affiliate .affiliate-rights {
     background-color: var(--section-background);
     div {
         @include setFlex(space-between, center);

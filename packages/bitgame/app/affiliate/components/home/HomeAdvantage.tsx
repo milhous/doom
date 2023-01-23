@@ -1,4 +1,4 @@
-import {useTranslation} from '@app/libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 
 import Assets from '@app/affiliate/assets';
 
@@ -6,7 +6,7 @@ import './HomeAdvantage.scss';
 
 // 竞争优势
 const HomeAdvantage = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslation(['affiliate']);
+  const {t} = await useTranslate(['affiliate']);
 
   return (
     <section className="affiliate-advantage">

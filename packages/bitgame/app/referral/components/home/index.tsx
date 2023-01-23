@@ -1,4 +1,4 @@
-// import HomeBanner from './HomeBanner';
+import HomeBanner from './HomeBanner';
 // import HomePlan from './HomePlan';
 // import HomeCommission from './HomeCommission';
 // import HomeSupport from './HomeSupport';
@@ -11,7 +11,9 @@ import HomeButton from './HomeButton';
 
 const Home = () => {
   return (
-    <main className="referral referral-home">
+    <main id="referral" className="referral-home">
+      {/* @ts-expect-error Server Component */}
+      <HomeBanner />
       {/* @ts-expect-error Server Component */}
       <HomeHow />
       {/* @ts-expect-error Server Component */}

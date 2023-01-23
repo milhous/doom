@@ -3,8 +3,8 @@ import Home from '@referral/components/home';
 
 import './theme.scss';
 
-setLocalesPath('referral');
-
 export default function Page() {
+  setLocalesPath('referral');
+
   return <Home />;
 }

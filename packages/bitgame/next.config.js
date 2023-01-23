@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs-extra';
+import CopyPlugin from 'copy-webpack-plugin';
 
 // 当前应用路径
 const appDir = fs.realpathSync(process.cwd());
@@ -93,6 +94,24 @@ const webpack = (config, options) => {
   };
 
   config.resolve.alias = {...config.resolve.alias, ...alias};
+
+  console.log(config.output.publicPath);
+
+  // 插件
+  config.plugins.push(
+    new CopyPlugin({
+      patterns: [
+        {
+          from: resolveAppPath('./app/referral/locales'),
+          to: resolveAppPath(`./.next/static/locales/referral`),
+          globOptions: {
+            ignore: ['**/.DS_Store'],
+          },
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
+  );
 
   return config;
 };

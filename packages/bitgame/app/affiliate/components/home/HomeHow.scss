@@ -1,5 +1,5 @@
 @use "@libs/styles/library" as *;
-.affiliate .affiliate-how {
+#affiliate .affiliate-how {
     @include setFlex(center, center, column);
     box-sizing: border-box;
     margin: 0 auto;

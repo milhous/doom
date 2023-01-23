@@ -1,11 +1,11 @@
-import {useTranslation} from '@libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 import WidgetFaq from '@widget/faq';
 
 import './HomeFaq.scss';
 
 // 常见问题
 const HomeFaq = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslation(['affiliate']);
+  const {t} = await useTranslate(['affiliate']);
 
   const list: {question: string; answer: string}[] = [];
 

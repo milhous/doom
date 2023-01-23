@@ -1,6 +1,6 @@
 import {Trans} from 'react-i18next/TransWithoutContext';
 
-import {useTranslation} from '@app/libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 
 import Assets from '@app/affiliate/assets';
 
@@ -8,7 +8,7 @@ import './HomeCommission.scss';
 
 // 代理佣金
 const HomeCommission = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslation(['affiliate']);
+  const {t} = await useTranslate(['affiliate']);
 
   return (
     <section className="affiliate-commission">

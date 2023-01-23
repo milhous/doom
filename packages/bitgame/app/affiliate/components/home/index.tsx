@@ -10,7 +10,7 @@ import HomeButton from './HomeButton';
 
 const Home = () => {
   return (
-    <main className="affiliate affiliate-home">
+    <main id="affiliate" className="affiliate-home">
       {/* @ts-expect-error Server Component */}
       <HomeBanner />
       {/* @ts-expect-error Server Component */}

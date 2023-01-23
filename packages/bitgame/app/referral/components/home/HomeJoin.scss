@@ -1,5 +1,5 @@
 @use "@libs/styles/library" as *;
-.referral .referral-join {
+#referral .referral-join {
     @include setFlex(center, center);
     overflow: hidden;
     position: relative;
