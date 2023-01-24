@@ -1,0 +1,68 @@
+@use "@libs/styles/library" as *;
+.ui-toolbar {
+    @include setFlex(space-between);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background-color: #161f2c;
+    aside {
+        @include setFlex(flex-start, center);
+        display: flex;
+        height: 32px;
+        &>i {
+            width: 1px;
+            height: 20px;
+            background-color: #3a4a61;
+        }
+    }
+    &_content {
+        @include setFlex(space-between, flex-end);
+        box-sizing: border-box;
+        max-width: 1600px;
+        height: 44px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    &_app {
+        @include setFlex(flex-start, center);
+        padding: 0 20px;
+        li {
+            @include setFlex(flex-start, center);
+            position: relative;
+            margin-left: 20px;
+            color: #7286a6;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:hover {
+                color: #dbe4ff;
+            }
+            &:hover>div {
+                display: block;
+            }
+            &>div {
+                display: none;
+            }
+        }
+        svg {
+            cursor: pointer;
+            fill: currentColor;
+        }
+    }
+    &_QRCode {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        bottom: -170px;
+        transform: translateX(-50%);
+        width: 160px;
+        height: 160px;
+        padding: 20px;
+        border-radius: var(--pc-radius);
+        background-color: #202c3c;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
