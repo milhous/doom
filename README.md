@@ -129,14 +129,15 @@ const webpack = (config) => {
         options: {
           plugins: [
             {
-              name: "preset-default",
+              name: 'preset-default',
               params: {
                 overrides: {
-                  removeViewBox: false,
-                  cleanupIDs: false,
+                  removeViewBox: false
                 },
               },
             },
+            // 解决ID被移除后svg可能不显示问题
+            'prefixIds'
           ],
         },
       },
@@ -156,14 +157,15 @@ const webpack = (config) => {
           svgoConfig: {
             plugins: [
               {
-                name: "preset-default",
+                name: 'preset-default',
                 params: {
                   overrides: {
-                    removeViewBox: false,
-                    cleanupIDs: false,
+                    removeViewBox: false
                   },
                 },
               },
+              // 解决ID被移除后svg可能不显示问题
+              'prefixIds'
             ],
           },
         },

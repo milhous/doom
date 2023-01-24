@@ -60,7 +60,7 @@ const ContentShare = (props: IContentProps): JSX.Element => {
 };
 
 export const toast = (str: any, options: any = {}): void => {
-  const opts = Object.assign({}, defaultOptions, options);
+  const opts = {...defaultOptions, ...options};
 
   init();
 
@@ -68,7 +68,7 @@ export const toast = (str: any, options: any = {}): void => {
 };
 
 export const error = (str: any, options: any = {}): void => {
-  const opts = Object.assign({}, defaultOptions, options);
+  const opts = {...defaultOptions, ...options};
 
   opts.className = opts.className + ' widget-toastify_error';
 
@@ -78,7 +78,7 @@ export const error = (str: any, options: any = {}): void => {
 };
 
 export const toastShare = (str: any, options: any = {}): void => {
-  const opts = Object.assign({}, defaultOptions, options);
+  const opts = {...defaultOptions, ...options};
 
   init();
 

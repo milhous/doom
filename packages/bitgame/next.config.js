@@ -44,11 +44,11 @@ const webpack = (config, options) => {
               name: 'preset-default',
               params: {
                 overrides: {
-                  removeViewBox: false,
-                  cleanupIDs: false,
+                  removeViewBox: false
                 },
               },
             },
+            'prefixIds'
           ],
         },
       },
@@ -71,11 +71,11 @@ const webpack = (config, options) => {
                 name: 'preset-default',
                 params: {
                   overrides: {
-                    removeViewBox: false,
-                    cleanupIDs: false,
+                    removeViewBox: false
                   },
                 },
               },
+              'prefixIds'
             ],
           },
         },
@@ -88,14 +88,13 @@ const webpack = (config, options) => {
     '@api': resolveAppPath('./pages/api'),
     '@app': resolveAppPath('./app'),
     '@libs': resolveAppPath('./app/libs'),
+    '@ui': resolveAppPath('./app/ui'),
     '@widget': resolveAppPath('./app/widget'),
     '@affiliate': resolveAppPath('./app/affiliate'),
     '@referral': resolveAppPath('./app/referral'),
   };
 
   config.resolve.alias = {...config.resolve.alias, ...alias};
-
-  console.log(config.output.publicPath);
 
   // 插件
   config.plugins.push(

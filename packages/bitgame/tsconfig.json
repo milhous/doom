@@ -24,6 +24,7 @@
       "@api/*": ["pages/api/*"],
       "@app/*": ["app/*"],
       "@libs/*": ["app/libs/*"],
+      "@ui/*": ["app/ui/*"],
       "@widget/*": ["app/widget/*"],
       "@affiliate/*": ["app/affiliate/*"],
       "@referral/*": ["app/referral/*"]
