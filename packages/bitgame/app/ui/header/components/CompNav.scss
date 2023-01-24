@@ -16,11 +16,12 @@
             }
             &::before {
                 @include setPseudo();
+                $height: 4px;
                 left: 50%;
                 bottom: 0;
                 transform: translate(-50%, 100%);
                 width: 0;
-                height: 4px;
+                height: $height;
                 border-radius: calc($height / 2);
                 background-color: var(--ui-header-hover);
                 transition: width var(--animation-duration);

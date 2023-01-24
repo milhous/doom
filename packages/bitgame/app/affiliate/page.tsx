@@ -1,10 +1,18 @@
-import {setAppname} from '@libs/i18n/server';
-import Home from '@affiliate/components/home';
+import { setAppname } from '@libs/i18n/server';
+import Header from '@ui/header';
+
+import Home from './components/home';
 
 import './theme.scss';
 
-export default function Page() {
+const Page = async (): Promise<JSX.Element> => {
   setAppname('affiliate');
 
-  return <Home />;
+  return <>
+    {/* @ts-expect-error Server Component */}
+    <Header />
+    <Home />
+  </>;
 }
+
+export default Page;

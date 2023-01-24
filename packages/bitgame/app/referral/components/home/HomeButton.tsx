@@ -1,7 +1,7 @@
 'use client';
 
 import Cookies from 'js-cookie';
-import {useRouter} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 import {cookieLngName} from '@app/libs/i18n/settings';
 import {changeLang} from '@app/libs/i18n/client';
