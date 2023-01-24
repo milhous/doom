@@ -2,8 +2,8 @@ import './index.scss';
 
 import logo from './assets/logo.png?as=apng';
 
-import CompNav from './components/CompNav';
-import CompButtons from './components/CompButtons';
+// import CompNav from './components/CompNav';
+// import CompButtons from './components/CompButtons';
 
 // header
 const UIHeader = (): JSX.Element => {
@@ -14,8 +14,8 @@ const UIHeader = (): JSX.Element => {
           <img className="ui-header_logo" src={logo} />
         </aside>
         <article>
-          <CompNav />
-          <CompButtons />
+          {/* <CompNav />
+          <CompButtons /> */}
         </article>
       </section>
     </div>
