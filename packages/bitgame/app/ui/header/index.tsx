@@ -19,6 +19,7 @@ const UIHeader =  async (): Promise<JSX.Element> => {
             alt="Picture of the author"
             width={logo.width}
             height={logo.height}
+            priority
           />
         </aside>
         <article>
