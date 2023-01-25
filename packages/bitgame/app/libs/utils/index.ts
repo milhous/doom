@@ -66,7 +66,16 @@ export const isAndroid = (): boolean => {
  * @returns {string}
  */
 export const getQueryParam = (key = '', search?: string, isFuzzy = false): string => {
-  const paramsString = typeof search === 'string' && search !== '' ? search : location.search;
+  let paramsString = '';
+
+  if (typeof search === 'string' && search !== '') {
+    paramsString = search;
+  }
+
+  if (paramsString === '' && typeof window !== 'undefined') {
+    paramsString = window.location.search;
+  }
+
   const searchParams = new URLSearchParams(paramsString);
   let context = '';
 
@@ -90,7 +99,16 @@ export const getQueryParam = (key = '', search?: string, isFuzzy = false): strin
  * @returns {string}
  */
 export const removeQueryParam = (key: string, search?: string): string => {
-  const paramsString = typeof search === 'string' && search !== '' ? search : location.search;
+  let paramsString = '';
+
+  if (typeof search === 'string' && search !== '') {
+    paramsString = search;
+  }
+
+  if (paramsString === '' && typeof window !== 'undefined') {
+    paramsString = window.location.search;
+  }
+
   const searchParams = new URLSearchParams(paramsString);
 
   if (searchParams.has(key)) {

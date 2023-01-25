@@ -5,6 +5,8 @@ import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 
 import {IRouterInfo} from '@libs/config/routers';
+import {cookieLngName} from '@app/libs/i18n/settings';
+import {getCurLang} from '@libs/i18n/client';
 
 import './CompNav.scss';
 
@@ -23,7 +25,13 @@ const CompNavItem = (props: {route: IRouterInfo; children: React.ReactNode}): JS
 
   return (
     <div className="header-nav_item">
-      <Link href={route.to} className={isActive ? 'header-nav_link active' : 'header-nav_link'}>
+      <Link
+        href={{
+          pathname: route.to,
+          query: {[cookieLngName]: getCurLang()},
+        }}
+        className={isActive ? 'header-nav_link active' : 'header-nav_link'}
+      >
         {children}
       </Link>
     </div>
