@@ -20,9 +20,9 @@ export const useInterval = (cb: () => void, delay: number | null) => {
     }
 
     if (delay !== null) {
-      const id = setInterval(tick, delay);
+      const id = window.setInterval(tick, delay);
 
-      return () => clearInterval(id);
+      return () => window.clearInterval(id);
     }
   }, [delay]);
 };
@@ -56,10 +56,10 @@ export const useDebounce = <F extends (...args: any[]) => any>(func: F, delay = 
 
   return useCallback(function f(...args: any[]) {
     if (!!current.timer) {
-      clearTimeout(current.timer);
+      window.clearTimeout(current.timer);
     }
 
-    current.timer = setTimeout(() => {
+    current.timer = window.setTimeout(() => {
       current.func(...args);
     }, delay);
   }, dep);
