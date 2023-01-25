@@ -37,7 +37,7 @@ export const useThrottle = <F extends (...args: any[]) => any>(func: F, delay = 
 
   return useCallback(function f(...args: any[]) {
     if (!current.timer) {
-      current.timer = setTimeout(() => {
+      current.timer = window.setTimeout(() => {
         current.timer = null;
       }, delay);
 
