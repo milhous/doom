@@ -1,5 +1,6 @@
 'use client';
 
+import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
 // import analytics from '@libs/analytics';
 import {copy, share} from '@libs/utils';
@@ -32,7 +33,7 @@ interface IBannerBtnShareProps {
 // 分享按钮
 export const BannerBtnShare = (props: IBannerBtnShareProps): JSX.Element => {
   const {type, inviteCode, children} = props;
-  const {t} = useTranslate(['referral', 'common']);
+  const {t} = useTranslate(['referral', 'common'], PackageType.REFERRAL);
   const link = getLink(inviteCode);
 
   /**
@@ -91,7 +92,7 @@ interface IBannerBtnCopyProps {
 // 复制按钮
 export const BannerBtnCopy = (props: IBannerBtnCopyProps): JSX.Element => {
   const {type, inviteCode, children} = props;
-  const {t} = useTranslate(['referral', 'common']);
+  const {t} = useTranslate(['referral', 'common'], PackageType.REFERRAL);
 
   /**
    * 复制
@@ -145,7 +146,7 @@ interface IBannerBtnCreateProps {
 // 创建按钮
 export const BannerBtnCreate = (props: IBannerBtnCreateProps): JSX.Element => {
   const {inviteNums, inviteLimit, children} = props;
-  const {t} = useTranslate(['referral', 'common']);
+  const {t} = useTranslate(['referral', 'common'], PackageType.REFERRAL);
 
   // 创建
   const handleCreate = () => {

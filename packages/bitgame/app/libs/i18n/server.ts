@@ -7,6 +7,8 @@ import {createInstance, i18n} from 'i18next';
 import {initReactI18next} from 'react-i18next/initReactI18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 
+import {readDirInfo} from '@libs/utils/server';
+
 import {defaultNS, supportedLngs, cookieLngName, getLng} from './settings';
 
 const __filename = url.fileURLToPath(import.meta.url);
@@ -25,27 +27,6 @@ const getLocalesPath = (appname: string): string => {
   const localesPath = path.resolve(__dirname, `../../${appname}/locales`);
 
   return localesPath;
-};
-
-/**
- * 获取目录信息
- * @param {string} path 目录路径
- */
-const readDirInfo = async (path: string): Promise<string[]> => {
-  const reg = new RegExp(/\.DS_Store|node_modules$/);
-  const isExist = await fs.pathExists(path);
-
-  if (!isExist) {
-    return [];
-  }
-
-  let dirInfo = await fs.readdir(path);
-
-  dirInfo = dirInfo.filter((item: string) => {
-    return !reg.test(item);
-  });
-
-  return dirInfo;
 };
 
 /**
@@ -94,7 +75,6 @@ const getNSResources = async (lng: string, localesPath: string): Promise<any> =>
  * 初始化i18n
  * @param {string} appname app名称
  * @param {string} lng 语言
- * @returns
  */
 const initI18next = async (appname: string, lng: string): Promise<i18n> => {
   // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel

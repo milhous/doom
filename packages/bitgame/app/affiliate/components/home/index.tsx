@@ -6,7 +6,6 @@ import HomeRights from './HomeRights';
 import HomeAdvantage from './HomeAdvantage';
 import HomeHow from './HomeHow';
 import HomeFaq from './HomeFaq';
-import HomeButton from './HomeButton';
 
 const Home = () => {
   return (
@@ -27,7 +26,6 @@ const Home = () => {
       <HomeHow />
       {/* @ts-expect-error Server Component */}
       <HomeFaq />
-      <HomeButton />
     </main>
   );
 };

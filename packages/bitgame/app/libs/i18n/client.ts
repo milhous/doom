@@ -1,36 +1,27 @@
 'use client';
 
 import {initReactI18next, useTranslation} from 'react-i18next';
-import i18next from 'i18next';
+import i18next, {i18n} from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpBackend from 'i18next-http-backend';
 import Cookies from 'js-cookie';
 
-import {defaultNS, supportedLngs, cookieLngName, getLng} from './settings';
+import {defaultNS, defaultLng, supportedLngs, cookieLngName, getLng} from './settings';
 
-let i18n;
+// i18集合
+const i18nMap = new Map<string, i18n>();
 
-// 获取包名
-const getPackageName = (): string => {
-  let packageName = '';
-  const elem = typeof document !== 'undefined' ? document.querySelector('main') : null;
-
-  if (!!elem && packageName !== elem.id) {
-    packageName = elem.id;
-  }
-
-  return packageName;
-};
-
-// 初始化
-const initI18next = () => {
-  const packageName = getPackageName();
+/**
+ * 初始化i18n
+ * @param {string} appname app名称
+ */
+const initI18next = (appname: string): i18n => {
   const cookieLng = Cookies.get(cookieLngName);
   const lng = getLng(cookieLng, '');
 
-  i18n = i18next.createInstance();
+  const i18nInstance: i18n = i18next.createInstance();
 
-  i18n
+  i18nInstance
     // load translation using xhr -> see /public/locales
     .use(HttpBackend)
     // detect user language
@@ -53,7 +44,7 @@ const initI18next = () => {
       },
       initImmediate: false,
       backend: {
-        loadPath: `${__webpack_public_path__}static/locales/${packageName}/{{lng}}/{{ns}}.json`,
+        loadPath: `${__webpack_public_path__}static/locales/${appname}/{{lng}}/{{ns}}.json`,
       },
       detection: {
         htmlTag: typeof document !== 'undefined' && document.documentElement,
@@ -63,32 +54,69 @@ const initI18next = () => {
         cookieOptions: {path: '/', sameSite: false},
       },
     });
+
+  return i18nInstance;
 };
 
-initI18next();
+/**
+ * 获取i18n instance
+ * @param {string} appname app名称
+ */
+const getI18nInstance = (appname: string): i18n => {
+  let i18nInstance: i18n;
+
+  if (i18nMap.has(appname)) {
+    i18nInstance = i18nMap.get(appname);
+  } else {
+    i18nInstance = initI18next(appname);
+
+    i18nMap.set(appname, i18nInstance);
+  }
+
+  return i18nInstance;
+};
+
+/**
+ * 获取当前语言
+ * @returns {string}
+ */
+export const getCurLang = (): string => {
+  const lng = Cookies.get(cookieLngName) || defaultLng;
+
+  if (supportedLngs.find(v => v === lng)) {
+    return lng;
+  } else {
+    return defaultLng;
+  }
+};
 
 /**
  * 获取翻译文案
  * @param {string} key 翻译key
+ * @param {string} appname app名称
  * @param {string | boolean} nsSeparator 命名空间分隔符
  * @returns {string}
  */
-export const getTranslate = (key: string, nsSeparator = ':'): string => {
-  return i18n.t(key, {nsSeparator: nsSeparator});
+export const getTranslate = (key: string, appname: string, nsSeparator = ':'): string => {
+  const i18next = getI18nInstance(appname);
+
+  return i18next.t(key, {nsSeparator: nsSeparator});
 };
 
 /**
- * 获取 Translate Hook
+ * hook - 多语言
  * @param {Array<string>} ns 命名空间
+ * @param {string} appname app名称
  * @returns {any}
  */
-export const useTranslate = (ns: string[]): any => {
-  const {t} = useTranslation(ns, {i18n});
+export const useTranslate = (ns: string[], appname: string): any => {
+  const i18next = getI18nInstance(appname);
+  const {t} = useTranslation(ns, {i18n: i18next});
 
   return {
     // TODO: solve TKPrefix problem here...
     t,
-    i18n,
+    i18n: i18next,
   };
 };
 
@@ -97,5 +125,7 @@ export const useTranslate = (ns: string[]): any => {
  * @param {string} lng 语言
  */
 export const changeLang = (lng: string): void => {
-  i18n.changeLanguage(lng);
+  for (const i18next of i18nMap.values()) {
+    i18next.changeLanguage(lng);
+  }
 };

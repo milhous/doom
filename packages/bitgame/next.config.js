@@ -2,6 +2,18 @@ import path from 'path';
 import fs from 'fs-extra';
 import CopyPlugin from 'copy-webpack-plugin';
 
+/**
+ * Package类型
+ * @property UI
+ * @property REFERRAL 邀请
+ * @property AFFILIATE 代理
+ */
+const PackageType = {
+  UI: 'ui',
+  REFERRAL: 'referral',
+  AFFILIATE: 'affiliate',
+};
+
 // 当前应用路径
 const appDir = fs.realpathSync(process.cwd());
 // 路径或路径片段的序列解析为应用绝对路径
@@ -44,11 +56,11 @@ const webpack = (config, options) => {
               name: 'preset-default',
               params: {
                 overrides: {
-                  removeViewBox: false
+                  removeViewBox: false,
                 },
               },
             },
-            'prefixIds'
+            'prefixIds',
           ],
         },
       },
@@ -71,11 +83,11 @@ const webpack = (config, options) => {
                 name: 'preset-default',
                 params: {
                   overrides: {
-                    removeViewBox: false
+                    removeViewBox: false,
                   },
                 },
               },
-              'prefixIds'
+              'prefixIds',
             ],
           },
         },
@@ -88,27 +100,32 @@ const webpack = (config, options) => {
     '@api': resolveAppPath('./pages/api'),
     '@app': resolveAppPath('./app'),
     '@libs': resolveAppPath('./app/libs'),
-    '@ui': resolveAppPath('./app/ui'),
     '@widget': resolveAppPath('./app/widget'),
-    '@affiliate': resolveAppPath('./app/affiliate'),
-    '@referral': resolveAppPath('./app/referral'),
   };
 
+  // 插件配置
+  const patterns = [];
+
+  for (const pname in PackageType) {
+    alias[`@${pname}`] = resolveAppPath(`./app/${pname}`);
+
+    patterns.push({
+      from: resolveAppPath(`./app/${pname}/locales`),
+      to: resolveAppPath(`./.next/static/locales/${pname}`),
+      globOptions: {
+        ignore: ['**/.DS_Store'],
+      },
+      noErrorOnMissing: true,
+    });
+  }
+
+  // 别名
   config.resolve.alias = {...config.resolve.alias, ...alias};
 
   // 插件
   config.plugins.push(
     new CopyPlugin({
-      patterns: [
-        {
-          from: resolveAppPath('./app/referral/locales'),
-          to: resolveAppPath(`./.next/static/locales/referral`),
-          globOptions: {
-            ignore: ['**/.DS_Store'],
-          },
-          noErrorOnMissing: true,
-        },
-      ],
+      patterns,
     }),
   );
 

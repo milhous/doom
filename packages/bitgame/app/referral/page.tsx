@@ -1,5 +1,6 @@
 import Toolbar from '@ui/toolbar';
 import Header from '@ui/header';
+import Footer from '@ui/footer';
 
 import Home from './components/home';
 
@@ -12,6 +13,7 @@ const Page = async (): Promise<JSX.Element> => {
       {/* @ts-expect-error Server Component */}
       <Header />
       <Home />
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,225 @@
+@use "@libs/styles/library" as *;
+$prefixCls: rc-dropdown;
+.widget-dropdown {
+    %effect {
+        display: block;
+        animation-duration: var(--animation-duration);
+        animation-fill-mode: both;
+        transform-origin: 0 0;
+    }
+    @keyframes rcDropdownSlideUpIn {
+        0% {
+            opacity: 0;
+            transform-origin: 0% 0%;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform-origin: 0% 0%;
+            transform: translateY(0);
+        }
+    }
+    @keyframes rcDropdownSlideUpOut {
+        0% {
+            opacity: 1;
+            transform-origin: 0% 0%;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform-origin: 0% 0%;
+            transform: translateY(-10px);
+        }
+    }
+    @keyframes rcDropdownSlideDownIn {
+        0% {
+            opacity: 0;
+            transform-origin: 0% 100%;
+            transform: translateY(10px);
+        }
+        100% {
+            opacity: 1;
+            transform-origin: 0% 100%;
+            transform: translateY(0);
+        }
+    }
+    @keyframes rcDropdownSlideDownOut {
+        0% {
+            opacity: 1;
+            transform-origin: 0% 100%;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform-origin: 0% 100%;
+            transform: translateY(-10px);
+        }
+    }
+    position: relative;
+    z-index: 10;
+    div:nth-child(2) {
+        z-index: 5;
+        height: 100%;
+        &>div {
+            height: 100%;
+        }
+    }
+    &_selected {
+        @include setFlex(space-between, center);
+        @include setFont(14px, 20px, #7286A6);
+        cursor: pointer;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 10;
+        width: 240px;
+        height: 36px;
+        padding: 0 14px;
+        border-radius: 18px;
+        background-color: #0F151F;
+        span {
+            @include setEllipsis();
+        }
+        svg {
+            transition: transform var(--animation-duration);
+            transform: rotate(0);
+            width: 10px;
+            min-width: 10px;
+            height: 6px;
+            margin-left: 14px;
+        }
+    }
+    &_tips {
+        @include setFont(12px, 24px, #fff);
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        padding: 5px 10px;
+        border-radius: var(--pc-radius);
+        background-color: rgba(0, 0, 0, .75);
+        box-shadow: 0 0 4px rgba(0, 0, 0, .17);
+        &::before {
+            @include setPseudo();
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border-left: 5px solid rgba(0, 0, 0, .75);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+        &.hidden {
+            display: none;
+        }
+        &.rightCenter {
+            transform: translateX(calc(-100% - 10px));
+            &::before {
+                right: 0;
+                transform: translate(100%, -50%);
+            }
+        }
+        &.leftCenter {
+            transform: translateX(calc(100% + 10px));
+            &::before {
+                left: 0;
+                transform: translate(-100%, -50%) scaleX(-1);
+            }
+        }
+    }
+    .rc-dropdown {
+        position: absolute;
+        left: 0!important;
+        padding: 6px 0;
+        border-radius: var(--pc-radius);
+        background-color: #161f2c;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+        &-hidden {
+            display: none;
+        }
+        &-slide-up-enter,
+        &-slide-up-appear {
+            @extend %effect;
+            opacity: 0;
+            animation-timing-function: ease;
+            animation-play-state: paused;
+        }
+        &-slide-up-leave {
+            @extend %effect;
+            opacity: 1;
+            animation-timing-function: ease;
+            animation-play-state: paused;
+        }
+        &-placement-bottomCenter {
+            top: calc(100% + 10px)!important;
+            bottom: auto!important;
+        }
+        &-placement-topCenter {
+            top: auto!important;
+            bottom: calc(100% + 10px)!important;
+        }
+        &-slide-up-enter.#{$prefixCls}-slide-up-enter-active.#{$prefixCls}-placement-bottomLeft,
+        &-slide-up-appear.#{$prefixCls}-slide-up-appear-active.#{$prefixCls}-placement-bottomLeft,
+        &-slide-up-enter.#{$prefixCls}-slide-up-enter-active.#{$prefixCls}-placement-bottomCenter,
+        &-slide-up-appear.#{$prefixCls}-slide-up-appear-active.#{$prefixCls}-placement-bottomCenter,
+        &-slide-up-enter.#{$prefixCls}-slide-up-enter-active.#{$prefixCls}-placement-bottomRight,
+        &-slide-up-appear.#{$prefixCls}-slide-up-appear-active.#{$prefixCls}-placement-bottomRight {
+            animation-name: rcDropdownSlideUpIn;
+            animation-play-state: running;
+        }
+        &-slide-up-enter.#{$prefixCls}-slide-up-enter-active.#{$prefixCls}-placement-topLeft,
+        &-slide-up-appear.#{$prefixCls}-slide-up-appear-active.#{$prefixCls}-placement-topLeft,
+        &-slide-up-enter.#{$prefixCls}-slide-up-enter-active.#{$prefixCls}-placement-topCenter,
+        &-slide-up-appear.#{$prefixCls}-slide-up-appear-active.#{$prefixCls}-placement-topCenter,
+        &-slide-up-enter.#{$prefixCls}-slide-up-enter-active.#{$prefixCls}-placement-topRight,
+        &-slide-up-appear.#{$prefixCls}-slide-up-appear-active.#{$prefixCls}-placement-topRight {
+            animation-name: rcDropdownSlideDownIn;
+            animation-play-state: running;
+        }
+        &-slide-up-leave.#{$prefixCls}-slide-up-leave-active.#{$prefixCls}-placement-bottomLeft,
+        &-slide-up-leave.#{$prefixCls}-slide-up-leave-active.#{$prefixCls}-placement-bottomCenter,
+        &-slide-up-leave.#{$prefixCls}-slide-up-leave-active.#{$prefixCls}-placement-bottomRight {
+            animation-name: rcDropdownSlideUpOut;
+            animation-play-state: running;
+        }
+        &-slide-up-leave.#{$prefixCls}-slide-up-leave-active.#{$prefixCls}-placement-topLeft,
+        &-slide-up-leave.#{$prefixCls}-slide-up-leave-active.#{$prefixCls}-placement-topCenter,
+        &-slide-up-leave.#{$prefixCls}-slide-up-leave-active.#{$prefixCls}-placement-topRight {
+            animation-name: rcDropdownSlideDownOut;
+            animation-play-state: running;
+        }
+    }
+    .rc-menu {
+        &-item {
+            @include setEllipsis();
+            @include setFont(14px, 28px, #7286a6);
+            cursor: pointer;
+            box-sizing: border-box;
+            position: relative;
+            width: 100%;
+            height: 28px;
+            padding: 0 14px;
+            transition: color var(--animation-duration), background-color var(--animation-duration);
+            &-disabled {
+                cursor: default;
+            }
+            &-active,
+            &-selected {
+                background-color: #202c3c;
+                color: #fff;
+            }
+            &-selected::before {
+                @include setPseudo();
+                left: 0;
+                top: 0;
+                width: 4px;
+                height: 100%;
+                background-color: #02996a;
+            }
+        }
+    }
+    &.rc-dropdown-open {
+        z-index: 20;
+        .widget-dropdown_selected svg {
+            transform: rotate(180deg);
+        }
+    }
+}
