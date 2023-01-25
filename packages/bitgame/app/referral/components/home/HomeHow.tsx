@@ -1,9 +1,10 @@
 import {Trans} from 'react-i18next/TransWithoutContext';
 
+import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 
-import Assets from '@referral/assets';
 import {getInvitationInfo} from '@referral/api';
+import Assets from '@referral/assets';
 
 import './HomeHow.scss';
 
@@ -14,7 +15,7 @@ async function getData() {
 }
 
 const HomeHow = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['referral']);
+  const {t} = await useTranslate(['referral'], PackageType.REFERRAL);
 
   const data = await getData();
   const {betDivisor, lutPrize, rebateAmount, rebateLimit} = data;

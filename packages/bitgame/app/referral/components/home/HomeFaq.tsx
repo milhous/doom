@@ -1,3 +1,4 @@
+import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 import WidgetFaq from '@widget/faq';
 
@@ -13,7 +14,7 @@ async function getData() {
 
 // 常见问题
 const HomeFaq = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['referral']);
+  const {t} = await useTranslate(['referral'], PackageType.REFERRAL);
 
   const data = await getData();
 

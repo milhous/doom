@@ -1,6 +1,6 @@
-import {headers} from 'next/headers';
 import {Trans} from 'react-i18next/TransWithoutContext';
 
+import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 
 import Assets from '@referral/assets';
@@ -17,7 +17,7 @@ async function getData() {
 }
 
 const ReferralBanner = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['referral', 'common']);
+  const {t} = await useTranslate(['referral', 'common'], PackageType.REFERRAL);
 
   const data = await getData();
   const {lutPrize, rebateLimit, inviteLimit, inviteCode} = data;

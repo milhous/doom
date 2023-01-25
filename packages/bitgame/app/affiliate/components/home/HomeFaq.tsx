@@ -1,3 +1,4 @@
+import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 import WidgetFaq from '@widget/faq';
 
@@ -5,7 +6,7 @@ import './HomeFaq.scss';
 
 // 常见问题
 const HomeFaq = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['affiliate']);
+  const {t} = await useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   const list: {question: string; answer: string}[] = [];
 

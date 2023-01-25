@@ -1,5 +1,6 @@
+import {PackageType} from '@libs/config';
 import routers from '@libs/config/routers';
-import { useTranslate } from '@libs/i18n/server';
+import {useTranslate} from '@libs/i18n/server';
 
 import CompNavItem from './CompNavItem';
 
@@ -7,7 +8,7 @@ import './CompNav.scss';
 
 // 导航
 const CompNav = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['common']);
+  const {t} = await useTranslate(['common'], PackageType.UI);
   const betType = 0;
   const headerRouters = routers[betType];
 

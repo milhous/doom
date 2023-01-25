@@ -1,4 +1,16 @@
 /**
+ * Package类型
+ * @property UI
+ * @property REFERRAL 邀请
+ * @property AFFILIATE 代理
+ */
+export const PackageType = {
+  UI: 'ui',
+  REFERRAL: 'referral',
+  AFFILIATE: 'affiliate',
+};
+
+/**
  * 投注类型
  * @property ACCOUNT 账户投注
  * @property CONTRACT 合约投注

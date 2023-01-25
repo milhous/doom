@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs-extra';
 
 import {cookies, headers} from 'next/headers';
-import {createInstance} from 'i18next';
+import {createInstance, i18n} from 'i18next';
 import {initReactI18next} from 'react-i18next/initReactI18next';
 import resourcesToBackend from 'i18next-resources-to-backend';
 
@@ -12,10 +12,8 @@ import {defaultNS, supportedLngs, cookieLngName, getLng} from './settings';
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.parse(__filename).dir;
 
-// i18next instance
-let i18n: any;
-// 应用名称
-let _appname = '';
+// i18集合
+const i18nMap = new Map<string, i18n>();
 // 多语言资源集合
 const localesMap = new Map<string, any>();
 
@@ -52,7 +50,7 @@ const readDirInfo = async (path: string): Promise<string[]> => {
 
 /**
  * 获取多语言资源
- * @param {string} appname app名称 
+ * @param {string} appname app名称
  */
 const getResources = async (appname: string): Promise<any> => {
   let res = {};
@@ -62,7 +60,7 @@ const getResources = async (appname: string): Promise<any> => {
   } else {
     const localesPath = getLocalesPath(appname);
     const dirInfo = await readDirInfo(`${localesPath}`);
-  
+
     for (const lng of dirInfo) {
       res[lng] = await getNSResources(lng, localesPath);
     }
@@ -94,13 +92,13 @@ const getNSResources = async (lng: string, localesPath: string): Promise<any> =>
 
 /**
  * 初始化i18n
- * @param {string} lng 语言 
  * @param {string} appname app名称
- * @returns 
+ * @param {string} lng 语言
+ * @returns
  */
-const initI18next = async (lng: string, appname: string) => {
+const initI18next = async (appname: string, lng: string): Promise<i18n> => {
   // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel
-  const i18nInstance = createInstance();
+  const i18nInstance: i18n = createInstance();
   const bundledResources = await getResources(appname);
   const ns = Object.keys(bundledResources[lng]);
 
@@ -124,39 +122,45 @@ const initI18next = async (lng: string, appname: string) => {
 };
 
 /**
- * 设置应用名称
+ * 获取i18n instance
  * @param {string} appname app名称
+ * @param {string} lng 语言
  */
-export const setAppname = (appname: string) => {
-  if (_appname !== appname) {
-    i18n = null;
+const getI18nInstance = async (appname: string, lng: string): Promise<i18n> => {
+  let i18nInstance: i18n;
+
+  if (i18nMap.has(appname)) {
+    i18nInstance = i18nMap.get(appname);
+  } else {
+    i18nInstance = await initI18next(appname, lng);
+
+    i18nMap.set(appname, i18nInstance);
   }
 
-  _appname = appname;
+  return i18nInstance;
 };
 
 /**
  * hook - 多语言
  * @param {string | string[]} ns 命名空间
+ * @param {string} appname app名称
  */
-export const useTranslate = async (ns: string | string[]) => {
+export const useTranslate = async (ns: string | string[], appname: string) => {
   const nextCookies = cookies();
   const cookieLng = nextCookies.get(cookieLngName)?.value;
   const nextHeaders = headers();
   const acceptLng = nextHeaders.get('Accept-Language');
   const lng = getLng(cookieLng, acceptLng);
 
-  if (!i18n) {
-    i18n = await initI18next(lng, _appname);
-  }
+  const i18next = await getI18nInstance(appname, lng);
 
-  if (i18n.language !== lng) {
-    i18n.changeLanguage(lng);
+  if (i18next.language !== lng) {
+    i18next.changeLanguage(lng);
   }
 
   return {
     // TODO: solve TKPrefix problem here...
-    t: i18n.getFixedT(lng, ns),
-    i18n,
+    t: i18next.getFixedT(lng, ns),
+    i18n: i18next,
   };
 };
