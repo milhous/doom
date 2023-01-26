@@ -40,7 +40,7 @@
             height: 100%;
             background-image: linear-gradient(to bottom, #274571, #152339);
             @include smallScreen {
-                &>svg {
+                &>img {
                     width: 48px;
                     height: 28px;
                 }

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 
@@ -17,7 +19,12 @@ const AboutUsage = async (): Promise<JSX.Element> => {
           <li>
             <a href="/staking/dividends" title={t('usage_desc1')}>
               <div>
-                <Assets.aboutIcon1 />
+                <Image
+                  src={Assets.aboutIcon1.src}
+                  alt=""
+                  width={Assets.aboutIcon1.width}
+                  height={Assets.aboutIcon1.height}
+                />
               </div>
               <dl>
                 <dt>{t('usage_desc1')}</dt>
@@ -29,7 +36,12 @@ const AboutUsage = async (): Promise<JSX.Element> => {
           <li>
             <a href="/staking/bidding" title={t('usage_desc2')}>
               <div>
-                <Assets.aboutIcon2 />
+                <Image
+                  src={Assets.aboutIcon2.src}
+                  alt=""
+                  width={Assets.aboutIcon2.width}
+                  height={Assets.aboutIcon2.height}
+                />
               </div>
               <dl>
                 <dt>{t('usage_desc2')}</dt>
@@ -41,7 +53,12 @@ const AboutUsage = async (): Promise<JSX.Element> => {
           <li>
             <a href="/match" title={t('usage_desc3')}>
               <div>
-                <Assets.aboutIcon3 />
+                <Image
+                  src={Assets.aboutIcon3.src}
+                  alt=""
+                  width={Assets.aboutIcon3.width}
+                  height={Assets.aboutIcon3.height}
+                />
               </div>
               <dl>
                 <dt>{t('usage_desc3')}</dt>
@@ -53,7 +70,12 @@ const AboutUsage = async (): Promise<JSX.Element> => {
           <li>
             <a href="/promotions" title={t('usage_desc4')}>
               <div>
-                <Assets.aboutIcon4 />
+                <Image
+                  src={Assets.aboutIcon4.src}
+                  alt=""
+                  width={Assets.aboutIcon4.width}
+                  height={Assets.aboutIcon4.height}
+                />
               </div>
               <dl>
                 <dt>{t('usage_desc4')}</dt>
