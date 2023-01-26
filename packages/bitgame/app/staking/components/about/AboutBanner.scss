@@ -1,0 +1,53 @@
+@use "@libs/styles/library" as *;
+.staking-about .about-banner {
+    width: 100%;
+    background: url('~@staking/assets/about/banner-bg.jpg') no-repeat center top;
+    background-size: 100% 400px;
+    .staking-container {
+        @include setFlex(space-between,
+        flex-start);
+        padding-top: 98px;
+        @include smallScreen {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 54px;
+        }
+    }
+    dl {
+        margin-left: 20px;
+        @include smallScreen {
+            margin: 0 10px;
+        }
+    }
+    dt {
+        @include setFont(40px,
+        50px,
+        #fff,
+        700);
+        @include smallScreen {
+            font-size: 50px;
+            line-height: 80px;
+        }
+    }
+    dd {
+        @include setFont(15px,
+        30px,
+        #96afd8);
+        margin-top: 15px;
+        @include smallScreen {
+            margin-top: 10px;
+            font-size: 24px;
+            line-height: 44px;
+        }
+    }
+    img {
+        width: 380px;
+        height: 320px;
+        margin: 0 20px 0 90px;
+        @include smallScreen {
+            width: 548px;
+            height: 460px;
+            margin: 100px auto 0;
+        }
+    }
+}

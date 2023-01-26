@@ -1,0 +1,94 @@
+@use "@libs/styles/library" as *;
+.staking-about .about-burning {
+    margin-top: 10px;
+    @include smallScreen {
+        margin-top: 20px;
+    }
+    article {
+        width: 40%;
+        min-width: 40%;
+        @include smallScreen {
+            width: 100%;
+            min-width: 100%;
+        }
+        p {
+            @include setFont(15px, 24px, #96afd8);
+            margin-bottom: 38px;
+            @include smallScreen {
+                width: 100%;
+                margin-bottom: 8px;
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+        dl {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include smallScreen {
+                margin-bottom: 30px;
+            }
+        }
+        dt {
+            @include setFont(15px, 21px, #81a0cb);
+            @include smallScreen {
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+        dd {
+            @include setFlex(space-between, center);
+            @include setFont(16px, 22px, #fff);
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 6px;
+            padding: 14px 20px;
+            border-radius: 4px;
+            background-color: #1f2d44;
+            word-break: break-all;
+            span {
+                color: #f7b500;
+            }
+            button {
+                color: #02996a;
+                text-decoration: underline;
+            }
+            @include smallScreen {
+                padding: 24px 20px;
+                border-radius: 6px;
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+    }
+    aside {
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: 20px;
+        svg {
+            display: block;
+            width: 100%;
+            max-width: 624px;
+            height: auto;
+            margin: 0 auto;
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        @include smallScreen {
+            padding: 60px 0 0;
+            font-size: 24px;
+            line-height: 34px;
+            svg {
+                max-width: none;
+                &:nth-child(1) {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+@use "@libs/styles/library" as *;
+.staking-about {
+    .staking-container {
+        box-sizing: border-box;
+        max-width: 1490px;
+        margin: 0 auto;
+        padding: 0 20px;
+        h2 {
+            @include setFont(30px, 42px, #fff, 700);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        @include smallScreen {
+            h2 {
+                margin-bottom: 50px;
+                font-size: 40px;
+                line-height: 56px;
+            }
+        }
+    }
+    .staking-box {
+        overflow: hidden;
+        border-radius: 8px;
+        background-color: #161f2c;
+        @include smallScreen {
+            border-radius: 12px;
+        }
+    }
+    .staking-header {
+        @include setFlex(space-between, center);
+        @include setFont(18px, 50px, #fff, 700);
+        height: 50px;
+        padding: 0 30px;
+        background-image: linear-gradient(to bottom, #1f2f47, #1e293a);
+        @include smallScreen {
+            height: 70px;
+            font-size: 26px;
+            line-height: 70px;
+        }
+        p {
+            color: #96afd8;
+            font-weight: 400;
+            font-size: 16px;
+            strong {
+                color: #f7b500;
+            }
+            @include smallScreen {
+                display: none;
+            }
+        }
+    }
+    .staking-content {
+        @include setFlex(space-between, flex-start);
+        padding: 20px 30px 30px;
+        @include smallScreen {
+            @include setFlex(center, flex-start, column);
+        }
+    }
+    .staking-btn {
+        @include setFlex(center, center);
+        cursor: pointer;
+        box-sizing: border-box;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0 20px;
+        border: none;
+        border-radius: 4px;
+        background-image: linear-gradient(to bottom, #05c9a3, #02996a);
+        color: #fff;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        white-space: nowrap;
+        outline: none;
+        &:hover {
+            background-image: linear-gradient(to bottom, #03d594, #02a371);
+        }
+        &.disabled,
+        &:disabled {
+            cursor: not-allowed;
+            background-color: #151e2e;
+            background-image: none !important;
+            color: #4f668c;
+        }
+        @include smallScreen {
+            border-radius: 6px;
+        }
+    }
+    .staking-icon {
+        content: '.';
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        text-indent: -9999px;
+    }
+}

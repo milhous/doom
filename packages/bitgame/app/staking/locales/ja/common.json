@@ -1,0 +1,23 @@
+{
+  "confirm": "確認",
+  "cancel": "キャンセル",
+  "btn_reset": "リセット",
+  "trans_success": "取引が成功する",
+  "tips": "提示",
+  "unit_price": "単価",
+  "total_price": "総金額",
+  "count": "数量",
+  "item_user": "ユーザー",
+  "operate": "操作",
+  "refresh": "更新",
+  "currency": "銘柄",
+  "delete": "削除",
+  "revert": "キャンセル",
+  "item_type": "タイプ",
+  "order_no": "オーダーナンバー",
+  "select_all": "すべてを選択",
+  "del_selected": "すべて選択削除",
+  "login_btn": "ログイン",
+  "all_currency": "銘柄",
+  "go_back": "戻る"
+}

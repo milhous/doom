@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="623" height="428" viewBox="0 0 623 428">
+  <defs>
+    <linearGradient id="info-flow-b" x1="5.772%" x2="100%" y1="43.704%" y2="56.296%">
+      <stop offset="0%" stop-color="#0091FF"/>
+      <stop offset="100%" stop-color="#005ADC"/>
+    </linearGradient>
+    <linearGradient id="info-flow-c" x1="5.772%" x2="100%" y1="26.367%" y2="73.633%">
+      <stop offset="0%" stop-color="#0091FF"/>
+      <stop offset="100%" stop-color="#005ADC"/>
+    </linearGradient>
+    <linearGradient id="info-flow-d" x1="5.772%" x2="100%" y1="48.699%" y2="51.301%">
+      <stop offset="0%" stop-color="#0091FF"/>
+      <stop offset="100%" stop-color="#005ADC"/>
+    </linearGradient>
+    <rect id="info-flow-a" width="100" height="110" x="189" y="318" rx="4"/>
+    <mask id="info-flow-e" width="100" height="110" x="0" y="0" fill="#fff" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox">
+      <use xlink:href="#info-flow-a"/>
+    </mask>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(313 318)">
+      <path fill="url(#info-flow-b)" d="M4,0 L306,0 C308.209139,-4.05812251e-16 310,1.790861 310,4 L310,106 C310,108.209139 308.209139,110 306,110 L4,110 C1.790861,110 2.705415e-16,108.209139 0,106 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 Z"/>
+      <g transform="translate(9 51)">
+        <rect width="90" height="50" fill="#0057C0" rx="4"/>
+        <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="15">
+          <tspan x="19.008" y="22">Tokens</tspan> <tspan x="17.5" y="42">Pool #1</tspan>
+        </text>
+      </g>
+      <g transform="translate(109 51)">
+        <rect width="90" height="50" fill="#0057C0" rx="4"/>
+        <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="15">
+          <tspan x="19.008" y="22">Tokens</tspan> <tspan x="17.5" y="42">Pool #2</tspan>
+        </text>
+      </g>
+      <g transform="translate(209 51)">
+        <rect width="90" height="50" fill="#0057C0" rx="4"/>
+        <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="15">
+          <tspan x="19.008" y="22">Tokens</tspan> <tspan x="17.5" y="42">Pool #3</tspan>
+        </text>
+      </g>
+      <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+        <tspan x="90" y="31">Prediction Pools</tspan>
+      </text>
+    </g>
+    <g transform="translate(0 318)">
+      <rect width="160" height="110" fill="url(#info-flow-c)" rx="4"/>
+      <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+        <tspan x="10.156" y="61"> LUT in circulation</tspan>
+      </text>
+    </g>
+    <g transform="translate(303 159)">
+      <rect width="310" height="50" fill="url(#info-flow-d)" rx="4"/>
+      <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+        <tspan x="41.18" y="31">Lucky Network Smart Contracts</tspan>
+      </text>
+    </g>
+    <g transform="translate(303)">
+      <rect width="310" height="50" fill="url(#info-flow-d)" rx="4"/>
+      <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+        <tspan x="146.4" y="31">User</tspan>
+      </text>
+    </g>
+    <g transform="translate(173 333)">
+      <rect width="82" height="23" x="24.5" y=".5" stroke="#0080E2" rx="4"/>
+      <text fill="#FFF" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500">
+        <tspan x="38.7" y="18">Auction</tspan>
+      </text>
+      <path fill="#0080E2" fill-rule="nonzero" d="M126 8C128.485281 8 130.5 10.0147186 130.5 12.5 130.5 14.9852814 128.485281 17 126 17 123.683966 17 121.776586 15.2503421 121.527543 13.0007074L106.5 13 106.5 12 121.527432 12.000297C121.776019 9.7501788 123.683621 8 126 8zM8.5 8L8.5 12 24.5 12 24.5 13 8.5 13 8.5 17-.5 12.5 8.5 8z"/>
+      <g transform="translate(0 28)">
+        <rect width="82" height="23" x="24.5" y=".5" stroke="#0080E2" rx="4"/>
+        <text fill="#FFF" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500">
+          <tspan x="30.817" y="18">Buy-back</tspan>
+        </text>
+        <path fill="#0080E2" fill-rule="nonzero" d="M126 8C128.485281 8 130.5 10.0147186 130.5 12.5 130.5 14.9852814 128.485281 17 126 17 123.683966 17 121.776586 15.2503421 121.527543 13.0007074L106.5 13 106.5 12 121.527432 12.000297C121.776019 9.7501788 123.683621 8 126 8zM8.5 8L8.5 12 24.5 12 24.5 13 8.5 13 8.5 17-.5 12.5 8.5 8z"/>
+      </g>
+      <g transform="translate(0 54)">
+        <rect width="82" height="23" x="24.5" y="2.5" stroke="#0080E2" rx="4"/>
+        <text fill="#FFF" font-family="PingFangSC-Semibold, PingFang SC" font-size="15" font-weight="500">
+          <tspan x="58.5" y="16">…</tspan>
+        </text>
+        <path fill="#0080E2" fill-rule="nonzero" d="M126 10C128.485281 10 130.5 12.0147186 130.5 14.5 130.5 16.9852814 128.485281 19 126 19 123.683966 19 121.776586 17.2503421 121.527543 15.0007074L106.5 15 106.5 14 121.527432 14.000297C121.776019 11.7501788 123.683621 10 126 10zM8.5 10L8.5 14 24.5 14 24.5 15 8.5 15 8.5 19-.5 14.5 8.5 10z"/>
+      </g>
+    </g>
+    <use stroke="#0080E2" stroke-dasharray="3" stroke-width="2" mask="url(#info-flow-e)" xlink:href="#info-flow-a"/>
+    <text fill="#0080E2" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+      <tspan x="221.368" y="309">Burn</tspan>
+    </text>
+    <g transform="translate(303 223)">
+      <path stroke="#0080E2" d="M306,23.5 C306.966498,23.5 307.841498,23.8917508 308.474874,24.5251263 C309.108249,25.1585017 309.5,26.0335017 309.5,27 L309.5,27 L309.5,53 C309.5,53.9664983 309.108249,54.8414983 308.474874,55.4748737 C307.841498,56.1082492 306.966498,56.5 306,56.5 L306,56.5 L4,56.5 C3.03350169,56.5 2.15850169,56.1082492 1.52512627,55.4748737 C0.891750844,54.8414983 0.5,53.9664983 0.5,53 L0.5,53 L0.5,27 C0.5,26.0335017 0.891750844,25.1585017 1.52512627,24.5251263 C2.15850169,23.8917508 3.03350169,23.5 4,23.5 L4,23.5 Z"/>
+      <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+        <tspan x="67.46" y="46">Manager conversion flow</tspan>
+      </text>
+      <path fill="#0080E2" fill-rule="nonzero" d="M155.5-4C157.985281-4 160-1.98528137 160 .5 160 2.81603406 158.250342 4.7234136 156.000707 4.97245735L156 23 155 23 155.000297 4.97256844C152.750179 4.72398135 151 2.81637876 151 .5 151-1.98528137 153.014719-4 155.5-4zM156 57L156 76 160 76 155.5 85 151 76 155 76 155 57 156 57z"/>
+    </g>
+    <g transform="translate(303 64)">
+      <path stroke="#0080E2" d="M306,23.5 C306.966498,23.5 307.841498,23.8917508 308.474874,24.5251263 C309.108249,25.1585017 309.5,26.0335017 309.5,27 L309.5,27 L309.5,53 C309.5,53.9664983 309.108249,54.8414983 308.474874,55.4748737 C307.841498,56.1082492 306.966498,56.5 306,56.5 L306,56.5 L4,56.5 C3.03350169,56.5 2.15850169,56.1082492 1.52512627,55.4748737 C0.891750844,54.8414983 0.5,53.9664983 0.5,53 L0.5,53 L0.5,27 C0.5,26.0335017 0.891750844,25.1585017 1.52512627,24.5251263 C2.15850169,23.8917508 3.03350169,23.5 4,23.5 L4,23.5 Z"/>
+      <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+        <tspan x="106.296" y="46">Betting Tokens</tspan>
+      </text>
+      <path fill="#0080E2" fill-rule="nonzero" d="M155.5-4C157.985281-4 160-1.98528137 160 .5 160 2.81603406 158.250342 4.7234136 156.000707 4.97245735L156 23 155 23 155.000297 4.97256844C152.750179 4.72398135 151 2.81637876 151 .5 151-1.98528137 153.014719-4 155.5-4zM156 57L156 76 160 76 155.5 85 151 76 155 76 155 57 156 57z"/>
+    </g>
+    <g transform="translate(130.652 72)">
+      <path stroke="#0080E2" d="M139,0.5 C139.966498,0.5 140.841498,0.891750844 141.474874,1.52512627 C142.108249,2.15850169 142.5,3.03350169 142.5,4 L142.5,4 L142.5,66 C142.5,66.9664983 142.108249,67.8414983 141.474874,68.4748737 C140.841498,69.1082492 139.966498,69.5 139,69.5 L139,69.5 L4,69.5 C3.03350169,69.5 2.15850169,69.1082492 1.52512627,68.4748737 C0.891750844,67.8414983 0.5,66.9664983 0.5,66 L0.5,66 L0.5,4 C0.5,3.03350169 0.891750844,2.15850169 1.52512627,1.52512627 C2.15850169,0.891750844 3.03350169,0.5 4,0.5 L4,0.5 Z"/>
+      <text fill="#FFF" font-family="PingFang-SC-Heavy, PingFang SC" font-size="16">
+        <tspan x="38.132" y="30">Manager </tspan> <tspan x="11.492" y="52">conversion flow</tspan>
+      </text>
+    </g>
+    <path fill="#0080E2" fill-rule="nonzero" d="M281 20.5L290 25 281 29.5 281 25.5 202.652 25.5 202.652668 52.1251565C204.902487 52.374026 206.652344 54.2814906 206.652344 56.5976562 206.652344 59.0829376 204.637625 61.0976562 202.152344 61.0976562 199.667062 61.0976562 197.652344 59.0829376 197.652344 56.5976562 197.652344 54.2814906 199.4022 52.374026 201.65202 52.1251565L201.652344 24.5 281 24.5 281 20.5zM202 158.5L206.5 167.5 202.5 167.5 202.5 183.5 285.027432 183.500297C285.276019 181.250179 287.183621 179.5 289.5 179.5 291.985281 179.5 294 181.514719 294 184 294 186.485281 291.985281 188.5 289.5 188.5 287.183966 188.5 285.276586 186.750342 285.027543 184.500707L201.5 184.5 201.5 167.5 197.5 167.5 202 158.5z"/>
+  </g>
+</svg>

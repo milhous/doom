@@ -1,0 +1,23 @@
+{
+  "confirm": "確認",
+  "cancel": "取消",
+  "btn_reset": "重置",
+  "trans_success": "交易成功",
+  "tips": "提示",
+  "unit_price": "單價",
+  "total_price": "總價",
+  "count": "數量",
+  "item_user": "用戶",
+  "operate": "操作",
+  "refresh": "刷新",
+  "currency": "貨幣",
+  "delete": "移除",
+  "revert": "撤銷",
+  "item_type": "類型",
+  "order_no": "訂單號",
+  "select_all": "全選",
+  "del_selected": "刪除已選",
+  "go_back": "返回",
+  "login_btn": "立即登錄",
+  "all_currency": "全部貨幣"
+}

@@ -1,4 +1,5 @@
 import {Trans} from 'react-i18next/TransWithoutContext';
+import Image from 'next/image';
 
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
@@ -17,37 +18,73 @@ const HomeCommission = async (): Promise<JSX.Element> => {
         <aside>
           <dl>
             <dd>
-              <img src={Assets.homeCommissionIcon1.src} className="commission-icon1" />
+              <Image
+                className="commission-icon1"
+                src={Assets.homeCommissionIcon1.src}
+                alt="Sports Betting"
+                width={Assets.homeCommissionIcon1.width}
+                height={Assets.homeCommissionIcon1.height}
+              />
             </dd>
             <dt>Sports Betting</dt>
           </dl>
           <dl>
             <dd>
-              <img src={Assets.homeCommissionIcon2.src} className="commission-icon2" />
+              <Image
+                className="commission-icon2"
+                src={Assets.homeCommissionIcon2.src}
+                alt="In-house"
+                width={Assets.homeCommissionIcon2.width}
+                height={Assets.homeCommissionIcon2.height}
+              />
             </dd>
             <dt>In-house</dt>
           </dl>
           <dl>
             <dd>
-              <img src={Assets.homeCommissionIcon3.src} className="commission-icon3" />
+              <Image
+                className="commission-icon3"
+                src={Assets.homeCommissionIcon3.src}
+                alt="Casino"
+                width={Assets.homeCommissionIcon3.width}
+                height={Assets.homeCommissionIcon3.height}
+              />
             </dd>
             <dt>Casino</dt>
           </dl>
           <dl>
             <dd>
-              <img src={Assets.homeCommissionIcon4.src} className="commission-icon4" />
+              <Image
+                className="commission-icon4"
+                src={Assets.homeCommissionIcon4.src}
+                alt="Live Casino"
+                width={Assets.homeCommissionIcon4.width}
+                height={Assets.homeCommissionIcon4.height}
+              />
             </dd>
             <dt>Live Casino</dt>
           </dl>
           <dl>
             <dd>
-              <img src={Assets.homeCommissionIcon5.src} className="commission-icon5" />
+              <Image
+                className="commission-icon5"
+                src={Assets.homeCommissionIcon5.src}
+                alt="Table Games"
+                width={Assets.homeCommissionIcon5.width}
+                height={Assets.homeCommissionIcon5.height}
+              />
             </dd>
             <dt>Table Games</dt>
           </dl>
           <dl>
             <dd>
-              <img src={Assets.homeCommissionIcon6.src} className="commission-icon6" />
+              <Image
+                className="commission-icon6"
+                src={Assets.homeCommissionIcon6.src}
+                alt="Virtual Sports"
+                width={Assets.homeCommissionIcon6.width}
+                height={Assets.homeCommissionIcon6.height}
+              />
             </dd>
             <dt>Virtual Sports</dt>
           </dl>

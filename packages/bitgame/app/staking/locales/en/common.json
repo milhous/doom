@@ -1,0 +1,23 @@
+{
+  "confirm": "Confirm",
+  "cancel": "Cancel",
+  "btn_reset": "Reset",
+  "trans_success": "Transaction successful",
+  "tips": "Tips",
+  "unit_price": "Price",
+  "total_price": "Total price",
+  "count": "Quantity",
+  "item_user": "User",
+  "operate": "Action",
+  "refresh": "Refresh",
+  "currency": "Currency",
+  "delete": "Delete",
+  "revert": "Cancel",
+  "item_type": "Types",
+  "order_no": "Order ID",
+  "select_all": "Select All",
+  "del_selected": "Delete Selected",
+  "go_back": "Back",
+  "login_btn": "Log in now",
+  "all_currency": "Currency"
+}

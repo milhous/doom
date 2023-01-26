@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 
@@ -13,7 +15,12 @@ const HomeRights = async (): Promise<JSX.Element> => {
     <section className="affiliate-rights">
       <div>
         <aside>
-          <img src={Assets.homeRightsPic.src} />
+          <Image
+            src={Assets.homeRightsPic.src}
+            alt=""
+            width={Assets.homeRightsPic.width}
+            height={Assets.homeRightsPic.height}
+          />
         </aside>
         <article>
           <h3>{t('rights_title')}</h3>

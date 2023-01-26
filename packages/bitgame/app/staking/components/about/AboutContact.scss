@@ -1,0 +1,36 @@
+@use "@libs/styles/library" as *;
+.staking-about .about-contact {
+    padding: 60px 0 70px;
+    border-bottom: 1px solid #04070c;
+    background-color: #161f2c;
+    .staking-container {
+        @include setFlex(center, center, column);
+        h2 {
+            margin-bottom: 0;
+        }
+        p {
+            @include setFont(15px, 26px, #96afd8);
+            max-width: 400px;
+            margin: 10px auto 30px;
+            text-align: center;
+            @include smallScreen {
+                max-width: 580px;
+                margin: 20px auto 40px;
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        a {
+            min-width: 140px;
+            height: 38px;
+            font-size: 16px;
+            line-height: 38px;
+            @include smallScreen {
+                min-width: 150px;
+                height: 50px;
+                font-size: 24px;
+                line-height: 50px;
+            }
+        }
+    }
+}

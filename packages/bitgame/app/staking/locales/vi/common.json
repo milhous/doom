@@ -1,0 +1,23 @@
+{
+  "confirm": "Xác nhận",
+  "cancel": "Hủy bỏ",
+  "btn_reset": "Đặt lại",
+  "trans_success": "Giao dịch thành công",
+  "tips": "Nhắc nhở",
+  "unit_price": "Đơn giá",
+  "total_price": "Tổng giá",
+  "count": "Số lượng",
+  "item_user": "Người dùng",
+  "operate": "Thao tác",
+  "refresh": "Cập",
+  "currency": "Tiền tệ",
+  "delete": "Xóa",
+  "revert": "Hủy bỏ",
+  "item_type": "Loại hình",
+  "order_no": "ID lệnh",
+  "select_all": "Chọn hết",
+  "del_selected": "Đã chọn xóa",
+  "login_btn": "Đăng nhập ngay",
+  "all_currency": "Tất cả",
+  "go_back": "Trở lại"
+}

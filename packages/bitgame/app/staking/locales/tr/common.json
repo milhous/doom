@@ -1,0 +1,23 @@
+{
+  "confirm": "Onayla",
+  "cancel": "İptal et",
+  "btn_reset": "Sıfırla",
+  "trans_success": "İşlem başarılı",
+  "tips": "İpuçları",
+  "unit_price": "Fiyat",
+  "total_price": "Toplam fiyat",
+  "count": "Miktar",
+  "item_user": "Kullanıcı",
+  "operate": "Eylem",
+  "refresh": "Yenile",
+  "currency": "Para birimi",
+  "delete": "Sil",
+  "revert": "İptal et",
+  "item_type": "Türler",
+  "order_no": "Emir Numarası",
+  "select_all": "Tümünü Seç",
+  "del_selected": "Seçileni Sil",
+  "go_back": "Geri",
+  "login_btn": "Şimdi giriş yap",
+  "all_currency": "Para birimi"
+}

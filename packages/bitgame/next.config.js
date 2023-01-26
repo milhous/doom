@@ -5,12 +5,15 @@ import CopyPlugin from 'copy-webpack-plugin';
 /**
  * Package类型
  * @property UI
+ * @property HOME 首页
+ * @property STAKING 质押
  * @property REFERRAL 邀请
  * @property AFFILIATE 代理
  */
 const PackageType = {
   UI: 'ui',
   HOME: 'home',
+  STAKING: 'staking',
   REFERRAL: 'referral',
   AFFILIATE: 'affiliate',
 };

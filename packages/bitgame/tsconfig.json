@@ -27,6 +27,7 @@
       "@libs/*": ["app/libs/*"],
       "@ui/*": ["app/ui/*"],
       "@widget/*": ["app/widget/*"],
+      "@staking/*": ["app/staking/*"],
       "@affiliate/*": ["app/affiliate/*"],
       "@referral/*": ["app/referral/*"]
     }

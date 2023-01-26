@@ -1,0 +1,149 @@
+@use "@libs/styles/library" as *;
+.staking-about .about-roadmap {
+    margin-top: 60px;
+    background: url('~@staking/assets/about/roadmap-bg.png') no-repeat center bottom;
+    background-size: 100% 1120px;
+    @include smallScreen {
+        margin-top: 50px;
+        background-size: 1600px 1120px;
+    }
+    .staking-container {
+        div {
+            @include setFlex(flex-start,
+            center,
+            column);
+            padding-bottom: 30px;
+            @include smallScreen {
+                align-items: flex-start;
+                padding: 0 35px 70px;
+            }
+        }
+        i {
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #96afd8;
+            &::before {
+                content: '.';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -40%);
+                width: 0;
+                height: 0;
+                border-left: 4px solid transparent;
+                border-right: 4px solid transparent;
+                border-top: 6px solid #fff;
+                text-align: left;
+                text-indent: -9999px;
+            }
+            @include smallScreen {
+                width: 28px;
+                height: 28px;
+                &::before {
+                    border-left-width: 6px;
+                    border-right-width: 6px;
+                    border-top-width: 9px;
+                }
+            }
+        }
+        dl {
+            box-sizing: border-box;
+            position: relative;
+            width: 50%;
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 22px;
+            @include smallScreen {
+                width: auto;
+                font-size: 26px;
+                line-height: 38px;
+            }
+        }
+        dl:last-child {
+            margin-bottom: 0;
+            dd:before {
+                display: none;
+            }
+        }
+        dl:nth-child(odd) {
+            transform: translateX(50%);
+            padding-left: 30px;
+            dt i {
+                left: -30px;
+                transform: translate(-50%, -50%);
+            }
+            dd:before {
+                left: -30px;
+                transform: translateX(-50%);
+            }
+            @include smallScreen {
+                transform: translateX(0);
+                padding-left: 44px;
+                dt i {
+                    left: -44px;
+                }
+                dd:before {
+                    left: -44px;
+                }
+            }
+        }
+        dl:nth-child(even) {
+            transform: translateX(-50%);
+            padding-right: 30px;
+            text-align: right;
+            dt i {
+                right: -30px;
+                transform: translate(50%, -50%);
+            }
+            dd:before {
+                right: -30px;
+                transform: translateX(50%);
+            }
+            @include smallScreen {
+                transform: translateX(0);
+                padding-left: 44px;
+                padding-right: 0;
+                text-align: left;
+                dt i {
+                    left: -44px;
+                    right: auto;
+                    transform: translate(-50%, -50%);
+                }
+                dd:before {
+                    left: -44px;
+                    right: auto;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        dt {
+            position: relative;
+            color: #02996a;
+        }
+        dd {
+            position: relative;
+            min-height: 44px;
+            margin-top: 6px;
+            color: #fff;
+            &::before {
+                content: '.';
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background-color: #96afd8;
+                text-align: left;
+                text-indent: -9999px;
+            }
+            @include smallScreen {
+                min-height: 76px;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "continuous_flip": "Liên tục phá",
+    "flip_once": "Phá lưới đầu tiên",
+    "auto": "Auto",
+    "stop": "Stop",
+    "congratulations": "Chúc mừng bạn",
+    "award": "Nhận được {amount} {name}!",
+    "award_tips": "Chúc mừng bạn nhận được {amount} {name}!",
+    "confirm": "Xác định",
+    "help_desc1": "Nhấp vào nút sẽ tiêu hao LUT và mở ngẫu nhiên một lưới.",
+    "help_desc2": "Phần thưởng chòm sao được kích hoạt sau khi mở lưới 5 lần liên tiếp ngang, dọc, chéo (cần nhấp thủ công để nhận).",
+    "help_desc3": "Sau khi nhận được tất cả các giải thưởng chòm sao, siêu giải thưởng sẽ được kích hoạt (cần nhấp thủ công để nhận).",
+    "help_desc4": "Sau khi nhận được tất cả các phần thưởng, một vòng mới của trò chơi sẽ bắt đầu.",
+    "help_desc5": "Bạn có thể nhấp vào nút AUTO để tự động mở lưới liên tục và bạn có thể nhấp vào STOP để kết thúc bất kỳ lúc nào.",
+    "help_desc6": "Nếu là ngẫu nhiên vào lưới đã mở, một nửa số tiền tiêu thụ sẽ được hoàn trả.",
+    "activity_time": "Thời gian hoạt động：",
+    "balance": "Số dư khả dụng"
+}

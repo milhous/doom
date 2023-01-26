@@ -1,0 +1,23 @@
+{
+  "confirm": "Confirmar",
+  "cancel": "Cancelar",
+  "btn_reset": "Reset",
+  "trans_success": "Transação bem-sucedida",
+  "tips": "Dicas",
+  "unit_price": "Preço",
+  "total_price": "Preço total",
+  "count": "Quantidade",
+  "item_user": "Usuário",
+  "operate": "Ação",
+  "refresh": "Atualizar",
+  "currency": "Moeda",
+  "delete": "Excluir",
+  "revert": "Cancelar",
+  "item_type": "Tipos",
+  "order_no": "ID do pedido",
+  "select_all": "Selecionar todos",
+  "del_selected": "Excluir selecionados",
+  "go_back": "Voltar",
+  "login_btn": "Faça login agora",
+  "all_currency": "Moeda"
+}

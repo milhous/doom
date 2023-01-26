@@ -1,0 +1,95 @@
+@use "@libs/styles/library" as *;
+.staking-about .about-usage {
+    margin-top: 80px;
+    @include smallScreen {
+        h2 {
+            margin-bottom: 30px!important;
+        }
+    }
+    ul {
+        @include setFlex(center);
+        flex-wrap: wrap;
+        margin: 0 auto;
+        @include mediumScreen {
+            & {
+                width: 520px;
+            }
+        }
+        li {
+            overflow: hidden;
+            box-sizing: border-box;
+            width: 226px;
+            height: 320px;
+            margin: 0 10px 20px;
+            padding: 1px;
+            border-radius: 8px;
+            background-image: linear-gradient(to bottom, #253246, #304463 30%, #21334e 60%, #202c3e);
+            @include smallScreen {
+                width: 345px;
+                height: 480px;
+                border-radius: 12px;
+                margin: 0 20px 20px 0;
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+        }
+        a {
+            @include setFlex(center, center, column);
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, #274571, #152339);
+            @include smallScreen {
+                &>svg {
+                    width: 48px;
+                    height: 28px;
+                }
+            }
+        }
+        div {
+            @include setFlex(center, center);
+            box-sizing: border-box;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #1c334f;
+            border-radius: 50%;
+            background-color: #1b2533;
+            @include smallScreen {
+                width: 120px;
+                height: 120px;
+                border: 4px solid #1c334f;
+                svg {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        dl {
+            height: 90px;
+            margin: 28px auto 26px;
+            line-height: 30px;
+            text-align: center;
+            @include smallScreen {
+                height: 135px;
+                margin: 44px auto 48px;
+                line-height: 45px;
+            }
+        }
+        dt {
+            padding: 0 10px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            white-space: pre-wrap;
+            @include smallScreen {
+                font-size: 30px;
+            }
+        }
+        dd {
+            color: #96afd8;
+            font-size: 15px;
+            @include smallScreen {
+                font-size: 24px;
+            }
+        }
+    }
+}

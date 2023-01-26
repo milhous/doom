@@ -1,6 +1,8 @@
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 
+import Image from 'next/image';
+
 import Assets from '@app/affiliate/assets';
 
 import './HomeSupport.scss';
@@ -29,7 +31,12 @@ const HomeSupport = async (): Promise<JSX.Element> => {
         </a>
       </article>
       <aside>
-        <img src={Assets.homeSupportPic.src} />
+        <Image
+          src={Assets.homeSupportPic.src}
+          alt=""
+          width={Assets.homeSupportPic.width}
+          height={Assets.homeSupportPic.height}
+        />
       </aside>
     </section>
   );

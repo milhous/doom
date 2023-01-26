@@ -1,0 +1,18 @@
+{
+    "continuous_flip": "連續翻",
+    "flip_once": "翻一次",
+    "auto": "auto",
+    "stop": "stop",
+    "congratulations": "恭喜您",
+    "award": "獲得 {amount} {name}！",
+    "award_tips": "恭喜獲得 {amount} {name}！",
+    "confirm": "確定",
+    "help_desc1": "點擊按鈕將消耗LUT並隨機開啟一個格子。",
+    "help_desc2": "橫、豎、斜5個連續格子都開啟後可以激活星座獎勵（需要手動點擊領取）。",
+    "help_desc3": "領取全部星座獎勵後將激活超級大獎（需要手動點擊領取）。",
+    "help_desc4": "全部獎勵領取後將開啟新一輪的遊戲。",
+    "help_desc5": "可以點擊AUTO按鈕自動連續開啟格子，可隨時點擊STOP終止。",
+    "help_desc6": "如果隨機到已經開啟的格子將返還一半的消費金額。",
+    "activity_time": "活動時間：",
+    "balance": "可用餘額"
+}
