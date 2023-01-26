@@ -1,11 +1,13 @@
 /**
  * Package类型
  * @property UI
+ * @property HOME 首页
  * @property REFERRAL 邀请
  * @property AFFILIATE 代理
  */
 export const PackageType = {
   UI: 'ui',
+  HOME: 'home',
   REFERRAL: 'referral',
   AFFILIATE: 'affiliate',
 };

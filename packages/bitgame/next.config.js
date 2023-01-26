@@ -10,6 +10,7 @@ import CopyPlugin from 'copy-webpack-plugin';
  */
 const PackageType = {
   UI: 'ui',
+  HOME: 'home',
   REFERRAL: 'referral',
   AFFILIATE: 'affiliate',
 };
