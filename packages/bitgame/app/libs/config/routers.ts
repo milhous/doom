@@ -10,14 +10,13 @@ import {BetType} from './index';
  * @property {Array<IHeaderLink>} children 子路由
  */
 export interface IRouterInfo {
-    name: string;
-    to: string;
-    key: string;
-    desc: string;
-    isHide?: boolean;
-    children?: IRouterInfo[]
-  }
-  
+  name: string;
+  to: string;
+  key: string;
+  desc: string;
+  isHide?: boolean;
+  children?: IRouterInfo[];
+}
 
 // 路由配置
 const routers = {
