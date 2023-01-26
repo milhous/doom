@@ -1,8 +1,7 @@
 import {PackageType} from '@libs/config';
-import routers from '@libs/config/routers';
+import routers, {IRouterInfo} from '@libs/config/routers';
 import {useTranslate} from '@libs/i18n/server';
-
-import CompNavItem from './CompNavItem';
+import WidgetLink from '@widget/link';
 
 import './CompNav.scss';
 
@@ -14,10 +13,12 @@ const CompNav = async (): Promise<JSX.Element> => {
 
   return (
     <nav className="ui-header_nav">
-      {headerRouters.map((route, index) => (
-        <CompNavItem key={index} route={route}>
-          {t(route.name)}
-        </CompNavItem>
+      {headerRouters.map((route: IRouterInfo) => (
+        <div className="header-nav_item" key={route.to}>
+          <WidgetLink to={route.to} classname="header-nav_link" highlight={true}>
+            {t(route.name)}
+          </WidgetLink>
+        </div>
       ))}
     </nav>
   );
