@@ -1,6 +1,9 @@
+import {Suspense} from 'react';
+
 import Toolbar from '@ui/toolbar';
 import Header from '@ui/header';
 import Footer from '@ui/footer';
+import WidgetSpinner from '@widget/spinner';
 
 import Home from './components/home';
 
@@ -12,7 +15,9 @@ const Page = async (): Promise<JSX.Element> => {
       <Toolbar />
       {/* @ts-expect-error Server Component */}
       <Header />
-      <Home />
+      <Suspense fallback={<WidgetSpinner />}>
+        <Home />
+      </Suspense>
       <Footer />
     </>
   );
