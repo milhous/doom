@@ -19,19 +19,14 @@ const telegramList = {
 // 成為LUT參與者
 const AboutContact = async (): Promise<JSX.Element> => {
   const {t, i18n} = await useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
+  const lng = i18n.language;
 
   return (
     <section className="about-contact">
       <div className="staking-container">
         <h2>{t('contact_title')}</h2>
         <p>{t('contact_desc')}</p>
-        <a
-          className="staking-btn"
-          href={telegramList[i18n.language]}
-          target="_blank"
-          title={t('contact_btn')}
-          rel="noreferrer"
-        >
+        <a className="staking-btn" href={telegramList[lng]} target="_blank" title={t('contact_btn')} rel="noreferrer">
           {t('contact_btn')}
         </a>
       </div>
