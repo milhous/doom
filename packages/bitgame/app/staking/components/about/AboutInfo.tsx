@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 
