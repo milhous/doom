@@ -115,7 +115,8 @@ const webpack = (config, options) => {
   // 插件配置
   const patterns = [];
 
-  for (const pname in PackageType) {
+  for (const key in PackageType) {
+    const pname = PackageType[key];
     alias[`@${pname}`] = resolveAppPath(`./app/${pname}`);
 
     patterns.push({
