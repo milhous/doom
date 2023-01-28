@@ -18,6 +18,7 @@ const i18nMap = new Map<string, i18n>();
 const initI18next = (appname: string): i18n => {
   const cookieLng = Cookies.get(cookieLngName);
   const lng = getLng(cookieLng, '');
+  const loadPath = `${__webpack_public_path__}static/locales/${appname}/{{lng}}/{{ns}}.json`;
 
   const i18nInstance: i18n = i18next.createInstance();
 
@@ -44,7 +45,7 @@ const initI18next = (appname: string): i18n => {
       },
       initImmediate: false,
       backend: {
-        loadPath: `${__webpack_public_path__}static/locales/${appname}/{{lng}}/{{ns}}.json`,
+        loadPath,
       },
       detection: {
         htmlTag: typeof document !== 'undefined' && document.documentElement,

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="icon-arrow_green-g" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="1490活动中心详情" transform="translate(-298.000000, -114.000000)">
+            <g id="编组-3" transform="translate(280.000000, 100.000000)">
+                <g id="下拉" transform="translate(11.000000, 9.000000)" fill="none" fill-rule="evenodd">
+                    <g transform="translate(11.000000, 11.000000) scale(-1, 1) rotate(-90.000000) translate(-11.000000, -11.000000) " id="编组" stroke="currentColor" stroke-width="2.2">
+                        <polyline id="Path-13" points="6.6 8.8 11 13.2 15.4 8.8"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

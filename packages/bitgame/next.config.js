@@ -7,6 +7,7 @@ import CopyPlugin from 'copy-webpack-plugin';
  * @property UI
  * @property HOME 首页
  * @property STAKING 质押
+ * @property PROMOTIONS 优惠活动
  * @property REFERRAL 邀请
  * @property AFFILIATE 代理
  */
@@ -14,6 +15,7 @@ const PackageType = {
   UI: 'ui',
   HOME: 'home',
   STAKING: 'staking',
+  PROMOTIONS: 'promotions',
   REFERRAL: 'referral',
   AFFILIATE: 'affiliate',
 };
@@ -29,6 +31,9 @@ const nextConfig = {
     appDir: true,
   },
   reactStrictMode: true,
+  images: {
+    domains: ['public.bnbstatic.com'],
+  },
 };
 
 const webpack = (config, options) => {

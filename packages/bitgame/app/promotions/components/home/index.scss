@@ -1,0 +1,54 @@
+@use "@libs/styles/library" as *;
+$btnLinkLinearGradient: to bottom,
+#05c9a3,
+#02996a;
+$btnHoverLinearGradient: to bottom,
+#16e8be,
+#079a7d;
+#promotions.promotions-home {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+    @include smallScreen {
+        max-width: auto;
+        padding: 0 30px 60px;
+    }
+    .promotions-btn {
+        cursor: pointer;
+        font-size: 16px;
+        white-space: nowrap;
+        @include smallScreen {
+            font-size: 24px;
+        }
+    }
+    .promotions-btn_participate {
+        @include setFlex(center, center);
+        width: 1130px;
+        height: 36px;
+        border-radius: 4px;
+        background-image: linear-gradient(#{btnLinkLinearGradient});
+        color: #fff;
+        text-align: center;
+        outline: none;
+        text-shadow: 0 1px 3px rgb(0 0 0 / 50%);
+        box-shadow: 0 6px 12px rgb(0 0 0 / 50%);
+        &:hover {
+            background-image: linear-gradient(#{btnHoverLinearGradient});
+        }
+        @include smallScreen {
+            width: 200px;
+            height: 60px;
+            border-radius: 6px;
+        }
+    }
+    .promotions-btn_detail {
+        color: #02996a;
+        line-height: 22px;
+        text-decoration: underline;
+        @include smallScreen {
+            line-height: 38px;
+        }
+    }
+}

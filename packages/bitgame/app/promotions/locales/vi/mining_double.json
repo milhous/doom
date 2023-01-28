@@ -1,0 +1,14 @@
+{
+  "act_desc": "Tham gia đặt cược vào các danh mục được chỉ định trên nền tảng trong mùa Giáng sinh, mở khai thác LUT để nhân đôi và cải thiện đáng kể hiệu quả!",
+  "title_lut_mining": "Kết quả khai thác LUT",
+  "title_game": "Trò chơi được chỉ định",
+  "title_match": "Cá cược thể thao tập trung",
+  "title_contract": "Cá cược thể thao theo hợp đồng",
+  "rules_1": "1. Thời gian hoạt động: {{startTime}} —— {{endTime}}",
+  "rules_2": "2. Tất cả người dùng của nền tảng đều có thể tham gia.",
+  "rules_3": "3. Chỉ các sự kiện / danh mục trò chơi được chỉ định trên nền tảng mới có thể hưởng nhân đôi kết quả khai thác, vàcác danh mục khác vẫn còn nguyên vẹn không thay đổi.",
+  "rules_4": "4. Nhân đôi sự kiện và trò chơi khai thác được tính dựa trên thời gian cá cược.Nếu người dùng đặt cược vào mục được chỉ định trong thời gian diễn ra sự kiện, nhưng thời gian trận đấu bắt đầu là sau khi sự kiện kết thúc, vẫn có thể tận hưởng dịch vụ nhân đôi và nâng cấp khai thác.",
+  "rules_5": "5. Đối với những người sử dụng các phương thức thủ đoạn gian lận để kiếm tiền thưởng, Bitgame sẽ có quyền khấu trừ phần thưởng và những lợi nhuận sản sinh vô thời hạn. Trong trường hợp nghiêm trọng, tất cả các tài khoản có liên quan sẽ bị đóng băng.",
+  "rules_6": "6. Bitgame có quyền giải thích cuối cùng về sự kiện này. Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ <a href=\"mailto:service@bitgame.com\">service@bitgame.com</a>.",
+  "order_btn_betting": "Đặt cược"
+}

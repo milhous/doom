@@ -3,6 +3,7 @@
  * @property UI
  * @property HOME 首页
  * @property STAKING 质押
+ * @property PROMOTIONS 优惠活动
  * @property REFERRAL 邀请
  * @property AFFILIATE 代理
  */
@@ -10,6 +11,7 @@ export const PackageType = {
   UI: 'ui',
   HOME: 'home',
   STAKING: 'staking',
+  PROMOTIONS: 'promotions',
   REFERRAL: 'referral',
   AFFILIATE: 'affiliate',
 };
@@ -64,6 +66,22 @@ export enum ModalType {
   MERGE,
   GOOGLE_AUTHENTICATOR,
   GOOGLE_HELP,
+}
+
+/**
+ * 活动类型
+ * @property All 全部
+ * @property Deposit Bonus 充值返利
+ * @property Sports Promos 赛事奖励
+ * @property Games Promos 游戏活动
+ * @property Community Promos 社群活动
+ */
+export enum PromotionsType {
+  ALL = -1,
+  DEPOSIT,
+  SPORTS,
+  GAMES,
+  COMMUNITY,
 }
 
 /**

@@ -1,8 +1,8 @@
 'use client';
 
-import {PackageType} from '@libs/config';
 import {useEffect, useState} from 'react';
 
+import {PackageType} from '@libs/config';
 import {useTranslate, getTranslate} from '@libs/i18n/client';
 import {TimeZoneConfigs, useTimezone, changeTimezone} from '@libs/timezone';
 import WidgetDropdown from '@widget/dropdown';

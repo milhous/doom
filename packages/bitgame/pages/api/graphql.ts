@@ -1,6 +1,6 @@
 import {createYoga, createSchema} from 'graphql-yoga';
 import {gql} from 'graphql-tag';
-import {getInvitationInfo} from '@referral/api';
+import {getInvitationInfo} from '@app/referral/api';
 
 const typeDefs = gql`
   type Query {

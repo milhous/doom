@@ -4,7 +4,7 @@ import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
 
 import Assets from '@referral/assets';
-import {getInvitationInfo} from '@referral/api';
+import {getInvitationInfo} from '@app/referral/api';
 
 // import * as referralCreate from './ReferralCreate';
 import {BannerBtnCreate, BannerBtnCopy, BannerBtnShare} from './HomeBannerBtn';

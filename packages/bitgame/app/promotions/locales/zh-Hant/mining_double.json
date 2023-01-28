@@ -1,0 +1,14 @@
+{
+  "act_desc": "聖誕季參與平台指定項目投注，開啟LUT挖礦翻倍，效率大幅提升！",
+  "title_lut_mining": "LUT挖礦結果",
+  "title_game": "指定遊戲項目",
+  "title_match": "中心化賽事項目",
+  "title_contract": "合約賽事項目",
+  "rules_1": "1. 活動時間：{{startTime}}——{{endTime}}",
+  "rules_2": "2. 平台所有用戶均可參加。",
+  "rules_3": "3. 僅限平台指定賽事/遊戲項目才可享受挖礦結果翻倍，其他項目保持原狀不變。",
+  "rules_4": "4. 賽事和遊戲的挖礦翻倍以投注時間計算，若用戶在活動期間投注指定項目的賽事，但是該場比賽開賽時間在活動結束後，仍可享受挖礦翻倍提升服務。",
+  "rules_5": "5. 凡是使用作弊手段，惡意套取獎金者，Bitgame將保留無限期審核扣獎勵利及產生利潤的權利，嚴重者將凍結所有相關賬號。",
+  "rules_6": "6. Bitgame保留對此活動的最終解釋權，如有疑問請聯繫 <a href=\"mailto:service@bitgame.com\">service@bitgame.com</a>。",
+  "order_btn_betting": "投注"
+}

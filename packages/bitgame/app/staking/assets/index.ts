@@ -21,7 +21,7 @@ import introIconUSDT from './about/intro-icon_usdt.svg';
 import usageArrow from './about/usage-arrow.svg';
 import aboutHelp from './about/help.svg';
 
-const assets = {
+const Assets = {
   banner,
   infoFlow,
   infoFlowMobile,
@@ -46,4 +46,4 @@ const assets = {
   introIconBnb,
 };
 
-export default assets;
+export default Assets;

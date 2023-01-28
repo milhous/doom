@@ -22,7 +22,7 @@ import HomeHowSN1 from './home/how-sn1.svg';
 import HomeHowSN2 from './home/how-sn2.svg';
 import HomeHowSN3 from './home/how-sn3.svg';
 
-export default {
+const Assets = {
   HomeIconHelp,
   HomeBannerPic,
   HomeBannerPicH5,
@@ -47,3 +47,5 @@ export default {
   HomeHowSN2,
   HomeHowSN3,
 };
+
+export default Assets;

@@ -1,0 +1,14 @@
+{
+  "act_desc": "Noel sezonu boyunca platformda belirlenmiş öğeler üzerinde bahislere katılın, LUT madenciliğini ikiye katlayın ve verimliliği büyük ölçüde artırın!",
+  "title_lut_mining": "LUT madenciliği",
+  "title_game": "Belirlenmiş oyunlar",
+  "title_match": "Merkezi spor bahisleri",
+  "title_contract": "Sözleşmeli spor bahisleri",
+  "rules_1": "1. Etkinlik zamanı: {{startTime}}——{{endTime}}",
+  "rules_2": "2. Tüm kullanıcılar katılabilir.",
+  "rules_3": "3. Yalnızca platformda belirlenen etkinlikler/oyunlar, madenciliğin iki katına çıkarılmasından faydalanabilir, geri kalanlar aynen kalır.",
+  "rules_4": "4. Etkinlik ve oyunların ikiye katlanması, bahis süresine göre hesaplanır. Bir kullanıcı etkinlik sırasında belirlenmiş bir etkinliğe bahis oynarsa ancak spor etkinliğin sonunda başlarsa yine de madencilik ikiye katlama yükseltme hizmetinden yararlanabilirler.",
+  "rules_5": "5. Bonus almak için hile yöntemlerini kullananlar için Bitgame, ödülleri inceleme ve kar elde etme hakkını saklı tutar. Bazı durumlarda, ilgili tüm hesaplar dondurulur.",
+  "rules_6": "6. Bitgame, bu olayın nihai karar verme hakkını saklı tutar. Herhangi bir sorunuz varsa lütfen <a href=\"mailto:service@bitgame.com\">service@bitgame.com</a> ile iletişime geçin.",
+  "order_btn_betting": "Bahis Yapma"
+}

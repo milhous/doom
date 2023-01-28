@@ -1,0 +1,116 @@
+@use "@libs/styles/library" as *;
+#promotions .promotions-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 44px 0 30px;
+    @include smallScreen {
+        padding: 30px 0;
+    }
+    ul {
+        overflow: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 10px;
+        /* width */
+        &::-webkit-scrollbar {
+            height: 6px;
+            border-radius: 3px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #283c56;
+            border-radius: 3px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #283c56;
+        }
+        li {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            position: relative;
+            margin-right: 40px;
+            padding-bottom: 14px;
+            color: #7286a6;
+            font-size: 16px;
+            line-height: 20px;
+            white-space: nowrap;
+            @include smallScreen {
+                font-size: 26px;
+                line-height: 32px;
+            }
+            &::before {
+                content: '.';
+                overflow: hidden;
+                display: block;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                transition: width 0.2s;
+                transform: translateX(-50%);
+                width: 0;
+                height: 5px;
+                border-radius: 3px;
+                background-color: #02996a;
+                text-indent: -9999px;
+            }
+            &.active {
+                &:before {
+                    width: 100%;
+                }
+                &:hover {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+            &:hover::before {
+                width: 0%;
+            }
+            span {
+                display: block;
+            }
+            svg {
+                width: 16px;
+                min-width: 16px;
+                height: 16px;
+                margin-right: 6px;
+                @include smallScreen {
+                    width: 22px;
+                    min-width: 22px;
+                    height: 22px;
+                }
+            }
+            svg:nth-child(1) {
+                display: block;
+            }
+            svg:nth-child(2) {
+                display: none;
+            }
+            &:hover,
+            &.active {
+                color: #fff;
+                svg {
+                    color: #03c588;
+                }
+                svg:nth-child(1) {
+                    display: none;
+                }
+                svg:nth-child(2) {
+                    display: block;
+                }
+            }
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+    }
+}

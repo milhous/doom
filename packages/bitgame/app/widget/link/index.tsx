@@ -12,7 +12,6 @@ const WidgetLink = (props: {
   to: string;
   classname?: string;
   highlight?: boolean;
-  fn?: (isActive: boolean) => string;
   children: React.ReactNode;
 }): JSX.Element => {
   const pathname = usePathname();

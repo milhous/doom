@@ -15,7 +15,7 @@ import HomeIconSN2 from './home/icon-sn2.svg';
 import HomeIconSN3 from './home/icon-sn3.svg';
 import HomeIconClose from './home/icon-close.svg';
 
-export default {
+const Assets = {
   homeLoginElem,
   HomeIconCopy,
   HomeIconFacebook,
@@ -33,3 +33,5 @@ export default {
   HomeIconSN3,
   HomeIconClose,
 };
+
+export default Assets;

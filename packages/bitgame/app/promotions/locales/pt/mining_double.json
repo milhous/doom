@@ -1,0 +1,14 @@
+{
+  "act_desc": "Boost your LUT mining efficiency up to 1.5x by betting on designated items on the platform during the Christmas season.",
+  "title_lut_mining": "LUT mining boost",
+  "title_game": "Designated games",
+  "title_match": "Centralized sports betting",
+  "title_contract": "Contract sports betting",
+  "rules_1": "1. Activity time: {{startTime}}——{{endTime}}",
+  "rules_2": "2. All users can participate.",
+  "rules_3": "3. Only the bets on the designated sports/games on the platform can enjoy the LUT mining boost.",
+  "rules_4": "4. The LUT mining boost of sports and games are calculated based on the betting time. If a user bets on a designated sports match during the event and the match actually starts after the event has ended, the LUT mining will still get boosted.",
+  "rules_5": "5. For those who use cheating methods to get bonuses, Bitgame will reserve the right to review the rewards and generate profits . In some cases, all related accounts will be frozen.",
+  "rules_6": "6. Bitgame reserves the right of final interpretation of this event. If you have any questions, please contact <a href=\"mailto:service@bitgame.com\">service@bitgame.com</a>.",
+  "order_btn_betting": "Betting"
+}
