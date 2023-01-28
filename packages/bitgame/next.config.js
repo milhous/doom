@@ -141,7 +141,9 @@ const webpack = (config, options) => {
   return config;
 };
 
-export default {
+const config = {
   ...nextConfig,
   webpack,
 };
+
+export default config;

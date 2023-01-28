@@ -33,6 +33,7 @@
         "react-i18next": "^12.1.4",
         "react-toastify": "^9.1.1",
         "server-only": "^0.0.1",
+        "sharp": "^0.31.3",
         "swr": "^2.0.2"
     },
     "devDependencies": {
@@ -42,6 +43,7 @@
         "@types/node": "18.11.18",
         "@types/react": "^18",
         "@types/react-dom": "^18.0.10",
+        "@types/sharp": "^0",
         "autoprefixer": "^10.4.13",
         "browserslist": "^4.21.4",
         "copy-webpack-plugin": "^11.0.0",
