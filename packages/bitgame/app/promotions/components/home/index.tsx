@@ -1,8 +1,9 @@
+import {getActivityInfo, IActivityData} from '@promotions/api';
+
 import {HomeProvider} from '@promotions/provider/HomeProvider';
 
-import {getActivityInfo} from '@promotions/api';
-
 import HomeNav from './HomeNav';
+import HomeContainer from './HomeContainer';
 import HomeList from './HomeList';
 import HomeNothing from './HomeNothing';
 
@@ -22,10 +23,11 @@ const Home = async (): Promise<JSX.Element> => {
       <HomeProvider>
         {/* @ts-expect-error Server Component */}
         <HomeNav />
-        <HomeList data={data}>
+        <HomeContainer data={data}>
+          <HomeList data={data} />
           {/* @ts-expect-error Server Component */}
           <HomeNothing />
-        </HomeList>
+        </HomeContainer>
       </HomeProvider>
     </main>
   );

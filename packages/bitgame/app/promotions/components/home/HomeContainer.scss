@@ -1,0 +1,26 @@
+#promotions .promotions-container {
+    .promotions-list,
+    .promotions-nothing,
+    .promotions-list_item {
+        display: none;
+    }
+    &.promotions-all .promotions-list {
+        display: flex;
+        .promotions-list_item {
+            display: flex;
+        }
+    }
+    &.promotions-nodata .promotions-nothing {
+        display: flex;
+    }
+    @for $i from 0 through 10 {
+        &.promotions-#{$i} {
+            .promotions-list {
+                display: flex;
+            }
+            .promotions-list_item#{$i} {
+                display: flex;
+            }
+        }
+    }
+}

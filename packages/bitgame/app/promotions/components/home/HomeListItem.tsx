@@ -1,11 +1,8 @@
-'use client';
-
-import {useState, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import {PackageType} from '@libs/config';
-import {useTranslate} from '@libs/i18n/client';
+import {useTranslate} from '@libs/i18n/server';
 
 import {IActivityData} from '@promotions/api';
 
@@ -36,13 +33,11 @@ const getPromotionState = (beginTime: number, endTime: number): number => {
 };
 
 /**
- * 标识
+ * 获取标识名称
  * @param {number} state 状态 0:未开始，1:进行中，2:结束
  * @param {number} type 类型 1:热门, 2:推荐
  */
-const Tag = (props: {state: number; type: number}): JSX.Element => {
-  const {state, type} = props;
-  const {t} = useTranslate(['promotions'], PackageType.PROMOTIONS);
+const getTagName = (state: number, type: number): string => {
   let name = '';
 
   if (state === 2) {
@@ -53,10 +48,21 @@ const Tag = (props: {state: number; type: number}): JSX.Element => {
     name = 'top';
   }
 
-  if (name !== '') {
+  return name;
+};
+
+/**
+ * 标识
+ * @param {string} tagName 标识名称
+ * @param {React.ReactNode} children 子节点
+ */
+const Tag = (props: {tagName: string; children: React.ReactNode}): JSX.Element => {
+  const {tagName, children} = props;
+
+  if (tagName !== '') {
     return (
-      <strong className={`promotions-tag ${name}`}>
-        <span>{t(name).toUpperCase()}</span>
+      <strong className={`promotions-tag ${tagName}`}>
+        <span>{children}</span>
       </strong>
     );
   } else {
@@ -65,28 +71,23 @@ const Tag = (props: {state: number; type: number}): JSX.Element => {
 };
 
 // 元素
-const HomeListItem = (props: {data: IActivityData}): JSX.Element => {
+const HomeListItem = async (props: {data: IActivityData}): Promise<JSX.Element> => {
   const {data} = props;
-  const {t} = useTranslate(['promotions'], PackageType.PROMOTIONS);
-
-  const [promotionState, setPromotionState] = useState<number>(0);
-
-  useEffect(() => {
-    // 活动状态 0:未开始，1:进行中，2:结束
-    const state = getPromotionState(data.startTime, data.endTime);
-
-    setPromotionState(state);
-  }, []);
+  const {t} = await useTranslate(['promotions'], PackageType.PROMOTIONS);
+  // 活动状态 0:未开始，1:进行中，2:结束
+  const promotionState = getPromotionState(data.startTime, data.endTime);
+  // 标志名称
+  const tagName = getTagName(promotionState, data.tag);
 
   return (
-    <li className="promotions-list_item">
+    <li className={`promotions-list_item promotions-list_item${data.type}`}>
       <div className="promotions-list_banner">
         <Image src={data.img} alt={data.title} width={1178} height={662} />
       </div>
       <div className="promotions-list_info">
         <h3>
           {data.title.toLocaleUpperCase()}
-          {promotionState !== 0 && <Tag state={promotionState} type={data.tag} />}
+          {promotionState !== 0 && <Tag tagName={tagName}>{t(tagName).toUpperCase()}</Tag>}
         </h3>
         <p>{data.desc}</p>
         <ul className="promotions-list_btns">

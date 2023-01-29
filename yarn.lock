@@ -1897,9 +1897,9 @@ __metadata:
     react-toastify: ^9.1.1
     sass: ^1.57.1
     server-only: ^0.0.1
-    sharp: 0.31.1
+    sharp: ^0.31.3
     svgo-loader: ^4.0.0
-    swr: ^2.0.2
+    swr: ^2.0.3
   languageName: unknown
   linkType: soft
 
@@ -4656,7 +4656,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.49.0
     cross-env: ^7.0.3
     cross-var: ^1.1.0
-    eslint: ^8.32.0
+    eslint: ^8.33.0
     eslint-config-next: ^13.1.6
     eslint-config-prettier: ^8.6.0
     eslint-plugin-prettier: ^4.2.1
@@ -5125,9 +5125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.32.0":
-  version: 8.32.0
-  resolution: "eslint@npm:8.32.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Feslint%2F-%2Feslint-8.32.0.tgz"
+"eslint@npm:^8.33.0":
+  version: 8.33.0
+  resolution: "eslint@npm:8.33.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Feslint%2F-%2Feslint-8.33.0.tgz"
   dependencies:
     "@eslint/eslintrc": ^1.4.1
     "@humanwhocodes/config-array": ^0.11.8
@@ -5170,7 +5170,7 @@ __metadata:
     text-table: ^0.2.0
   bin:
     eslint: bin/eslint.js
-  checksum: 23c8fb3c57291eecd9c1448faf603226a8f885022a2cd96e303459bf72e39b7f54987c6fb948f0f9eecaf7085600e6eb0663482a35ea83da12e9f9141a22b91e
+  checksum: 727e63ab8b7acf281442323c5971f6afdd5b656fbcebc4476cf54e35af51b2f180617433fc5e1952f0449ca3f43a905527f9407ea4b8a7ea7562fc9c3f278d4c
   languageName: node
   linkType: hard
 
@@ -8648,20 +8648,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:0.31.1":
-  version: 0.31.1
-  resolution: "sharp@npm:0.31.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsharp%2F-%2Fsharp-0.31.1.tgz"
+"sharp@npm:^0.31.3":
+  version: 0.31.3
+  resolution: "sharp@npm:0.31.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsharp%2F-%2Fsharp-0.31.3.tgz"
   dependencies:
     color: ^4.2.3
     detect-libc: ^2.0.1
     node-addon-api: ^5.0.0
     node-gyp: latest
     prebuild-install: ^7.1.1
-    semver: ^7.3.7
+    semver: ^7.3.8
     simple-get: ^4.0.1
     tar-fs: ^2.1.1
     tunnel-agent: ^0.6.0
-  checksum: 42d00c9c6c61e5cf752c29583253782b3d821ee15fc2648c1f59892b94e9bc170a47ee9d138aa0a61c1c2ee9b7573ee54444c857fff887908701c4208710480d
+  checksum: 29fd1dfbc616c6389f53f366cec342b4353d9f2a37e98952ca273db38dca57dfa0f336322d6d763f0fae876042ead22fd86ffe26d70c32ade2458d421db60d04
   languageName: node
   linkType: hard
 
@@ -9127,14 +9127,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swr@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "swr@npm:2.0.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fswr%2F-%2Fswr-2.0.2.tgz"
+"swr@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "swr@npm:2.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fswr%2F-%2Fswr-2.0.3.tgz"
   dependencies:
     use-sync-external-store: ^1.2.0
   peerDependencies:
     react: ^16.11.0 || ^17.0.0 || ^18.0.0
-  checksum: d68f6b5dfd66d9c3e36b7248d00c306d2a11e0f1a0fbb58956fef041f83dfc997b0d0c49532e05abdb9092d8b7be0d5b25803305225bdf0188157f6442f186c4
+  checksum: 968071e3336b81194879fd94553777793314e773cd2a27665617131403dca6b7e4d3697ab00d0b0aa456c107c0c8d86f9ce52bac22f8533e8421099870d46b17
   languageName: node
   linkType: hard
 
