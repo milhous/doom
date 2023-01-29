@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <script src="flexible.js" />
+        <script src="/flexible.js" defer />
       </head>
       <body>{children}</body>
     </html>

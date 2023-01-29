@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/server';
+import WidgetLink from '@widget/link';
 
 import {IActivityData} from '@promotions/api';
 import Assets from '@promotions/assets';
@@ -15,15 +16,17 @@ const Detail = async (props: {data: IActivityData}): Promise<JSX.Element> => {
   return (
     <>
       <div className="promotions-detail_back">
-        <div className="promotions-btn_back">
+        <WidgetLink to="/promotions" classname="promotions-btn_back">
           <Assets.IconArrowGreen />
           <span>{t('return_back')}</span>
-        </div>
+        </WidgetLink>
       </div>
       <dl className="promotions-detail_header">
         <dd>
-          <Assets.IconArrowGray />
-          <span>{t('return_back')}</span>
+          <WidgetLink to="/promotions">
+            <Assets.IconArrowGray />
+            <span>{t('return_back')}</span>
+          </WidgetLink>
         </dd>
         <dt>&nbsp;</dt>
         {/* <dt>{t('promotions')}</dt> */}

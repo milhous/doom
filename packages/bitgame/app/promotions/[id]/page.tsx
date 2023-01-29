@@ -1,3 +1,5 @@
+import {cache} from 'react';
+
 import {getActivityInfo, IActivityData} from '@promotions/api';
 
 import Detail from '@promotions/components/detail';
@@ -7,6 +9,19 @@ const getData = async () => {
 
   return res;
 };
+
+const getDetail = cache(async (id: string): Promise<IActivityData> => {
+  const data = await getData();
+  let res: IActivityData;
+
+  for (const item of data) {
+    if (item.id === id) {
+      res = item;
+    }
+  }
+
+  return res;
+});
 
 export async function generateStaticParams() {
   const data = await getData();
@@ -18,12 +33,12 @@ export async function generateStaticParams() {
 
 const Page = async ({params}: {params: {id: string}}): Promise<JSX.Element> => {
   const {id} = params;
-  const data = await getData();
+  const data = await getDetail(id);
 
   return (
     <main id="promotions" className="promotions-detail">
       {/* @ts-expect-error Server Component */}
-      <Detail data={data[0]} />
+      <Detail data={data} />
     </main>
   );
 };

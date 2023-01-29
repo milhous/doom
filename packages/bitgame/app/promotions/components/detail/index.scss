@@ -1,7 +1,10 @@
 @use "@libs/styles/library" as *;
-#promotions .promotions-detail {
-    max-width: 1040px;
+#promotions.promotions-detail {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1450px;
     margin: 0 auto;
+    padding: 0 20px 50px;
     .promotions-detail_header {
         display: none;
         align-items: center;
