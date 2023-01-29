@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import {PackageType} from '@libs/config';
-// import {useTranslate} from '@libs/i18n/client';
+import {useTranslate} from '@libs/i18n/server';
 
 import {IActivityData} from '@promotions/api';
 import Assets from '@promotions/assets';
@@ -9,21 +9,21 @@ import Assets from '@promotions/assets';
 import './index.scss';
 
 const Detail = async (props: {data: IActivityData}): Promise<JSX.Element> => {
-  //   const {t} = await useTranslate(['promotions'], PackageType.PROMOTIONS);
+  const {t} = await useTranslate(['promotions'], PackageType.PROMOTIONS);
   const {data} = props;
 
   return (
-    <div className="promotions-detail">
+    <>
       <div className="promotions-detail_back">
         <div className="promotions-btn_back">
           <Assets.IconArrowGreen />
-          {/* <span>{t('return_back')}</span> */}
+          <span>{t('return_back')}</span>
         </div>
       </div>
       <dl className="promotions-detail_header">
         <dd>
           <Assets.IconArrowGray />
-          {/* <span>{t('return_back')}</span> */}
+          <span>{t('return_back')}</span>
         </dd>
         <dt>&nbsp;</dt>
         {/* <dt>{t('promotions')}</dt> */}
@@ -41,7 +41,7 @@ const Detail = async (props: {data: IActivityData}): Promise<JSX.Element> => {
           __html: data.content,
         }}
       ></div>
-    </div>
+    </>
   );
 };
 

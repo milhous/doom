@@ -1,10 +1,6 @@
-import Toolbar from '@ui/toolbar';
-import Header from '@ui/header';
-import Footer from '@ui/footer';
-
 import {getActivityInfo, IActivityData} from '@promotions/api';
 
-export const dynamic = 'force-dynamic';
+import Detail from '@promotions/components/detail';
 
 const getData = async () => {
   const res = await getActivityInfo();
@@ -22,14 +18,13 @@ export async function generateStaticParams() {
 
 const Page = async ({params}: {params: {id: string}}): Promise<JSX.Element> => {
   const {id} = params;
+  const data = await getData();
 
   return (
-    <>
-      <Toolbar />
+    <main id="promotions" className="promotions-detail">
       {/* @ts-expect-error Server Component */}
-      <Header />
-      <h1>My Page {id}</h1>
-    </>
+      <Detail data={data[0]} />
+    </main>
   );
 };
 
