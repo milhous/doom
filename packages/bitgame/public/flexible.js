@@ -5,7 +5,7 @@
     var fontSize = (width / 768) * 100;
     var html = document.querySelector('html');
 
-    if (!!html) {
+    if (html) {
       html.style.fontSize = fontSize + 'px';
     }
   };

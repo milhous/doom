@@ -2,7 +2,7 @@ import Toolbar from '@ui/toolbar';
 import Header from '@ui/header';
 import Footer from '@ui/footer';
 
-const Page = async (): Promise<JSX.Element> => {
+const Page = async (): Promise<React.ReactNode> => {
   return (
     <>
       <Toolbar />

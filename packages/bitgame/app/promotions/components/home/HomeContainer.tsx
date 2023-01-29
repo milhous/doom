@@ -43,7 +43,7 @@ const getClassname = (type: string, data: IActivityData[]): string => {
 // 活动容器
 const HomeContainer = (props: IHomeListProps): JSX.Element => {
   const {data, children} = props;
-  const {state, dispatch} = useHome();
+  const {state} = useHome();
   // 活动列表
   const [classname, setClassname] = useState<string>(getClassname(state.promotionsType, data));
 

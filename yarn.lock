@@ -1641,7 +1641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:13.1.6":
+"@next/eslint-plugin-next@npm:13.1.6, @next/eslint-plugin-next@npm:^13.1.6":
   version: 13.1.6
   resolution: "@next/eslint-plugin-next@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Feslint-plugin-next%2F-%2Feslint-plugin-next-13.1.6.tgz"
   dependencies:
@@ -1859,6 +1859,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@packages/bitgame@workspace:packages/bitgame"
   dependencies:
+    "@next/eslint-plugin-next": ^13.1.6
     "@svgr/webpack": ^6.5.1
     "@types/fs-extra": ^11
     "@types/js-cookie": ^3
@@ -4660,7 +4661,7 @@ __metadata:
     eslint-config-next: ^13.1.6
     eslint-config-prettier: ^8.6.0
     eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: 7.32.1
+    eslint-plugin-react: 7.32.2
     eslint-plugin-react-hooks: ^4.6.0
     npm-check-updates: ^16.6.3
     prettier: ^2.8.3
@@ -5030,9 +5031,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react@npm:7.32.1":
-  version: 7.32.1
-  resolution: "eslint-plugin-react@npm:7.32.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-plugin-react%2F-%2Feslint-plugin-react-7.32.1.tgz"
+"eslint-plugin-react@npm:7.32.2":
+  version: 7.32.2
+  resolution: "eslint-plugin-react@npm:7.32.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Feslint-plugin-react%2F-%2Feslint-plugin-react-7.32.2.tgz"
   dependencies:
     array-includes: ^3.1.6
     array.prototype.flatmap: ^1.3.1
@@ -5051,7 +5052,7 @@ __metadata:
     string.prototype.matchall: ^4.0.8
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: e20eab61161a3db6211c2bd1eb9be3e407fd14e72c06c5f39a078b6ac37427b2af6056ee70e3954249bca0a04088ae797a0c8ba909fb8802e29712de2a41262d
+  checksum: 2232b3b8945aa50b7773919c15cd96892acf35d2f82503667a79e2f55def90f728ed4f0e496f0f157acbe1bd4397c5615b676ae7428fe84488a544ca53feb944
   languageName: node
   linkType: hard
 

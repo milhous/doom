@@ -1,8 +1,11 @@
 module.exports = {
+    globals: {
+        React: "readonly",
+        JSX: "readonly",
+        __webpack_public_path__: "readonly",
+    },
     parser: "@typescript-eslint/parser",
     extends: [
-        "plugin:react/recommended",
-        "plugin:react-hooks/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended",
         "next",

@@ -37,6 +37,7 @@
         "swr": "^2.0.3"
     },
     "devDependencies": {
+        "@next/eslint-plugin-next": "^13.1.6",
         "@svgr/webpack": "^6.5.1",
         "@types/fs-extra": "^11",
         "@types/js-cookie": "^3",

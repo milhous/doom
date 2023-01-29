@@ -1,4 +1,4 @@
-import {getActivityInfo, IActivityData} from '@promotions/api';
+import {getActivityInfo} from '@promotions/api';
 
 import {HomeProvider} from '@promotions/provider/HomeProvider';
 
