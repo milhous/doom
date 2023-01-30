@@ -1,5 +1,3 @@
-import dynamic from 'next/dynamic';
-
 import './index.scss';
 import SpinnerBg from './spinner-bg.svg';
 import SpinnerLogo from './spinner-logo.svg';

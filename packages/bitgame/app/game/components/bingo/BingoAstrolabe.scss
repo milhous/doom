@@ -1,0 +1,114 @@
+@use "@libs/styles/library" as *;
+@use "variables" as *;
+.game-bingo .bingo-astrolabe {
+    position: relative;
+    canvas {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) !important;
+    }
+    .astrolabe-background {
+        top: 60%;
+        width: $pcBackgroundSize;
+        height: $pcBackgroundSize;
+    }
+    .astrolabe-info {
+        position: absolute;
+        top: 372px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 700;
+        text-align: center;
+        dl {
+            position: relative;
+            z-index: 10;
+        }
+        dt {
+            color: #ffc833;
+            font-size: $pcInfoTitleFontSize;
+            line-height: $pcInfoTitleLineHeight;
+        }
+        dd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: $pcInfoAmountFontSize;
+            line-height: $pcInfoAmountLineHeight;
+            img {
+                display: block;
+                width: $pcInfoIconSize;
+                height: $pcInfoIconSize;
+                margin-right: 10px;
+            }
+        }
+        canvas {
+            width: $pcInfoSizeWidth;
+            height: pcInfoSizeHeight;
+        }
+    }
+    .astrolabe-sign {
+        position: relative;
+        z-index: 10;
+        width: $pcSignSize;
+        height: $pcSignSize;
+        margin: 0 auto;
+        background: url('~@game/assets/bingo/astrolabe-bg_sign.png') no-repeat center center;
+        background-size: 100% 100%;
+        .astrolabe-sign_active {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            canvas {
+                width: $pcSignActiveSize;
+                height: $pcSignActiveSize;
+            }
+        }
+        .astrolabe-frame {
+            width: $pcFrameSize;
+            height: $pcFrameSize;
+        }
+        .astrolabe-award {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            &.active {
+                cursor: pointer;
+                .astrolabe-award_active {
+                    display: block;
+                }
+            }
+            img {
+                position: relative;
+                z-index: 10;
+                width: $pcAwardSize;
+                height: $pcAwardSize;
+                transform: translate(-2px, 3px);
+            }
+            .astrolabe-award_halo {
+                width: 160px;
+                height: 160px;
+            }
+            .astrolabe-award_stars,
+            .astrolabe-award_active {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .astrolabe-award_stars {
+                z-index: 20;
+                width: 170px;
+                height: 170px;
+            }
+            .astrolabe-award_active {
+                display: none;
+                z-index: 30;
+                width: $pcAwardActiveSize;
+                height: $pcAwardActiveSize;
+            }
+        }
+    }
+}

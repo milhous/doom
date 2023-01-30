@@ -34,6 +34,7 @@
         "react-toastify": "^9.1.1",
         "server-only": "^0.0.1",
         "sharp": "^0.31.3",
+        "svga": "^2.0.7",
         "swr": "^2.0.3"
     },
     "devDependencies": {

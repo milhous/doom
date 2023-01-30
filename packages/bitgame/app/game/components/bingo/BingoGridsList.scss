@@ -1,0 +1,42 @@
+@use "@libs/styles/library" as *;
+@use "variables" as *;
+.game-bingo .bingo-grids_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: $gridX * $pcGridsItemSize;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    background-image: url('~@game/assets/bingo/bingo-grids_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    @include smallScreen {
+        width: $gridX * $mobileGridsItemSize;
+    }
+    &.fixed {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        background: none;
+        .bingo-grids_item {
+            border-color: transparent;
+            border-radius: $gridsItemRadius;
+            background: transparent;
+            &.prize::before {
+                display: none;
+            }
+            &.flip.transition {
+                &::before {
+                    display: block;
+                    border-color: #f5c954;
+                    box-shadow: 0 8px #f5c954;
+                }
+            }
+        }
+    }
+}

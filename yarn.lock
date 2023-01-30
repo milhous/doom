@@ -1899,6 +1899,7 @@ __metadata:
     sass: ^1.57.1
     server-only: ^0.0.1
     sharp: ^0.31.3
+    svga: ^2.0.7
     svgo-loader: ^4.0.0
     swr: ^2.0.3
   languageName: unknown
@@ -9083,6 +9084,13 @@ __metadata:
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsvg-parser%2F-%2Fsvg-parser-2.0.4.tgz"
   checksum: b3de6653048212f2ae7afe4a423e04a76ec6d2d06e1bf7eacc618a7c5f7df7faa5105561c57b94579ec831fbbdbf5f190ba56a9205ff39ed13eabdf8ab086ddf
+  languageName: node
+  linkType: hard
+
+"svga@npm:^2.0.7":
+  version: 2.0.7
+  resolution: "svga@npm:2.0.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fsvga%2F-%2Fsvga-2.0.7.tgz"
+  checksum: 76c1c230a4bb0a55b69ff4c18f96e8ff660400f8cfb23d5726ab6a51c602d8371de25805df171cd8c22f0c226fad6bc7371efbf9c83b8522266aab411b94a7bf
   languageName: node
   linkType: hard
 

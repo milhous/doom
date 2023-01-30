@@ -1,0 +1,63 @@
+@use "@libs/styles/library" as *;
+@use "variables" as *;
+.game-bingo .bingo-grids_item {
+    .bingo-prize {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        img {
+            position: absolute;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+        }
+        canvas,
+        img {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) !important;
+        }
+        .bingo-prize_active,
+        .bingo-prize_halo {
+            display: none;
+        }
+        .bingo-prize_active {
+            width: 90px;
+            height: 90px;
+            @include smallScreen {
+                width: 110px;
+                height: 110px;
+            }
+        }
+        .bingo-prize_halo {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .bingo-tips {
+        box-sizing: border-box;
+        display: none;
+        position: absolute;
+        left: 50%;
+        bottom: 80%;
+        z-index: 20;
+        transform: translateX(-50%);
+        min-width: 130px;
+        padding: 15px 15px 10px;
+        border: 2px solid #2f4573;
+        border-radius: 10px;
+        background-color: rgba(6, 17, 37, 0.7);
+        dd {
+            @include setFont(20px, 30px, #fff);
+            margin-top: 5px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        img {
+            display: block;
+            width: 48px;
+            height: 48px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -2,6 +2,7 @@
  * Package类型
  * @property UI
  * @property HOME 首页
+ * @property GAME 游戏
  * @property STAKING 质押
  * @property PROMOTIONS 优惠活动
  * @property REFERRAL 邀请
@@ -10,6 +11,7 @@
 export const PackageType = {
   UI: 'ui',
   HOME: 'home',
+  GAME: 'game',
   STAKING: 'staking',
   PROMOTIONS: 'promotions',
   REFERRAL: 'referral',

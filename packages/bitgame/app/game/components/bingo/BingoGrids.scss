@@ -1,0 +1,10 @@
+@use "@libs/styles/library" as *;
+@use "variables" as *;
+.game-bingo .bingo-grids {
+    position: relative;
+    padding: 0.06rem;
+    border: 0.04rem solid rgba(59, 95, 148, 0.75);
+    border-radius: 0.16rem;
+    background-color: $gridsItemBackgroundColor;
+    box-shadow: 0 0 0.42rem rgba(0, 114, 230, 0.38);
+}

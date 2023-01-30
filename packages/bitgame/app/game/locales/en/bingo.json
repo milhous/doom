@@ -1,0 +1,18 @@
+{
+    "continuous_flip": "Auto Flip",
+    "flip_once": "Flip",
+    "auto": "Auto",
+    "stop": "Stop",
+    "congratulations": "congratulations",
+    "award": "Received  {amount} {name}！",
+    "award_tips": "Congratulation, you received {amount} {name}！",
+    "confirm": "Confirm",
+    "help_desc1": "Click the buttom will consume LUT and flip a pattern",
+    "help_desc2": "Ater 5 adjacent pattern in horizontal, vertical and diagonal fliped, will active star sign prize (Click to Receive) ",
+    "help_desc3": "The ultimate prize will actived after you received all star sign's prize (Click to receive).",
+    "help_desc4": "Will start a round game after you reveive all the prize.",
+    "help_desc5": "You can click AUTO to flip continuously, and click STOP to end at anytime.",
+    "help_desc6": "If AUTO flip a flipped pattern, will return half consumed LUT.",
+    "activity_time": "Activity time:",
+    "balance": "Balance"
+}

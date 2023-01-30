@@ -1,0 +1,102 @@
+@use "@libs/styles/library" as *;
+#game.game-bingo {
+    @keyframes breathe {
+        0% {
+            opacity: 0.4;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    overflow: hidden;
+    background: url('~@game/assets/bingo/bingo-bg.jpg') no-repeat center center;
+    background-size: 100% 100%;
+    .bingo-container {
+        box-sizing: border-box;
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 70px 50px 50px;
+        z-index: 1;
+        &::before,
+        &::after {
+            animation: breathe 3s ease-in-out infinite alternate;
+            content: '.';
+            position: absolute;
+            top: 50%;
+            width: 800px;
+            height: 800px;
+            background: url('~@game/assets/bingo/bingo-bln.png') no-repeat center center;
+            background-size: contain;
+            text-indent: -9999px;
+        }
+        &::before {
+            left: 0;
+            top: 50%;
+            transform: translate(-40%, -50%);
+        }
+        &::after {
+            right: 0;
+            top: 25%;
+            transform: translate(50%, -50%);
+        }
+        @include smallScreen {
+            overflow: hidden;
+            width: 750px;
+            padding: 0 0 50px;
+        }
+    }
+    .bingo-header {
+        @include setFlex(space-between);
+        display: none;
+        position: relative;
+        z-index: 20;
+        @include smallScreen {
+            display: flex;
+        }
+    }
+    .bingo-game {
+        @include setFlex(space-between);
+        position: relative;
+        z-index: 10;
+        .bingo-logo {
+            position: absolute;
+            left: 0;
+            top: -15px;
+            z-index: 10;
+        }
+        .bingo-game_astrolabe {
+            width: 100%;
+            transform: translateY(-28px);
+        }
+        .bingo-game_grids {
+            position: relative;
+            z-index: 10;
+            margin: 0 auto;
+        }
+        @include smallScreen {
+            .bingo-logo {
+                display: none;
+            }
+            .bingo-game_astrolabe {
+                display: none;
+            }
+        }
+    }
+    .bingo-btn {
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        text-align: center;
+        text-transform: uppercase;
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+}

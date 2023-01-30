@@ -1,0 +1,253 @@
+@use "@libs/styles/library" as *;
+@use "variables" as *;
+.game-bingo .bingo-grids_item {
+    @keyframes rubberBand {
+        0% {
+            transform: scale3d(1, 1, 1);
+        }
+        30% {
+            transform: scale3d(1.25, 1.25, 1);
+        }
+        40% {
+            transform: scale3d(0.75, 0.75, 1);
+        }
+        50% {
+            transform: scale3d(1.15, 1.15, 1);
+        }
+        65% {
+            transform: scale3d(0.95, 0.95, 1);
+        }
+        75% {
+            transform: scale3d(1.05, 1.05, 1);
+        }
+        100% {
+            transform: scale3d(0, 0, 0);
+        }
+    }
+    box-sizing: border-box;
+    position: relative;
+    width: $pcGridsItemSize;
+    height: $pcGridsItemSize;
+    border: $gridsItemBorderColor solid $pcGridsItemBorder;
+    &::before {
+        content: '.';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border: $gridsItemBorderColor solid $pcGridsItemBorder;
+        border-radius: $gridsItemRadius;
+        text-indent: -9999px;
+    }
+    &.disabled {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $gridsItemDisabledColor;
+    }
+    &.prize {
+        cursor: pointer;
+        background-color: $gridsItemPrizeColor;
+        box-shadow: 0 0 38px #132a4f inset;
+    }
+    &.flip {
+        position: relative;
+        z-index: 10;
+        canvas {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) !important;
+        }
+    }
+    &:nth-child(#{$gridX}n + #{$gridX}) {
+        margin-right: 0;
+    }
+    &:nth-last-child(-n + #{$gridX}) {
+        margin-bottom: 0;
+    }
+    @include smallScreen {
+        width: $mobileGridsItemSize;
+        height: $mobileGridsItemSize;
+        border: $gridsItemBorderColor solid $mobileGridsItemBorder;
+        &::before {
+            border: $gridsItemBorderColor solid $mobileGridsItemBorder;
+        }
+    }
+    &.flip.active {
+        .bingo-flip {
+            transform: rotateY(0);
+            img {
+                animation: rubberBand $time both;
+            }
+        }
+    }
+    &.prize.active,
+    &.prize.received {
+        .bingo-prize_active {
+            display: block;
+        }
+    }
+    &.prize.active {
+        .bingo-prize_halo {
+            display: block;
+        }
+    }
+    &.prize:hover {
+        .bingo-tips {
+            display: block;
+        }
+        &.active {
+            .bingo-tips {
+                display: none;
+            }
+        }
+    }
+    .bingo-letter,
+    .bingo-sign {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+    }
+    .bingo-letter {
+        width: 32px;
+        height: 38px;
+        text-indent: -9999px;
+        &.bingo-letter_B {
+            background-image: url('~@game/assets/bingo/letter-B.png');
+        }
+        &.bingo-letter_I {
+            background-image: url('~@game/assets/bingo/letter-I.png');
+        }
+        &.bingo-letter_N {
+            background-image: url('~@game/assets/bingo/letter-N.png');
+        }
+        &.bingo-letter_G {
+            background-image: url('~@game/assets/bingo/letter-G.png');
+        }
+        &.bingo-letter_O {
+            background-image: url('~@game/assets/bingo/letter-O.png');
+        }
+        @include smallScreen {
+            width: 42px;
+            height: 46px;
+        }
+    }
+    .bingo-sign {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &.bingo-sign_aries {
+            width: 54px;
+            height: 32px;
+            background-image: url('~@game/assets/bingo/sign-aries.png');
+            @include smallScreen {
+                width: 64px;
+                height: 40px;
+            }
+        }
+        &.bingo-sign_taurus {
+            width: 48px;
+            height: 38px;
+            background-image: url('~@game/assets/bingo/sign-taurus.png');
+            @include smallScreen {
+                width: 60px;
+                height: 48px;
+            }
+        }
+        &.bingo-sign_gemini {
+            width: 48px;
+            height: 34px;
+            background-image: url('~@game/assets/bingo/sign-gemini.png');
+            @include smallScreen {
+                width: 60px;
+                height: 40px;
+            }
+        }
+        &.bingo-sign_cancer {
+            width: 36px;
+            height: 40px;
+            background-image: url('~@game/assets/bingo/sign-cancer.png');
+            @include smallScreen {
+                width: 44px;
+                height: 48px;
+            }
+        }
+        &.bingo-sign_pisces {
+            width: 50px;
+            height: 38px;
+            background-image: url('~@game/assets/bingo/sign-pisces.png');
+            @include smallScreen {
+                width: 60px;
+                height: 46px;
+            }
+        }
+        &.bingo-sign_aquarius {
+            width: 46px;
+            height: 40px;
+            background-image: url('~@game/assets/bingo/sign-aquarius.png');
+            @include smallScreen {
+                width: 56px;
+                height: 48px;
+            }
+        }
+        &.bingo-sign_capricornus {
+            width: 50px;
+            height: 46px;
+            background-image: url('~@game/assets/bingo/sign-capricornus.png');
+            @include smallScreen {
+                width: 62px;
+                height: 56px;
+            }
+        }
+        &.bingo-sign_sagittarius {
+            width: 38px;
+            height: 38px;
+            background-image: url('~@game/assets/bingo/sign-sagittarius.png');
+            @include smallScreen {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        &.bingo-sign_scorpio {
+            width: 36px;
+            height: 38px;
+            background-image: url('~@game/assets/bingo/sign-scorpio.png');
+            @include smallScreen {
+                width: 44px;
+                height: 48px;
+            }
+        }
+        &.bingo-sign_libra {
+            width: 46px;
+            height: 36px;
+            background-image: url('~@game/assets/bingo/sign-libra.png');
+            @include smallScreen {
+                width: 56px;
+                height: 46px;
+            }
+        }
+        &.bingo-sign_virgo {
+            width: 38px;
+            height: 42px;
+            background-image: url('~@game/assets/bingo/sign-virgo.png');
+            @include smallScreen {
+                width: 48px;
+                height: 54px;
+            }
+        }
+        &.bingo-sign_leo {
+            width: 42px;
+            height: 38px;
+            background-image: url('~@game/assets/bingo/sign-leo.png');
+            @include smallScreen {
+                width: 52px;
+                height: 46px;
+            }
+        }
+    }
+}
