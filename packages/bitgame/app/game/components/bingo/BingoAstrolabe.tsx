@@ -26,7 +26,7 @@ const BingoAstrolabe = (): JSX.Element => {
         <dl>
           <dt>{name}</dt>
           <dd>
-            {/* <Image src={Assets.iconAward} alt={name} width={119} height={119} /> */}
+            <Image src={Assets.iconAward} alt={name} width={119} height={119} />
             <span>x{amount}</span>
           </dd>
         </dl>
