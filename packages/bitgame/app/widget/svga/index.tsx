@@ -9,7 +9,7 @@ const Svga = dynamic(() => import('./WidgetSvga'), {
 
 const WidgetSvga = (props: IWidgetSvgaProps): JSX.Element => {
   return (
-    <Suspense fallback={<p>Loading feed...</p>}>
+    <Suspense fallback={<p>Loading...</p>}>
       <Svga {...props} />
     </Suspense>
   );
