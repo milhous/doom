@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 import Assets from '@game/assets';
@@ -22,20 +20,20 @@ const BingoAstrolabe = (): JSX.Element => {
 
   return (
     <div className="bingo-astrolabe">
-      {/* <WidgetSvga className="astrolabe-background" url={Assets.backgroundAstrolabe} /> */}
+      <WidgetSvga className="astrolabe-background" url={Assets.backgroundAstrolabe} />
       <div className="astrolabe-info">
-        {/* <WidgetSvga url={Assets.baseAstrolabe} /> */}
+        <WidgetSvga url={Assets.baseAstrolabe} />
         <dl>
           <dt>{name}</dt>
           <dd>
-            <Image src={Assets.iconAward} alt={name} />
+            {/* <Image src={Assets.iconAward} alt={name} width={119} height={119} /> */}
             <span>x{amount}</span>
           </dd>
         </dl>
       </div>
       <div className="astrolabe-sign">
         <div className="astrolabe-sign_active">{elems}</div>
-        {/* <WidgetSvga className="astrolabe-frame" url={Assets.frameAstrolabe} /> */}
+        <WidgetSvga className="astrolabe-frame" url={Assets.frameAstrolabe} />
         {/* <Award pid={pid} /> */}
       </div>
     </div>
