@@ -13,7 +13,6 @@ const HomeList = (props: {data: IActivityData[]}): JSX.Element => {
         <ul className="promotions-list">
           {data.map((item: IActivityData) => {
             return (
-              /* @ts-expect-error Server Component */
               <HomeListItem data={item} key={item.id} />
             );
           })}
