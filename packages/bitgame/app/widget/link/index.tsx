@@ -18,6 +18,7 @@ const WidgetLink = (props: {
   const {to, classname = '', highlight = false, children} = props;
 
   const [className, setClassName] = useState<string>(classname);
+  const [query, setQuery] = useState<{ [propName: string]: any }>({});
 
   useEffect(() => {
     if (highlight) {
@@ -25,13 +26,15 @@ const WidgetLink = (props: {
 
       isActive && setClassName(`${classname} active`);
     }
+
+    setQuery({[cookieLngName]: getCurLang()});
   }, []);
 
   return (
     <Link
       href={{
         pathname: to,
-        query: {[cookieLngName]: getCurLang()},
+        query,
       }}
       className={className}
     >
