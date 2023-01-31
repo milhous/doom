@@ -3,7 +3,7 @@
 import {initReactI18next, useTranslation} from 'react-i18next';
 import i18next, {i18n} from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpBackend from 'i18next-http-backend';
+import FetchBackend from 'i18next-fetch-backend';
 import Cookies from 'js-cookie';
 
 import {defaultNS, defaultLng, supportedLngs, cookieLngName, getLng} from './settings';
@@ -24,7 +24,8 @@ const initI18next = (appname: string): i18n => {
 
   i18nInstance
     // load translation using xhr -> see /public/locales
-    .use(HttpBackend)
+    // .use(HttpBackend)
+    .use(FetchBackend)
     // detect user language
     // learn more: https://github.com/i18next/i18next-browser-languageDetector
     .use(LanguageDetector)
@@ -112,7 +113,7 @@ export const getTranslate = (key: string, appname: string, nsSeparator = ':'): s
  */
 export const useTranslate = (ns: string[], appname: string): any => {
   const i18next = getI18nInstance(appname);
-  const {t} = useTranslation(ns, {i18n: i18next});
+  const { t } = useTranslation(ns, { i18n: i18next });
 
   return {
     // TODO: solve TKPrefix problem here...

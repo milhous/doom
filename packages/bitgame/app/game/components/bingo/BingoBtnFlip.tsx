@@ -9,7 +9,7 @@ import './BingoBtnFlip.scss';
 
 // 翻牌按钮
 const BingoBtnFlip = (): JSX.Element => {
-//   const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
+  const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
 
   const flipCurrency = 'LUT';
   const flipAmount = 10;
@@ -40,7 +40,7 @@ const BingoBtnFlip = (): JSX.Element => {
               <span>{flipAmount}</span>&nbsp;{flipCurrency}
             </dt>
             <dd>
-              {/* {t('balance')}: {flipBalance} {flipCurrency} */}
+              {t('balance')}: {flipBalance} {flipCurrency}
             </dd>
           </dl>
           <div></div>

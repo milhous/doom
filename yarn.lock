@@ -1878,6 +1878,7 @@ __metadata:
     i18next: ^22.4.9
     i18next-browser-languagedetector: ^7.0.1
     i18next-chained-backend: ^4.2.0
+    i18next-fetch-backend: ^5.0.1
     i18next-fs-backend: ^2.1.1
     i18next-http-backend: ^2.1.1
     i18next-resources-to-backend: ^1.1.1
@@ -5958,6 +5959,13 @@ __metadata:
   dependencies:
     "@babel/runtime": ^7.19.4
   checksum: 8ce90573772b04bc5d223eb49f90b8167b6f1c58a01f03dca4309e201c59dd6b0269e040b93d7f0aa1488576a99d7ba95af22330f932b0d6af38a4769da16c4c
+  languageName: node
+  linkType: hard
+
+"i18next-fetch-backend@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "i18next-fetch-backend@npm:5.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fi18next-fetch-backend%2F-%2Fi18next-fetch-backend-5.0.1.tgz"
+  checksum: be6d72b10944fc27510778c4e4fc6a12d718e9156dd9b571be74bde25566f3c0227038a6449fdec3c7efc927b97d17fd721176f36d57ba2a9acce3099d8270e1
   languageName: node
   linkType: hard
 
