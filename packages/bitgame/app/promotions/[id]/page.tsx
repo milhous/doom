@@ -37,7 +37,6 @@ const Page = async ({params}: {params: {id: string}}): Promise<JSX.Element> => {
 
   return (
     <main id="promotions" className="promotions-detail">
-      {/* @ts-expect-error Server Component */}
       <Detail data={data} />
     </main>
   );
