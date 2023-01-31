@@ -1,17 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 
 import Assets from '@game/assets';
 
 import './BingoAstrolabe.scss';
 
 import WidgetSvga from '@widget/svga';
-
-// const WidgetSvga = dynamic(() => import('@widget/svga'), {
-//   ssr: false,
-// });
 
 const BingoAstrolabe = (): JSX.Element => {
   // 星座
@@ -27,9 +22,9 @@ const BingoAstrolabe = (): JSX.Element => {
 
   return (
     <div className="bingo-astrolabe">
-      <WidgetSvga className="astrolabe-background" url={Assets.backgroundAstrolabe} />
+      {/* <WidgetSvga className="astrolabe-background" url={Assets.backgroundAstrolabe} /> */}
       <div className="astrolabe-info">
-        <WidgetSvga url={Assets.baseAstrolabe} />
+        {/* <WidgetSvga url={Assets.baseAstrolabe} /> */}
         <dl>
           <dt>{name}</dt>
           <dd>
@@ -40,7 +35,7 @@ const BingoAstrolabe = (): JSX.Element => {
       </div>
       <div className="astrolabe-sign">
         <div className="astrolabe-sign_active">{elems}</div>
-        <WidgetSvga className="astrolabe-frame" url={Assets.frameAstrolabe} />
+        {/* <WidgetSvga className="astrolabe-frame" url={Assets.frameAstrolabe} /> */}
         {/* <Award pid={pid} /> */}
       </div>
     </div>
