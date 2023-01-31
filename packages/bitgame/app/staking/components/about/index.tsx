@@ -24,17 +24,11 @@ const About = async (): Promise<JSX.Element> => {
 
   return (
     <main id="staking" className="staking-about">
-      {/* @ts-expect-error Server Component */}
       <AboutBanner />
-      {/* @ts-expect-error Server Component */}
       <AboutInfo info={res} />
-      {/* @ts-expect-error Server Component */}
       <AboutBurning info={res} />
-      {/* @ts-expect-error Server Component */}
       <AboutUsage />
-      {/* @ts-expect-error Server Component */}
       <AboutRoadmap />
-      {/* @ts-expect-error Server Component */}
       <AboutContact />
     </main>
   );

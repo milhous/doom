@@ -71,9 +71,9 @@ const Tag = (props: {tagName: string; children: React.ReactNode}): JSX.Element =
 };
 
 // 元素
-const HomeListItem = async (props: {data: IActivityData}): Promise<JSX.Element> => {
+const HomeListItem = (props: {data: IActivityData}): JSX.Element => {
   const {data} = props;
-  const {t} = await useTranslate(['promotions'], PackageType.PROMOTIONS);
+  const {t} = useTranslate(['promotions'], PackageType.PROMOTIONS);
   // 活动状态 0:未开始，1:进行中，2:结束
   const promotionState = getPromotionState(data.startTime, data.endTime);
   // 标志名称

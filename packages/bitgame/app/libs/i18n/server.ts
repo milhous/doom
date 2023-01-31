@@ -33,17 +33,17 @@ const getLocalesPath = (appname: string): string => {
  * 获取多语言资源
  * @param {string} appname app名称
  */
-const getResources = async (appname: string): Promise<any> => {
+const getResources = (appname: string): any => {
   let res = {};
 
   if (localesMap.has(appname)) {
     res = localesMap.get(appname);
   } else {
     const localesPath = getLocalesPath(appname);
-    const dirInfo = await readDirInfo(`${localesPath}`);
+    const dirInfo = readDirInfo(`${localesPath}`);
 
     for (const lng of dirInfo) {
-      res[lng] = await getNSResources(lng, localesPath);
+      res[lng] = getNSResources(lng, localesPath);
     }
 
     localesMap.set(appname, res);
@@ -57,12 +57,12 @@ const getResources = async (appname: string): Promise<any> => {
  * @param {string} lng 语言
  * @param {string} localesPath 语言根路径
  */
-const getNSResources = async (lng: string, localesPath: string): Promise<any> => {
-  const dirInfo = await readDirInfo(`${localesPath}/${lng}`);
+const getNSResources = (lng: string, localesPath: string): any => {
+  const dirInfo = readDirInfo(`${localesPath}/${lng}`);
   const res = {};
 
   for (const file of dirInfo) {
-    const data = await fs.readJson(`${localesPath}/${lng}/${file}`);
+    const data = fs.readJsonSync(`${localesPath}/${lng}/${file}`);
     const name = path.parse(file).name;
 
     res[name] = data;
@@ -76,10 +76,10 @@ const getNSResources = async (lng: string, localesPath: string): Promise<any> =>
  * @param {string} appname app名称
  * @param {string} lng 语言
  */
-const initI18next = async (appname: string, lng: string): Promise<i18n> => {
+const initI18next = (appname: string, lng: string): i18n => {
   // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel
   const i18nInstance: i18n = createInstance();
-  const bundledResources = await getResources(appname);
+  const bundledResources = getResources(appname);
   const ns = Object.keys(bundledResources[lng]);
 
   i18nInstance
@@ -106,13 +106,13 @@ const initI18next = async (appname: string, lng: string): Promise<i18n> => {
  * @param {string} appname app名称
  * @param {string} lng 语言
  */
-const getI18nInstance = async (appname: string, lng: string): Promise<i18n> => {
+const getI18nInstance = (appname: string, lng: string): i18n => {
   let i18nInstance: i18n;
 
   if (i18nMap.has(appname)) {
     i18nInstance = i18nMap.get(appname);
   } else {
-    i18nInstance = await initI18next(appname, lng);
+    i18nInstance = initI18next(appname, lng);
 
     i18nMap.set(appname, i18nInstance);
   }
@@ -125,14 +125,14 @@ const getI18nInstance = async (appname: string, lng: string): Promise<i18n> => {
  * @param {string | string[]} ns 命名空间
  * @param {string} appname app名称
  */
-export const useTranslate = async (ns: string | string[], appname: string) => {
+export const useTranslate = (ns: string | string[], appname: string) => {
   const nextCookies = cookies();
   const cookieLng = nextCookies.get(cookieLngName)?.value;
   const nextHeaders = headers();
   const acceptLng = nextHeaders.get('Accept-Language');
   const lng = getLng(cookieLng, acceptLng);
 
-  const i18next = await getI18nInstance(appname, lng);
+  const i18next = getI18nInstance(appname, lng);
 
   if (i18next.language !== lng) {
     i18next.changeLanguage(lng);

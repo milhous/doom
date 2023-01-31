@@ -9,8 +9,8 @@ import HomeNavItem from './HomeNavItem';
 import './HomeNav.scss';
 
 // 导航
-const HomeNav = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['promotions'], PackageType.PROMOTIONS);
+const HomeNav = (): JSX.Element => {
+  const {t} = useTranslate(['promotions'], PackageType.PROMOTIONS);
 
   const items = [];
 

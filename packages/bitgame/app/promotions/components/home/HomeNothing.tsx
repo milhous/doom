@@ -6,8 +6,8 @@ import Assets from '@promotions/assets';
 import './HomeNothing.scss';
 
 // 暂无数据
-const HomeNothing = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['promotions'], PackageType.PROMOTIONS);
+const HomeNothing = (): JSX.Element => {
+  const {t} = useTranslate(['promotions'], PackageType.PROMOTIONS);
 
   return (
     <div className="promotions-nothing">

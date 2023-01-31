@@ -12,8 +12,8 @@ import FooterAndroid from '../assets/footer-android.svg';
 import FooterGoogle from '../assets/footer-google.svg';
 
 // 导航
-const CompNav = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['footer'], PackageType.UI);
+const CompNav = (): JSX.Element => {
+  const {t} = useTranslate(['footer'], PackageType.UI);
 
   return (
     <div className="ui-footer_nav">

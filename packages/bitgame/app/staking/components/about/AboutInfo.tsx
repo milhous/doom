@@ -7,9 +7,9 @@ import AboutInfoChart from './AboutInfoChart';
 import './AboutInfo.scss';
 
 // LUT情报
-const AboutInfo = async (props: {info: any}): Promise<JSX.Element> => {
+const AboutInfo = (props: {info: any}): JSX.Element => {
   const {info} = props;
-  const {t, i18n} = await useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
+  const {t, i18n} = useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
 
   const {ownerNumber = 0, miningPoolTotal = 0, miningMaxPool = 0} = info;
   const lng = i18n.language;

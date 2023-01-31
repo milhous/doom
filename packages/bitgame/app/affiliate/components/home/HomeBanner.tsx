@@ -4,8 +4,8 @@ import {useTranslate} from '@libs/i18n/server';
 import './HomeBanner.scss';
 
 // 代理banner
-const HomeBanner = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['affiliate'], PackageType.AFFILIATE);
+const HomeBanner = ():JSX.Element => {
+  const {t} = useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   return (
     <section className="affiliate-banner">

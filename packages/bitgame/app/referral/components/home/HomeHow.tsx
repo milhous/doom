@@ -15,7 +15,7 @@ async function getData() {
 }
 
 const HomeHow = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['referral'], PackageType.REFERRAL);
+  const {t} = useTranslate(['referral'], PackageType.REFERRAL);
 
   const data = await getData();
   const {betDivisor, lutPrize, rebateAmount, rebateLimit} = data;

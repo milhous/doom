@@ -5,8 +5,8 @@ import WidgetFaq from '@widget/faq';
 import './HomeFaq.scss';
 
 // 常见问题
-const HomeFaq = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['affiliate'], PackageType.AFFILIATE);
+const HomeFaq = ():JSX.Element => {
+  const {t} = useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   const list: {question: string; answer: string}[] = [];
 

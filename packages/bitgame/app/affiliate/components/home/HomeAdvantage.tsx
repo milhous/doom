@@ -6,8 +6,8 @@ import Assets from '@app/affiliate/assets';
 import './HomeAdvantage.scss';
 
 // 竞争优势
-const HomeAdvantage = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['affiliate'], PackageType.AFFILIATE);
+const HomeAdvantage = ():JSX.Element => {
+  const {t} = useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   return (
     <section className="affiliate-advantage">

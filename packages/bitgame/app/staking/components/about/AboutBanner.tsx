@@ -8,8 +8,8 @@ import Assets from '@staking/assets';
 import './AboutBanner.scss';
 
 // Banner
-const AboutBanner = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
+const AboutBanner = (): JSX.Element => {
+  const {t} = useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
 
   return (
     <section className="about-banner">

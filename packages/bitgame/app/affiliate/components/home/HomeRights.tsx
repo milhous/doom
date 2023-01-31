@@ -8,8 +8,8 @@ import Assets from '@app/affiliate/assets';
 import './HomeRights.scss';
 
 // 专属权益
-const HomeRights = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['affiliate'], PackageType.AFFILIATE);
+const HomeRights = ():JSX.Element => {
+  const {t} = useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   return (
     <section className="affiliate-rights">

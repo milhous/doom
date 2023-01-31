@@ -11,8 +11,8 @@ import './CompPartners.scss';
 const assetsPath = path.resolve(process.cwd(), `./public/assets/footer`);
 
 // 合作商
-const CompPartners = async (): Promise<JSX.Element> => {
-  const dirInfo = await readDirInfo(assetsPath);
+const CompPartners = (): JSX.Element => {
+  const dirInfo = readDirInfo(assetsPath);
   const imgs = dirInfo.filter(item => item.startsWith('footer-partner'));
 
   const comps = [];

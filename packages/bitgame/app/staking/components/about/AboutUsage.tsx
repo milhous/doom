@@ -8,8 +8,8 @@ import Assets from '@staking/assets';
 import './AboutUsage.scss';
 
 // LUT代币使用場景
-const AboutUsage = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
+const AboutUsage = (): JSX.Element => {
+  const {t} = useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
 
   return (
     <section className="about-usage">

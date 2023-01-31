@@ -15,7 +15,6 @@ const Home = () => {
       <HomeBanner />
       {/* @ts-expect-error Server Component */}
       <HomeHow />
-      {/* @ts-expect-error Server Component */}
       <HomeJoin />
       {/* @ts-expect-error Server Component */}
       <HomeFaq />

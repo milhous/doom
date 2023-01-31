@@ -6,8 +6,8 @@ import Assets from '@app/affiliate/assets';
 import './HomeHow.scss';
 
 // 如何加入
-const HomeHow = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['affiliate'], PackageType.AFFILIATE);
+const HomeHow = ():JSX.Element => {
+  const {t} =  useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   return (
     <section className="affiliate-how">

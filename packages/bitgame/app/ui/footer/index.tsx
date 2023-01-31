@@ -9,12 +9,9 @@ import './index.scss';
 const UIFooter = (): JSX.Element => {
   return (
     <footer className="ui-footer">
-      {/* @ts-expect-error Server Component */}
       <CompNav />
-      {/* @ts-expect-error Server Component */}
       <CompPartners />
       <CompAssume />
-      {/* @ts-expect-error Server Component */}
       <CompCopyright />
     </footer>
   );

@@ -4,8 +4,8 @@ import {useTranslate} from '@libs/i18n/server';
 import './CompCopyright.scss';
 
 // 版权
-const CompCopyright = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['footer'], PackageType.UI);
+const CompCopyright = (): JSX.Element => {
+  const {t} = useTranslate(['footer'], PackageType.UI);
 
   return (
     <div className="ui-footer_copyright">

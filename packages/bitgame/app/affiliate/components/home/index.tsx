@@ -10,21 +10,13 @@ import HomeFaq from './HomeFaq';
 const Home = () => {
   return (
     <main id="affiliate" className="affiliate-home">
-      {/* @ts-expect-error Server Component */}
       <HomeBanner />
-      {/* @ts-expect-error Server Component */}
       <HomePlan />
-      {/* @ts-expect-error Server Component */}
       <HomeCommission />
-      {/* @ts-expect-error Server Component */}
       <HomeSupport />
-      {/* @ts-expect-error Server Component */}
       <HomeRights />
-      {/* @ts-expect-error Server Component */}
       <HomeAdvantage />
-      {/* @ts-expect-error Server Component */}
       <HomeHow />
-      {/* @ts-expect-error Server Component */}
       <HomeFaq />
     </main>
   );

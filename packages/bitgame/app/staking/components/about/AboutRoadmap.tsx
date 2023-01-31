@@ -4,8 +4,8 @@ import {useTranslate} from '@libs/i18n/server';
 import './AboutRoadmap.scss';
 
 // LUT發展路線
-const AboutRoadmap = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
+const AboutRoadmap = (): JSX.Element => {
+  const {t} = useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
 
   return (
     <section className="about-roadmap">

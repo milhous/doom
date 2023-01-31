@@ -48,7 +48,7 @@ const BingoBtnFlip = (): JSX.Element => {
       </li>
       <li>
         <button className="bingo-btn bingo-btn_switch" onClick={handlerAuto} disabled={isSwitchDisable}>
-          {/* {isAuto ? t('stop') : t('auto')} */}
+          {isAuto ? t('stop') : t('auto')}
         </button>
       </li>
     </ul>

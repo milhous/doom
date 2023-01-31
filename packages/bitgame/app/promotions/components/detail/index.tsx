@@ -9,8 +9,8 @@ import Assets from '@promotions/assets';
 
 import './index.scss';
 
-const Detail = async (props: {data: IActivityData}): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['promotions'], PackageType.PROMOTIONS);
+const Detail = (props: {data: IActivityData}): JSX.Element => {
+  const {t} = useTranslate(['promotions'], PackageType.PROMOTIONS);
   const {data} = props;
 
   return (

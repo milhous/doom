@@ -6,9 +6,9 @@ import Assets from '@staking/assets';
 import './AboutBurning.scss';
 
 // LUT代币销毁机制
-const AboutBurning = async (props: {info: any}): Promise<JSX.Element> => {
+const AboutBurning = (props: {info: any}): JSX.Element => {
   const {info} = props;
-  const {t} = await useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
+  const {t} = useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
 
   const {totalBurning = 0} = info;
 

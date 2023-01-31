@@ -21,11 +21,9 @@ const Home = async (): Promise<JSX.Element> => {
   return (
     <main id="promotions" className="promotions-home">
       <HomeProvider>
-        {/* @ts-expect-error Server Component */}
         <HomeNav />
         <HomeContainer data={data}>
           <HomeList data={data} />
-          {/* @ts-expect-error Server Component */}
           <HomeNothing />
         </HomeContainer>
       </HomeProvider>

@@ -14,7 +14,7 @@ async function getData() {
 
 // 常见问题
 const HomeFaq = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['referral'], PackageType.REFERRAL);
+  const {t} = useTranslate(['referral'], PackageType.REFERRAL);
 
   const data = await getData();
 

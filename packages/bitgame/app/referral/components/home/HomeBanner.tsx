@@ -17,7 +17,7 @@ async function getData() {
 }
 
 const ReferralBanner = async (): Promise<JSX.Element> => {
-  const {t} = await useTranslate(['referral', 'common'], PackageType.REFERRAL);
+  const {t} = useTranslate(['referral', 'common'], PackageType.REFERRAL);
 
   const data = await getData();
   const {lutPrize, rebateLimit, inviteLimit, inviteCode} = data;

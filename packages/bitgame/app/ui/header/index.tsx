@@ -13,7 +13,6 @@ const UIHeader = async (): Promise<JSX.Element> => {
           <CompLogo />
         </aside>
         <article>
-          {/* @ts-expect-error Server Component */}
           <CompNav />
           {/* 
           <CompButtons /> */}

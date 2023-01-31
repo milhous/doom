@@ -17,8 +17,8 @@ const telegramList = {
 };
 
 // 成為LUT參與者
-const AboutContact = async (): Promise<JSX.Element> => {
-  const {t, i18n} = await useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
+const AboutContact = (): JSX.Element => {
+  const {t, i18n} = useTranslate(['about', 'staking', 'error'], PackageType.STAKING);
   const lng = i18n.language;
 
   return (
