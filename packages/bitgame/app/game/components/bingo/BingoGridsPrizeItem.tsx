@@ -39,13 +39,11 @@ const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string})
     <li className={classname} data-index={index}>
       <div className="bingo-prize" data-pid={pid}>
         <i className={`bingo-sign bingo-sign_${pname}`}></i>
-        <Image className="bingo-prize_active" src={Assets[pname + 'Grids']} alt="" width={150} height={150} />
-        <Image className="bingo-prize_halo" src={Assets.haloPrize} alt="" width={340} height={340} />
+        {/* <Image className="bingo-prize_active" src={Assets[pname + 'Grids']} alt="" width={150} height={150} />
+        <Image className="bingo-prize_halo" src={Assets.haloPrize} alt="" width={340} height={340} /> */}
       </div>
       <dl className="bingo-tips">
-        <dt>
-          <Image src={Assets.iconLut} alt="" />
-        </dt>
+        <dt>{/* <Image src={Assets.iconLut} alt="" /> */}</dt>
         <dd>
           {prizeCurrency} x{prizeAmount}
         </dd>

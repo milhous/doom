@@ -3,7 +3,7 @@
 import {Suspense} from 'react';
 import dynamic from 'next/dynamic';
 
-const Svga = dynamic(() => import('./WidgetSvga'), {
+const Svga = dynamic(() => import('./Svga'), {
   ssr: false,
 });
 

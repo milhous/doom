@@ -17,7 +17,9 @@ const Bingo = () => {
           <div className="bingo-game_astrolabe">
             <BingoAstrolabe />
           </div>
-          <div className="bingo-game_grids">{/* <BingoGrids /> */}</div>
+          <div className="bingo-game_grids">
+            <BingoGrids />
+          </div>
         </div>
         {/* <BtnFlip />
       <Time /> */}

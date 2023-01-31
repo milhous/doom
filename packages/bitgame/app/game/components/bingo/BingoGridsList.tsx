@@ -15,11 +15,9 @@ const BingoGridsList = (): JSX.Element => {
       items.push(<BingoGridsDisabledItem key={i} index={i} />);
     } else if (gridPrizeIdxs.indexOf(i) > -1) {
       const [pid, pname] = gridSignConfig[i].split('@');
-
       items.push(<BingoGridsPrizeItem key={i} index={i} pid={Number(pid)} pname={pname} />);
     } else {
       const gid = i - Math.floor(i / gridX) * 2;
-
       items.push(<BingoGridsFlipItem key={i} index={i} gid={gid} />);
     }
   }

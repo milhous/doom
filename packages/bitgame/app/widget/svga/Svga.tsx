@@ -121,7 +121,7 @@ const uuid = (): string => {
 };
 
 // SVGA动画
-const WidgetSvga = (props: IWidgetSvgaProps) => {
+const Svga = (props: IWidgetSvgaProps) => {
   const {className = '', url, time = 0, onEnd, onStart, onProcess} = props;
   const [id] = useState<string>(uuid());
   const container = useRef();
@@ -154,4 +154,4 @@ const WidgetSvga = (props: IWidgetSvgaProps) => {
   return <canvas className={`widget-svga ${className}`} ref={container} id={id}></canvas>;
 };
 
-export default WidgetSvga;
+export default Svga;
