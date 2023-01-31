@@ -10,6 +10,9 @@ const nextConfig = {
     domains: ['public.bnbstatic.com'],
     formats: ['image/webp'],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 const config = {
