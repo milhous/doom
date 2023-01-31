@@ -1,6 +1,7 @@
 import BingoLogo from './BingoLogo';
 import BingoAstrolabe from './BingoAstrolabe';
 import BingoGrids from './BingoGrids';
+import BingoBtnFlip from './BingoBtnFlip';
 
 import './index.scss';
 
@@ -21,7 +22,8 @@ const Bingo = () => {
             <BingoGrids />
           </div>
         </div>
-        {/* <BtnFlip />
+        <BingoBtnFlip />
+        {/* <BingoBtnFlip />
       <Time /> */}
       </section>
     </main>

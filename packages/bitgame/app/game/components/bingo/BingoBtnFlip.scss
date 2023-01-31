@@ -1,0 +1,162 @@
+@use "@libs/styles/library" as *;
+.game-bingo .bingo-play {
+    @include setFlex();
+    position: relative;
+    z-index: 10;
+    margin-top: 15px;
+    li {
+        @include setFlex();
+        position: relative;
+    }
+    p {
+        @include setFont(18px, 28px, #b3c8ef);
+        position: absolute;
+        left: 50%;
+        top: 90px;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    button {
+        margin: 0 10px !important;
+    }
+    i {
+        display: block;
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background: url('~@game/assets/bingo/icon-lut.png') no-repeat center center;
+        background-size: 100% 100%;
+    }
+    dt,
+    dd {
+        margin: 0;
+        padding: 0;
+    }
+    dt {
+        @include setFlex();
+        @include setFont(24px,
+        34px,
+        #f0ff00);
+    }
+    dd {
+        @include setFont(14px,
+        24px,
+        #fff);
+    }
+    @include smallScreen {
+        i {
+            width: 30px;
+            min-width: 30px;
+            height: 30px;
+        }
+        dt {
+            font-size: 30px;
+            line-height: 40px;
+        }
+        dd {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+    .bingo-btn_flip {
+        @include setFlex();
+        position: relative;
+        width: 282px;
+        height: 66px;
+        div {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        &:disabled {
+            cursor: not-allowed;
+            div {
+                display: block;
+            }
+        }
+        &::before,
+        &::after {
+            content: '.';
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 42px;
+            height: 82px;
+            background: url('~@game/assets/bingo/btn-flip_border.png') no-repeat center center;
+            background-size: 100% 100%;
+            z-index: 10;
+        }
+        &::before {
+            left: -10px;
+            transform: translateY(-50%);
+        }
+        &::after {
+            right: -10px;
+            transform: translateY(-50%) scaleX(-1);
+        }
+        @include smallScreen {
+            width: 362px;
+            height: 86px;
+            &::before,
+            &::after {
+                width: 52px;
+                height: 104px;
+            }
+        }
+    }
+    .bingo-btn_switch {
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        color: #fff;
+        font-size: 13px;
+        &::before {
+            content: '.';
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            text-indent: -9999px;
+        }
+        &:disabled::before {
+            cursor: not-allowed;
+            display: block;
+        }
+        @include smallScreen {
+            width: 114px;
+            height: 114px;
+            font-size: 18px;
+            &::before {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+    &.auto {
+        .bingo-btn_flip {
+            background-image: url('~@game/assets/bingo/btn-flip_once.png');
+        }
+        .bingo-btn_switch {
+            background-image: url('~@game/assets/bingo/btn-switch_auto.png');
+        }
+    }
+    &.stop {
+        .bingo-btn_flip {
+            background-image: url('~@game/assets/bingo/btn-flip_auto.png');
+        }
+        .bingo-btn_switch {
+            background-image: url('~@game/assets/bingo/btn-switch_stop.png');
+        }
+    }
+}
