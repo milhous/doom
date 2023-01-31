@@ -43,7 +43,9 @@ const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string})
         <Image className="bingo-prize_halo" src={Assets.haloPrize} alt="" width={340} height={340} /> */}
       </div>
       <dl className="bingo-tips">
-        <dt>{/* <Image src={Assets.iconLut} alt="" /> */}</dt>
+        <dt>
+          <Image src={Assets.iconLut} alt="" width={60} height={60} />
+        </dt>
         <dd>
           {prizeCurrency} x{prizeAmount}
         </dd>
