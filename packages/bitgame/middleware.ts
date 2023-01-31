@@ -30,6 +30,4 @@ export function middleware(req: NextRequest): NextResponse {
 
     return response;
   }
-
-  return NextResponse.next();
 }

@@ -1,5 +1,6 @@
 'use client';
 
+import {Suspense} from 'react';
 import dynamic from 'next/dynamic';
 
 const Svga = dynamic(() => import('./WidgetSvga'), {
@@ -7,7 +8,11 @@ const Svga = dynamic(() => import('./WidgetSvga'), {
 });
 
 const WidgetSvga = (props: IWidgetSvgaProps): JSX.Element => {
-  return <Svga {...props} />;
+  return (
+    <Suspense fallback={<p>Loading feed...</p>}>
+      <Svga {...props} />
+    </Suspense>
+  );
 };
 
 export default WidgetSvga;

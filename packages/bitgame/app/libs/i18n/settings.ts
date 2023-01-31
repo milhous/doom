@@ -29,6 +29,7 @@ export const supportedLngs: string[] = lngConfigs.map(v => v.lng);
 
 // cookie语言保存名称
 export const cookieLngName = 'i18nextLng';
+export const cookieLastLngName = 'i18nextLastLng';
 
 // 默认语言
 export const defaultLng = 'en';

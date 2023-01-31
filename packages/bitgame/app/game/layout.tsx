@@ -1,6 +1,9 @@
+import {Suspense} from 'react';
+
 import Toolbar from '@ui/toolbar';
 import Header from '@ui/header';
 import Footer from '@ui/footer';
+import WidgetSpinner from '@widget/spinner';
 
 const GameLayout = async ({
   children, // will be a page or nested layout
@@ -12,7 +15,7 @@ const GameLayout = async ({
       <Toolbar />
       {/* @ts-expect-error Server Component */}
       <Header />
-      {children}
+      <Suspense fallback={<WidgetSpinner />}>{children}</Suspense>
       <Footer />
     </>
   );

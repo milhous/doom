@@ -24,12 +24,8 @@ const getDataWidthDownLoader = async (file: string): Promise<any> => {
   if (dataMap.has(file)) {
     data = dataMap.get(file);
   } else {
-    console.log('Parser', file);
-
     const parser = new Parser({isDisableImageBitmapShim: true});
     data = await parser.load(file);
-
-    console.log('db', data);
 
     dataMap.set(file, data);
 
@@ -80,11 +76,7 @@ const play = async (params: {
   if (db) {
     data = await getDataWidthDB(file);
   } else {
-    console.log('downLoader');
-
     data = await getDataWidthDownLoader(file);
-
-    console.log('downLoader', data);
   }
 
   // 监听 - 播放开始
@@ -127,15 +119,6 @@ const play = async (params: {
 const uuid = (): string => {
   return 'r' + Math.random().toString(16).replace('0.', '');
 };
-
-export interface IWidgetSvgaProps {
-  className?: string;
-  url: string;
-  time?: number;
-  onProcess?: () => void;
-  onEnd?: () => void;
-  onStart?: (ele: HTMLCanvasElement) => void;
-}
 
 // SVGA动画
 const WidgetSvga = (props: IWidgetSvgaProps) => {
