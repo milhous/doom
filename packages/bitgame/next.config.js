@@ -8,6 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['public.bnbstatic.com'],
+    formats: ['image/webp'],
   },
 };
 
