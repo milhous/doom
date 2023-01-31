@@ -31,13 +31,11 @@ import virgoAstrolabeActive from './bingo/astrolabe-virgo_active.svga';
 import congratulations from './bingo/congratulations.svga';
 import iconAward from './bingo/icon-award.png';
 import iconLut from './bingo/icon-lut.png';
-import iconStar from './bingo/icon-star.png';
 import lineHorizontal from './bingo/line-horizontal.svga';
 import lineSlanting from './bingo/line-slanting.svga';
 import lineVertical from './bingo/line-vertical.svga';
 import dotPrize from './bingo/prize-dot.svga';
 import framePrize from './bingo/prize-frame.svga';
-import haloPrize from './bingo/prize-halo.png';
 import aquariusReceive from './bingo/receive-aquarius.png';
 import ariesReceive from './bingo/receive-aries.png';
 import cancerReceive from './bingo/receive-cancer.png';
@@ -65,7 +63,6 @@ import virgoGrids from './bingo/sign-virgo_active.png';
 
 const Assets = {
   iconLut,
-  iconStar,
   aquariusGrids,
   ariesGrids,
   cancerGrids,
@@ -129,7 +126,6 @@ const Assets = {
 
   framePrize,
   dotPrize,
-  haloPrize,
 
   lineHorizontal,
   lineSlanting,

@@ -21,8 +21,7 @@ const BingoGridsFlipItem = (props: {index: number; gid: number}): JSX.Element =>
     <li className={classname} data-index={index} style={{zIndex: zIndex}}>
       <div className="bingo-flip" data-gid={gid}>
         <div>
-          {/* {flipPic !== '' && <Image src={Assets.iconStar} alt="" width={65} height={65} />} */}
-          <Image src={Assets.iconStar} alt="" width={65} height={65} />
+          <i></i>
         </div>
       </div>
     </li>

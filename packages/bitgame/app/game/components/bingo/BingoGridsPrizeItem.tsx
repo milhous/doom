@@ -18,11 +18,11 @@ const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string})
   const prizeAmount = 0;
   // 领取状态 0未触发 1待领取 2已领取
   const prizeState = 0;
-  const classname = 'bingo-grids_item prize';
+  const classname = 'bingo-grids_item prize active';
 
   // switch (prizeState) {
   //   case 0:
-  //     classname = 'bingo-grids_item prize';
+  //     classname = 'bingo-grids_item prize ';
 
   //     break;
   //   case 1:
@@ -39,8 +39,8 @@ const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string})
     <li className={classname} data-index={index}>
       <div className="bingo-prize" data-pid={pid}>
         <i className={`bingo-sign bingo-sign_${pname}`}></i>
-        {/* <Image className="bingo-prize_active" src={Assets[pname + 'Grids']} alt="" width={150} height={150} />
-        <Image className="bingo-prize_halo" src={Assets.haloPrize} alt="" width={340} height={340} /> */}
+        <i className="bingo-prize_active" style={{backgroundImage: `url(${Assets[pname + 'Grids'].src})`}}></i>
+        <i className="bingo-prize_halo"></i>
       </div>
       <dl className="bingo-tips">
         <dt>

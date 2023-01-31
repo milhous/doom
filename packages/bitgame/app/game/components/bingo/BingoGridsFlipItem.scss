@@ -19,10 +19,12 @@
             background-color: #17284b;
             transform: rotateY(180deg);
         }
-        img {
+        i {
             display: block;
             width: 64px;
             height: 64px;
+            background: url('~@game/assets/bingo/icon-star.png') no-repeat center center;
+            background-size: 100% 100%;
             .smallScreen {
                 width: 80px;
                 height: 80px;

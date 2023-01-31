@@ -6,13 +6,15 @@
         z-index: 10;
         width: 100%;
         height: 100%;
-        img {
+        .bingo-prize_active,
+        .bingo-prize_halo {
             position: absolute;
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
         }
         canvas,
-        img {
+        .bingo-prize_active,
+        .bingo-prize_halo {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%) !important;
@@ -24,6 +26,9 @@
         .bingo-prize_active {
             width: 90px;
             height: 90px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% 100%;
             @include smallScreen {
                 width: 110px;
                 height: 110px;
@@ -32,6 +37,8 @@
         .bingo-prize_halo {
             width: 100px;
             height: 100px;
+            background: url('~@game/assets/bingo/prize-halo.png') no-repeat center center;
+            background-size: 100% 100%;
         }
     }
     .bingo-tips {
@@ -48,7 +55,9 @@
         border-radius: 10px;
         background-color: rgba(6, 17, 37, 0.7);
         dd {
-            @include setFont(20px, 30px, #fff);
+            @include setFont(20px,
+            30px,
+            #fff);
             margin-top: 5px;
             text-align: center;
             white-space: nowrap;
