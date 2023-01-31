@@ -1,10 +1,17 @@
-import Image from 'next/image';
+'use client';
 
-import WidgetSvga from '@widget/svga';
+import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
 import Assets from '@game/assets';
 
 import './BingoAstrolabe.scss';
+
+import WidgetSvga from '@widget/svga';
+
+// const WidgetSvga = dynamic(() => import('@widget/svga'), {
+//   ssr: false,
+// });
 
 const BingoAstrolabe = (): JSX.Element => {
   // 星座

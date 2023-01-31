@@ -73,13 +73,11 @@ const files = rules => {
     ],
   });
 
-  fileConfig.push(
-    // svga
-    {
-      test: /\.(svga)$/i,
-      type: 'asset/resource',
-    },
-  );
+  // svga
+  fileConfig.push({
+    test: /\.svga$/i,
+    type: 'asset/resource',
+  });
 
   return fileConfig;
 };

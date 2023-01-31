@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useReducer, useContext, useMemo} from 'react';
+import React, {createContext, useReducer, useContext, useMemo} from 'react';
 
 import {reducer, initialState, IPromotionsReducerState, IPromotionsReducerAction} from './homeReducer';
 
@@ -14,7 +14,7 @@ interface IHomeContextProps {
   dispatch: React.Dispatch<IPromotionsReducerAction>;
 }
 
-const CountContext = React.createContext({} as IHomeContextProps);
+const CountContext = createContext({} as IHomeContextProps);
 
 // Home Provider
 export const HomeProvider = ({children}: {children: React.ReactNode}): JSX.Element => {
