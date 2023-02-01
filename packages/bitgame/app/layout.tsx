@@ -1,4 +1,5 @@
 import './global.scss';
+import {getCurLang} from '@libs/i18n/server';
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -7,8 +8,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const lng = getCurLang();
+
   return (
-    <html>
+    <html lang={lng}>
       <head>
         <script src="/flexible.js" defer />
       </head>

@@ -16,7 +16,8 @@ const i18nMap = new Map<string, i18n>();
  * @param {string} appname app名称
  */
 const initI18next = (appname: string): i18n => {
-  const cookieLng = Cookies.get(cookieLngName);
+  const serverLng = typeof document !== 'undefined' ? document.documentElement.getAttribute('lang') : '';
+  const cookieLng = serverLng ? serverLng : Cookies.get(cookieLngName);
   const lng = getLng(cookieLng, '');
   const loadPath = `${__webpack_public_path__}static/locales/${appname}/{{lng}}/{{ns}}.json`;
 
@@ -113,7 +114,7 @@ export const getTranslate = (key: string, appname: string, nsSeparator = ':'): s
  */
 export const useTranslate = (ns: string[], appname: string): any => {
   const i18next = getI18nInstance(appname);
-  const { t } = useTranslation(ns, { i18n: i18next });
+  const {t} = useTranslation(ns, {i18n: i18next});
 
   return {
     // TODO: solve TKPrefix problem here...

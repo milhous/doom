@@ -18,7 +18,7 @@ const WidgetLink = (props: {
   const {to, classname = '', highlight = false, children} = props;
 
   const [className, setClassName] = useState<string>(classname);
-  const [query, setQuery] = useState<{ [propName: string]: any }>({});
+  const [query, setQuery] = useState<{[propName: string]: any}>({});
 
   useEffect(() => {
     if (highlight) {

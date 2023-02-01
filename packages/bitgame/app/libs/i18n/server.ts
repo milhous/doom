@@ -9,7 +9,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 
 import {readDirInfo} from '@libs/utils/server';
 
-import {defaultNS, supportedLngs, cookieLngName, getLng} from './settings';
+import {defaultNS, supportedLngs, cookieLngName, getLng, defaultLng} from './settings';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.parse(__filename).dir;
@@ -71,6 +71,36 @@ const getNSResources = (lng: string, localesPath: string): any => {
   return res;
 };
 
+// 获取当前语言
+export const getCurLang = (): string => {
+  let lng = '';
+
+  for (const i18n of i18nMap.values()) {
+    if (lng !== '') {
+      lng = i18n.language;
+
+      break;
+    }
+  }
+
+  if (lng === '') {
+    lng = getServerLng();
+  }
+
+  return lng;
+};
+
+// 获取Server语言
+const getServerLng = (): string => {
+  const nextCookies = cookies();
+  const cookieLng = nextCookies.get(cookieLngName)?.value;
+  const nextHeaders = headers();
+  const acceptLng = nextHeaders.get('Accept-Language');
+  const lng = getLng(cookieLng, acceptLng);
+
+  return lng;
+};
+
 /**
  * 初始化i18n
  * @param {string} appname app名称
@@ -126,12 +156,7 @@ const getI18nInstance = (appname: string, lng: string): i18n => {
  * @param {string} appname app名称
  */
 export const useTranslate = (ns: string | string[], appname: string) => {
-  const nextCookies = cookies();
-  const cookieLng = nextCookies.get(cookieLngName)?.value;
-  const nextHeaders = headers();
-  const acceptLng = nextHeaders.get('Accept-Language');
-  const lng = getLng(cookieLng, acceptLng);
-
+  const lng = getServerLng();
   const i18next = getI18nInstance(appname, lng);
 
   if (i18next.language !== lng) {

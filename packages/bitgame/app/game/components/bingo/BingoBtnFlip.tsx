@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
+import WidgetTranslate from '@widget/translate';
 
 import './BingoBtnFlip.scss';
 
@@ -16,6 +17,7 @@ const BingoBtnFlip = (): JSX.Element => {
   const flipBalance = 1000;
   const isComplete = true;
 
+  const [isPending, setPedding] = useState<boolean>(true);
   // 是否自动
   const [isAuto, setFilpAuto] = useState<boolean>(false);
   // 是否禁用翻牌
@@ -30,6 +32,10 @@ const BingoBtnFlip = (): JSX.Element => {
     setFilpAuto(!isAuto);
   };
 
+  useEffect(() => {
+    setPedding(false);
+  }, []);
+
   return (
     <ul className={isAuto ? 'bingo-play stop' : 'bingo-play auto'}>
       <li>
@@ -40,7 +46,7 @@ const BingoBtnFlip = (): JSX.Element => {
               <span>{flipAmount}</span>&nbsp;{flipCurrency}
             </dt>
             <dd>
-              {t('balance')}: {flipBalance} {flipCurrency}
+              <WidgetTranslate t={t} tkey="balance" />: {flipBalance} {flipCurrency}
             </dd>
           </dl>
           <div></div>
@@ -48,7 +54,7 @@ const BingoBtnFlip = (): JSX.Element => {
       </li>
       <li>
         <button className="bingo-btn bingo-btn_switch" onClick={handlerAuto} disabled={isSwitchDisable}>
-          {isAuto ? t('stop') : t('auto')}
+          {isAuto ? <WidgetTranslate t={t} tkey="stop" /> : <WidgetTranslate t={t} tkey="auto" />}
         </button>
       </li>
     </ul>
