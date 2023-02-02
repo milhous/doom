@@ -5,23 +5,30 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
+import {error} from '@widget/toastify';
 import WidgetTranslate from '@widget/translate';
 
 import {BingoState} from '@game/stores/bingo';
-import {increment} from '@game/reducers/bingo';
+import {flip} from '@game/reducers/bingo';
 
 import './BingoBtnFlip.scss';
+
+interface IBingoState {
+  flipCurrency: string;
+  flipAmount: number;
+  flipBalance: number;
+  isComplete: boolean;
+}
 
 // 翻牌按钮
 const BingoBtnFlip = (): JSX.Element => {
   const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
-  const {flipBalance, flipAmount} = useSelector<BingoState>(state => {
-    return {flipBalance: state.bingo.flipBalance, flipAmount: state.bingo.flipAmount};
-  }) as {flipBalance: number; flipAmount: number};
-  const dispatch = useDispatch();
+  const {flipCurrency, flipAmount, flipBalance, isComplete} = useSelector<BingoState>(state => {
+    const {flipCurrency, flipAmount, flipBalance, isComplete} = state.bingo;
 
-  const flipCurrency = 'LUT';
-  const isComplete = false;
+    return {flipCurrency, flipAmount, flipBalance, isComplete};
+  }) as IBingoState;
+  const dispatch = useDispatch();
 
   // 是否自动
   const [isAuto, setFilpAuto] = useState<boolean>(false);
@@ -33,7 +40,15 @@ const BingoBtnFlip = (): JSX.Element => {
   const [canTime, setCanTime] = useState<boolean>(false);
 
   const handleManual = () => {
-    dispatch(increment());
+    if (flipBalance < flipAmount) {
+      error(t('error:error_5001'));
+
+      return;
+    }
+
+    // setFilpDisable(true);
+
+    dispatch(flip());
   };
   const handlerAuto = () => {
     setFilpAuto(!isAuto);

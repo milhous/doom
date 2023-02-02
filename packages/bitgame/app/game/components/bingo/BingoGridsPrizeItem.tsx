@@ -18,7 +18,7 @@ const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string})
   const prizeAmount = 0;
   // 领取状态 0未触发 1待领取 2已领取
   const prizeState = 0;
-  const classname = 'bingo-grids_item prize active';
+  const classname = 'bingo-grids_item prize';
 
   // switch (prizeState) {
   //   case 0:

@@ -60,9 +60,9 @@ type IBingoGridsState = Map<number, boolean>;
 
 // 初始化状态
 const initialState: IBingoState = {
-  flipCurrency: '',
-  flipAmount: 0,
-  flipBalance: 0,
+  flipCurrency: 'LUT',
+  flipAmount: 100,
+  flipBalance: 10000,
   isComplete: false,
   beginTime: 0,
   endTime: 0,
@@ -78,12 +78,19 @@ export const bingoSlice = createSlice({
   name: 'bingo',
   initialState,
   reducers: {
-    increment: state => {
-      state.flipBalance += 1;
+    flip: state => {
+      const {flipBalance, flipAmount} = state;
+      let bablance = flipBalance - flipAmount;
+
+      if (bablance < 0) {
+        bablance = 0;
+      }
+
+      state.flipBalance = bablance;
     },
   },
 });
 
-export const {increment} = bingoSlice.actions;
+export const {flip} = bingoSlice.actions;
 
 export default bingoSlice.reducer;
