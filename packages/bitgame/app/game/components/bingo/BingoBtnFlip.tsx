@@ -1,23 +1,28 @@
 'use client';
 
 import {useState, useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 
 import {PackageType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
 import WidgetTranslate from '@widget/translate';
+
+import {BingoState} from '@game/stores/bingo';
+import {increment} from '@game/reducers/bingo';
 
 import './BingoBtnFlip.scss';
 
 // 翻牌按钮
 const BingoBtnFlip = (): JSX.Element => {
   const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
+  const {flipBalance, flipAmount} = useSelector<BingoState>(state => {
+    return {flipBalance: state.bingo.flipBalance, flipAmount: state.bingo.flipAmount};
+  }) as {flipBalance: number; flipAmount: number};
+  const dispatch = useDispatch();
 
   const flipCurrency = 'LUT';
-  const flipAmount = 10;
-  const flipBalance = 1000;
-  const isComplete = true;
+  const isComplete = false;
 
-  const [isPending, setPedding] = useState<boolean>(true);
   // 是否自动
   const [isAuto, setFilpAuto] = useState<boolean>(false);
   // 是否禁用翻牌
@@ -27,14 +32,12 @@ const BingoBtnFlip = (): JSX.Element => {
   // 自动投币
   const [canTime, setCanTime] = useState<boolean>(false);
 
-  const handleManual = () => {};
+  const handleManual = () => {
+    dispatch(increment());
+  };
   const handlerAuto = () => {
     setFilpAuto(!isAuto);
   };
-
-  useEffect(() => {
-    setPedding(false);
-  }, []);
 
   return (
     <ul className={isAuto ? 'bingo-play stop' : 'bingo-play auto'}>
@@ -46,7 +49,7 @@ const BingoBtnFlip = (): JSX.Element => {
               <span>{flipAmount}</span>&nbsp;{flipCurrency}
             </dt>
             <dd>
-              <WidgetTranslate t={t} tkey="balance" />: {flipBalance} {flipCurrency}
+              <WidgetTranslate i18nT={t} i18nKey="balance" />: {flipBalance} {flipCurrency}
             </dd>
           </dl>
           <div></div>
@@ -54,7 +57,7 @@ const BingoBtnFlip = (): JSX.Element => {
       </li>
       <li>
         <button className="bingo-btn bingo-btn_switch" onClick={handlerAuto} disabled={isSwitchDisable}>
-          {isAuto ? <WidgetTranslate t={t} tkey="stop" /> : <WidgetTranslate t={t} tkey="auto" />}
+          {isAuto ? <WidgetTranslate i18nT={t} i18nKey="stop" /> : <WidgetTranslate i18nT={t} i18nKey="auto" />}
         </button>
       </li>
     </ul>
