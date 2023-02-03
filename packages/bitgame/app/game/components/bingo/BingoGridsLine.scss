@@ -1,0 +1,39 @@
+@use "@libs/styles/library" as *;
+.game-bingo .bingo-grids_item {
+    .bingo-line {
+        canvas {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) !important;
+            &.bingo-line_horizontal {
+                width: 428px;
+                height: 146px;
+                @include smallScreen {
+                    width: 588px;
+                    height: 200px;
+                }
+            }
+            &.bingo-line_vertical {
+                width: 146px;
+                height: 428px;
+                transform: translate(-51%, -50%) !important;
+                @include smallScreen {
+                    width: 200px;
+                    height: 588px;
+                }
+            }
+            &.bingo-line_slanting {
+                width: 450px;
+                height: 450px;
+                @include smallScreen {
+                    width: 646px;
+                    height: 646px;
+                }
+            }
+            &.fixed {
+                transform: translate(-50%, -50%) scaleX(-1) !important;
+            }
+        }
+    }
+}

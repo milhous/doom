@@ -1,5 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {gridPrizeConfig, gridLinesConfig} from '@game/config/bingo';
+
 /**
  * 奖励信息
  * @param {number} prizeId 奖励id
@@ -35,7 +37,7 @@ export interface IBingoInfoPrize {
  * @param {Array<number>} lineIds 连线ID（用于翻牌奖励连线）<-> gird
  * @param {Map<number, IBingoInfoPrize>} prizesInfo 奖励信息
  * @param {IBingoPrizesState} prizesState 奖励状态
- * @param {IBingoGridsState} gridsState 翻牌状态
+ * @param {IBingoGridsState} flipGridsState 翻牌状态
  */
 export interface IBingoState {
   flipCurrency: string;
@@ -46,17 +48,138 @@ export interface IBingoState {
   endTime: number;
   transitionIds: number[];
   highlightIds: number[];
-  // lineIds: IterableIterator<[number, number[]]>;
+  lineIds: [number, number[]][];
   // prizesInfo: IterableIterator<[number, IBingoInfoPrize]>;
-  // prizesState: IterableIterator<[number, number]>;
-  // gridsState: IterableIterator<[number, number]>;
+  prizeGridsState: IBingoPrizeGridsState;
+  flipGridsState: IBingoFlipGridsState;
 }
 
 // 声明 - 奖励状态
-type IBingoPrizesState = Map<number, number>;
+type IBingoPrizeGridsState = [number, number][];
 
 // 声明 - 翻牌状态
-type IBingoGridsState = Map<number, boolean>;
+type IBingoFlipGridsState = [number, boolean][];
+
+/**
+ * 随机排序（洗牌算法）
+ * @param {Array<number>} data 数据
+ * @return {Array<number>} result
+ */
+const shuffle = (data: number[]): number[] => {
+  const arr = Array.from(data);
+  const len = data.length;
+
+  for (let i = len - 1; i >= 0; i--) {
+    const index = Math.floor(Math.random() * (i + 1));
+    const item = arr[index];
+
+    arr[index] = arr[i];
+    arr[i] = item;
+  }
+
+  return arr;
+};
+
+// 初始化翻牌网格状态
+const initFlipsState = () => {
+  const states: Map<number, boolean> = new Map();
+
+  for (let i = 1; i <= 25; i++) {
+    states.set(i, false);
+  }
+
+  return [...states];
+};
+
+// 初始化奖励网格状态
+const initPrizesState = () => {
+  const states: Map<number, number> = new Map();
+
+  for (const pid in gridPrizeConfig) {
+    states.set(Number(pid), 0);
+  }
+
+  return [...states];
+};
+
+// 更新翻牌状态
+const updateFlipsState = (gridId: number, gridsState: IBingoFlipGridsState): IBingoFlipGridsState => {
+  const states = new Map(gridsState);
+
+  if (states.has(gridId)) {
+    states.set(gridId, true);
+  }
+
+  return [...states];
+};
+
+// 更新奖励状态
+const updatePrizesState = (prizeIds: number[], gridsState: IBingoPrizeGridsState): IBingoPrizeGridsState => {
+  const states = new Map(gridsState);
+
+  if (Array.isArray(prizeIds) && prizeIds.length) {
+    for (const pid of prizeIds) {
+      states.set(pid, 1);
+    }
+  }
+
+  return [...states];
+};
+
+// 获取过渡动画网格ID
+const getTransitionIds = (gridId: number, gridsState: IBingoFlipGridsState): number[] => {
+  const states = new Map(gridsState);
+  const ids = shuffle([...states.keys()]);
+
+  ids.push(gridId);
+
+  return ids;
+};
+
+// 判断本轮翻盘是否结束
+const checkComplete = (gridsState: IBingoPrizeGridsState): boolean => {
+  const states = new Map(gridsState);
+  let counter = 0;
+  for (const state of states.values()) {
+    // 领取状态：0未触发 1待领取 2已领取
+    if (state !== 0) {
+      counter++;
+    }
+  }
+  return counter >= states.size - 1;
+};
+
+/**
+ * 检测高亮
+ * @param {Array<number>} data 数据
+ * @return {Array<number>}
+ */
+const detectHighlight = (prizeIds: number[]): {highlightIds: number[]; lineIds: [number, number[]][]} => {
+  let highlightIds: number[] = [];
+  const lineIds: Map<number, number[]> = new Map();
+
+  if (Array.isArray(prizeIds)) {
+    for (const pid of prizeIds) {
+      if (Array.isArray(gridPrizeConfig[pid])) {
+        highlightIds = highlightIds.concat(gridPrizeConfig[pid]);
+      }
+
+      if (Array.isArray(gridLinesConfig[pid])) {
+        const [gid, type] = gridLinesConfig[pid];
+        const types = lineIds.has(gid) ? Array.from(lineIds.get(gid) as number[]) : [];
+
+        types.push(type);
+
+        lineIds.set(gid, types);
+      }
+    }
+  }
+
+  return {
+    highlightIds: [...new Set(highlightIds)],
+    lineIds: [...lineIds],
+  };
+};
 
 // 初始化状态
 const initialState: IBingoState = {
@@ -68,18 +191,34 @@ const initialState: IBingoState = {
   endTime: 0,
   transitionIds: [],
   highlightIds: [],
-  // lineIds: new Map().entries(),
+  lineIds: [],
   // prizesInfo: new Map().entries(),
-  // prizesState: new Map().entries(),
-  // gridsState: new Map().entries(),
+  prizeGridsState: initPrizesState(),
+  flipGridsState: initFlipsState(),
 };
 
 export const bingoSlice = createSlice({
   name: 'bingo',
   initialState,
   reducers: {
-    flip: state => {
+    flip: (state, action) => {
+      const {payload} = action;
       const {flipBalance, flipAmount} = state;
+
+      const flipGridsState = updateFlipsState(payload.gridId, state.flipGridsState);
+      const prizeGridsState = updatePrizesState(payload.prizeIds, state.prizeGridsState);
+      const isComplete = checkComplete(prizeGridsState);
+      const transitionIds = getTransitionIds(payload.gridId, flipGridsState);
+      const {highlightIds, lineIds} = detectHighlight(payload.prizeIds);
+
+      state.flipGridsState = flipGridsState;
+      state.prizeGridsState = prizeGridsState;
+      state.isComplete = isComplete;
+      state.transitionIds = transitionIds;
+      state.highlightIds = highlightIds;
+      state.lineIds = lineIds;
+
+      // 更新余额
       let bablance = flipBalance - flipAmount;
 
       if (bablance < 0) {
@@ -88,9 +227,16 @@ export const bingoSlice = createSlice({
 
       state.flipBalance = bablance;
     },
+    transition: state => {
+      const transitionIds = Array.from(state.transitionIds);
+
+      transitionIds.shift();
+
+      state.transitionIds = transitionIds;
+    },
   },
 });
 
-export const {flip} = bingoSlice.actions;
+export const {flip, transition} = bingoSlice.actions;
 
 export default bingoSlice.reducer;

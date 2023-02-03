@@ -25,7 +25,7 @@ const Bingo = () => {
             </div>
           </div>
           <BingoBtnFlip />
-          {/* <BingoBtnFlip />
+          {/*
       <Time /> */}
         </section>
       </main>

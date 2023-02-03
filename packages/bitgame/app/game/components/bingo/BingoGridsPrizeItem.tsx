@@ -1,9 +1,19 @@
+'use client';
+
+import {useEffect, useState, useCallback} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import Image from 'next/image';
 
 import Assets from '@game/assets';
+import {BingoState} from '@game/stores/bingo';
 
 import './BingoGridsItem.scss';
 import './BingoGridsPrizeItem.scss';
+
+interface IBingoData {
+  transitionIds: number[];
+  prizeGridsState: [number, number][];
+}
 
 /**
  * 奖励网格
@@ -13,27 +23,49 @@ import './BingoGridsPrizeItem.scss';
  */
 const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string}): JSX.Element => {
   const {index, pid, pname} = props;
+  const dispatch = useDispatch();
+  const {prizeGridsState, transitionIds} = useSelector<BingoState>(state => {
+    const {prizeGridsState, transitionIds} = state.bingo;
 
-  const prizeCurrency = '';
-  const prizeAmount = 0;
-  // 领取状态 0未触发 1待领取 2已领取
-  const prizeState = 0;
-  const classname = 'bingo-grids_item prize';
+    return {prizeGridsState, transitionIds};
+  }) as IBingoData;
 
-  // switch (prizeState) {
-  //   case 0:
-  //     classname = 'bingo-grids_item prize ';
+  // 类名
+  const [classname, setClassname] = useState<string>('bingo-grids_item prize');
+  // 状态 0未触发 1待领取 2已领取
+  const [prizeState, setPrizeState] = useState<number>(0);
 
-  //     break;
-  //   case 1:
-  //     classname = 'bingo-grids_item prize active';
+  const prizeCurrency = 'LUT';
+  const prizeAmount = 10;
 
-  //     break;
-  //   case 2:
-  //     classname = 'bingo-grids_item prize received';
+  // 领取状态
+  useEffect(() => {
+    const states = new Map(prizeGridsState);
 
-  //     break;
-  // }
+    setPrizeState(states.get(pid));
+  }, [prizeGridsState]);
+
+  // 设置领取状态  0未触发 1待领取 2已领取
+  useEffect(() => {
+    if (Array.isArray(transitionIds) && transitionIds.length) {
+      return;
+    }
+
+    switch (prizeState) {
+      case 0:
+        setClassname('bingo-grids_item prize');
+
+        break;
+      case 1:
+        setClassname('bingo-grids_item prize active');
+
+        break;
+      case 2:
+        setClassname('bingo-grids_item prize received');
+
+        break;
+    }
+  }, [prizeState, transitionIds]);
 
   return (
     <li className={classname} data-index={index}>
