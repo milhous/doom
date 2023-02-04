@@ -126,6 +126,28 @@ const updatePrizesState = (prizeIds: number[], gridsState: IBingoPrizeGridsState
   return [...states];
 };
 
+// 重置翻牌状态
+const resetFlipsState = (gridsState: IBingoFlipGridsState): IBingoFlipGridsState => {
+  const states = new Map(gridsState);
+
+  for (const gridId of states.keys()) {
+    states.set(gridId, false);
+  }
+
+  return [...states];
+};
+
+// 重置奖励状态
+const resetPrizesState = (gridsState: IBingoPrizeGridsState): IBingoPrizeGridsState => {
+  const states = new Map(gridsState);
+
+  for (const prizeId of states.keys()) {
+    states.set(prizeId, 0);
+  }
+
+  return [...states];
+};
+
 // 获取过渡动画网格ID
 const getTransitionIds = (gridId: number, gridsState: IBingoFlipGridsState): number[] => {
   const states = new Map(gridsState);
@@ -234,9 +256,27 @@ export const bingoSlice = createSlice({
 
       state.transitionIds = transitionIds;
     },
+    receive: (state, action) => {
+      const {payload} = action;
+      const states = new Map(state.prizeGridsState);
+
+      if (states.has(payload.pid)) {
+        states.set(payload.pid, 2);
+      }
+
+      state.prizeGridsState = [...states];
+    },
+    reset: state => {
+      const flipGridsState = resetFlipsState(state.flipGridsState);
+      const prizeGridsState = resetPrizesState(state.prizeGridsState);
+
+      state.flipGridsState = flipGridsState;
+      state.prizeGridsState = prizeGridsState;
+      state.isComplete = false;
+    },
   },
 });
 
-export const {flip, transition} = bingoSlice.actions;
+export const {flip, transition, receive, reset} = bingoSlice.actions;
 
 export default bingoSlice.reducer;

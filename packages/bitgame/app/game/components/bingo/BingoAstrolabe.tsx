@@ -1,23 +1,20 @@
-'use client';
-
 import Image from 'next/image';
 
 import WidgetSvga from '@widget/svga';
 
 import Assets from '@game/assets';
 
+import BingoConstellations from './BingoConstellations';
 import BingoAstrolabeAward from './BingoAstrolabeAward';
 import './BingoAstrolabe.scss';
 
 const BingoAstrolabe = (): JSX.Element => {
-  // 星座
-  const elems = [];
   // 大奖ID
   const pid = 0;
   // 大奖名称
-  const name = '';
+  const name = 'USDT';
   // 大奖金额
-  const amount = 0;
+  const amount = 100;
   // 大奖图片
   const img = '';
 
@@ -35,7 +32,9 @@ const BingoAstrolabe = (): JSX.Element => {
         </dl>
       </div>
       <div className="astrolabe-sign">
-        <div className="astrolabe-sign_active">{elems}</div>
+        <div className="astrolabe-sign_active">
+          <BingoConstellations />
+        </div>
         <WidgetSvga className="astrolabe-frame" url={Assets.frameAstrolabe} />
         <BingoAstrolabeAward pid={pid} />
       </div>

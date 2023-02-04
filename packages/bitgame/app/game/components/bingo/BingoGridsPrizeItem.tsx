@@ -1,11 +1,17 @@
 'use client';
 
-import {useEffect, useState, useCallback} from 'react';
+import {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import Image from 'next/image';
 
+import {PackageType} from '@libs/config';
+import {useTranslate} from '@libs/i18n/client';
+import {useThrottle} from '@libs/hooks';
+import {toast} from '@widget/toastify';
+
 import Assets from '@game/assets';
 import {BingoState} from '@game/stores/bingo';
+import {receive} from '@game/reducers/bingo';
 
 import './BingoGridsItem.scss';
 import './BingoGridsPrizeItem.scss';
@@ -23,6 +29,7 @@ interface IBingoData {
  */
 const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string}): JSX.Element => {
   const {index, pid, pname} = props;
+  const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
   const dispatch = useDispatch();
   const {prizeGridsState, transitionIds} = useSelector<BingoState>(state => {
     const {prizeGridsState, transitionIds} = state.bingo;
@@ -37,6 +44,21 @@ const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string})
 
   const prizeCurrency = 'LUT';
   const prizeAmount = 10;
+
+  // 领取奖励
+  const handleReceive = useThrottle(async (): Promise<void> => {
+    if (prizeState !== 1) {
+      return;
+    }
+
+    dispatch(receive({pid}));
+
+    toast(
+      t('award_tips')
+        .replace('{name}', prizeCurrency)
+        .replace('{amount}', '' + prizeAmount),
+    );
+  });
 
   // 领取状态
   useEffect(() => {
@@ -68,7 +90,7 @@ const BingoGridsPrizeItem = (props: {index: number; pid: number; pname: string})
   }, [prizeState, transitionIds]);
 
   return (
-    <li className={classname} data-index={index}>
+    <li className={classname} data-index={index} onClick={handleReceive}>
       <div className="bingo-prize" data-pid={pid}>
         <i className={`bingo-sign bingo-sign_${pname}`}></i>
         <i className="bingo-prize_active" style={{backgroundImage: `url(${Assets[pname + 'Grids'].src})`}}></i>

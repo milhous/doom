@@ -82,5 +82,11 @@ export function apiBingoFlip(): IBingoFlipData {
   const gridId = gridsFlipIds.shift();
   const prizeIds = getPrizeIds(gridId);
 
+  if (gridPrizeIds.size === 0 && gridsFlipIds.length === 0) {
+    initGridsFlipIdxs();
+
+    initGridsPrizeIdxs();
+  }
+
   return {gridId, prizeIds};
 }
