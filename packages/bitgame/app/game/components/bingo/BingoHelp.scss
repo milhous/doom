@@ -1,0 +1,45 @@
+@use "@libs/styles/library" as *;
+.bingo-pop {
+    .bingo-pop_help {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #192944;
+        .bingo-pop_container {
+            box-sizing: border-box;
+            width: 744px;
+            padding: 50px 50px 20px;
+            border: 2px solid #2c455a;
+            border-radius: 10px;
+            ul,
+            li {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                margin-bottom: 30px;
+            }
+            li {
+                @include setFont(24px, 34px, #8396b9);
+            }
+            @include smallScreen {
+                width: 700px;
+                padding: 50px 30px 20px;
+            }
+            .btn-confirm {
+                @include setFont(24px, 76px, #fff);
+                cursor: pointer;
+                display: block;
+                width: 254px;
+                height: 76px;
+                margin: 0 auto;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                background: transparent url('~@game/assets/bingo/btn-confirm.png') no-repeat center center;
+                background-size: 100% 100%;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

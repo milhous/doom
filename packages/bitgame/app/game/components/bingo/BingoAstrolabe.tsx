@@ -9,14 +9,10 @@ import BingoAstrolabeAward from './BingoAstrolabeAward';
 import './BingoAstrolabe.scss';
 
 const BingoAstrolabe = (): JSX.Element => {
-  // 大奖ID
-  const pid = 0;
   // 大奖名称
   const name = 'USDT';
   // 大奖金额
   const amount = 100;
-  // 大奖图片
-  const img = '';
 
   return (
     <div className="bingo-astrolabe">
@@ -36,7 +32,7 @@ const BingoAstrolabe = (): JSX.Element => {
           <BingoConstellations />
         </div>
         <WidgetSvga className="astrolabe-frame" url={Assets.frameAstrolabe} />
-        <BingoAstrolabeAward pid={pid} />
+        <BingoAstrolabeAward />
       </div>
     </div>
   );

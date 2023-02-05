@@ -1,6 +1,6 @@
 'use client';
 
-import {Suspense, useState, useEffect, useRef, useMemo} from 'react';
+import {Suspense, useState, useEffect, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import Portal from './portal';
@@ -8,16 +8,13 @@ import './index.scss';
 
 // 弹层
 const WidgetModal = (props: IWidgetModalProps): JSX.Element => {
-  const {classname = '', isActive, disableMaskClick = false, onShow, onClose, children} = props;
+  const {classname = '', isActive, disableMaskClick = true, onShow, onClose, children} = props;
   const nodeRef = useRef(null);
 
-  const [visible, setVisible] = useState<boolean>(false);
-  const isIn = useMemo(() => {
-    return isActive && visible;
-  }, [isActive, visible]);
+  const [isIn, setInState] = useState<boolean>(isActive);
 
   useEffect(() => {
-    setVisible(isActive);
+    setInState(isActive);
   }, [isActive]);
 
   // 关闭
@@ -28,7 +25,7 @@ const WidgetModal = (props: IWidgetModalProps): JSX.Element => {
       return;
     }
 
-    setVisible(false);
+    setInState(false);
   };
 
   return (

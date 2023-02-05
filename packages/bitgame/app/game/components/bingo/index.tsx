@@ -3,6 +3,7 @@ import BingoLogo from './BingoLogo';
 import BingoAstrolabe from './BingoAstrolabe';
 import BingoGrids from './BingoGrids';
 import BingoBtnFlip from './BingoBtnFlip';
+import BingoReceive from './BingoReceive';
 
 import './index.scss';
 
@@ -12,7 +13,7 @@ const Bingo = () => {
       <main id="game" className="game-bingo">
         <section className="bingo-container">
           <div className="bingo-header">
-            {/* <Receive /> */}
+            <BingoReceive />
             <BingoLogo />
           </div>
           <div className="bingo-game">

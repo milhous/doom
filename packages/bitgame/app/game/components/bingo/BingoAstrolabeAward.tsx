@@ -17,11 +17,8 @@ interface IBingoData {
   isComplete: boolean;
 }
 
-/**
- * 大奖
- * @param {number} pid 奖励ID
- */
-const BingoAstrolabeAward = (props: {pid: number}): JSX.Element => {
+// 大奖
+const BingoAstrolabeAward = (): JSX.Element => {
   const {prizeGridsState, isComplete} = useSelector<BingoState>(state => {
     const {prizeGridsState, isComplete} = state.bingo;
 
@@ -77,7 +74,7 @@ const BingoAstrolabeAward = (props: {pid: number}): JSX.Element => {
         <WidgetSvga className="astrolabe-award_halo" url={Assets.currencyHaloAstrolabe} />
         <i className="astrolabe-award_icon"></i>
         <i className="astrolabe-award_stars"></i>
-        <i className="astrolabe-award_active" />
+        <i className="astrolabe-award_active"></i>
       </div>
       <BingoCongratulations currency="USDT" amount={100} isOpen={visible} />
     </>
