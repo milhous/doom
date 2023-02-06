@@ -21,7 +21,6 @@ export interface IRouterInfo {
 // 路由配置
 const routers = {
   [BetType.ACCOUNT]: [
-    {name: 'games', to: '/game', key: 'Game', desc: '点击游戏按钮'},
     {
       name: 'staking',
       to: '/staking',
@@ -46,6 +45,7 @@ const routers = {
         },
       ],
     },
+    {name: 'games', to: '/game', key: 'Game', desc: '点击游戏按钮'},
     {name: 'promotions', to: '/promotions', key: 'Promotions', desc: '点击活动按钮'},
     {
       name: 'vip',
