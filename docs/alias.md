@@ -7,7 +7,16 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["app/*"]
+      "@api/*": ["pages/api/*"],
+      "@app/*": ["app/*"],
+      "@libs/*": ["app/libs/*"],
+      "@ui/*": ["app/ui/*"],
+      "@widget/*": ["app/widget/*"],
+      "@game/*": ["app/game/*"],
+      "@staking/*": ["app/staking/*"],
+      "@promotions/*": ["app/promotions/*"],
+      "@affiliate/*": ["app/affiliate/*"],
+      "@referral/*": ["app/referral/*"]
     }
   }
 }
