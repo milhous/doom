@@ -12,7 +12,7 @@ yarn add -D svgo-loader @svgr/webpack
 
 ```
 
-2. 在 webpack/files.js 中 添加 svg 规则，用于 next.config 配置。
+2. 在 webpack/files.js 中 添加 svg 规则，用于 next.config 自定义 webpack 配置。
 
 ```js
 let svgLoaderOptions = {};
