@@ -92,7 +92,7 @@ export default function RootLayout({
 }
 ```
 
-## 查阅 [SVG 配置](./packages/ui/README.md)
+## 查阅 [SVG 配置](./docs/svg.md)
 
 ## Alias 配置
 
