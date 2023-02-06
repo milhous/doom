@@ -86,19 +86,19 @@ fileConfig.push({
 });
 ```
 
-3. 使用方法：svg 体积过大时, 建议使用 url , 避免使用 inline, 使其打包到 js 中，导致 js 体积变大。
+3. 使用建议，当 svg 体积过大时使用 url , 避免使用 inline, 使其打包到 js 中，导致 js 体积变大。
 
 > 为了区分导入类型, url 导入时, 导入名首字母小写. inline 导入时, 导入名首字母大写.
 
 ```
 # svg 体积较大时，比如 banner
 import Image from 'next/image';
-import svg from './assets/file.svg?url'
+import banner from './assets/banner.svg?url'
 
-<Image src={svg.src} width={200} height={200} priority />
+<Image src={banner.src} width={200} height={200} priority />
 
 # svg 体积较小时，比如 icon
-import Svg from './assets/file.svg'
+import Banner from './assets/banner.svg'
 
-<Svg width="200" height="200" />
+<Banner width="200" height="200" />
 ```
