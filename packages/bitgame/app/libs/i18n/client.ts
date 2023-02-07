@@ -11,17 +11,25 @@ import {defaultNS, defaultLng, supportedLngs, cookieLngName, getLng} from './set
 // i18集合
 const i18nMap = new Map<string, i18n>();
 
-/**
- * 初始化i18n
- * @param {string} appname app名称
- */
-const initI18next = (appname: string): i18n => {
+// 获取客户端语言
+const getClientLng = (): string => {
   const serverLng = typeof document !== 'undefined' ? document.documentElement.getAttribute('lang') : '';
   const cookieLng = serverLng ? serverLng : Cookies.get(cookieLngName);
   const lng = getLng(cookieLng, '');
-  const loadPath = `${__webpack_public_path__}static/locales/${appname}/{{lng}}/{{ns}}.json`;
 
+  return lng;
+};
+
+/**
+ * 初始化i18n
+ * @param {string} appname app名称
+ * @param {string} lng 语言
+ */
+const initI18next = (appname: string, lng: string): i18n => {
+  const loadPath = `${__webpack_public_path__}static/locales/${appname}/{{lng}}/{{ns}}.json`;
   const i18nInstance: i18n = i18next.createInstance();
+
+  console.log(lng);
 
   i18nInstance
     // load translation using xhr -> see /public/locales
@@ -71,7 +79,9 @@ const getI18nInstance = (appname: string): i18n => {
   if (i18nMap.has(appname)) {
     i18nInstance = i18nMap.get(appname);
   } else {
-    i18nInstance = initI18next(appname);
+    const lng = getClientLng();
+
+    i18nInstance = initI18next(appname, lng);
 
     i18nMap.set(appname, i18nInstance);
   }

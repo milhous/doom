@@ -5,6 +5,13 @@ __metadata:
   version: 6
   cacheKey: 8
 
+"@adraffy/ens-normalize@npm:1.8.9":
+  version: 1.8.9
+  resolution: "@adraffy/ens-normalize@npm:1.8.9::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40adraffy%2Fens-normalize%2F-%2Fens-normalize-1.8.9.tgz"
+  checksum: 17791dce03a4320a88c377136c48d0c16ac3e5b07aad321d028c8342fcf821b95c0082cd269cddd488472d1273e8157ae101f2e4e7f9e6be42667ed7ab9614d9
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ampproject%2Fremapping%2F-%2Fremapping-2.2.0.tgz"
@@ -1467,10 +1474,451 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ethersproject/abi@npm:5.7.0, @ethersproject/abi@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/abi@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fabi%2F-%2Fabi-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/address": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/constants": ^5.7.0
+    "@ethersproject/hash": ^5.7.0
+    "@ethersproject/keccak256": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+  checksum: bc6962bb6cb854e4d2a4d65b2c49c716477675b131b1363312234bdbb7e19badb7d9ce66f4ca2a70ae2ea84f7123dbc4e300a1bfe5d58864a7eafabc1466627e
+  languageName: node
+  linkType: hard
+
+"@ethersproject/abstract-provider@npm:5.7.0, @ethersproject/abstract-provider@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/abstract-provider@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fabstract-provider%2F-%2Fabstract-provider-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/networks": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@ethersproject/web": ^5.7.0
+  checksum: 74cf4696245cf03bb7cc5b6cbf7b4b89dd9a79a1c4688126d214153a938126d4972d42c93182198653ce1de35f2a2cad68be40337d4774b3698a39b28f0228a8
+  languageName: node
+  linkType: hard
+
+"@ethersproject/abstract-signer@npm:5.7.0, @ethersproject/abstract-signer@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/abstract-signer@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fabstract-signer%2F-%2Fabstract-signer-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/abstract-provider": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+  checksum: a823dac9cfb761e009851050ebebd5b229d1b1cc4a75b125c2da130ff37e8218208f7f9d1386f77407705b889b23d4a230ad67185f8872f083143e0073cbfbe3
+  languageName: node
+  linkType: hard
+
+"@ethersproject/address@npm:5.7.0, @ethersproject/address@npm:^5, @ethersproject/address@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/address@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Faddress%2F-%2Faddress-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/keccak256": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/rlp": ^5.7.0
+  checksum: 64ea5ebea9cc0e845c413e6cb1e54e157dd9fc0dffb98e239d3a3efc8177f2ff798cd4e3206cf3660ee8faeb7bef1a47dc0ebef0d7b132c32e61e550c7d4c843
+  languageName: node
+  linkType: hard
+
+"@ethersproject/base64@npm:5.7.0, @ethersproject/base64@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/base64@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fbase64%2F-%2Fbase64-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+  checksum: 7dd5d734d623582f08f665434f53685041a3d3b334a0e96c0c8afa8bbcaab934d50e5b6b980e826a8fde8d353e0b18f11e61faf17468177274b8e7c69cd9742b
+  languageName: node
+  linkType: hard
+
+"@ethersproject/basex@npm:5.7.0, @ethersproject/basex@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/basex@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fbasex%2F-%2Fbasex-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+  checksum: 326087b7e1f3787b5fe6cd1cf2b4b5abfafbc355a45e88e22e5e9d6c845b613ffc5301d629b28d5c4d5e2bfe9ec424e6782c804956dff79be05f0098cb5817de
+  languageName: node
+  linkType: hard
+
+"@ethersproject/bignumber@npm:5.7.0, @ethersproject/bignumber@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/bignumber@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fbignumber%2F-%2Fbignumber-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    bn.js: ^5.2.1
+  checksum: 8c9a134b76f3feb4ec26a5a27379efb4e156b8fb2de0678a67788a91c7f4e30abe9d948638458e4b20f2e42380da0adacc7c9389d05fce070692edc6ae9b4904
+  languageName: node
+  linkType: hard
+
+"@ethersproject/bytes@npm:5.7.0, @ethersproject/bytes@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/bytes@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fbytes%2F-%2Fbytes-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/logger": ^5.7.0
+  checksum: 66ad365ceaab5da1b23b72225c71dce472cf37737af5118181fa8ab7447d696bea15ca22e3a0e8836fdd8cfac161afe321a7c67d0dde96f9f645ddd759676621
+  languageName: node
+  linkType: hard
+
+"@ethersproject/constants@npm:5.7.0, @ethersproject/constants@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/constants@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fconstants%2F-%2Fconstants-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bignumber": ^5.7.0
+  checksum: 6d4b1355747cce837b3e76ec3bde70e4732736f23b04f196f706ebfa5d4d9c2be50904a390d4d40ce77803b98d03d16a9b6898418e04ba63491933ce08c4ba8a
+  languageName: node
+  linkType: hard
+
+"@ethersproject/contracts@npm:5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/contracts@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fcontracts%2F-%2Fcontracts-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/abi": ^5.7.0
+    "@ethersproject/abstract-provider": ^5.7.0
+    "@ethersproject/abstract-signer": ^5.7.0
+    "@ethersproject/address": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/constants": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+  checksum: 6ccf1121cba01b31e02f8c507cb971ab6bfed85706484a9ec09878ef1594a62215f43c4fdef8f4a4875b99c4a800bc95e3be69b1803f8ce479e07634b5a740c0
+  languageName: node
+  linkType: hard
+
+"@ethersproject/hash@npm:5.7.0, @ethersproject/hash@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/hash@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fhash%2F-%2Fhash-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/abstract-signer": ^5.7.0
+    "@ethersproject/address": ^5.7.0
+    "@ethersproject/base64": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/keccak256": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+  checksum: 6e9fa8d14eb08171cd32f17f98cc108ec2aeca74a427655f0d689c550fee0b22a83b3b400fad7fb3f41cf14d4111f87f170aa7905bcbcd1173a55f21b06262ef
+  languageName: node
+  linkType: hard
+
+"@ethersproject/hdnode@npm:5.7.0, @ethersproject/hdnode@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/hdnode@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fhdnode%2F-%2Fhdnode-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/abstract-signer": ^5.7.0
+    "@ethersproject/basex": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/pbkdf2": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/sha2": ^5.7.0
+    "@ethersproject/signing-key": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@ethersproject/wordlists": ^5.7.0
+  checksum: bfe5ca2d89a42de73655f853170ef4766b933c5f481cddad709b3aca18823275b096e572f92d1602a052f80b426edde44ad6b9d028799775a7dad4a5bbed2133
+  languageName: node
+  linkType: hard
+
+"@ethersproject/json-wallets@npm:5.7.0, @ethersproject/json-wallets@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/json-wallets@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fjson-wallets%2F-%2Fjson-wallets-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/abstract-signer": ^5.7.0
+    "@ethersproject/address": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/hdnode": ^5.7.0
+    "@ethersproject/keccak256": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/pbkdf2": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/random": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    aes-js: 3.0.0
+    scrypt-js: 3.0.1
+  checksum: f583458d22db62efaaf94d38dd243482776a45bf90f9f3882fbad5aa0b8fd288b41eb7c1ff8ec0b99c9b751088e43d6173530db64dd33c59f9d8daa8d7ad5aa2
+  languageName: node
+  linkType: hard
+
+"@ethersproject/keccak256@npm:5.7.0, @ethersproject/keccak256@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/keccak256@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fkeccak256%2F-%2Fkeccak256-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    js-sha3: 0.8.0
+  checksum: ff70950d82203aab29ccda2553422cbac2e7a0c15c986bd20a69b13606ed8bb6e4fdd7b67b8d3b27d4f841e8222cbaccd33ed34be29f866fec7308f96ed244c6
+  languageName: node
+  linkType: hard
+
+"@ethersproject/logger@npm:5.7.0, @ethersproject/logger@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/logger@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Flogger%2F-%2Flogger-5.7.0.tgz"
+  checksum: 075ab2f605f1fd0813f2e39c3308f77b44a67732b36e712d9bc085f22a84aac4da4f71b39bee50fe78da3e1c812673fadc41180c9970fe5e486e91ea17befe0d
+  languageName: node
+  linkType: hard
+
+"@ethersproject/networks@npm:5.7.1, @ethersproject/networks@npm:^5.7.0":
+  version: 5.7.1
+  resolution: "@ethersproject/networks@npm:5.7.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fnetworks%2F-%2Fnetworks-5.7.1.tgz"
+  dependencies:
+    "@ethersproject/logger": ^5.7.0
+  checksum: 0339f312304c17d9a0adce550edb825d4d2c8c9468c1634c44172c67a9ed256f594da62c4cda5c3837a0f28b7fabc03aca9b492f68ff1fdad337ee861b27bd5d
+  languageName: node
+  linkType: hard
+
+"@ethersproject/pbkdf2@npm:5.7.0, @ethersproject/pbkdf2@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/pbkdf2@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fpbkdf2%2F-%2Fpbkdf2-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/sha2": ^5.7.0
+  checksum: b895adb9e35a8a127e794f7aadc31a2424ef355a70e51cde10d457e3e888bb8102373199a540cf61f2d6b9a32e47358f9c65b47d559f42bf8e596b5fd67901e9
+  languageName: node
+  linkType: hard
+
+"@ethersproject/properties@npm:5.7.0, @ethersproject/properties@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/properties@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fproperties%2F-%2Fproperties-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/logger": ^5.7.0
+  checksum: 6ab0ccf0c3aadc9221e0cdc5306ce6cd0df7f89f77d77bccdd1277182c9ead0202cd7521329ba3acde130820bf8af299e17cf567d0d497c736ee918207bbf59f
+  languageName: node
+  linkType: hard
+
+"@ethersproject/providers@npm:5.7.2, @ethersproject/providers@npm:^5":
+  version: 5.7.2
+  resolution: "@ethersproject/providers@npm:5.7.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fproviders%2F-%2Fproviders-5.7.2.tgz"
+  dependencies:
+    "@ethersproject/abstract-provider": ^5.7.0
+    "@ethersproject/abstract-signer": ^5.7.0
+    "@ethersproject/address": ^5.7.0
+    "@ethersproject/base64": ^5.7.0
+    "@ethersproject/basex": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/constants": ^5.7.0
+    "@ethersproject/hash": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/networks": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/random": ^5.7.0
+    "@ethersproject/rlp": ^5.7.0
+    "@ethersproject/sha2": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@ethersproject/web": ^5.7.0
+    bech32: 1.1.4
+    ws: 7.4.6
+  checksum: 1754c731a5ca6782ae9677f4a9cd8b6246c4ef21a966c9a01b133750f3c578431ec43ec254e699969c4a0f87e84463ded50f96b415600aabd37d2056aee58c19
+  languageName: node
+  linkType: hard
+
+"@ethersproject/random@npm:5.7.0, @ethersproject/random@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/random@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Frandom%2F-%2Frandom-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+  checksum: 017829c91cff6c76470852855108115b0b52c611b6be817ed1948d56ba42d6677803ec2012aa5ae298a7660024156a64c11fcf544e235e239ab3f89f0fff7345
+  languageName: node
+  linkType: hard
+
+"@ethersproject/rlp@npm:5.7.0, @ethersproject/rlp@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/rlp@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Frlp%2F-%2Frlp-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+  checksum: bce165b0f7e68e4d091c9d3cf47b247cac33252df77a095ca4281d32d5eeaaa3695d9bc06b2b057c5015353a68df89f13a4a54a72e888e4beeabbe56b15dda6e
+  languageName: node
+  linkType: hard
+
+"@ethersproject/sha2@npm:5.7.0, @ethersproject/sha2@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/sha2@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fsha2%2F-%2Fsha2-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    hash.js: 1.1.7
+  checksum: 09321057c022effbff4cc2d9b9558228690b5dd916329d75c4b1ffe32ba3d24b480a367a7cc92d0f0c0b1c896814d03351ae4630e2f1f7160be2bcfbde435dbc
+  languageName: node
+  linkType: hard
+
+"@ethersproject/signing-key@npm:5.7.0, @ethersproject/signing-key@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/signing-key@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fsigning-key%2F-%2Fsigning-key-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    bn.js: ^5.2.1
+    elliptic: 6.5.4
+    hash.js: 1.1.7
+  checksum: 8f8de09b0aac709683bbb49339bc0a4cd2f95598f3546436c65d6f3c3a847ffa98e06d35e9ed2b17d8030bd2f02db9b7bd2e11c5cf8a71aad4537487ab4cf03a
+  languageName: node
+  linkType: hard
+
+"@ethersproject/solidity@npm:5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/solidity@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fsolidity%2F-%2Fsolidity-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/keccak256": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/sha2": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+  checksum: 9a02f37f801c96068c3e7721f83719d060175bc4e80439fe060e92bd7acfcb6ac1330c7e71c49f4c2535ca1308f2acdcb01e00133129aac00581724c2d6293f3
+  languageName: node
+  linkType: hard
+
+"@ethersproject/strings@npm:5.7.0, @ethersproject/strings@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/strings@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fstrings%2F-%2Fstrings-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/constants": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+  checksum: 5ff78693ae3fdf3cf23e1f6dc047a61e44c8197d2408c42719fef8cb7b7b3613a4eec88ac0ed1f9f5558c74fe0de7ae3195a29ca91a239c74b9f444d8e8b50df
+  languageName: node
+  linkType: hard
+
+"@ethersproject/transactions@npm:5.7.0, @ethersproject/transactions@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/transactions@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Ftransactions%2F-%2Ftransactions-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/address": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/constants": ^5.7.0
+    "@ethersproject/keccak256": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/rlp": ^5.7.0
+    "@ethersproject/signing-key": ^5.7.0
+  checksum: a31b71996d2b283f68486241bff0d3ea3f1ba0e8f1322a8fffc239ccc4f4a7eb2ea9994b8fd2f093283fd75f87bae68171e01b6265261f821369aca319884a79
+  languageName: node
+  linkType: hard
+
+"@ethersproject/units@npm:5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/units@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Funits%2F-%2Funits-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/constants": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+  checksum: 304714f848cd32e57df31bf545f7ad35c2a72adae957198b28cbc62166daa929322a07bff6e9c9ac4577ab6aa0de0546b065ed1b2d20b19e25748b7d475cb0fc
+  languageName: node
+  linkType: hard
+
+"@ethersproject/wallet@npm:5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/wallet@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fwallet%2F-%2Fwallet-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/abstract-provider": ^5.7.0
+    "@ethersproject/abstract-signer": ^5.7.0
+    "@ethersproject/address": ^5.7.0
+    "@ethersproject/bignumber": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/hash": ^5.7.0
+    "@ethersproject/hdnode": ^5.7.0
+    "@ethersproject/json-wallets": ^5.7.0
+    "@ethersproject/keccak256": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/random": ^5.7.0
+    "@ethersproject/signing-key": ^5.7.0
+    "@ethersproject/transactions": ^5.7.0
+    "@ethersproject/wordlists": ^5.7.0
+  checksum: a4009bf7331eddab38e3015b5e9101ef92de7f705b00a6196b997db0e5635b6d83561674d46c90c6f77b87c0500fe4a6b0183ba13749efc22db59c99deb82fbd
+  languageName: node
+  linkType: hard
+
+"@ethersproject/web@npm:5.7.1, @ethersproject/web@npm:^5.7.0":
+  version: 5.7.1
+  resolution: "@ethersproject/web@npm:5.7.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fweb%2F-%2Fweb-5.7.1.tgz"
+  dependencies:
+    "@ethersproject/base64": ^5.7.0
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+  checksum: 7028c47103f82fd2e2c197ce0eecfacaa9180ffeec7de7845b1f4f9b19d84081b7a48227aaddde05a4aaa526af574a9a0ce01cc0fc75e3e371f84b38b5b16b2b
+  languageName: node
+  linkType: hard
+
+"@ethersproject/wordlists@npm:5.7.0, @ethersproject/wordlists@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "@ethersproject/wordlists@npm:5.7.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40ethersproject%2Fwordlists%2F-%2Fwordlists-5.7.0.tgz"
+  dependencies:
+    "@ethersproject/bytes": ^5.7.0
+    "@ethersproject/hash": ^5.7.0
+    "@ethersproject/logger": ^5.7.0
+    "@ethersproject/properties": ^5.7.0
+    "@ethersproject/strings": ^5.7.0
+  checksum: 30eb6eb0731f9ef5faa44bf9c0c6e950bcaaef61e4d2d9ce0ae6d341f4e2d6d1f4ab4f8880bfce03b7aac4b862fb740e1421170cfbf8e2aafc359277d49e6e97
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40gar%2Fpromisify%2F-%2Fpromisify-1.1.3.tgz"
   checksum: 4059f790e2d07bf3c3ff3e0fec0daa8144fe35c1f6e0111c9921bd32106adaa97a4ab096ad7dab1e28ee6a9060083c4d1a4ada42a7f5f3f7a96b8812e2b757c1
+  languageName: node
+  linkType: hard
+
+"@gnosis.pm/safe-apps-provider@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "@gnosis.pm/safe-apps-provider@npm:0.12.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40gnosis.pm%2Fsafe-apps-provider%2F-%2Fsafe-apps-provider-0.12.0.tgz"
+  dependencies:
+    "@gnosis.pm/safe-apps-sdk": 7.6.0
+    events: ^3.3.0
+  checksum: 3c016c0028993e368f76078d7751c94a56ce33573bd7b7ad0e93117046f99eead76cf2b2d1ca944ac2aae5dcbcc42a62fb11ea274a9706567457071839121131
+  languageName: node
+  linkType: hard
+
+"@gnosis.pm/safe-apps-sdk@npm:7.6.0":
+  version: 7.6.0
+  resolution: "@gnosis.pm/safe-apps-sdk@npm:7.6.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40gnosis.pm%2Fsafe-apps-sdk%2F-%2Fsafe-apps-sdk-7.6.0.tgz"
+  dependencies:
+    "@gnosis.pm/safe-react-gateway-sdk": ^3.1.3
+    ethers: ^5.6.8
+  checksum: e626c9243f79361fa0900e5fc6892e01b6714890d24478e4e6f750920d86c6f6f2dee5835a4b558b05da6ae55e57a3d8f1ec4d25bde04f93938d1990c31e9dab
+  languageName: node
+  linkType: hard
+
+"@gnosis.pm/safe-apps-sdk@npm:^7.6.0":
+  version: 7.8.0
+  resolution: "@gnosis.pm/safe-apps-sdk@npm:7.8.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40gnosis.pm%2Fsafe-apps-sdk%2F-%2Fsafe-apps-sdk-7.8.0.tgz"
+  dependencies:
+    "@gnosis.pm/safe-react-gateway-sdk": ^3.1.3
+    ethers: ^5.6.8
+  checksum: 3535c20fad397795e658d19bbf3f536fea65128e5bcaca3b403582ae8d1c395d43033d04332b2a842f906066a9a2a5eda3133fe9c03043bb295b81bb1b8a7ff8
+  languageName: node
+  linkType: hard
+
+"@gnosis.pm/safe-react-gateway-sdk@npm:^3.1.3":
+  version: 3.5.2
+  resolution: "@gnosis.pm/safe-react-gateway-sdk@npm:3.5.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40gnosis.pm%2Fsafe-react-gateway-sdk%2F-%2Fsafe-react-gateway-sdk-3.5.2.tgz"
+  dependencies:
+    cross-fetch: ^3.1.5
+  checksum: c878dc0e86d6296c753fd91c4ebbdfb1e2c1a2634809e8a425fad9737dbb709bb46a8121d4ed4e025e01569f3b9c454a82a9d218b3c4bab6da851556761d9196
   languageName: node
   linkType: hard
 
@@ -1634,10 +2082,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/env@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fenv%2F-%2Fenv-13.1.6.tgz"
-  checksum: 0f911a18f0b3372007632fffa87f5d7f802c00d07b3bf757d2d09574735ae43f60000ecdf64b6f06e195971c508c2bcee82dd1e3aab27a08a4300eb0317652bb
+"@metamask/detect-provider@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@metamask/detect-provider@npm:1.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40metamask%2Fdetect-provider%2F-%2Fdetect-provider-1.2.0.tgz"
+  checksum: 2c152534a8dd15bc1430bb5159cdf58993549a644cff344a1ff43f4ede8f041aad72b909e822747f6545de3ed293a740ecffc86a859daf7a925c4096efd61eb3
+  languageName: node
+  linkType: hard
+
+"@next/env@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/env@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fenv%2F-%2Fenv-13.1.7-canary.7.tgz"
+  checksum: 2d77453c1e12eaf643c44b62c9c4bc7fff66a2dd0e8140da0b07283223d2d12bdd4816e06ab42ce113b88e2086d6209f6a29d7d1438455c93afdb76306818859
   languageName: node
   linkType: hard
 
@@ -1650,94 +2105,108 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-android-arm-eabi@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm-eabi%2F-%2Fswc-android-arm-eabi-13.1.6.tgz"
+"@next/swc-android-arm-eabi@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-android-arm-eabi@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm-eabi%2F-%2Fswc-android-arm-eabi-13.1.7-canary.7.tgz"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-android-arm64@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm64%2F-%2Fswc-android-arm64-13.1.6.tgz"
+"@next/swc-android-arm64@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-android-arm64@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-android-arm64%2F-%2Fswc-android-arm64-13.1.7-canary.7.tgz"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-darwin-arm64@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-arm64%2F-%2Fswc-darwin-arm64-13.1.6.tgz"
+"@next/swc-darwin-arm64@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-darwin-arm64@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-arm64%2F-%2Fswc-darwin-arm64-13.1.7-canary.7.tgz"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-darwin-x64@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-x64%2F-%2Fswc-darwin-x64-13.1.6.tgz"
+"@next/swc-darwin-x64@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-darwin-x64@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-darwin-x64%2F-%2Fswc-darwin-x64-13.1.7-canary.7.tgz"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-freebsd-x64@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-freebsd-x64@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-freebsd-x64%2F-%2Fswc-freebsd-x64-13.1.6.tgz"
+"@next/swc-freebsd-x64@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-freebsd-x64@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-freebsd-x64%2F-%2Fswc-freebsd-x64-13.1.7-canary.7.tgz"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm-gnueabihf%2F-%2Fswc-linux-arm-gnueabihf-13.1.6.tgz"
+"@next/swc-linux-arm-gnueabihf@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm-gnueabihf%2F-%2Fswc-linux-arm-gnueabihf-13.1.7-canary.7.tgz"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-linux-arm64-gnu@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-gnu%2F-%2Fswc-linux-arm64-gnu-13.1.6.tgz"
+"@next/swc-linux-arm64-gnu@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-gnu%2F-%2Fswc-linux-arm64-gnu-13.1.7-canary.7.tgz"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-linux-arm64-musl@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-musl%2F-%2Fswc-linux-arm64-musl-13.1.6.tgz"
+"@next/swc-linux-arm64-musl@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-linux-arm64-musl@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-arm64-musl%2F-%2Fswc-linux-arm64-musl-13.1.7-canary.7.tgz"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-linux-x64-gnu@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-gnu%2F-%2Fswc-linux-x64-gnu-13.1.6.tgz"
+"@next/swc-linux-x64-gnu@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-linux-x64-gnu@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-gnu%2F-%2Fswc-linux-x64-gnu-13.1.7-canary.7.tgz"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-linux-x64-musl@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-musl%2F-%2Fswc-linux-x64-musl-13.1.6.tgz"
+"@next/swc-linux-x64-musl@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-linux-x64-musl@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-linux-x64-musl%2F-%2Fswc-linux-x64-musl-13.1.7-canary.7.tgz"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-win32-arm64-msvc@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-arm64-msvc%2F-%2Fswc-win32-arm64-msvc-13.1.6.tgz"
+"@next/swc-win32-arm64-msvc@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-arm64-msvc%2F-%2Fswc-win32-arm64-msvc-13.1.7-canary.7.tgz"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-win32-ia32-msvc@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-ia32-msvc%2F-%2Fswc-win32-ia32-msvc-13.1.6.tgz"
+"@next/swc-win32-ia32-msvc@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-ia32-msvc%2F-%2Fswc-win32-ia32-msvc-13.1.7-canary.7.tgz"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:13.1.6":
-  version: 13.1.6
-  resolution: "@next/swc-win32-x64-msvc@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-x64-msvc%2F-%2Fswc-win32-x64-msvc-13.1.6.tgz"
+"@next/swc-win32-x64-msvc@npm:13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "@next/swc-win32-x64-msvc@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40next%2Fswc-win32-x64-msvc%2F-%2Fswc-win32-x64-msvc-13.1.7-canary.7.tgz"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@noble/hashes@npm:1.1.2":
+  version: 1.1.2
+  resolution: "@noble/hashes@npm:1.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40noble%2Fhashes%2F-%2Fhashes-1.1.2.tgz"
+  checksum: 3c2a8cb7c2e053811032f242155d870c5eb98844d924d69702244d48804cb03b42d4a666c49c2b71164420d8229cb9a6f242b972d50d5bb2f1d673b98b041de2
+  languageName: node
+  linkType: hard
+
+"@noble/secp256k1@npm:1.7.1":
+  version: 1.7.1
+  resolution: "@noble/secp256k1@npm:1.7.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40noble%2Fsecp256k1%2F-%2Fsecp256k1-1.7.1.tgz"
+  checksum: d2301f1f7690368d8409a3152450458f27e54df47e3f917292de3de82c298770890c2de7c967d237eff9c95b70af485389a9695f73eb05a43e2bd562d18b18cb
   languageName: node
   linkType: hard
 
@@ -1864,15 +2333,27 @@ __metadata:
     "@svgr/webpack": ^6.5.1
     "@types/fs-extra": ^11
     "@types/js-cookie": ^3
-    "@types/node": 18.11.19
+    "@types/node": 18.13.0
     "@types/react": ^18
     "@types/react-dom": ^18.0.10
     "@types/react-transition-group": ^4
     "@types/sharp": ^0
+    "@web3-react/coinbase-wallet": 8.0.35-beta.0
+    "@web3-react/core": 8.0.35-beta.0
+    "@web3-react/eip1193": 8.0.27-beta.0
+    "@web3-react/empty": 8.0.20-beta.0
+    "@web3-react/gnosis-safe": 8.0.7-beta.0
+    "@web3-react/metamask": 8.0.30-beta.0
+    "@web3-react/network": 8.0.27-beta.0
+    "@web3-react/store": 8.0.25-beta.0
+    "@web3-react/types": 8.0.20-beta.0
+    "@web3-react/url": 8.0.25-beta.0
+    "@web3-react/walletconnect": 8.0.37-beta.0
     autoprefixer: ^10.4.13
     browserslist: ^4.21.5
     copy-webpack-plugin: ^11.0.0
     echarts: ^5.4.1
+    ethers: ^6.0.2
     fs-extra: ^11.1.0
     graphql: ^16.6.0
     graphql-tag: ^2.12.6
@@ -1884,7 +2365,7 @@ __metadata:
     i18next-resources-to-backend: ^1.1.1
     image-size: ^1.0.2
     js-cookie: ^3.0.1
-    next: ^13.1.6
+    next: ^13.1.7-canary.7
     postcss: ^8.4.21
     postcss-normalize: ^10.0.1
     postcss-pxtorem: ^6.0.0
@@ -1893,8 +2374,8 @@ __metadata:
     rc-menu: ^9.8.2
     rc-scrollbars: ^1.1.5
     rc-tooltip: ^5.3.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: next
+    react-dom: next
     react-i18next: ^12.1.5
     react-redux: ^8.0.5
     react-toastify: ^9.1.1
@@ -2267,10 +2748,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.11.19":
-  version: 18.11.19
-  resolution: "@types/node@npm:18.11.19::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2F-%2Fnode-18.11.19.tgz"
-  checksum: d7cd19fcfc59cbdd3f9ba0b4072cb7adc21bd575bd8eb7d7e698975e63564aaa83f03434f32b12331f84f73d0b369d9cbe2371e359d9d7f5c3361f4987f4f7da
+"@types/node@npm:18.13.0":
+  version: 18.13.0
+  resolution: "@types/node@npm:18.13.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2F-%2Fnode-18.13.0.tgz"
+  checksum: 4ea10f8802848b01672bce938f678b6774ca2cee0c9774f12275ab064ae07818419c3e2e41d6257ce7ba846d1ea26c63214aa1dfa4166fa3746291752b8c6416
   languageName: node
   linkType: hard
 
@@ -2347,13 +2828,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/eslint-plugin@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Feslint-plugin%2F-%2Feslint-plugin-5.50.0.tgz"
+"@typescript-eslint/eslint-plugin@npm:^5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Feslint-plugin%2F-%2Feslint-plugin-5.51.0.tgz"
   dependencies:
-    "@typescript-eslint/scope-manager": 5.50.0
-    "@typescript-eslint/type-utils": 5.50.0
-    "@typescript-eslint/utils": 5.50.0
+    "@typescript-eslint/scope-manager": 5.51.0
+    "@typescript-eslint/type-utils": 5.51.0
+    "@typescript-eslint/utils": 5.51.0
     debug: ^4.3.4
     grapheme-splitter: ^1.0.4
     ignore: ^5.2.0
@@ -2367,7 +2848,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 351c4a157a7d717cc3835bdc09324b20d649463738a029c5701e5a38cdb162305ff7d56adff196a0c3245c24ea3167bbdac7f1c30399b8c1d495abbdbc1c53d6
+  checksum: 5351d8cec13bd9867ce4aaf7052aa31c9ca867fc89c620fc0fe5718ac2cbc165903275db59974324d98e45df0d33a73a4367d236668772912731031a672cfdcd
   languageName: node
   linkType: hard
 
@@ -2388,20 +2869,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/parser@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Fparser%2F-%2Fparser-5.50.0.tgz"
+"@typescript-eslint/parser@npm:^5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/parser@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Fparser%2F-%2Fparser-5.51.0.tgz"
   dependencies:
-    "@typescript-eslint/scope-manager": 5.50.0
-    "@typescript-eslint/types": 5.50.0
-    "@typescript-eslint/typescript-estree": 5.50.0
+    "@typescript-eslint/scope-manager": 5.51.0
+    "@typescript-eslint/types": 5.51.0
+    "@typescript-eslint/typescript-estree": 5.51.0
     debug: ^4.3.4
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 816a421ce9a5c61a2e92499d6d400aed4211ca5b685e0212844b6659f7acfeba1cca0418b462236c44eea6e8a2574cd51ccb7abc2bf4a8cad5b7a275d71ae9bf
+  checksum: 096ec819132839febd4f390c4bbf31687e06191092c244dbd189a64cd7383fbaba728f2765e8809cd9834c0069163ab38b0e5f0f6360157d831647d4c295f8cd
   languageName: node
   linkType: hard
 
@@ -2415,22 +2896,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/scope-manager@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Fscope-manager%2F-%2Fscope-manager-5.50.0.tgz"
+"@typescript-eslint/scope-manager@npm:5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/scope-manager@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Fscope-manager%2F-%2Fscope-manager-5.51.0.tgz"
   dependencies:
-    "@typescript-eslint/types": 5.50.0
-    "@typescript-eslint/visitor-keys": 5.50.0
-  checksum: bd49447a834c82cb130e6900644042c3a84195bf7a63483385e90b6454c65856d6f276c997cad6bf9c36c9d0cb168fdde625ce4c78c3b8bcce42da782270794b
+    "@typescript-eslint/types": 5.51.0
+    "@typescript-eslint/visitor-keys": 5.51.0
+  checksum: b3c9f48b6b7a7ae2ebcad4745ef91e4727776b2cf56d31be6456b1aa063aa649539e20f9fffa83cad9ccaaa9c492f2354a1c15526a2b789e235ec58b3a82d22c
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/type-utils@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Ftype-utils%2F-%2Ftype-utils-5.50.0.tgz"
+"@typescript-eslint/type-utils@npm:5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/type-utils@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Ftype-utils%2F-%2Ftype-utils-5.51.0.tgz"
   dependencies:
-    "@typescript-eslint/typescript-estree": 5.50.0
-    "@typescript-eslint/utils": 5.50.0
+    "@typescript-eslint/typescript-estree": 5.51.0
+    "@typescript-eslint/utils": 5.51.0
     debug: ^4.3.4
     tsutils: ^3.21.0
   peerDependencies:
@@ -2438,7 +2919,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: d2fc2fd10ef300865fd6a902ae92aef6c45cddc4359445f1e5c6dc9511063b52d2170cc6b525763395d4171c177b3d0fffd77cf9a2ab7e01fcd7109bd1a5a585
+  checksum: ab9747b0c629cfaaab903eed8ce1e39d34d69a402ce5faf2f1fff2bbb461bdbe034044b1368ba67ba8e5c1c512172e07d83c8a563635d8de811bf148d95c7dec
   languageName: node
   linkType: hard
 
@@ -2449,10 +2930,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/types@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Ftypes%2F-%2Ftypes-5.50.0.tgz"
-  checksum: 1189c63d35abeec685dd519fd923926b884e63d5e10e4a9fe995aebfde59b8a2e10773090ec3ba32a0ec408746b18f6a454d9bedb0b6c7ce8b6066547144fb4d
+"@typescript-eslint/types@npm:5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/types@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Ftypes%2F-%2Ftypes-5.51.0.tgz"
+  checksum: b31021a0866f41ba5d71b6c4c7e20cc9b99d49c93bb7db63b55b2e51542fb75b4e27662ee86350da3c1318029e278a5a807facaf4cb5aeea724be8b0e021e836
   languageName: node
   linkType: hard
 
@@ -2474,12 +2955,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/typescript-estree@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Ftypescript-estree%2F-%2Ftypescript-estree-5.50.0.tgz"
+"@typescript-eslint/typescript-estree@npm:5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/typescript-estree@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Ftypescript-estree%2F-%2Ftypescript-estree-5.51.0.tgz"
   dependencies:
-    "@typescript-eslint/types": 5.50.0
-    "@typescript-eslint/visitor-keys": 5.50.0
+    "@typescript-eslint/types": 5.51.0
+    "@typescript-eslint/visitor-keys": 5.51.0
     debug: ^4.3.4
     globby: ^11.1.0
     is-glob: ^4.0.3
@@ -2488,25 +2969,25 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: cb1ac8d39647da6d52750c713d9635750ed41245ec82f937a159a71ad3bf490ebabfad3b43eeca07bca39d60df30d3a2f31f8bed0061381731d92a62e284b867
+  checksum: aec23e5cab48ee72fefa6d1ac266639ebabf6cebec1e0207ad47011d3a48186ac9a632c8e34c3bac896155f54895a497230c11d789fd81263b08eb267d7113ce
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/utils@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Futils%2F-%2Futils-5.50.0.tgz"
+"@typescript-eslint/utils@npm:5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/utils@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Futils%2F-%2Futils-5.51.0.tgz"
   dependencies:
     "@types/json-schema": ^7.0.9
     "@types/semver": ^7.3.12
-    "@typescript-eslint/scope-manager": 5.50.0
-    "@typescript-eslint/types": 5.50.0
-    "@typescript-eslint/typescript-estree": 5.50.0
+    "@typescript-eslint/scope-manager": 5.51.0
+    "@typescript-eslint/types": 5.51.0
+    "@typescript-eslint/typescript-estree": 5.51.0
     eslint-scope: ^5.1.1
     eslint-utils: ^3.0.0
     semver: ^7.3.7
   peerDependencies:
     eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
-  checksum: 4471ae8b24449300e009f1cc09ee0d38cce20ae9171e8fbf4ef752ce4eb87104cc0d813d8f7051b619fa05e1e7c12b748dad49832911685297b1bbfef3c01f0b
+  checksum: c6e28c942fbac5500f0e8ed67ef304b484ba296486e55306f78fb090dc9d5bb1f25a0bedc065e14680041eadce5e95fa10aab618cb0c316599ec987e6ea72442
   languageName: node
   linkType: hard
 
@@ -2520,13 +3001,132 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:5.50.0":
-  version: 5.50.0
-  resolution: "@typescript-eslint/visitor-keys@npm:5.50.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Fvisitor-keys%2F-%2Fvisitor-keys-5.50.0.tgz"
+"@typescript-eslint/visitor-keys@npm:5.51.0":
+  version: 5.51.0
+  resolution: "@typescript-eslint/visitor-keys@npm:5.51.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40typescript-eslint%2Fvisitor-keys%2F-%2Fvisitor-keys-5.51.0.tgz"
   dependencies:
-    "@typescript-eslint/types": 5.50.0
+    "@typescript-eslint/types": 5.51.0
     eslint-visitor-keys: ^3.3.0
-  checksum: 55319cb7ee7b78d07d9dc67a388d69fe0b7f11cbc79190e17e7f87a39c9992d08dab3b5872d5a7f01094dda28ad6ac61d3573e59015ef70bf138d4c4f8c45b88
+  checksum: b49710f3c6b3b62a846a163afffd81be5eb2b1f44e25bec51ff3c9f4c3b579d74aa4cbd3753b4fc09ea3dbc64a7062f9c658c08d22bb2740a599cb703d876220
+  languageName: node
+  linkType: hard
+
+"@web3-react/coinbase-wallet@npm:8.0.35-beta.0":
+  version: 8.0.35-beta.0
+  resolution: "@web3-react/coinbase-wallet@npm:8.0.35-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fcoinbase-wallet%2F-%2Fcoinbase-wallet-8.0.35-beta.0.tgz"
+  dependencies:
+    "@web3-react/types": ^8.0.20-beta.0
+  peerDependencies:
+    "@coinbase/wallet-sdk": ^3.0.4
+  checksum: fa8a9e313cb0cb25e90c160545870d4d8657b55b3d42d42cbadb78a5a5c6e8979347ed84315aa6e50fb67c58e9e4c9d26d23d3f4200c22aa94bbfb770b0167d1
+  languageName: node
+  linkType: hard
+
+"@web3-react/core@npm:8.0.35-beta.0":
+  version: 8.0.35-beta.0
+  resolution: "@web3-react/core@npm:8.0.35-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fcore%2F-%2Fcore-8.0.35-beta.0.tgz"
+  dependencies:
+    "@ethersproject/providers": ^5
+    "@web3-react/store": ^8.0.25-beta.0
+    "@web3-react/types": ^8.0.20-beta.0
+    zustand: ^4.0.0-rc.0
+  peerDependencies:
+    react: ">=16.8"
+  dependenciesMeta:
+    "@ethersproject/providers":
+      optional: true
+  checksum: 4c129fbcd97436d62fa788c06b53ee49966f9be3f27f0f5882863949ecfa8c2d7d3d79053d959dd4fb5a1d5775606ae2ba9ccd78b0d8033cb76b6f2513702629
+  languageName: node
+  linkType: hard
+
+"@web3-react/eip1193@npm:8.0.27-beta.0":
+  version: 8.0.27-beta.0
+  resolution: "@web3-react/eip1193@npm:8.0.27-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Feip1193%2F-%2Feip1193-8.0.27-beta.0.tgz"
+  dependencies:
+    "@web3-react/types": ^8.0.20-beta.0
+  checksum: d50109144fc887be8e94a78ae4a39d49939a6909fb0c14d263906adf2998f9c14f3a73564b67cf896431bf5b2f3e41ed90197aa134a350316ab02354586e0b51
+  languageName: node
+  linkType: hard
+
+"@web3-react/empty@npm:8.0.20-beta.0":
+  version: 8.0.20-beta.0
+  resolution: "@web3-react/empty@npm:8.0.20-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fempty%2F-%2Fempty-8.0.20-beta.0.tgz"
+  dependencies:
+    "@web3-react/types": ^8.0.20-beta.0
+  checksum: 56d74ce0daf0a9706d92e9c5a726d7b716bfc774c4ec83b8632920661890e882c53094c80f86fd4361aefa963b9d6291b17b4a916d83a864db069521832644cc
+  languageName: node
+  linkType: hard
+
+"@web3-react/gnosis-safe@npm:8.0.7-beta.0":
+  version: 8.0.7-beta.0
+  resolution: "@web3-react/gnosis-safe@npm:8.0.7-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fgnosis-safe%2F-%2Fgnosis-safe-8.0.7-beta.0.tgz"
+  dependencies:
+    "@gnosis.pm/safe-apps-provider": ^0.12.0
+    "@gnosis.pm/safe-apps-sdk": ^7.6.0
+    "@web3-react/types": ^8.0.20-beta.0
+  checksum: 36be9ba735e88e1029938685e134af1eeef91976f1086a35dfde862bb0a23c2c460596f166a5462d5ea20ce4120ccfbd2369c725e47fbc538b1d426042691dab
+  languageName: node
+  linkType: hard
+
+"@web3-react/metamask@npm:8.0.30-beta.0":
+  version: 8.0.30-beta.0
+  resolution: "@web3-react/metamask@npm:8.0.30-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fmetamask%2F-%2Fmetamask-8.0.30-beta.0.tgz"
+  dependencies:
+    "@metamask/detect-provider": ^1.2.0
+    "@web3-react/types": ^8.0.20-beta.0
+  checksum: a9fb153045d996c5fd3d2a2352dd668ede5309e4c96a0b19a2e5a8ae58b04dba77c5d0da543ff5ac7c3b111a3152f42c77cd00c5e1f5f3b97ab38287198c9aae
+  languageName: node
+  linkType: hard
+
+"@web3-react/network@npm:8.0.27-beta.0":
+  version: 8.0.27-beta.0
+  resolution: "@web3-react/network@npm:8.0.27-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fnetwork%2F-%2Fnetwork-8.0.27-beta.0.tgz"
+  dependencies:
+    "@ethersproject/providers": ^5
+    "@web3-react/types": ^8.0.20-beta.0
+  checksum: 5073c450aa7450790c37f262660490a751de8218a392d87d7fd4cb8c20107996479c83adf0a04f14e69444ca40d330eb6dd180be56d80f6b46ef2996372886b1
+  languageName: node
+  linkType: hard
+
+"@web3-react/store@npm:8.0.25-beta.0, @web3-react/store@npm:^8.0.25-beta.0":
+  version: 8.0.25-beta.0
+  resolution: "@web3-react/store@npm:8.0.25-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fstore%2F-%2Fstore-8.0.25-beta.0.tgz"
+  dependencies:
+    "@ethersproject/address": ^5
+    "@web3-react/types": ^8.0.20-beta.0
+    zustand: ^4.0.0-rc.0
+  checksum: f7061e8eb1e10774f3508a9557459e6ff7586ba7b980a4910f727066ca77bbbac3c5dad4ce7fab67c16646d4e2156a60bd736c32e0d7ec2c059eb9979810ab86
+  languageName: node
+  linkType: hard
+
+"@web3-react/types@npm:8.0.20-beta.0, @web3-react/types@npm:^8.0.20-beta.0":
+  version: 8.0.20-beta.0
+  resolution: "@web3-react/types@npm:8.0.20-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Ftypes%2F-%2Ftypes-8.0.20-beta.0.tgz"
+  dependencies:
+    zustand: ^4.0.0-rc.0
+  checksum: 65a91fd1c7dfdb21affc2c29d67d697004a0eaeecfb3491da9da9adfc665b2b4c4fe794e5d23d182ad4809fc94ae4e2906cedbca4f5025af697e863b1f672d40
+  languageName: node
+  linkType: hard
+
+"@web3-react/url@npm:8.0.25-beta.0":
+  version: 8.0.25-beta.0
+  resolution: "@web3-react/url@npm:8.0.25-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Furl%2F-%2Furl-8.0.25-beta.0.tgz"
+  dependencies:
+    "@ethersproject/providers": ^5
+    "@web3-react/types": ^8.0.20-beta.0
+  checksum: 635d156f511f58764533f2ee706d1d9b647cb07373a3ba2de56f12e792166cd579ec64547de2360ae97faf6d7b0f44b1e39118f598582be0b91f938304c0f440
+  languageName: node
+  linkType: hard
+
+"@web3-react/walletconnect@npm:8.0.37-beta.0":
+  version: 8.0.37-beta.0
+  resolution: "@web3-react/walletconnect@npm:8.0.37-beta.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2F%40web3-react%2Fwalletconnect%2F-%2Fwalletconnect-8.0.37-beta.0.tgz"
+  dependencies:
+    "@web3-react/types": ^8.0.20-beta.0
+    eventemitter3: ^4.0.7
+  peerDependencies:
+    "@walletconnect/ethereum-provider": ^1.7.8
+  checksum: c1ac05c41e8e179d11c9a16cbc589c3ae32862fbec8ca180a0ac9bd249971c2c2fc0c7de9293346b6b311e43868bfed733ebe31f0fa98364704c9b0185acd6a3
   languageName: node
   linkType: hard
 
@@ -2602,6 +3202,20 @@ __metadata:
   version: 1.0.0
   resolution: "add-px-to-style@npm:1.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fadd-px-to-style%2F-%2Fadd-px-to-style-1.0.0.tgz"
   checksum: 673831d81d86d717e3a9f4f644059476ca74990dd28310d9bffe6cb35fac8007865351d37a885af168a8613f5cdb054db728a3df19e9ee1457b75a668003c729
+  languageName: node
+  linkType: hard
+
+"aes-js@npm:3.0.0":
+  version: 3.0.0
+  resolution: "aes-js@npm:3.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Faes-js%2F-%2Faes-js-3.0.0.tgz"
+  checksum: 251e26d533cd1a915b44896b17d5ed68c24a02484cfdd2e74ec700a309267db96651ea4eb657bf20aac32a3baa61f6e34edf8e2fec2de440a655da9942d334b8
+  languageName: node
+  linkType: hard
+
+"aes-js@npm:4.0.0-beta.3":
+  version: 4.0.0-beta.3
+  resolution: "aes-js@npm:4.0.0-beta.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Faes-js%2F-%2Faes-js-4.0.0-beta.3.tgz"
+  checksum: 2336feee1e4a7722f5b6ede192b0a22881fd6f9310b36ec10e62b6f015f9fddf812c1d8a61b9743ab710811fd0b0d7aad844178f11e7cb1439bbc14246c6c93e
   languageName: node
   linkType: hard
 
@@ -3787,6 +4401,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bech32@npm:1.1.4":
+  version: 1.1.4
+  resolution: "bech32@npm:1.1.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fbech32%2F-%2Fbech32-1.1.4.tgz"
+  checksum: 0e98db619191548390d6f09ff68b0253ba7ae6a55db93dfdbb070ba234c1fd3308c0606fbcc95fad50437227b10011e2698b89f0181f6e7f845c499bd14d0f4b
+  languageName: node
+  linkType: hard
+
 "binary-extensions@npm:^2.0.0":
   version: 2.2.0
   resolution: "binary-extensions@npm:2.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fbinary-extensions%2F-%2Fbinary-extensions-2.2.0.tgz"
@@ -3802,6 +4423,20 @@ __metadata:
     inherits: ^2.0.4
     readable-stream: ^3.4.0
   checksum: 9e8521fa7e83aa9427c6f8ccdcba6e8167ef30cc9a22df26effcc5ab682ef91d2cbc23a239f945d099289e4bbcfae7a192e9c28c84c6202e710a0dfec3722662
+  languageName: node
+  linkType: hard
+
+"bn.js@npm:^4.11.9":
+  version: 4.12.0
+  resolution: "bn.js@npm:4.12.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fbn.js%2F-%2Fbn.js-4.12.0.tgz"
+  checksum: 39afb4f15f4ea537b55eaf1446c896af28ac948fdcf47171961475724d1bb65118cca49fa6e3d67706e4790955ec0e74de584e45c8f1ef89f46c812bee5b5a12
+  languageName: node
+  linkType: hard
+
+"bn.js@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "bn.js@npm:5.2.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fbn.js%2F-%2Fbn.js-5.2.1.tgz"
+  checksum: 3dd8c8d38055fedfa95c1d5fc3c99f8dd547b36287b37768db0abab3c239711f88ff58d18d155dd8ad902b0b0cee973747b7ae20ea12a09473272b0201c9edd3
   languageName: node
   linkType: hard
 
@@ -3853,6 +4488,13 @@ __metadata:
   dependencies:
     fill-range: ^7.0.1
   checksum: e2a8e769a863f3d4ee887b5fe21f63193a891c68b612ddb4b68d82d1b5f3ff9073af066c343e9867a393fe4c2555dcb33e89b937195feb9c1613d259edfcd459
+  languageName: node
+  linkType: hard
+
+"brorand@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "brorand@npm:1.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fbrorand%2F-%2Fbrorand-1.1.0.tgz"
+  checksum: 8a05c9f3c4b46572dec6ef71012b1946db6cae8c7bb60ccd4b7dd5a84655db49fe043ecc6272e7ef1f69dc53d6730b9e2a3a03a8310509a3d797a618cbee52be
   languageName: node
   linkType: hard
 
@@ -4348,6 +4990,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cross-fetch@npm:^3.1.5":
+  version: 3.1.5
+  resolution: "cross-fetch@npm:3.1.5::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcross-fetch%2F-%2Fcross-fetch-3.1.5.tgz"
+  dependencies:
+    node-fetch: 2.6.7
+  checksum: f6b8c6ee3ef993ace6277fd789c71b6acf1b504fd5f5c7128df4ef2f125a429e29cd62dc8c127523f04a5f2fa4771ed80e3f3d9695617f441425045f505cf3bb
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^5.0.1":
   version: 5.1.0
   resolution: "cross-spawn@npm:5.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fcross-spawn%2F-%2Fcross-spawn-5.1.0.tgz"
@@ -4731,8 +5382,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "doom@workspace:."
   dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.50.0
-    "@typescript-eslint/parser": ^5.50.0
+    "@typescript-eslint/eslint-plugin": ^5.51.0
+    "@typescript-eslint/parser": ^5.51.0
     cross-env: ^7.0.3
     cross-var: ^1.1.0
     eslint: ^8.33.0
@@ -4741,7 +5392,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: 7.32.2
     eslint-plugin-react-hooks: ^4.6.0
-    npm-check-updates: ^16.6.3
+    npm-check-updates: ^16.6.5
     prettier: ^2.8.3
     typescript: ^4.9.5
   languageName: unknown
@@ -4784,6 +5435,21 @@ __metadata:
   version: 1.4.284
   resolution: "electron-to-chromium@npm:1.4.284::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Felectron-to-chromium%2F-%2Felectron-to-chromium-1.4.284.tgz"
   checksum: be496e9dca6509dbdbb54dc32146fc99f8eb716d28a7ee8ccd3eba0066561df36fc51418d8bd7cf5a5891810bf56c0def3418e74248f51ea4a843d423603d10a
+  languageName: node
+  linkType: hard
+
+"elliptic@npm:6.5.4":
+  version: 6.5.4
+  resolution: "elliptic@npm:6.5.4::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Felliptic%2F-%2Felliptic-6.5.4.tgz"
+  dependencies:
+    bn.js: ^4.11.9
+    brorand: ^1.1.0
+    hash.js: ^1.0.0
+    hmac-drbg: ^1.0.1
+    inherits: ^2.0.4
+    minimalistic-assert: ^1.0.1
+    minimalistic-crypto-utils: ^1.0.1
+  checksum: d56d21fd04e97869f7ffcc92e18903b9f67f2d4637a23c860492fbbff5a3155fd9ca0184ce0c865dd6eb2487d234ce9551335c021c376cd2d3b7cb749c7d10f4
   languageName: node
   linkType: hard
 
@@ -5300,6 +5966,72 @@ __metadata:
   version: 2.0.3
   resolution: "esutils@npm:2.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fesutils%2F-%2Fesutils-2.0.3.tgz"
   checksum: 22b5b08f74737379a840b8ed2036a5fb35826c709ab000683b092d9054e5c2a82c27818f12604bfc2a9a76b90b6834ef081edbc1c7ae30d1627012e067c6ec87
+  languageName: node
+  linkType: hard
+
+"ethers@npm:^5.6.8":
+  version: 5.7.2
+  resolution: "ethers@npm:5.7.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fethers%2F-%2Fethers-5.7.2.tgz"
+  dependencies:
+    "@ethersproject/abi": 5.7.0
+    "@ethersproject/abstract-provider": 5.7.0
+    "@ethersproject/abstract-signer": 5.7.0
+    "@ethersproject/address": 5.7.0
+    "@ethersproject/base64": 5.7.0
+    "@ethersproject/basex": 5.7.0
+    "@ethersproject/bignumber": 5.7.0
+    "@ethersproject/bytes": 5.7.0
+    "@ethersproject/constants": 5.7.0
+    "@ethersproject/contracts": 5.7.0
+    "@ethersproject/hash": 5.7.0
+    "@ethersproject/hdnode": 5.7.0
+    "@ethersproject/json-wallets": 5.7.0
+    "@ethersproject/keccak256": 5.7.0
+    "@ethersproject/logger": 5.7.0
+    "@ethersproject/networks": 5.7.1
+    "@ethersproject/pbkdf2": 5.7.0
+    "@ethersproject/properties": 5.7.0
+    "@ethersproject/providers": 5.7.2
+    "@ethersproject/random": 5.7.0
+    "@ethersproject/rlp": 5.7.0
+    "@ethersproject/sha2": 5.7.0
+    "@ethersproject/signing-key": 5.7.0
+    "@ethersproject/solidity": 5.7.0
+    "@ethersproject/strings": 5.7.0
+    "@ethersproject/transactions": 5.7.0
+    "@ethersproject/units": 5.7.0
+    "@ethersproject/wallet": 5.7.0
+    "@ethersproject/web": 5.7.1
+    "@ethersproject/wordlists": 5.7.0
+  checksum: b7c08cf3e257185a7946117dbbf764433b7ba0e77c27298dec6088b3bc871aff711462b0621930c56880ff0a7ceb8b1d3a361ffa259f93377b48e34107f62553
+  languageName: node
+  linkType: hard
+
+"ethers@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "ethers@npm:6.0.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fethers%2F-%2Fethers-6.0.2.tgz"
+  dependencies:
+    "@adraffy/ens-normalize": 1.8.9
+    "@noble/hashes": 1.1.2
+    "@noble/secp256k1": 1.7.1
+    aes-js: 4.0.0-beta.3
+    tslib: 2.4.0
+    ws: 8.5.0
+  checksum: 7e012ca49ccc326c1ff63f8d4a00cc71f95ae69167adb24ab73148f386714866479eda429ea2330ea93241cf6afbd3a086d43a00a75b483f99fb8ef597676a85
+  languageName: node
+  linkType: hard
+
+"eventemitter3@npm:^4.0.7":
+  version: 4.0.7
+  resolution: "eventemitter3@npm:4.0.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Feventemitter3%2F-%2Feventemitter3-4.0.7.tgz"
+  checksum: 1875311c42fcfe9c707b2712c32664a245629b42bb0a5a84439762dd0fd637fc54d078155ea83c2af9e0323c9ac13687e03cfba79b03af9f40c89b4960099374
+  languageName: node
+  linkType: hard
+
+"events@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "events@npm:3.3.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fevents%2F-%2Fevents-3.3.0.tgz"
+  checksum: f6f487ad2198aa41d878fa31452f1a3c00958f46e9019286ff4787c84aac329332ab45c9cdc8c445928fc6d7ded294b9e005a7fce9426488518017831b272780
   languageName: node
   linkType: hard
 
@@ -5916,6 +6648,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"hash.js@npm:1.1.7, hash.js@npm:^1.0.0, hash.js@npm:^1.0.3":
+  version: 1.1.7
+  resolution: "hash.js@npm:1.1.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fhash.js%2F-%2Fhash.js-1.1.7.tgz"
+  dependencies:
+    inherits: ^2.0.3
+    minimalistic-assert: ^1.0.1
+  checksum: e350096e659c62422b85fa508e4b3669017311aa4c49b74f19f8e1bc7f3a54a584fdfd45326d4964d6011f2b2d882e38bea775a96046f2a61b7779a979629d8f
+  languageName: node
+  linkType: hard
+
+"hmac-drbg@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "hmac-drbg@npm:1.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fhmac-drbg%2F-%2Fhmac-drbg-1.0.1.tgz"
+  dependencies:
+    hash.js: ^1.0.3
+    minimalistic-assert: ^1.0.0
+    minimalistic-crypto-utils: ^1.0.1
+  checksum: bd30b6a68d7f22d63f10e1888aee497d7c2c5c0bb469e66bbdac99f143904d1dfe95f8131f95b3e86c86dd239963c9d972fcbe147e7cffa00e55d18585c43fe0
+  languageName: node
+  linkType: hard
+
 "hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.2":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fhoist-non-react-statics%2F-%2Fhoist-non-react-statics-3.3.2.tgz"
@@ -6511,6 +7264,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-sha3@npm:0.8.0":
+  version: 0.8.0
+  resolution: "js-sha3@npm:0.8.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fjs-sha3%2F-%2Fjs-sha3-0.8.0.tgz"
+  checksum: 75df77c1fc266973f06cce8309ce010e9e9f07ec35ab12022ed29b7f0d9c8757f5a73e1b35aa24840dced0dea7059085aa143d817aea9e188e2a80d569d9adce
+  languageName: node
+  linkType: hard
+
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fjs-tokens%2F-%2Fjs-tokens-4.0.0.tgz"
@@ -6921,6 +7681,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimalistic-assert@npm:^1.0.0, minimalistic-assert@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "minimalistic-assert@npm:1.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fminimalistic-assert%2F-%2Fminimalistic-assert-1.0.1.tgz"
+  checksum: cc7974a9268fbf130fb055aff76700d7e2d8be5f761fb5c60318d0ed010d839ab3661a533ad29a5d37653133385204c503bfac995aaa4236f4e847461ea32ba7
+  languageName: node
+  linkType: hard
+
+"minimalistic-crypto-utils@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "minimalistic-crypto-utils@npm:1.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fminimalistic-crypto-utils%2F-%2Fminimalistic-crypto-utils-1.0.1.tgz"
+  checksum: 6e8a0422b30039406efd4c440829ea8f988845db02a3299f372fceba56ffa94994a9c0f2fd70c17f9969eedfbd72f34b5070ead9656a34d3f71c0bd72583a0ed
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.0.4, minimatch@npm:^3.0.5, minimatch@npm:^3.1.1, minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fminimatch%2F-%2Fminimatch-3.1.2.tgz"
@@ -7135,24 +7909,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:^13.1.6":
-  version: 13.1.6
-  resolution: "next@npm:13.1.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fnext%2F-%2Fnext-13.1.6.tgz"
+"next@npm:^13.1.7-canary.7":
+  version: 13.1.7-canary.7
+  resolution: "next@npm:13.1.7-canary.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fnext%2F-%2Fnext-13.1.7-canary.7.tgz"
   dependencies:
-    "@next/env": 13.1.6
-    "@next/swc-android-arm-eabi": 13.1.6
-    "@next/swc-android-arm64": 13.1.6
-    "@next/swc-darwin-arm64": 13.1.6
-    "@next/swc-darwin-x64": 13.1.6
-    "@next/swc-freebsd-x64": 13.1.6
-    "@next/swc-linux-arm-gnueabihf": 13.1.6
-    "@next/swc-linux-arm64-gnu": 13.1.6
-    "@next/swc-linux-arm64-musl": 13.1.6
-    "@next/swc-linux-x64-gnu": 13.1.6
-    "@next/swc-linux-x64-musl": 13.1.6
-    "@next/swc-win32-arm64-msvc": 13.1.6
-    "@next/swc-win32-ia32-msvc": 13.1.6
-    "@next/swc-win32-x64-msvc": 13.1.6
+    "@next/env": 13.1.7-canary.7
+    "@next/swc-android-arm-eabi": 13.1.7-canary.7
+    "@next/swc-android-arm64": 13.1.7-canary.7
+    "@next/swc-darwin-arm64": 13.1.7-canary.7
+    "@next/swc-darwin-x64": 13.1.7-canary.7
+    "@next/swc-freebsd-x64": 13.1.7-canary.7
+    "@next/swc-linux-arm-gnueabihf": 13.1.7-canary.7
+    "@next/swc-linux-arm64-gnu": 13.1.7-canary.7
+    "@next/swc-linux-arm64-musl": 13.1.7-canary.7
+    "@next/swc-linux-x64-gnu": 13.1.7-canary.7
+    "@next/swc-linux-x64-musl": 13.1.7-canary.7
+    "@next/swc-win32-arm64-msvc": 13.1.7-canary.7
+    "@next/swc-win32-ia32-msvc": 13.1.7-canary.7
+    "@next/swc-win32-x64-msvc": 13.1.7-canary.7
     "@swc/helpers": 0.4.14
     caniuse-lite: ^1.0.30001406
     postcss: 8.4.14
@@ -7199,7 +7973,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 584977e382bd826c21e7fc5f67bca50e4d95741a854b1686394d45331404479c7266569671227421975fc18e5cf70769a4ad7edede7450d4497213205bba77c8
+  checksum: 5ff12a94c31dfb704228ccc78854c04884c55bef8b8c81ff7f1b3ec42b6194c710c028764ec76bd034b15c0d1abacaa837d6f9cc6579aabbee295c1ad56c2063
   languageName: node
   linkType: hard
 
@@ -7218,6 +7992,20 @@ __metadata:
   dependencies:
     node-gyp: latest
   checksum: 2508bd2d2981945406243a7bd31362fc7af8b70b8b4d65f869c61731800058fb818cc2fd36c8eac714ddd0e568cc85becf5e165cebbdf7b5024d5151bbc75ea1
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:2.6.7":
+  version: 2.6.7
+  resolution: "node-fetch@npm:2.6.7::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fnode-fetch%2F-%2Fnode-fetch-2.6.7.tgz"
+  dependencies:
+    whatwg-url: ^5.0.0
+  peerDependencies:
+    encoding: ^0.1.0
+  peerDependenciesMeta:
+    encoding:
+      optional: true
+  checksum: 8d816ffd1ee22cab8301c7756ef04f3437f18dace86a1dae22cf81db8ef29c0bf6655f3215cb0cdb22b420b6fe141e64b26905e7f33f9377a7fa59135ea3e10b
   languageName: node
   linkType: hard
 
@@ -7301,9 +8089,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-check-updates@npm:^16.6.3":
-  version: 16.6.3
-  resolution: "npm-check-updates@npm:16.6.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fnpm-check-updates%2F-%2Fnpm-check-updates-16.6.3.tgz"
+"npm-check-updates@npm:^16.6.5":
+  version: 16.6.5
+  resolution: "npm-check-updates@npm:16.6.5::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fnpm-check-updates%2F-%2Fnpm-check-updates-16.6.5.tgz"
   dependencies:
     chalk: ^5.2.0
     cli-table: ^0.3.11
@@ -7337,7 +8125,7 @@ __metadata:
   bin:
     ncu: build/src/bin/cli.js
     npm-check-updates: build/src/bin/cli.js
-  checksum: 133645c3fa66eaaf36c91ef1e9cc0105f753c423e69f83592f4d45be24e494ddd96c4bd9e1fd0885a4b4b0237222929cc71b41b9405ac1fb27115b9627fec9df
+  checksum: bd2fab7b142241843b691c01ec9453c4a4797072f2d0d6445850449bdf6044a56211ff2030c2131980d8b4cf314a1e3a4f9cdd8c4850a8aa8fb51b2923d8ea29
   languageName: node
   linkType: hard
 
@@ -8164,15 +8952,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.2.0":
-  version: 18.2.0
-  resolution: "react-dom@npm:18.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Freact-dom%2F-%2Freact-dom-18.2.0.tgz"
+"react-dom@npm:next":
+  version: 18.3.0-next-4bf2113a1-20230206
+  resolution: "react-dom@npm:18.3.0-next-4bf2113a1-20230206::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Freact-dom%2F-%2Freact-dom-18.3.0-next-4bf2113a1-20230206.tgz"
   dependencies:
     loose-envify: ^1.1.0
-    scheduler: ^0.23.0
+    scheduler: 0.24.0-next-4bf2113a1-20230206
   peerDependencies:
-    react: ^18.2.0
-  checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+    react: 18.3.0-next-4bf2113a1-20230206
+  checksum: 6dc48b3ad5ea86c316b1c7395c021c7654d60f7115d1b66afdd3bf8a36d46d73e71efce65f269fd436c2d3f56690791febcf34be6a78f756f961c38064522309
   languageName: node
   linkType: hard
 
@@ -8267,12 +9055,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.2.0":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Freact%2F-%2Freact-18.2.0.tgz"
+"react@npm:next":
+  version: 18.3.0-next-4bf2113a1-20230206
+  resolution: "react@npm:18.3.0-next-4bf2113a1-20230206::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Freact%2F-%2Freact-18.3.0-next-4bf2113a1-20230206.tgz"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
+  checksum: 2b4f72a1a530ce16f59028c7cc8b00b7fd57e4ab7a192a263e10b788a623cb97815b3a409ee46169327dd6dba6d09dc684eef1a2c126895c2712d14f29a617c7
   languageName: node
   linkType: hard
 
@@ -8674,12 +9462,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.23.0":
-  version: 0.23.0
-  resolution: "scheduler@npm:0.23.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fscheduler%2F-%2Fscheduler-0.23.0.tgz"
+"scheduler@npm:0.24.0-next-4bf2113a1-20230206":
+  version: 0.24.0-next-4bf2113a1-20230206
+  resolution: "scheduler@npm:0.24.0-next-4bf2113a1-20230206::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fscheduler%2F-%2Fscheduler-0.24.0-next-4bf2113a1-20230206.tgz"
   dependencies:
     loose-envify: ^1.1.0
-  checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
+  checksum: 01f6fc2638dd4e5af7d9136e7b4b99eed9d62d3ff0cbb2197c4ea4031df30ff8358640faea998e620c3bd323ad86e77406fa3eb1ae3f4dd3aa58613d02570bc6
   languageName: node
   linkType: hard
 
@@ -8692,6 +9480,13 @@ __metadata:
     ajv-formats: ^2.1.1
     ajv-keywords: ^5.0.0
   checksum: c843e92fdd1a5c145dbb6ffdae33e501867f9703afac67bdf35a685e49f85b1dcc10ea250033175a64bd9d31f0555bc6785b8359da0c90bcea30cf6dfbb55a8f
+  languageName: node
+  linkType: hard
+
+"scrypt-js@npm:3.0.1":
+  version: 3.0.1
+  resolution: "scrypt-js@npm:3.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fscrypt-js%2F-%2Fscrypt-js-3.0.1.tgz"
+  checksum: b7c7d1a68d6ca946f2fbb0778e0c4ec63c65501b54023b2af7d7e9f48fdb6c6580d6f7675cd53bda5944c5ebc057560d5a6365079752546865defb3b79dea454
   languageName: node
   linkType: hard
 
@@ -9372,6 +10167,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tr46@npm:~0.0.3":
+  version: 0.0.3
+  resolution: "tr46@npm:0.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Ftr46%2F-%2Ftr46-0.0.3.tgz"
+  checksum: 726321c5eaf41b5002e17ffbd1fb7245999a073e8979085dacd47c4b4e8068ff5777142fc6726d6ca1fd2ff16921b48788b87225cbc57c72636f6efa8efbffe3
+  languageName: node
+  linkType: hard
+
 "trim-right@npm:^1.0.1":
   version: 1.0.1
   resolution: "trim-right@npm:1.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Ftrim-right%2F-%2Ftrim-right-1.0.1.tgz"
@@ -9665,7 +10467,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.0.0, use-sync-external-store@npm:^1.2.0":
+"use-sync-external-store@npm:1.2.0, use-sync-external-store@npm:^1.0.0, use-sync-external-store@npm:^1.2.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fuse-sync-external-store%2F-%2Fuse-sync-external-store-1.2.0.tgz"
   peerDependencies:
@@ -9731,6 +10533,23 @@ __metadata:
     pvtsutils: ^1.3.2
     tslib: ^2.4.0
   checksum: f6e529ca5c1175b8ccead3547f60efa7a1f8e247aaeab3bd4f096eb9fda11cfc8e6b6fb574bbc5696f608958c491a27e9682c89204412f73fb430e5fcbe9ebac
+  languageName: node
+  linkType: hard
+
+"webidl-conversions@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "webidl-conversions@npm:3.0.1::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fwebidl-conversions%2F-%2Fwebidl-conversions-3.0.1.tgz"
+  checksum: c92a0a6ab95314bde9c32e1d0a6dfac83b578f8fa5f21e675bc2706ed6981bc26b7eb7e6a1fab158e5ce4adf9caa4a0aee49a52505d4d13c7be545f15021b17c
+  languageName: node
+  linkType: hard
+
+"whatwg-url@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "whatwg-url@npm:5.0.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fwhatwg-url%2F-%2Fwhatwg-url-5.0.0.tgz"
+  dependencies:
+    tr46: ~0.0.3
+    webidl-conversions: ^3.0.0
+  checksum: b8daed4ad3356cc4899048a15b2c143a9aed0dfae1f611ebd55073310c7b910f522ad75d727346ad64203d7e6c79ef25eafd465f4d12775ca44b90fa82ed9e2c
   languageName: node
   linkType: hard
 
@@ -9849,6 +10668,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ws@npm:7.4.6":
+  version: 7.4.6
+  resolution: "ws@npm:7.4.6::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fws%2F-%2Fws-7.4.6.tgz"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 3a990b32ed08c72070d5e8913e14dfcd831919205be52a3ff0b4cdd998c8d554f167c9df3841605cde8b11d607768cacab3e823c58c96a5c08c987e093eb767a
+  languageName: node
+  linkType: hard
+
+"ws@npm:8.5.0":
+  version: 8.5.0
+  resolution: "ws@npm:8.5.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fws%2F-%2Fws-8.5.0.tgz"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ^5.0.2
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 76f2f90e40344bf18fd544194e7067812fb1372b2a37865678d8f12afe4b478ff2ebc0c7c0aff82cd5e6b66fc43d889eec0f1865c2365d8f7a66d92da7744a77
+  languageName: node
+  linkType: hard
+
 "xdg-basedir@npm:^5.0.1, xdg-basedir@npm:^5.1.0":
   version: 5.1.0
   resolution: "xdg-basedir@npm:5.1.0::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fxdg-basedir%2F-%2Fxdg-basedir-5.1.0.tgz"
@@ -9904,5 +10753,22 @@ __metadata:
   dependencies:
     tslib: 2.3.0
   checksum: 9a50cc2cc42ef44a436cfca5a29d6378b92790f50755b4d54f513a55dc7dab9698cecbc5640d731b380ad282aab1c33ae8cc1d14b61c0d51f0e951085a1bf17c
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.0.0-rc.0":
+  version: 4.3.2
+  resolution: "zustand@npm:4.3.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fzustand%2F-%2Fzustand-4.3.2.tgz"
+  dependencies:
+    use-sync-external-store: 1.2.0
+  peerDependencies:
+    immer: ">=9.0"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: fc443abf5bc9deac0d4e375847e7914e44c7ffc9f7f09b60e466cb9bbbcf5a46706bf2f9c8b9e6e6c9a1c5aea0bd6123cbf9fbcd39788ae27d8494d505969ae8
   languageName: node
   linkType: hard
