@@ -1,5 +1,6 @@
 import {getCurLang} from '@libs/i18n/server';
 
+import UIModal from '@ui/modal';
 import Web3Provider from '@web3/providers';
 
 import './global.scss';
@@ -19,7 +20,10 @@ export default function RootLayout({
         <script src="/flexible.js" defer />
       </head>
       <body>
-        <Web3Provider>{children}</Web3Provider>
+        <Web3Provider>
+          {children}
+          <UIModal />
+        </Web3Provider>
       </body>
     </html>
   );

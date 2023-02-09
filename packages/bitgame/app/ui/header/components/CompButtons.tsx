@@ -4,8 +4,9 @@ import {useState, useEffect, useCallback} from 'react';
 import {useWeb3React, Web3ReactHooks} from '@web3-react/core';
 // import {useState} from 'react';
 
-import {PackageType} from '@libs/config';
+import {PackageType, ModalType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
+import {showModal} from '@app/ui/modal';
 import WidgetTranslate from '@widget/translate';
 import {getName} from '@web3/utils';
 import {CHAINS, getAddChainParameters, URLS} from '@web3/utils/chains';
@@ -34,6 +35,7 @@ const CompButtons = (): JSX.Element => {
   }, [connector, desiredChainId]);
 
   const handleSignup = (): void => {
+    showModal(ModalType.LINK_WALLET);
     // showModal(ModalType.SIGN_UP);
   };
 

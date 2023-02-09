@@ -57,6 +57,7 @@ export enum UIType {
  * @property MERGE 合并邮箱
  * @property GOOGLE_AUTHENTICATOR 谷歌验证
  * @property GOOGLE_HELP 谷歌帮助
+ * @property LINK_WALLET 链接钱包
  */
 export enum ModalType {
   NONE,
@@ -68,6 +69,7 @@ export enum ModalType {
   MERGE,
   GOOGLE_AUTHENTICATOR,
   GOOGLE_HELP,
+  LINK_WALLET,
 }
 
 /**
@@ -124,16 +126,14 @@ export const ChannelEventType = {
  * @property CURRENCY_CHANGE 币种改变
  * @property MODAL_SHOW 弹层显示
  * @property MODAL_CLOSE 弹层关闭
- * @property BET_TYPE_CHANGE 投注类型改变
  */
 export const CustomEventType = {
-  ACCOUNT_CHANGE: 'customAccountChange',
-  LANGUAGES_CHANGE: 'customLanguagesChange',
-  TIMEZONE_CHANGE: 'customTimezoneChange',
-  CURRENCY_CHANGE: 'customCurrencyChange',
-  MODAL_SHOW: 'customModalShow',
-  MODAL_CLOSE: 'customModalClose',
-  BET_TYPE_CHANGE: 'customBetTypeChange',
+  ACCOUNT_CHANGE: 'customEventAccountChange',
+  LANGUAGES_CHANGE: 'customEventLanguagesChange',
+  TIMEZONE_CHANGE: 'customEventTimezoneChange',
+  CURRENCY_CHANGE: 'customEventCurrencyChange',
+  MODAL_SHOW: 'customEventModalShow',
+  MODAL_CLOSE: 'customEventModalClose',
 };
 
 /**
