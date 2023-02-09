@@ -27,7 +27,7 @@
       "@libs/*": ["app/libs/*"],
       "@ui/*": ["app/ui/*"],
       "@widget/*": ["app/widget/*"],
-      "@connectors/*": ["app/connectors/*"],
+      "@web3/*": ["app/web3/*"],
       "@game/*": ["app/game/*"],
       "@staking/*": ["app/staking/*"],
       "@promotions/*": ["app/promotions/*"],

@@ -6,7 +6,16 @@ import alias from './alias.js';
 import plugins from './plugins.js';
 
 // webpack配置
-const webpack = (config, options) => {
+const webpack = config => {
+  if (Array.isArray(config.externals)) {
+    config.externals.push('bufferutil', 'utf-8-validate');
+  }
+
+  // config.externals = {
+  //   bufferutil: 'bufferutil',
+  //   'utf-8-validate': 'utf-8-validate',
+  // };
+
   // 处理svg文件
   const filesConfig = files(config.module.rules);
 

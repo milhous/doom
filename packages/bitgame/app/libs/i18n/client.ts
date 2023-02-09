@@ -29,8 +29,6 @@ const initI18next = (appname: string, lng: string): i18n => {
   const loadPath = `${__webpack_public_path__}static/locales/${appname}/{{lng}}/{{ns}}.json`;
   const i18nInstance: i18n = i18next.createInstance();
 
-  console.log(lng);
-
   i18nInstance
     // load translation using xhr -> see /public/locales
     // .use(HttpBackend)

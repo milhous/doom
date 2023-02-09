@@ -1,5 +1,6 @@
 import CompLogo from './components/CompLogo';
 import CompNav from './components/CompNav';
+import CompButtons from './components/CompButtons';
 
 import './index.scss';
 // import CompButtons from './components/CompButtons';
@@ -14,8 +15,7 @@ const UIHeader = async (): Promise<JSX.Element> => {
         </aside>
         <article>
           <CompNav />
-          {/* 
-          <CompButtons /> */}
+          <CompButtons />
         </article>
       </section>
     </header>

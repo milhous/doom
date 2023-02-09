@@ -1,5 +1,8 @@
-import './global.scss';
 import {getCurLang} from '@libs/i18n/server';
+
+import Web3Provider from '@web3/providers';
+
+import './global.scss';
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -15,7 +18,9 @@ export default function RootLayout({
       <head>
         <script src="/flexible.js" defer />
       </head>
-      <body>{children}</body>
+      <body>
+        <Web3Provider>{children}</Web3Provider>
+      </body>
     </html>
   );
 }
