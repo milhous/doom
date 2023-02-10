@@ -109,7 +109,7 @@ const WalletScan = (): JSX.Element => {
 
 // 钱包信息
 const WalletInfo = (): JSX.Element => {
-  const {t} = useTranslate(['header', 'common'], PackageType.UI);
+  const {t} = useTranslate(['header'], PackageType.UI);
   const {isActive} = useWeb3React();
 
   return (
