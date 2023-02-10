@@ -43,7 +43,7 @@
 }
 
 // 设置字体
-@mixin setFont($fontSize, $lineHeight, $fontColor, $fontWeight: 400) {
+@mixin setFont($fontSize, $lineHeight, $fontColor: currentColor, $fontWeight: 400) {
     color: $fontColor;
     font-weight: $fontWeight;
     font-size: $fontSize;

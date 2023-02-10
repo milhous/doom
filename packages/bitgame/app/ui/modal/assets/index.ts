@@ -1,4 +1,3 @@
-import aquariusAstrolabe from './bingo/astrolabe-aquarius.svga';
 import IconClose from './icon-close.svg';
 import IconCoinbase from './icon-coinbase.svg';
 import IconMetaMask from './icon-metaMask.svg';

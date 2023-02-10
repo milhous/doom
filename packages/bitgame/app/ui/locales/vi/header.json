@@ -1,4 +1,7 @@
 {
     "btn_login": "Đăng nhập",
-    "btn_signup": "Đăng ký"
+    "btn_signup": "Đăng ký",
+    "your_address": "Địa chỉ của bạn",
+    "connect_wallet": "Kết nối Ví",
+    "disconnect_wallet": "Ngắt kết nối Ví"
 }

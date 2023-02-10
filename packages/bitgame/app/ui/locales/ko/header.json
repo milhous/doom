@@ -1,4 +1,7 @@
 {
     "btn_login": "로그인",
-    "btn_signup": "회원가입"
+    "btn_signup": "회원가입",
+    "your_address": "내 주소",
+    "connect_wallet": "지갑 연결",
+    "disconnect_wallet": "지갑 연결 끊기"
 }

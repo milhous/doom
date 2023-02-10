@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import WidgetLink from '@widget/link';
 
-import logo from '../assets/logo.png';
+import Assets from '../assets';
 
 // Logo
 const CompLogo = (): JSX.Element => {
@@ -10,10 +10,10 @@ const CompLogo = (): JSX.Element => {
     <WidgetLink to="/">
       <Image
         className="ui-header_logo"
-        src={logo.src}
+        src={Assets.iconLogo.src}
         alt="Picture of the author"
-        width={logo.width}
-        height={logo.height}
+        width={Assets.iconLogo.width}
+        height={Assets.iconLogo.height}
         priority
       />
     </WidgetLink>

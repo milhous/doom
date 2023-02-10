@@ -1,0 +1,130 @@
+    @use "@libs/styles/library" as *;
+    .ui-header {
+        &_wallet {
+            @include setFlex(center, center);
+            button {
+                @include setBtn(100px, 36px, 16px, #fff, var(--ui-btn-default), var(--pc-btn-radius));
+                margin-left: 20px;
+                &.header-btns_login {
+                    background-color: var(--ui-btn-default);
+                }
+                &.header-btns_login:hover {
+                    background-color: var(--ui-btn-default-hover);
+                }
+                &.header-btns_primary {
+                    background-image: var(--ui-btn-primary);
+                }
+                &.header-btns_primary:hover {
+                    background-image: var(--ui-btn-primary-hover);
+                }
+            }
+            .wallet-connect {
+                display: none;
+                &.active {
+                    display: block;
+                }
+            }
+            .wallet-info {
+                @include setFont(16px, 22px, #DBE4FF);
+                display: none;
+                position: relative;
+                &.active {
+                    display: block;
+                }
+                &:hover {
+                    .wallet-dropdown {
+                        display: block;
+                    }
+                    .wallet-icon_arrow {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .wallet-thumb {
+                @include setFlex(flex-start);
+                cursor: pointer;
+                box-sizing: border-box;
+                height: 36px;
+                padding: 0 15px;
+                border-radius: 18px;
+                background-color: #263244;
+                span {
+                    display: block;
+                }
+            }
+            .wallet-icon {
+                &_wallet {
+                    width: 20px;
+                    min-width: 20px;
+                    height: 16px;
+                    margin-right: 12px;
+                }
+                &_arrow {
+                    transition: transform var(--animation-duration);
+                    width: 10px;
+                    min-width: 10px;
+                    height: 6px;
+                    margin-left: 12px;
+                }
+                &_copy {
+                    width: 15px;
+                    min-width: 15px;
+                    height: 17px;
+                }
+                &_scan {
+                    width: 18px;
+                    min-width: 18px;
+                    height: 18px;
+                    margin-left: 10px;
+                }
+            }
+            .wallet-dropdown {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 36px;
+                padding-top: 15px;
+                &_content {
+                    box-sizing: border-box;
+                    width: 490px;
+                    padding: 20px 30px;
+                    border-radius: 16px;
+                    background-color: #202C3C;
+                    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.5);
+                    color: #7286A6;
+                    h3 {
+                        @include setFont(16px, 22px);
+                    }
+                }
+                .wallet-address {
+                    @include setFlex(space-between);
+                    @include setFont(16px, 22px, #DBE4FF);
+                    box-sizing: border-box;
+                    height: 44px;
+                    margin-top: 14px;
+                    padding: 0 22px;
+                    border-radius: 22px;
+                    background-color: #161F2C;
+                    dt {
+                        @include setEllipsis();
+                    }
+                    dd {
+                        cursor: pointer;
+                        margin-left: 15px;
+                    }
+                }
+                .wallet-scan {
+                    @include setFlex(space-between);
+                    margin-top: 20px;
+                    a {
+                        @include setFlex();
+                        color: currentColor;
+                        text-transform: capitalize;
+                    }
+                    span {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }

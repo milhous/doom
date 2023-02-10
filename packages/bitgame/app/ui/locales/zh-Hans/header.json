@@ -1,4 +1,7 @@
 {
     "btn_login": "登录",
-    "btn_signup": "注册"
+    "btn_signup": "注册",
+    "your_address": "您的地址",
+    "connect_wallet": "连接钱包",
+    "disconnect_wallet": "断开钱包"
 }

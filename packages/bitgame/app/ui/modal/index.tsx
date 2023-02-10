@@ -2,7 +2,8 @@ import {CustomEventType} from '@libs/config';
 
 import {IModalData} from './type';
 
-import LinkWallet from './wallets/LinkWallet';
+import WalletLink from './wallet/Link';
+import './index.scss';
 
 /**
  * 显示弹层
@@ -33,7 +34,7 @@ export const closeModal = (type: number, isAll = false): void => {
 };
 
 const UIModal = () => {
-  return <LinkWallet />;
+  return <WalletLink />;
 };
 
 export default UIModal;

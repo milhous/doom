@@ -1,4 +1,7 @@
 {
     "btn_login": "登錄",
-    "btn_signup": "註冊"
+    "btn_signup": "註冊",
+    "your_address": "您的位址",
+    "connect_wallet": "與錢包連線",
+    "disconnect_wallet": "中斷與錢包的連線"
 }

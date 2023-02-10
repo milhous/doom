@@ -1,4 +1,7 @@
 {
     "btn_login": "ログイン",
-    "btn_signup": "登録"
+    "btn_signup": "登録",
+    "your_address": "アドレス",
+    "connect_wallet": "ウォレットを接続",
+    "disconnect_wallet": "ウォレットの接続を解除"
 }

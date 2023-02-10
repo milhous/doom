@@ -1,0 +1,41 @@
+@use "@libs/styles/library" as *;
+.ui-modal {
+    .ui-modal_container {
+        overflow: hidden;
+        border-radius: 16px;
+        background-color: #283C56;
+        box-shadow: 0 10px 20px rgba($color: #000000, $alpha: .35);
+    }
+    .ui-modal_btn {
+        display: block;
+        cursor: pointer;
+    }
+    .ui-modal_title {
+        @include setFlex(space-between);
+        @include setFont(16px, 22px, #81A0CB, 700);
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        padding: 0 30px;
+        background-color: #202F42;
+        &::before {
+            @include setPseudo();
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #02996A, #283C56);
+        }
+        dd {
+            @include setFlex();
+            width: 40px;
+            height: 40px;
+            transform: translateX(14px);
+            svg {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+}

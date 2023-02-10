@@ -1,4 +1,7 @@
 {
     "btn_login": "Ingresar",
-    "btn_signup": "Registrarse"
+    "btn_signup": "Registrarse",
+    "your_address": "TU DIRECCIÓN",
+    "connect_wallet": "Conectar monedero",
+    "disconnect_wallet": "Desconectar el monedero"
 }

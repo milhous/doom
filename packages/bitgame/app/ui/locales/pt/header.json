@@ -1,4 +1,7 @@
 {
     "btn_login": "Conecte-se",
-    "btn_signup": "Inscrever-se"
+    "btn_signup": "Inscrever-se",
+    "your_address": "O seu endereço",
+    "connect_wallet": "Associar carteira",
+    "disconnect_wallet": "Desconectar carteira"
 }

@@ -1,13 +1,19 @@
 import type {AddEthereumChainParameter} from '@web3-react/types';
 
 // 基础信息
-interface BasicChainInfo {
+interface IBasicChainInfo {
   urls: string[];
   name: string;
 }
 
+// 区块链浏览器信息
+interface IBlockExplorerInfo {
+  blockExplorerName: string;
+  blockExplorerUrl: string;
+}
+
 // 扩展信息
-interface ExtendedChainInfo extends BasicChainInfo {
+interface IExtendedChainInfo extends IBasicChainInfo {
   nativeCurrency: AddEthereumChainParameter['nativeCurrency'];
   blockExplorerUrls: AddEthereumChainParameter['blockExplorerUrls'];
 }
@@ -38,12 +44,9 @@ const BNB: AddEthereumChainParameter['nativeCurrency'] = {
 };
 
 // 链信息
-export const CHAINS: {[chainId: number]: BasicChainInfo | ExtendedChainInfo} = {
+export const CHAINS: {[chainId: number]: IBasicChainInfo | IExtendedChainInfo} = {
   1: {
-    urls: filterUrls([
-      process.env.alchemyKey ? `https://eth-mainnet.g.alchemyapi.io/v2/${process.env.alchemyKey}` : '',
-      'https://mainnet.infura.io/v3/',
-    ]),
+    urls: filterUrls(['https://mainnet.infura.io/v3/']),
     name: 'Mainnet',
     nativeCurrency: ETH,
     blockExplorerUrls: ['https://etherscan.io'],
@@ -54,27 +57,26 @@ export const CHAINS: {[chainId: number]: BasicChainInfo | ExtendedChainInfo} = {
       'https://goerli.infura.io/v3/',
     ]),
     name: 'Görli',
+    nativeCurrency: ETH,
+    blockExplorerUrls: ['https://goerli.etherscan.io'],
   },
   // BNB
   56: {
-    urls: ['https://bsc-dataseed.binance.org/'].filter(url => url !== ''),
+    urls: ['https://bsc-dataseed.binance.org/'],
     name: 'Smart Chain',
     nativeCurrency: BNB,
     blockExplorerUrls: ['https://bscscan.com'],
   },
   // Polygon
   137: {
-    urls: [
-      process.env.alchemyKey ? `https://polygon-mainnet.infura.io/v3/${process.env.alchemyKey}` : '',
-      'https://rpc-mainnet.maticvigil.com/',
-    ].filter(url => url !== ''),
+    urls: ['https://rpc-mainnet.maticvigil.com/'],
     name: 'Polygon Mainnet',
     nativeCurrency: MATIC,
     blockExplorerUrls: ['https://polygonscan.com'],
   },
   // FTM
   250: {
-    urls: ['https://rpc.ftm.tools'].filter(url => url !== ''),
+    urls: ['https://rpc.ftm.tools'],
     name: 'Fantom Opera',
     nativeCurrency: FTM,
     blockExplorerUrls: ['https://ftmscan.com'],
@@ -89,10 +91,15 @@ function filterUrls(urls: string[]): string[] {
 }
 
 // 是否为扩展信息
-function isExtendedChainInfo(chainInfo: BasicChainInfo | ExtendedChainInfo): chainInfo is ExtendedChainInfo {
-  return !!(chainInfo as ExtendedChainInfo).nativeCurrency;
+function isExtendedChainInfo(chainInfo: IBasicChainInfo | IExtendedChainInfo): chainInfo is IExtendedChainInfo {
+  return !!(chainInfo as IExtendedChainInfo).nativeCurrency;
 }
 
+/**
+ * 获取 Chain 附加信息
+ * @param {number} chainId 链ID
+ * @returns {AddEthereumChainParameter | number}
+ */
 export function getAddChainParameters(chainId: number): AddEthereumChainParameter | number {
   const chainInformation = CHAINS[chainId];
   if (!!chainInformation && isExtendedChainInfo(chainInformation)) {
@@ -106,6 +113,27 @@ export function getAddChainParameters(chainId: number): AddEthereumChainParamete
   } else {
     return chainId;
   }
+}
+
+/**
+ * 获取区块链浏览器信息
+ * @param {number} chainId 链ID
+ * @returns {IBlockExplorerInfo}
+ */
+export function getBlockExplorerInfo(chainId: number): IBlockExplorerInfo {
+  const chainInformation = CHAINS[chainId];
+  let blockExplorerName = '';
+  let blockExplorerUrl = '';
+
+  if (!!chainInformation && 'blockExplorerUrls' in chainInformation) {
+    blockExplorerUrl = chainInformation.blockExplorerUrls[0];
+    blockExplorerName = blockExplorerUrl.replace('https://', '').split('.')[0];
+  }
+
+  return {
+    blockExplorerName,
+    blockExplorerUrl,
+  };
 }
 
 // 获取 RPC URL

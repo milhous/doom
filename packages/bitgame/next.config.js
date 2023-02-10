@@ -2,6 +2,9 @@ import webpack from './webpack/index.js';
 
 // nextJs配置
 const nextConfig = {
+  env: {
+    alchemyKey: process.env.ALCHEMY_KEY,
+  },
   experimental: {
     appDir: true,
   },

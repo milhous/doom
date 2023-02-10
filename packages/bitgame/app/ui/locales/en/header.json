@@ -1,4 +1,7 @@
 {
     "btn_login": "Login",
-    "btn_signup": "Sign Up"
+    "btn_signup": "Sign Up",
+    "your_address": "Your Address",
+    "connect_wallet": "Connect Wallet",
+    "disconnect_wallet": "Disconnect Wallet"
 }

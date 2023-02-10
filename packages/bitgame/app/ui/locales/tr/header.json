@@ -1,4 +1,7 @@
 {
     "btn_login": "Giriş yap",
-    "btn_signup": "Kayıt Ol"
+    "btn_signup": "Kayıt Ol",
+    "your_address": "Adresin",
+    "connect_wallet": "Cüzdanı Bağla",
+    "disconnect_wallet": "Cüzdan Bağlantısını Kes"
 }
