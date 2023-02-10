@@ -1,0 +1,90 @@
+@use "@libs/styles/library" as *;
+#referral .referral-login {
+    @include setImg(100%, 460px, '~@referral/assets/home/bg.jpg');
+    overflow: hidden;
+    @include smallScreen {
+        height: auto;
+        background-size: 100% 100%;
+    }
+    div {
+        @include setFlex(space-between);
+        box-sizing: border-box;
+        max-width: 1450px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 40px;
+        @include smallScreen {
+            @include setFlex(center, center, column);
+            padding: 65px 40px 35px;
+        }
+    }
+    dl {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 700px;
+        dt {
+            @include setFont(40px, 56px, var(--font-title-color), 700);
+            margin-bottom: 20px;
+            @include smallScreen {
+                font-size: 50px;
+                line-height: 60px;
+            }
+        }
+        dd {
+            @include setFont(16px, 26px, var(--font-content-color));
+            @include smallScreen {
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+        strong {
+            color: var(--font-highlight-color);
+        }
+    }
+    i {
+        display: block;
+        position: relative;
+        transform: translateY(12px);
+        width: 504px;
+        min-width: 504px;
+        height: 396px;
+        margin-left: 40px;
+        &::after {
+            @include setPseudo();
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            width: 884px;
+            height: 884px;
+            border-radius: 50%;
+            background: radial-gradient(var(--gradient-halo));
+            opacity: 0.8;
+        }
+        @include smallScreen {
+            transform: translateY(0);
+            width: 504px;
+            min-width: 652px;
+            height: 508px;
+            margin-left: 0;
+            margin-top: 50px;
+            &::after {
+                bottom: 472px;
+            }
+        }
+    }
+    img {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
+    .btn-invite {
+        @include setBtn(140px, 40px, 16px, var(--font-btn-color), var(--gradient-btn-invite), var(--pc-btn-radius));
+        margin-top: .4rem;
+        @include smallScreen {
+            @include setBtn(180px, 60px, 22px, var(--font-btn-color), var(--gradient-btn-invite), var(--h5-btn-radius));
+            margin: 40px auto 0;
+        }
+    }
+}

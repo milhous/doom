@@ -1,18 +1,23 @@
 import HomeBanner from './HomeBanner';
-// import HomePlan from './HomePlan';
-// import HomeCommission from './HomeCommission';
-// import HomeSupport from './HomeSupport';
-// import HomeRights from './HomeRights';
-// import HomeAdvantage from './HomeAdvantage';
+import HomeLogin from './HomeLogin';
 import HomeHow from './HomeHow';
 import HomeJoin from './HomeJoin';
 import HomeFaq from './HomeFaq';
 
+import Web3ActivatedWrap from '@web3/components/Web3ActivatedWrap';
+import Web3UnactivatedWrap from '@web3/components/Web3UnactivatedWrap';
+
 const Home = () => {
   return (
     <main id="referral" className="referral-home">
-      {/* @ts-expect-error Server Component */}
-      <HomeBanner />
+      <Web3ActivatedWrap>
+        {/* @ts-expect-error Server Component */}
+        <HomeBanner />
+      </Web3ActivatedWrap>
+      <Web3UnactivatedWrap>
+        {/* @ts-expect-error Server Component */}
+        <HomeLogin />
+      </Web3UnactivatedWrap>
       {/* @ts-expect-error Server Component */}
       <HomeHow />
       <HomeJoin />
