@@ -1,9 +1,15 @@
+import {Suspense} from 'react';
+import dynamic from 'next/dynamic';
+
 import CompLogo from './components/CompLogo';
 import CompNav from './components/CompNav';
-import HeaderWallet from './components/HeaderWallet';
 
 import './index.scss';
-// import CompButtons from './components/CompButtons';
+
+// 钱包
+const HeaderWallet = dynamic(() => import('./components/HeaderWallet'), {
+  ssr: false,
+});
 
 // header
 const UIHeader = async (): Promise<JSX.Element> => {
@@ -15,7 +21,9 @@ const UIHeader = async (): Promise<JSX.Element> => {
         </aside>
         <article>
           <CompNav />
-          <HeaderWallet />
+          <Suspense>
+            <HeaderWallet />
+          </Suspense>
         </article>
       </section>
     </header>

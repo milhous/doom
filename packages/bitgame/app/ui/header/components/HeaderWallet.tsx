@@ -1,6 +1,6 @@
 'use client';
 
-import {useState, useEffect, useCallback} from 'react';
+import {useEffect} from 'react';
 import {useWeb3React} from '@web3-react/core';
 
 import {PackageType, ModalType} from '@libs/config';
@@ -17,8 +17,8 @@ import './HeaderWallet.scss';
 
 // 钱包连接
 const WalletConnect = (): JSX.Element => {
-  const {isActive} = useWeb3React();
   const {t} = useTranslate(['header'], PackageType.UI);
+  const {isActive} = useWeb3React();
 
   const handleConnect = (): void => {
     showModal(ModalType.LINK_WALLET);

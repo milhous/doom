@@ -34,8 +34,6 @@ const BtnMetaMassk = (props: {onClose: () => void}) => {
 const BtnCoinbase = (props: {onClose: () => void}) => {
   const {onClose} = props;
   const onClick = async (): Promise<void> => {
-    console.log(onClose);
-
     !!onClose && onClose();
 
     await coinbaseWallet.activate(5);
