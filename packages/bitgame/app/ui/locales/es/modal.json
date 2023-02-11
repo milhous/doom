@@ -1,3 +1,8 @@
 {
-    "linkWallet": "Vincular billetera"
+    "link_wallet": "Vincular billetera",
+    "wrong_network": "Estás en la red equivocada",
+    "located_network": "Esta página se encuentra para la red {{chainName}}.",
+    "switch_network": "En este momento estás en la red {{chainName}}, cambia de red para continuar.",
+    "switch_to": "Cambiar a la red {{chainName}}",
+    "disconnect_wallet": "Desconectar el monedero"
 }

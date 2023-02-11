@@ -1,0 +1,17 @@
+@use "@libs/styles/library" as *;
+.ui-modal .modal-wallet_switch {
+    width: 386px;
+    ul {
+        li {
+            @include setFont(16px, 22px, #81A0CB);
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}

@@ -1,7 +1,5 @@
 'use client';
 
-import {useEffect, useState} from 'react';
-
 import {PackageType, ModalType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
 import WidgetModal from '@widget/modal';
@@ -12,7 +10,7 @@ import {walletConnect, hooks as walletConnectHooks} from '@web3/connectors/walle
 
 import Assets from '../assets';
 import {useModal} from '../hooks';
-import './Link.scss';
+import './LinkChain.scss';
 
 //
 const BtnMetaMassk = (props: {onClose: () => void}) => {
@@ -48,9 +46,9 @@ const BtnCoinbase = (props: {onClose: () => void}) => {
 };
 
 // 弹层 - 链接钱包
-const UIModalWalletLink = () => {
+const UIModalWalletLinkChain = () => {
   const {t} = useTranslate(['modal'], PackageType.UI);
-  const {visible, setVisible} = useModal(ModalType.LINK_WALLET);
+  const {visible, setVisible} = useModal(ModalType.LINK_CHAIN);
 
   // 关闭
   const onClose = () => {
@@ -62,7 +60,7 @@ const UIModalWalletLink = () => {
       <div className="modal-wallet_link">
         <div className="ui-modal_container">
           <dl className="ui-modal_title">
-            <dt>{t('linkWallet')}</dt>
+            <dt>{t('link_wallet')}</dt>
             <dd className="ui-modal_btn" onClick={onClose}>
               <Assets.IconClose />
             </dd>
@@ -81,4 +79,4 @@ const UIModalWalletLink = () => {
   );
 };
 
-export default UIModalWalletLink;
+export default UIModalWalletLinkChain;

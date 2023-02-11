@@ -1,3 +1,8 @@
 {
-    "linkWallet": "Cüzdan Bağla"
+    "link_wallet": "Cüzdan Bağla",
+    "wrong_network": "Yanlış ağdasınız",
+    "located_network": "Bu sayfa {{chainName}} ağında yer almaktadır.",
+    "switch_network": "Şu anda {{chainName}} ağındasınız, lütfen devam etmek için ağı değiştirin.",
+    "switch_to": "{{chainName}} olarak değiştir",
+    "disconnect_wallet": "Cüzdan Bağlantısını Kes"
 }

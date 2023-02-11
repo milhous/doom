@@ -16,7 +16,7 @@ const HomeLoginBtn = ({children}: {children: React.ReactNode}): JSX.Element => {
       return;
     }
 
-    showModal(ModalType.LINK_WALLET);
+    showModal(ModalType.LINK_CHAIN);
   }, 1000);
 
   return (

@@ -1,5 +1,10 @@
 @use "@libs/styles/library" as *;
 .ui-modal {
+    @keyframes ellipsis {
+        to {
+            width: 1.25em;
+        }
+    }
     .ui-modal_container {
         overflow: hidden;
         border-radius: 16px;
@@ -9,6 +14,43 @@
     .ui-modal_btn {
         display: block;
         cursor: pointer;
+    }
+    .ui-modal_btns {
+        @include setBtn(100px, 36px, 16px, #fff, var(--ui-btn-default), var(--pc-btn-radius));
+        &:disabled {
+            cursor: not-allowed;
+        }
+        &.modal-btns_default {
+            background-color: var(--ui-btn-default);
+        }
+        &.modal-btns_default:hover,
+        &.modal-btns_default:disabled {
+            background-color: var(--ui-btn-default-hover);
+        }
+        &.modal-btns_default:disabled {
+            cursor: not-allowed;
+            background-color: var(--ui-btn-default-hover);
+        }
+        &.modal-btns_primary {
+            background-image: var(--ui-btn-primary);
+        }
+        &.modal-btns_primary:hover,
+        &.modal-btns_primary:disabled {
+            background-image: var(--ui-btn-primary-hover);
+        }
+        & .modal-btns_loading {
+            width: 1.25em;
+            margin-left: 2px;
+            text-align: left;
+            &::before {
+                content: "\2026";
+                overflow: hidden;
+                display: inline-block;
+                width: 0px;
+                vertical-align: bottom;
+                animation: ellipsis steps(4, end) 1s infinite;
+            }
+        }
     }
     .ui-modal_title {
         @include setFlex(space-between);
@@ -37,5 +79,8 @@
                 height: 12px;
             }
         }
+    }
+    .ui-modal_content {
+        padding: 30px;
     }
 }

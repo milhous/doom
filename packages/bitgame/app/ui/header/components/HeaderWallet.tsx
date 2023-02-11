@@ -9,8 +9,8 @@ import {copy} from '@libs/utils';
 import {showModal} from '@ui/modal';
 import WidgetTranslate from '@widget/translate';
 import {toast} from '@widget/toastify';
+import {disconnect, getBlockExplorerInfo} from '@web3/core';
 import {getThumbAddress} from '@web3/utils';
-import {getBlockExplorerInfo} from '@web3/utils/chains';
 
 import Assets from '../assets';
 import './HeaderWallet.scss';
@@ -21,7 +21,7 @@ const WalletConnect = (): JSX.Element => {
   const {isActive} = useWeb3React();
 
   const handleConnect = (): void => {
-    showModal(ModalType.LINK_WALLET);
+    showModal(ModalType.LINK_CHAIN);
   };
 
   return (
@@ -79,15 +79,7 @@ const WalletScan = (): JSX.Element => {
 
   // 断开钱包
   const handleDisconnect = (): void => {
-    if (!isActive) {
-      return;
-    }
-
-    if (connector?.deactivate) {
-      connector.deactivate();
-    } else {
-      connector.resetState();
-    }
+    disconnect(connector, isActive);
   };
 
   return (

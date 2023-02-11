@@ -1,3 +1,8 @@
 {
-    "linkWallet": "ウォレットとリンク"
+    "link_wallet": "ウォレットとリンク",
+    "wrong_network": "ネットワークが誤っています",
+    "located_network": "これは{{chainName}}のページです。",
+    "switch_network": "現在、{{chainName}}を使用中です。ネットワークを切り替えてから続行してください。",
+    "switch_to": "{{chainName}}に切り替える",
+    "disconnect_wallet": "ウォレットの接続を解除"
 }

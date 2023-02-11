@@ -1,3 +1,8 @@
 {
-    "linkWallet": "Link Wallet"
+    "link_wallet": "Link Wallet",
+    "wrong_network": "You are in wrong network",
+    "located_network": "This page is located for {{chainName}}.",
+    "switch_network": "You are under {{chainName}} now, please switch the network to continue.",
+    "switch_to": "Switch to {{chainName}}",
+    "disconnect_wallet": "Disconnect Wallet"
 }

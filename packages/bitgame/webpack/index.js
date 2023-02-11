@@ -11,11 +11,6 @@ const webpack = config => {
     config.externals.push('bufferutil', 'utf-8-validate');
   }
 
-  // config.externals = {
-  //   bufferutil: 'bufferutil',
-  //   'utf-8-validate': 'utf-8-validate',
-  // };
-
   // 处理svg文件
   const filesConfig = files(config.module.rules);
 

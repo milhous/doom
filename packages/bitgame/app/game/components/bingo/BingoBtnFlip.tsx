@@ -2,10 +2,13 @@
 
 import {useState, useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import {useWeb3React} from '@web3-react/core';
 
-import {PackageType} from '@libs/config';
+import {PackageType, ModalType, ChainType} from '@libs/config';
+
 import {useTranslate} from '@libs/i18n/client';
 import {useThrottle, useInterval} from '@libs/hooks';
+import {showModal} from '@ui/modal';
 import {error} from '@widget/toastify';
 import WidgetTranslate from '@widget/translate';
 
@@ -26,6 +29,7 @@ interface IBingoData {
 // 翻牌按钮
 const BingoBtnFlip = (): JSX.Element => {
   const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
+  const {isActive, chainId} = useWeb3React();
   const dispatch = useDispatch();
   const {flipCurrency, flipAmount, flipBalance, isComplete, transitionIds} = useSelector<BingoState>(state => {
     const {flipCurrency, flipAmount, flipBalance, isComplete, transitionIds} = state.bingo;
@@ -58,6 +62,20 @@ const BingoBtnFlip = (): JSX.Element => {
 
   // 事件 - 手动翻牌
   const handleManual = useThrottle(() => {
+    // 如果钱包未链接，显示链接弹层
+    if (!isActive) {
+      showModal(ModalType.LINK_CHAIN);
+
+      return;
+    }
+
+    // 如果网络不匹配，显示切换弹层
+    if (chainId !== ChainType.GOERLI) {
+      showModal(ModalType.SWITCH_CHAIN);
+
+      return;
+    }
+
     if (flipBalance < flipAmount) {
       error(t('error:error_5001'));
 

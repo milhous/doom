@@ -1,3 +1,8 @@
 {
-    "linkWallet": "Liên kết Ví"
+    "link_wallet": "Liên kết Ví",
+    "wrong_network": "Bạn đang ở sai mạng lưới",
+    "located_network": "Trang này được dành cho {{chainName}}.",
+    "switch_network": "Bạn đang ở trong {{chainName}}, vui lòng chuyển mạng lưới để tiếp tục.",
+    "switch_to": "Chuyển sang {{chainName}}",
+    "disconnect_wallet": "Ngắt kết nối Ví"
 }

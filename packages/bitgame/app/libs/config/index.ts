@@ -47,7 +47,7 @@ export enum UIType {
 }
 
 /**
- * UI授权类型
+ * 弹层类型
  * @property NONE 无
  * @property LOGIN 登录
  * @property SIGN_UP 注册
@@ -57,7 +57,8 @@ export enum UIType {
  * @property MERGE 合并邮箱
  * @property GOOGLE_AUTHENTICATOR 谷歌验证
  * @property GOOGLE_HELP 谷歌帮助
- * @property LINK_WALLET 链接钱包
+ * @property LINK_CHAIN 链接钱包
+ * @property SWITCH_CHAIN 切换链
  */
 export enum ModalType {
   NONE,
@@ -69,7 +70,8 @@ export enum ModalType {
   MERGE,
   GOOGLE_AUTHENTICATOR,
   GOOGLE_HELP,
-  LINK_WALLET,
+  LINK_CHAIN,
+  SWITCH_CHAIN
 }
 
 /**
@@ -98,6 +100,22 @@ export const WalletType = {
   METAMASK: 'metamask',
   BINANCE_CHAIN_WALLET: 'binance_chain_wallet',
   TRONLINK: 'tronlink',
+};
+
+/**
+ * 区块链类型
+ * @property MAINNET ETH
+ * @property GOERLI ETH测试链
+ * @property BNB_SMART_CHAIN BNB
+ * @property POLYGON_MAINNET MATIC
+ * @property FANTOM_OPERA FTM
+ */
+export const ChainType = {
+  MAINNET: 1,
+  GOERLI: 5,
+  BNB_SMART_CHAIN: 56,
+  POLYGON_MAINNET: 137,
+  FANTOM_OPERA: 250,
 };
 
 /**

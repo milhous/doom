@@ -1,3 +1,8 @@
 {
-    "linkWallet": "Vincular carteira"
+    "link_wallet": "Vincular carteira",
+    "wrong_network": "Está numa rede incorreta",
+    "located_network": "Esta página destina-se a {{chainName}}.",
+    "switch_network": "Agora está em {{chainName}}, troque de rede para continuar.",
+    "switch_to": "Trocar para {{chainName}}",
+    "disconnect_wallet": "Desconectar carteira"
 }

@@ -1,22 +1,5 @@
 import type {AddEthereumChainParameter} from '@web3-react/types';
-
-// 基础信息
-interface IBasicChainInfo {
-  urls: string[];
-  name: string;
-}
-
-// 区块链浏览器信息
-interface IBlockExplorerInfo {
-  blockExplorerName: string;
-  blockExplorerUrl: string;
-}
-
-// 扩展信息
-interface IExtendedChainInfo extends IBasicChainInfo {
-  nativeCurrency: AddEthereumChainParameter['nativeCurrency'];
-  blockExplorerUrls: AddEthereumChainParameter['blockExplorerUrls'];
-}
+import {Web3BasicChainInfo, Web3ExtendedChainInfo} from '@web3/types';
 
 // 货币信息
 const ETH: AddEthereumChainParameter['nativeCurrency'] = {
@@ -44,7 +27,7 @@ const BNB: AddEthereumChainParameter['nativeCurrency'] = {
 };
 
 // 链信息
-export const CHAINS: {[chainId: number]: IBasicChainInfo | IExtendedChainInfo} = {
+export const CHAINS: {[chainId: number]: Web3BasicChainInfo | Web3ExtendedChainInfo} = {
   1: {
     urls: filterUrls(['https://mainnet.infura.io/v3/']),
     name: 'Mainnet',
@@ -63,7 +46,7 @@ export const CHAINS: {[chainId: number]: IBasicChainInfo | IExtendedChainInfo} =
   // BNB
   56: {
     urls: ['https://bsc-dataseed.binance.org/'],
-    name: 'Smart Chain',
+    name: 'BNB Smart Chain',
     nativeCurrency: BNB,
     blockExplorerUrls: ['https://bscscan.com'],
   },
@@ -88,52 +71,6 @@ function filterUrls(urls: string[]): string[] {
   const res = urls.filter(url => url !== '');
 
   return res;
-}
-
-// 是否为扩展信息
-function isExtendedChainInfo(chainInfo: IBasicChainInfo | IExtendedChainInfo): chainInfo is IExtendedChainInfo {
-  return !!(chainInfo as IExtendedChainInfo).nativeCurrency;
-}
-
-/**
- * 获取 Chain 附加信息
- * @param {number} chainId 链ID
- * @returns {AddEthereumChainParameter | number}
- */
-export function getAddChainParameters(chainId: number): AddEthereumChainParameter | number {
-  const chainInformation = CHAINS[chainId];
-  if (!!chainInformation && isExtendedChainInfo(chainInformation)) {
-    return {
-      chainId,
-      chainName: chainInformation.name,
-      nativeCurrency: chainInformation.nativeCurrency,
-      rpcUrls: chainInformation.urls,
-      blockExplorerUrls: chainInformation.blockExplorerUrls,
-    };
-  } else {
-    return chainId;
-  }
-}
-
-/**
- * 获取区块链浏览器信息
- * @param {number} chainId 链ID
- * @returns {IBlockExplorerInfo}
- */
-export function getBlockExplorerInfo(chainId: number): IBlockExplorerInfo {
-  const chainInformation = CHAINS[chainId];
-  let blockExplorerName = '';
-  let blockExplorerUrl = '';
-
-  if (!!chainInformation && 'blockExplorerUrls' in chainInformation) {
-    blockExplorerUrl = chainInformation.blockExplorerUrls[0];
-    blockExplorerName = blockExplorerUrl.replace('https://', '').split('.')[0];
-  }
-
-  return {
-    blockExplorerName,
-    blockExplorerUrl,
-  };
 }
 
 // 获取 RPC URL

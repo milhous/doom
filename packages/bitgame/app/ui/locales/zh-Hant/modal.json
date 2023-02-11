@@ -1,3 +1,8 @@
 {
-    "linkWallet": "鏈接錢包"
+    "link_wallet": "鏈接錢包",
+    "wrong_network": "您所使用的網路有誤",
+    "located_network": "此頁面位於 {{chainName}}。",
+    "switch_network": "您目前位於 {{chainName}}，請切換網路以便繼續。",
+    "switch_to": "切換至 {{chainName}}",
+    "disconnect_wallet": "中斷與錢包的連線"
 }

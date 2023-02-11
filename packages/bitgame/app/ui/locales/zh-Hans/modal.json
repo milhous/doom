@@ -1,3 +1,8 @@
 {
-    "linkWallet": "链接钱包"
+    "link_wallet": "链接钱包",
+    "wrong_network": "您处于错误的网络",
+    "located_network": "此页面属于 {{chainName}}。",
+    "switch_network": "您现在处于 {{chainName}} 下，请切换网络以继续。",
+    "switch_to": "切换至 {{chainName}}",
+    "disconnect_wallet": "断开钱包"
 }

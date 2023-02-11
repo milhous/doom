@@ -2,7 +2,8 @@ import {CustomEventType} from '@libs/config';
 
 import {IModalData} from './type';
 
-import WalletLink from './wallet/Link';
+import WalletLinkChain from './wallet/LinkChain';
+import WalletSwitchChain from './wallet/SwitchChain';
 import './index.scss';
 
 /**
@@ -34,7 +35,12 @@ export const closeModal = (type: number, isAll = false): void => {
 };
 
 const UIModal = () => {
-  return <WalletLink />;
+  return (
+    <>
+      <WalletLinkChain />
+      <WalletSwitchChain />
+    </>
+  );
 };
 
 export default UIModal;
