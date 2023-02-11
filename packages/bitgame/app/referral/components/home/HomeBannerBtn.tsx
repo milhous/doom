@@ -119,8 +119,6 @@ export const BannerBtnCopy = (props: IBannerBtnCopyProps): JSX.Element => {
 
     const tips = t('common:tips_copy_success');
 
-    console.log(tips);
-
     toast(tips);
   };
 

@@ -31,7 +31,7 @@ const WidgetModal = (props: IWidgetModalProps): JSX.Element => {
   return (
     <Portal selector="widgetModal">
       <CSSTransition
-        in={isIn}
+        in={isActive}
         timeout={300}
         classNames="widget-modal"
         unmountOnExit

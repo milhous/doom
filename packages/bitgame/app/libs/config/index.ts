@@ -71,7 +71,7 @@ export enum ModalType {
   GOOGLE_AUTHENTICATOR,
   GOOGLE_HELP,
   LINK_CHAIN,
-  SWITCH_CHAIN
+  SWITCH_CHAIN,
 }
 
 /**

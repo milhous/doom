@@ -11,6 +11,7 @@ import {useThrottle, useInterval} from '@libs/hooks';
 import {showModal} from '@ui/modal';
 import {error} from '@widget/toastify';
 import WidgetTranslate from '@widget/translate';
+import {useBalance} from '@web3/core';
 
 import {BingoState} from '@game/stores/bingo';
 import {flip} from '@game/reducers/bingo';
@@ -29,7 +30,8 @@ interface IBingoData {
 // 翻牌按钮
 const BingoBtnFlip = (): JSX.Element => {
   const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
-  const {isActive, chainId} = useWeb3React();
+  const {provider, account, isActive, chainId} = useWeb3React();
+  const balance = useBalance(provider, account);
   const dispatch = useDispatch();
   const {flipCurrency, flipAmount, flipBalance, isComplete, transitionIds} = useSelector<BingoState>(state => {
     const {flipCurrency, flipAmount, flipBalance, isComplete, transitionIds} = state.bingo;
@@ -144,7 +146,7 @@ const BingoBtnFlip = (): JSX.Element => {
               <span>{flipAmount}</span>&nbsp;{flipCurrency}
             </dt>
             <dd>
-              <WidgetTranslate i18nT={t} i18nKey="balance" />: {flipBalance} {flipCurrency}
+              <WidgetTranslate i18nT={t} i18nKey="balance" />: {balance}
             </dd>
           </dl>
           <div></div>

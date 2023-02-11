@@ -1,10 +1,18 @@
 @use "@libs/styles/library" as *;
 .ui-modal .modal-wallet_switch {
     width: 386px;
+    @include smallScreen {
+        width: 646px;
+    }
     ul {
         li {
             @include setFont(16px, 22px, #81A0CB);
             margin-bottom: 10px;
+            @include smallScreen {
+                margin-bottom: 20px;
+                font-size: 26px;
+                line-height: 37px;
+            }
             &:last-child {
                 margin-bottom: 0;
             }

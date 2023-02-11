@@ -43,5 +43,6 @@
     "error_9003": "Hủy thất bại",
     "error_9004": "Không đủ số lượng giao dịch",
     "error_9005": "Giao dịch thất bại",
-    "error_9006": "Đang xử lý giao dịch, hủy bỏ thất bại, xin thử lại sau"
+    "error_9006": "Đang xử lý giao dịch, hủy bỏ thất bại, xin thử lại sau",
+    "error_wallet": "Lỗi kết nối, vui lòng thử lại và xác nhận trong ví!"
 }

@@ -1,10 +1,14 @@
+import dynamic from 'next/dynamic';
+
 import {CustomEventType} from '@libs/config';
 
 import {IModalData} from './type';
 
-import WalletLinkChain from './wallet/LinkChain';
-import WalletSwitchChain from './wallet/SwitchChain';
 import './index.scss';
+
+// 钱包
+const WalletLinkChain = dynamic(() => import('./wallet/LinkChain'), {ssr: false});
+const WalletSwitchChain = dynamic(() => import('./wallet/SwitchChain'), {ssr: false});
 
 /**
  * 显示弹层
@@ -37,8 +41,8 @@ export const closeModal = (type: number, isAll = false): void => {
 const UIModal = () => {
   return (
     <>
-      <WalletLinkChain />
       <WalletSwitchChain />
+      <WalletLinkChain />
     </>
   );
 };

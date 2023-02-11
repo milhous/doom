@@ -8,6 +8,7 @@ import {PackageType, ModalType, ChainType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
 import {useThrottle} from '@libs/hooks';
 import WidgetModal from '@widget/modal';
+import {error} from '@widget/toastify';
 import {disconnect, swithChain, getChainInfo} from '@web3/core';
 
 import Assets from '../assets';
@@ -17,7 +18,7 @@ import './SwitchChain.scss';
 // 按钮 - 切换
 const BtnSwtichChain = (props: {onClose: () => void}): JSX.Element => {
   const {onClose} = props;
-  const {t} = useTranslate(['modal'], PackageType.UI);
+  const {t} = useTranslate(['modal', 'error'], PackageType.UI);
   const {connector} = useWeb3React();
   const switchChainInfo = getChainInfo(ChainType.GOERLI);
 
@@ -32,6 +33,10 @@ const BtnSwtichChain = (props: {onClose: () => void}): JSX.Element => {
     if (res) {
       onClose();
     } else {
+      const tips = t('error:error_wallet');
+
+      error(tips);
+
       setDisabled(false);
     }
   }, 1000);

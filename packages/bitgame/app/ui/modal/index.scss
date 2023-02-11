@@ -17,6 +17,11 @@
     }
     .ui-modal_btns {
         @include setBtn(100px, 36px, 16px, #fff, var(--ui-btn-default), var(--pc-btn-radius));
+        @include smallScreen {
+            height: 60px;
+            border-radius: var(--h5-btn-radius);
+            font-size: 24px;
+        }
         &:disabled {
             cursor: not-allowed;
         }
@@ -61,6 +66,11 @@
         height: 50px;
         padding: 0 30px;
         background-color: #202F42;
+        @include smallScreen {
+            height: 80px;
+            font-size: 26px;
+            line-height: 37px;
+        }
         &::before {
             @include setPseudo();
             left: 0;
@@ -68,15 +78,25 @@
             width: 100%;
             height: 2px;
             background: linear-gradient(to right, #02996A, #283C56);
+            @include smallScreen {
+                height: 6px;
+            }
         }
         dd {
             @include setFlex();
             width: 40px;
             height: 40px;
             transform: translateX(14px);
+            @include smallScreen {
+                transform: translateX(10px);
+            }
             svg {
                 width: 12px;
                 height: 12px;
+                @include smallScreen {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }
