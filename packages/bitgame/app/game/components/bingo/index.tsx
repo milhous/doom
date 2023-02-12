@@ -3,11 +3,11 @@ import dynamic from 'next/dynamic';
 
 import BingoProvider from './BingoProvider';
 import BingoLogo from './BingoLogo';
-import BingoAstrolabe from './BingoAstrolabe';
 import BingoGrids from './BingoGrids';
 import BingoReceive from './BingoReceive';
 
-// const BingoBtnFlip = dynamic(() => import('./BingoBtnFlip'), {ssr: false});
+const BingoAstrolabe = dynamic(() => import('./BingoAstrolabe'), {ssr: false});
+const BingoBtnFlip = dynamic(() => import('./BingoBtnFlip'), {ssr: false});
 
 import './index.scss';
 
@@ -29,9 +29,9 @@ const Bingo = () => {
               <BingoGrids />
             </div>
           </div>
-          {/* <Suspense>
+          <Suspense>
             <BingoBtnFlip />
-          </Suspense> */}
+          </Suspense>
           {/*
       <Time /> */}
         </section>
