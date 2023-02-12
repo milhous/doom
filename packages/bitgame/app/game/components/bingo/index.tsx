@@ -7,7 +7,7 @@ import BingoAstrolabe from './BingoAstrolabe';
 import BingoGrids from './BingoGrids';
 import BingoReceive from './BingoReceive';
 
-const BingoBtnFlip = dynamic(() => import('./BingoBtnFlip'), {ssr: false});
+// const BingoBtnFlip = dynamic(() => import('./BingoBtnFlip'), {ssr: false});
 
 import './index.scss';
 
@@ -29,9 +29,9 @@ const Bingo = () => {
               <BingoGrids />
             </div>
           </div>
-          <Suspense>
+          {/* <Suspense>
             <BingoBtnFlip />
-          </Suspense>
+          </Suspense> */}
           {/*
       <Time /> */}
         </section>
