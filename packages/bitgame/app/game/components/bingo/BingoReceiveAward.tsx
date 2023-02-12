@@ -1,18 +1,14 @@
 'use client';
 
 import {useEffect, useState} from 'react';
-import {useDispatch} from 'react-redux';
 import Image from 'next/image';
 
-import {PackageType} from '@libs/config';
-import {useTranslate} from '@libs/i18n/client';
 import WidgetModal from '@widget/modal';
 import WidgetSvga from '@widget/svga';
 
 import Assets from '@game/assets';
 import BingoConstellations from './BingoConstellations';
 import BingoAstrolabeAward from './BingoAstrolabeAward';
-import {reset} from '@game/reducers/bingo';
 
 import './BingoReceiveAward.scss';
 

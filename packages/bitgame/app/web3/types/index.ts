@@ -18,6 +18,8 @@ export type Web3Provider = ReturnType<Web3ReactHooks['useProvider']>;
 
 export type Web3Accounts = ReturnType<Web3ReactHooks['useAccounts']>;
 
+export type Web3Account = ReturnType<Web3ReactHooks['useAccount']>;
+
 // 基础信息
 export interface Web3BasicChainInfo {
   urls: string[];

@@ -4,7 +4,14 @@ import type {Web3ReactHooks} from '@web3-react/core';
 import type {AddEthereumChainParameter} from '@web3-react/types';
 import {formatEther, formatUnits, toBigInt} from 'ethers';
 import {WalletConnect} from '@web3-react/walletconnect';
-import {Web3BasicChainInfo, Web3ExtendedChainInfo, Web3BlockExplorerInfo} from '@web3/types';
+import {
+  Web3BasicChainInfo,
+  Web3ExtendedChainInfo,
+  Web3BlockExplorerInfo,
+  Web3Account,
+  Web3ChainId,
+  Web3IsActive,
+} from '@web3/types';
 import {CHAINS} from '@web3/utils/chains';
 
 // 是否为扩展信息
@@ -15,12 +22,23 @@ function isExtendedChainInfo(
 }
 
 /**
+ * 获取区块链信息
+ * @param {Web3ChainId} chainId 链ID
+ * @returns {Web3BasicChainInfo | Web3ExtendedChainInfo}
+ */
+export function getChainInfo(chainId: Web3ChainId): Web3BasicChainInfo | Web3ExtendedChainInfo {
+  const chainInformation = CHAINS[chainId];
+
+  return chainInformation;
+}
+
+/**
  * 获取 Chain 附加信息
- * @param {number} chainId 链ID
+ * @param {Web3ChainId} chainId 链ID
  * @returns {AddEthereumChainParameter | number}
  */
-export function getAddChainParameters(chainId: number): AddEthereumChainParameter | number {
-  const chainInformation = CHAINS[chainId];
+export function getAddChainParameters(chainId: Web3ChainId): AddEthereumChainParameter | number {
+  const chainInformation = getChainInfo(chainId);
   if (!!chainInformation && isExtendedChainInfo(chainInformation)) {
     return {
       chainId,
@@ -36,11 +54,11 @@ export function getAddChainParameters(chainId: number): AddEthereumChainParamete
 
 /**
  * 获取区块链浏览器信息
- * @param {number} chainId 链ID
+ * @param {Web3ChainId} chainId 链ID
  * @returns {Web3BlockExplorerInfo}
  */
-export function getBlockExplorerInfo(chainId: number): Web3BlockExplorerInfo {
-  const chainInformation = CHAINS[chainId];
+export function getBlockExplorerInfo(chainId: Web3ChainId): Web3BlockExplorerInfo {
+  const chainInformation = getChainInfo(chainId);
   let blockExplorerName = '';
   let blockExplorerUrl = '';
 
@@ -56,23 +74,28 @@ export function getBlockExplorerInfo(chainId: number): Web3BlockExplorerInfo {
 }
 
 /**
- * 获取区块链信息
- * @param {number} chainId 链ID
- * @returns {Web3BasicChainInfo | Web3ExtendedChainInfo}
+ * 获取币种名称
+ * @param {Web3ChainId} chainId 链ID
+ * @returns {string}
  */
-export function getChainInfo(chainId: number): Web3BasicChainInfo | Web3ExtendedChainInfo {
-  const chainInformation = CHAINS[chainId];
+export function getCurrencyName(chainId: Web3ChainId): string {
+  const chainInformation = getChainInfo(chainId);
+  let currencyName = '';
 
-  return chainInformation;
+  if (!!chainInformation && isExtendedChainInfo(chainInformation)) {
+    currencyName = chainInformation.nativeCurrency.symbol;
+  }
+
+  return currencyName;
 }
 
 /**
  * 断开钱包
  * @param {Connector} connector 连接器
- * @param {boolean} isActive 是否激活
+ * @param {Web3IsActive} isActive 是否激活
  * @returns
  */
-export function disconnect(connector: Connector, isActive: boolean) {
+export function disconnect(connector: Connector, isActive: Web3IsActive) {
   if (!isActive) {
     return;
   }
@@ -87,10 +110,10 @@ export function disconnect(connector: Connector, isActive: boolean) {
 /**
  * 切换链
  * @param {Connector} connector 连接器
- * @param {number} chainId 链ID
+ * @param {Web3ChainId} chainId 链ID
  * @returns
  */
-export async function swithChain(connector: Connector, chainId: number): Promise<boolean> {
+export async function swithChain(connector: Connector, chainId: Web3ChainId): Promise<boolean> {
   //   if (connector instanceof WalletConnect) {
   //     connector.activate(chainId);
   //   } else {
@@ -109,44 +132,52 @@ export async function swithChain(connector: Connector, chainId: number): Promise
 /**
  * 获取余额
  * @param {BaseProvider} provider 提供者是一个连接以太坊网络的抽象，用与查询以太坊网络状态或者发送更改状态的交易。
- * @param {string} address 地址
+ * @param {Web3Account} account 地址
+ * @param {number} decimals 保留小数点位数 -1：默认18位
  * @returns {string}
  */
 export async function getBalance(
   provider: ReturnType<Web3ReactHooks['useProvider']>,
-  address: string,
+  account: Web3Account,
+  decimals = -1,
 ): Promise<string> {
-  const balance = await provider.getBalance(address);
+  const balance = await provider.getBalance(account);
+  let res = formatEther(balance.toBigInt());
 
-  return formatEther(balance.toBigInt());
+  if (decimals >= 0) {
+    const regex = new RegExp(`^\\d+(?:\\.\\d{0,${decimals}})?`);
+
+    res = res.match(regex).toString();
+  }
+
+  return res;
 }
 
 /**
  * Hook - 获取余额
  * @param {BaseProvider} provider 提供者是一个连接以太坊网络的抽象，用与查询以太坊网络状态或者发送更改状态的交易。
- * @param {string} address 地址
+ * @param {Web3Account} account 地址
  * @param {number} decimals 保留小数点位数
  * @returns {string}
  */
 export const useBalance = (
   provider: ReturnType<Web3ReactHooks['useProvider']>,
-  address: string,
+  account: Web3Account,
   decimals = 4,
 ): string => {
   const [ammount, setAmmount] = useState<string>('--');
 
   useEffect(() => {
-    if (provider && address) {
+    if (provider && account) {
       (async () => {
-        const balance = await getBalance(provider, address);
-        const regex = new RegExp(`^\\d+(?:\\.\\d{0,${decimals}})?`);
+        const balance = await getBalance(provider, account, decimals);
 
-        setAmmount(balance.match(regex).toString());
+        setAmmount(balance);
       })();
     } else {
       setAmmount('--');
     }
-  }, [provider, address]);
+  }, [provider, account]);
 
   return ammount;
 };

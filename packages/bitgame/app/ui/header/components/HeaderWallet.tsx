@@ -10,7 +10,7 @@ import {showModal} from '@ui/modal';
 import WidgetTranslate from '@widget/translate';
 import {toast} from '@widget/toastify';
 import {disconnect, getBlockExplorerInfo} from '@web3/core';
-import {getThumbAddress} from '@web3/utils';
+import {getThumbAccount} from '@web3/utils';
 
 import Assets from '../assets';
 import './HeaderWallet.scss';
@@ -41,7 +41,7 @@ const WalletThumb = (): JSX.Element => {
   return (
     <div className="wallet-thumb">
       <Assets.IconWallet className="wallet-icon_wallet" />
-      <span>{getThumbAddress(account)}</span>
+      <span>{getThumbAccount(account)}</span>
       <Assets.IconArrow className="wallet-icon_arrow" />
     </div>
   );

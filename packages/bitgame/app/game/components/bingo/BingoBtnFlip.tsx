@@ -11,7 +11,7 @@ import {useThrottle, useInterval} from '@libs/hooks';
 import {showModal} from '@ui/modal';
 import {error} from '@widget/toastify';
 import WidgetTranslate from '@widget/translate';
-import {useBalance} from '@web3/core';
+import {useBalance, getCurrencyName} from '@web3/core';
 
 import {BingoState} from '@game/stores/bingo';
 import {flip} from '@game/reducers/bingo';
@@ -146,7 +146,7 @@ const BingoBtnFlip = (): JSX.Element => {
               <span>{flipAmount}</span>&nbsp;{flipCurrency}
             </dt>
             <dd>
-              <WidgetTranslate i18nT={t} i18nKey="balance" />: {balance}
+              <WidgetTranslate i18nT={t} i18nKey="balance" />: {getCurrencyName(chainId)} {balance}
             </dd>
           </dl>
           <div></div>

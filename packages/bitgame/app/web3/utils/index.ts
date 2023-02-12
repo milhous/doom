@@ -3,6 +3,8 @@ import {MetaMask} from '@web3-react/metamask';
 import {WalletConnect} from '@web3-react/walletconnect';
 import type {Connector} from '@web3-react/types';
 
+import {Web3Account} from '@web3/types';
+
 export function getName(connector: Connector) {
   if (connector instanceof MetaMask) return 'MetaMask';
   // if (connector instanceof WalletConnect) return 'WalletConnect';
@@ -15,11 +17,11 @@ export function getName(connector: Connector) {
  * @param {string} address 钱包地址
  * @returns
  */
-export function getThumbAddress(address: string): string {
+export function getThumbAccount(account: Web3Account): string {
   let res = '';
 
-  if (typeof address === 'string') {
-    res = `${address.slice(0, 2)}...${address.slice(-4)}`;
+  if (typeof account === 'string') {
+    res = `${account.slice(0, 2)}...${account.slice(-4)}`;
   }
 
   return res;
