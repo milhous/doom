@@ -1,9 +1,13 @@
+import {Suspense} from 'react';
+import dynamic from 'next/dynamic';
+
 import BingoProvider from './BingoProvider';
 import BingoLogo from './BingoLogo';
 import BingoAstrolabe from './BingoAstrolabe';
 import BingoGrids from './BingoGrids';
-import BingoBtnFlip from './BingoBtnFlip';
 import BingoReceive from './BingoReceive';
+
+const BingoBtnFlip = dynamic(() => import('./BingoBtnFlip'), {ssr: false});
 
 import './index.scss';
 
@@ -25,7 +29,9 @@ const Bingo = () => {
               <BingoGrids />
             </div>
           </div>
-          <BingoBtnFlip />
+          <Suspense>
+            <BingoBtnFlip />
+          </Suspense>
           {/*
       <Time /> */}
         </section>
