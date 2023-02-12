@@ -1,3 +1,4 @@
+import {Suspense} from 'react';
 import dynamic from 'next/dynamic';
 
 import {CustomEventType} from '@libs/config';
@@ -41,8 +42,12 @@ export const closeModal = (type: number, isAll = false): void => {
 const UIModal = () => {
   return (
     <>
-      <WalletSwitchChain />
-      <WalletLinkChain />
+      <Suspense fallback={<>loading...</>}>
+        <WalletSwitchChain />
+      </Suspense>
+      <Suspense fallback={<>loading...</>}>
+        <WalletLinkChain />
+      </Suspense>
     </>
   );
 };

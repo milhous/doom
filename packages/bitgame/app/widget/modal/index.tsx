@@ -1,6 +1,6 @@
 'use client';
 
-import {Suspense, useState, useEffect, useRef} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {CSSTransition} from 'react-transition-group';
 
 import Portal from './portal';
@@ -31,7 +31,7 @@ const WidgetModal = (props: IWidgetModalProps): JSX.Element => {
   return (
     <Portal selector="widgetModal">
       <CSSTransition
-        in={isActive}
+        in={isIn}
         timeout={300}
         classNames="widget-modal"
         unmountOnExit
@@ -39,14 +39,12 @@ const WidgetModal = (props: IWidgetModalProps): JSX.Element => {
         onExited={() => !!onClose && onClose()}
         nodeRef={nodeRef}
       >
-        <Suspense fallback="Loading">
-          <div className={`widget-modal ${classname}`} ref={nodeRef}>
-            <div className="widget-modal_mask" onClick={handleClose}></div>
-            <div className="widget-modal_container">
-              <div className="widget-modal_content">{children}</div>
-            </div>
+        <div className={`widget-modal ${classname}`} ref={nodeRef}>
+          <div className="widget-modal_mask" onClick={handleClose}></div>
+          <div className="widget-modal_container">
+            <div className="widget-modal_content">{children}</div>
           </div>
-        </Suspense>
+        </div>
       </CSSTransition>
     </Portal>
   );
