@@ -1,7 +1,7 @@
 {
     "name": "@packages/bitgame",
     "version": "1.0.0",
-    "description": "bitgame",
+    "description": "nextJS - bitgame",
     "type": "module",
     "main": "dist/static/js/main.js",
     "private": true,
