@@ -2230,7 +2230,7 @@ __metadata:
     browserslist: ^4.21.5
     copy-webpack-plugin: ^11.0.0
     echarts: ^5.4.1
-    ethers: ^6.0.2
+    ethers: ^6.0.3
     fs-extra: ^11.1.0
     graphql: ^16.6.0
     graphql-tag: ^2.12.6
@@ -6249,9 +6249,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ethers@npm:^6.0.2":
-  version: 6.0.2
-  resolution: "ethers@npm:6.0.2::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fethers%2F-%2Fethers-6.0.2.tgz"
+"ethers@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "ethers@npm:6.0.3::__archiveUrl=https%3A%2F%2Fregistry.npmmirror.com%2Fethers%2F-%2Fethers-6.0.3.tgz"
   dependencies:
     "@adraffy/ens-normalize": 1.8.9
     "@noble/hashes": 1.1.2
@@ -6259,7 +6259,7 @@ __metadata:
     aes-js: 4.0.0-beta.3
     tslib: 2.4.0
     ws: 8.5.0
-  checksum: 7e012ca49ccc326c1ff63f8d4a00cc71f95ae69167adb24ab73148f386714866479eda429ea2330ea93241cf6afbd3a086d43a00a75b483f99fb8ef597676a85
+  checksum: b48184ddd0944e5954d9d0bde442df9a3dee657c559a901aa88c40fea4cfcf0a15703affeb44e558882a7abe9e65bed1d6ee9931376bb1497fa4003cdcdc698a
   languageName: node
   linkType: hard
 

@@ -23,7 +23,7 @@
         "@web3-react/url": "8.0.25-beta.0",
         "@web3-react/walletconnect": "8.0.37-beta.0",
         "echarts": "^5.4.1",
-        "ethers": "^6.0.2",
+        "ethers": "^6.0.3",
         "graphql": "^16.6.0",
         "graphql-tag": "^2.12.6",
         "graphql-yoga": "^3.5.1",
