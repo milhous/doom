@@ -9,9 +9,9 @@ import {PackageType, ModalType, ChainType} from '@libs/config';
 import {useTranslate} from '@libs/i18n/client';
 import {useThrottle, useInterval} from '@libs/hooks';
 import {showModal} from '@ui/modal';
-import {error} from '@widget/toastify';
+import {toast, error, dismissToast} from '@widget/toastify';
 import WidgetTranslate from '@widget/translate';
-import {useBalance, getCurrencyName} from '@web3/core';
+import {useBalance, getCurrencyName, contractFundMe} from '@web3/core';
 
 import {BingoState} from '@game/stores/bingo';
 import {flip} from '@game/reducers/bingo';
@@ -63,7 +63,7 @@ const BingoBtnFlip = (): JSX.Element => {
   );
 
   // 事件 - 手动翻牌
-  const handleManual = useThrottle(() => {
+  const handleManual = useThrottle(async () => {
     // 如果钱包未链接，显示链接弹层
     if (!isActive) {
       showModal(ModalType.LINK_CHAIN);
@@ -78,7 +78,7 @@ const BingoBtnFlip = (): JSX.Element => {
       return;
     }
 
-    if (flipBalance < flipAmount) {
+    if (Number(balance) < flipAmount) {
       error(t('error:error_5001'));
 
       return;
@@ -86,16 +86,30 @@ const BingoBtnFlip = (): JSX.Element => {
 
     setFilpDisable(true);
 
-    const data = apiBingoFlip();
+    const toastId = toast(t('order_status'), {autoClose: false});
 
-    if (data.gridId) {
-      dispatch(flip(data));
+    try {
+      await contractFundMe(provider);
+
+      dismissToast(toastId);
+
+      const data = apiBingoFlip();
+
+      if (data.gridId) {
+        dispatch(flip(data));
+      }
+    } catch (err) {
+      dismissToast(toastId);
+
+      error(t('error:error_9005'));
+
+      setFilpDisable(false);
     }
   });
 
   // 事件 - 自动翻牌
   const handlerAuto = () => {
-    if (flipBalance < flipAmount) {
+    if (Number(balance) < flipAmount) {
       error(t('error:error_5001'));
 
       setFilpAuto(false);

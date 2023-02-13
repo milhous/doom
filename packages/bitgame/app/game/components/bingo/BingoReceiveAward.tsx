@@ -13,7 +13,7 @@ import BingoAstrolabeAward from './BingoAstrolabeAward';
 import './BingoReceiveAward.scss';
 
 // 星盘
-const Astrolabe = (props: {currency: string; amount: number}): JSX.Element => {
+const Astrolabe = (props: {currency: string; amount: string}): JSX.Element => {
   const {currency, amount} = props;
 
   return (
@@ -40,7 +40,7 @@ const Astrolabe = (props: {currency: string; amount: number}): JSX.Element => {
   );
 };
 
-const BingoReceiveAward = (props: {currency: string; amount: number; isOpen: boolean; onClose: () => void}) => {
+const BingoReceiveAward = (props: {currency: string; amount: string; isOpen: boolean; onClose: () => void}) => {
   const {currency, amount, isOpen, onClose} = props;
 
   // 是否显示

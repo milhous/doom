@@ -2,9 +2,14 @@
 
 import {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import {useWeb3React} from '@web3-react/core';
 
+import {PackageType} from '@libs/config';
 import {useThrottle} from '@libs/hooks';
+import {useTranslate} from '@libs/i18n/client';
 import WidgetSvga from '@widget/svga';
+import {toast, error, dismissToast} from '@widget/toastify';
+import {getCurrencyName, contractGetBalance, contractWithdraw} from '@web3/core';
 
 import Assets from '@game/assets';
 import {BingoState} from '@game/stores/bingo';
@@ -19,6 +24,8 @@ interface IBingoData {
 
 // 大奖
 const BingoAstrolabeAward = (): JSX.Element => {
+  const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
+  const {provider, chainId} = useWeb3React();
   const {prizeGridsState, isComplete} = useSelector<BingoState>(state => {
     const {prizeGridsState, isComplete} = state.bingo;
 
@@ -29,6 +36,10 @@ const BingoAstrolabeAward = (): JSX.Element => {
   const [isReceive, setReceiveState] = useState<boolean>(false);
   // 是否显示奖励弹窗
   const [visible, setVisible] = useState<boolean>(false);
+  // 币种名称
+  const [currency, setCurrency] = useState<string>('');
+  // 币种名称
+  const [amount, setAmount] = useState<string>('');
 
   // 领取奖励
   const handleReceive = useThrottle(async (): Promise<void> => {
@@ -36,7 +47,27 @@ const BingoAstrolabeAward = (): JSX.Element => {
       return;
     }
 
-    setVisible(true);
+    const _currency = getCurrencyName(chainId);
+
+    setCurrency(_currency);
+
+    const _amount = await contractGetBalance(provider);
+
+    setAmount(_amount);
+
+    const toastId = toast(t('order_status'), {autoClose: false});
+
+    try {
+      await contractWithdraw(provider);
+
+      dismissToast(toastId);
+
+      setVisible(true);
+    } catch (err) {
+      dismissToast(toastId);
+
+      error(t('error:error_9005'));
+    }
   });
 
   useEffect(() => {
@@ -76,7 +107,7 @@ const BingoAstrolabeAward = (): JSX.Element => {
         <i className="astrolabe-award_stars"></i>
         <i className="astrolabe-award_active"></i>
       </div>
-      <BingoCongratulations currency="USDT" amount={100} isOpen={visible} />
+      <BingoCongratulations currency={currency} amount={amount} isOpen={visible} />
     </>
   );
 };

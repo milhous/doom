@@ -14,5 +14,6 @@
     "help_desc5": "You can click AUTO to flip continuously, and click STOP to end at anytime.",
     "help_desc6": "If AUTO flip a flipped pattern, will return half consumed LUT.",
     "activity_time": "Activity time:",
-    "balance": "Balance"
+    "balance": "Balance",
+    "order_status": "Confirming action, please wait..."
 }

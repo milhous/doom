@@ -205,8 +205,8 @@ const detectHighlight = (prizeIds: number[]): {highlightIds: number[]; lineIds: 
 
 // 初始化状态
 const initialState: IBingoState = {
-  flipCurrency: 'LUT',
-  flipAmount: 100,
+  flipCurrency: 'ETH',
+  flipAmount: 0.001,
   flipBalance: 10000,
   isComplete: false,
   beginTime: 0,

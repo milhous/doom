@@ -14,5 +14,6 @@
     "help_desc5": "Bạn có thể nhấp vào nút AUTO để tự động mở lưới liên tục và bạn có thể nhấp vào STOP để kết thúc bất kỳ lúc nào.",
     "help_desc6": "Nếu là ngẫu nhiên vào lưới đã mở, một nửa số tiền tiêu thụ sẽ được hoàn trả.",
     "activity_time": "Thời gian hoạt động：",
-    "balance": "Số dư khả dụng"
+    "balance": "Số dư khả dụng",
+    "order_status": "Đang xác nhận lệnh, vui lòng đợi..."
 }

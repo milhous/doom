@@ -2,10 +2,14 @@
 
 import {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import {useWeb3React} from '@web3-react/core';
 import Image from 'next/image';
 
+import {PackageType} from '@libs/config';
 import {useThrottle} from '@libs/hooks';
-import WidgetSvga from '@widget/svga';
+import {useTranslate} from '@libs/i18n/client';
+import {toast, error, dismissToast} from '@widget/toastify';
+import {getCurrencyName, contractGetBalance, contractWithdraw} from '@web3/core';
 
 import Assets from '@game/assets';
 import {astrolabeConfig} from '@game/config/bingo';
@@ -34,17 +38,18 @@ const Constellation = (props: {pid: number; state: number}): JSX.Element => {
 
 // 领取按钮
 const BingoReceive = (): JSX.Element => {
+  const {t} = useTranslate(['bingo', 'error'], PackageType.GAME);
+  const {provider, chainId} = useWeb3React();
   const {prizeGridsState, isComplete} = useSelector<BingoState>(state => {
     const {prizeGridsState, isComplete} = state.bingo;
 
     return {prizeGridsState, isComplete};
   }) as IBingoData;
 
-  // 大奖名称
-  const name = 'USDT';
-  // 大奖金额
-  const amount = 100;
-
+  // 币种名称
+  const [currency, setCurrency] = useState<string>('');
+  // 币种名称
+  const [amount, setAmount] = useState<string>('');
   // 是否可领取
   const [isReceive, setReceiveState] = useState<boolean>(false);
   // 是否显示奖励弹窗
@@ -56,7 +61,27 @@ const BingoReceive = (): JSX.Element => {
       return;
     }
 
-    setVisible(true);
+    const _currency = getCurrencyName(chainId);
+
+    setCurrency(_currency);
+
+    const _amount = await contractGetBalance(provider);
+
+    setAmount(_amount);
+
+    const toastId = toast(t('order_status'), {autoClose: false});
+
+    try {
+      await contractWithdraw(provider);
+
+      dismissToast(toastId);
+
+      setVisible(true);
+    } catch (err) {
+      dismissToast(toastId);
+
+      error(t('error:error_9005'));
+    }
   });
 
   // 隐藏奖励
@@ -106,14 +131,14 @@ const BingoReceive = (): JSX.Element => {
           <i className="bingo-receive_award"></i>
         </div>
         <dl>
-          <dt>{name}</dt>
+          <dt>{currency}</dt>
           <dd>
-            <Image src={Assets.iconAward} alt={name} width={119} height={119} />
+            <Image src={Assets.iconAward} alt={currency} width={119} height={119} />
             <span>x{amount}</span>
           </dd>
         </dl>
       </div>
-      <BingoReceiveAward currency="USDT" amount={100} isOpen={visible} onClose={handleClose} />
+      <BingoReceiveAward currency={currency} amount={amount} isOpen={visible} onClose={handleClose} />
     </>
   );
 };

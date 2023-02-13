@@ -2,8 +2,9 @@ import {useState, useEffect} from 'react';
 import type {Connector} from '@web3-react/types';
 import type {Web3ReactHooks} from '@web3-react/core';
 import type {AddEthereumChainParameter} from '@web3-react/types';
-import {formatEther, formatUnits, toBigInt} from 'ethers';
 import {WalletConnect} from '@web3-react/walletconnect';
+import {formatEther, parseEther, Contract, toBigInt} from 'ethers';
+import useSWR from 'swr';
 import {
   Web3BasicChainInfo,
   Web3ExtendedChainInfo,
@@ -11,8 +12,10 @@ import {
   Web3Account,
   Web3ChainId,
   Web3IsActive,
+  Web3Provider,
 } from '@web3/types';
 import {CHAINS} from '@web3/utils/chains';
+import FundMe from '@web3/contract/FundMe.json';
 
 // 是否为扩展信息
 function isExtendedChainInfo(
@@ -136,18 +139,18 @@ export async function swithChain(connector: Connector, chainId: Web3ChainId): Pr
  * @param {number} decimals 保留小数点位数 -1：默认18位
  * @returns {string}
  */
-export async function getBalance(
-  provider: ReturnType<Web3ReactHooks['useProvider']>,
-  account: Web3Account,
-  decimals = -1,
-): Promise<string> {
-  const balance = await provider.getBalance(account);
-  let res = formatEther(balance.toBigInt());
+export async function getBalance(provider: Web3Provider, account: Web3Account, decimals = -1): Promise<string> {
+  let res = '--';
 
-  if (decimals >= 0) {
-    const regex = new RegExp(`^\\d+(?:\\.\\d{0,${decimals}})?`);
+  if (provider && account) {
+    const balance = await provider.getBalance(account);
+    res = formatEther(balance.toBigInt());
 
-    res = res.match(regex).toString();
+    if (decimals >= 0) {
+      const regex = new RegExp(`^\\d+(?:\\.\\d{0,${decimals}})?`);
+
+      res = res.match(regex).toString();
+    }
   }
 
   return res;
@@ -160,24 +163,49 @@ export async function getBalance(
  * @param {number} decimals 保留小数点位数
  * @returns {string}
  */
-export const useBalance = (
-  provider: ReturnType<Web3ReactHooks['useProvider']>,
-  account: Web3Account,
-  decimals = 4,
-): string => {
-  const [ammount, setAmmount] = useState<string>('--');
-
-  useEffect(() => {
-    if (provider && account) {
-      (async () => {
-        const balance = await getBalance(provider, account, decimals);
-
-        setAmmount(balance);
-      })();
-    } else {
-      setAmmount('--');
-    }
-  }, [provider, account]);
+export const useBalance = (provider: Web3Provider, account: Web3Account, decimals = 4): string => {
+  const {data: ammount} = useSWR([provider, account, decimals], args => getBalance(...args));
 
   return ammount;
 };
+
+export async function contractFundMe(provider: any): Promise<void> {
+  const signer = provider.getSigner();
+  const contract = new Contract(FundMe.address, FundMe.abi, signer);
+
+  const transactionResponse = await contract.fund({
+    value: parseEther('0.001'),
+  });
+
+  await listenForTransactionMine(transactionResponse, provider);
+}
+
+export async function contractWithdraw(provider: any): Promise<void> {
+  await provider.send('eth_requestAccounts', []);
+  const signer = provider.getSigner();
+  const contract = new Contract(FundMe.address, FundMe.abi, signer);
+
+  const transactionResponse = await contract.withdraw();
+
+  await listenForTransactionMine(transactionResponse, provider);
+}
+
+export async function contractGetBalance(provider: any): Promise<string> {
+  const balance = await provider.getBalance(FundMe.address);
+
+  return formatEther(balance.toBigInt());
+}
+
+function listenForTransactionMine(transactionResponse, provider): Promise<boolean> {
+  console.log(`Mining ${transactionResponse.hash}`);
+  return new Promise((resolve, reject) => {
+    try {
+      provider.once(transactionResponse.hash, transactionReceipt => {
+        console.log(`Completed with ${transactionReceipt.confirmations} confirmations. `);
+        resolve(true);
+      });
+    } catch (error) {
+      reject(error);
+    }
+  });
+}

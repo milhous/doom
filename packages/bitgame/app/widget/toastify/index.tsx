@@ -33,7 +33,7 @@ const init = (): void => {
   isInit = true;
 
   const div = document.createElement('div');
-  div.className = 'widget-toastify_root';
+  div.id = 'widgetToastifyRoot';
   document.body.appendChild(div);
 
   const root = ReactDOM.createRoot(div as HTMLElement);
@@ -59,12 +59,14 @@ const ContentShare = (props: IContentProps): JSX.Element => {
   return <>{props.children}</>;
 };
 
-export const toast = (str: any, options: any = {}): void => {
+export const toast = (str: any, options: any = {}): toastify.Id => {
   const opts = {...defaultOptions, ...options};
 
   init();
 
-  toastify.toast(<Content>{str}</Content>, opts);
+  const toastId = toastify.toast(<Content>{str}</Content>, opts);
+
+  return toastId;
 };
 
 export const error = (str: any, options: any = {}): void => {
@@ -83,4 +85,12 @@ export const toastShare = (str: any, options: any = {}): void => {
   init();
 
   toastify.toast(<ContentShare>{str}</ContentShare>, opts);
+};
+
+export const dismissToast = (toastId: toastify.Id) => {
+  if (!!toastId) {
+    toastify.toast.dismiss(toastId);
+  } else {
+    toastify.toast.dismiss();
+  }
 };

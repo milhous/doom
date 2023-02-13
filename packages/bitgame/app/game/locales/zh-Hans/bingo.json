@@ -14,5 +14,6 @@
     "help_desc5": "可以点击AUTO按钮自动连续开启格子，可随时点击STOP终止。",
     "help_desc6": "如果随机到已经开启的格子将返还一半的消费金额。",
     "activity_time": "活动时间：",
-    "balance": "可用余额"
+    "balance": "可用余额",
+    "order_status": "订单确认中，请稍后..."
 }

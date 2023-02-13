@@ -14,7 +14,7 @@ import {reset} from '@game/reducers/bingo';
 import './BingoCongratulations.scss';
 
 // 弹层 - 胜利
-const BingoCongratulations = (props: {currency: string; amount: number; isOpen: boolean}): JSX.Element => {
+const BingoCongratulations = (props: {currency: string; amount: string; isOpen: boolean}): JSX.Element => {
   const {currency, amount, isOpen} = props;
   const {t} = useTranslate(['bingo'], PackageType.GAME);
   const dispatch = useDispatch();

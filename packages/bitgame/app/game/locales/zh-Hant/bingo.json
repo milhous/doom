@@ -14,5 +14,6 @@
     "help_desc5": "可以點擊AUTO按鈕自動連續開啟格子，可隨時點擊STOP終止。",
     "help_desc6": "如果隨機到已經開啟的格子將返還一半的消費金額。",
     "activity_time": "活動時間：",
-    "balance": "可用餘額"
+    "balance": "可用餘額",
+    "order_status": "訂單確認中，請稍後..."
 }
