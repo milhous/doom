@@ -1,4 +1,4 @@
-# doom
+## NextJS 配置
 
 #### 查看 [CSS 配置](./docs/css.md)
 
