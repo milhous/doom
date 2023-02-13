@@ -47,16 +47,16 @@ const routers = {
     },
     {name: 'games', to: '/game', key: 'Game', desc: '点击游戏按钮'},
     {name: 'promotions', to: '/promotions', key: 'Promotions', desc: '点击活动按钮'},
-    {
-      name: 'vip',
-      to: '/user/vip',
-      key: 'VIP',
-      desc: '点击VIP按钮',
-      children: [
-        {name: 'vip_account', to: '/user/vip', key: 'VIP_MyVIP', desc: '点击我的VIP切页'},
-        {name: 'vip_about', to: '/about/vip', key: 'VIP_AboutVIP', desc: '点击关于VIP切页'},
-      ],
-    },
+    // {
+    //   name: 'vip',
+    //   to: '/user/vip',
+    //   key: 'VIP',
+    //   desc: '点击VIP按钮',
+    //   children: [
+    //     {name: 'vip_account', to: '/user/vip', key: 'VIP_MyVIP', desc: '点击我的VIP切页'},
+    //     {name: 'vip_about', to: '/about/vip', key: 'VIP_AboutVIP', desc: '点击关于VIP切页'},
+    //   ],
+    // },
     {
       name: 'referral',
       to: '/referral',
@@ -69,7 +69,7 @@ const routers = {
       key: 'Affiliate',
       desc: '点击代理按钮',
     },
-    {name: 'app_download', to: '/app', key: 'app_download', desc: '点击app下载按钮'},
+    // {name: 'app_download', to: '/app', key: 'app_download', desc: '点击app下载按钮'},
     // { name: 'christmas', to: '/promotions/christmas', key: 'Christmas', desc: '点击圣诞活动' },
   ],
   [BetType.CONTRACT]: [
