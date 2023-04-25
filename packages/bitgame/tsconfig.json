@@ -33,7 +33,8 @@
       "@promotions/*": ["app/promotions/*"],
       "@affiliate/*": ["app/affiliate/*"],
       "@referral/*": ["app/referral/*"]
-    }
+    },
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",

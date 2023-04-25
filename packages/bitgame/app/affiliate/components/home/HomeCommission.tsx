@@ -9,7 +9,7 @@ import Assets from '@app/affiliate/assets';
 import './HomeCommission.scss';
 
 // 代理佣金
-const HomeCommission = ():JSX.Element => {
+const HomeCommission = (): JSX.Element => {
   const {t} = useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   return (

@@ -4,7 +4,7 @@ import {useTranslate} from '@libs/i18n/server';
 import './HomeBanner.scss';
 
 // 代理banner
-const HomeBanner = ():JSX.Element => {
+const HomeBanner = (): JSX.Element => {
   const {t} = useTranslate(['affiliate'], PackageType.AFFILIATE);
 
   return (

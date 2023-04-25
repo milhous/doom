@@ -26,6 +26,12 @@ const BNB: AddEthereumChainParameter['nativeCurrency'] = {
   decimals: 18,
 };
 
+const CELO: AddEthereumChainParameter['nativeCurrency'] = {
+  name: 'Celo',
+  symbol: 'CELO',
+  decimals: 18,
+}
+
 // 链信息
 export const CHAINS: {[chainId: number]: Web3BasicChainInfo | Web3ExtendedChainInfo} = {
   1: {
